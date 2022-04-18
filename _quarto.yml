@@ -1,0 +1,36 @@
+project:
+  type: website
+
+website:
+  title: "R for the Rest of Us Handbook"
+  search: false
+  navbar:
+    background: "#6cabdd"
+    right:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+  sidebar:
+    style: "floating"
+    search: true
+    border: true
+    contents:
+      - section: "Basics"
+        contents:
+          - index.qmd
+          - basics-knitr.qmd
+          - basics-jupyter.qmd
+      - section: "Layout"
+        contents:
+          - layout.qmd
+          - layout-knitr.qmd
+          - layout-jupyter.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+

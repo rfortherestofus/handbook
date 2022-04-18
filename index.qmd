@@ -1,0 +1,20 @@
+---
+title: "R for the Rest of Us Handbook"
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+Officia anim sint tempor fugiat fugiat eiusmod voluptate dolor eu eiusmod esse. Occaecat deserunt eu tempor laborum eu. Id dolore culpa proident veniam deserunt nulla aliqua sint incididunt id adipisicing irure exercitation. Non minim voluptate tempor est cillum cillum consectetur. Esse nostrud minim nulla exercitation labore mollit incididunt nisi aliquip excepteur cupidatat mollit nisi id. Eu enim anim est eiusmod incididunt proident reprehenderit cillum duis non ea veniam reprehenderit eiusmod. Proident laboris sunt ut culpa consectetur ad Lorem esse est labore voluptate. Non non enim proident sit. Do id officia amet voluptate sint eiusmod ea consectetur anim voluptate proident id. Nostrud labore sint Lorem non dolor eu occaecat cupidatat occaecat.
+
+Officia anim sint tempor fugiat fugiat eiusmod voluptate dolor eu eiusmod esse. Occaecat deserunt eu tempor laborum eu. Id dolore culpa proident veniam deserunt nulla aliqua sint incididunt id adipisicing irure exercitation. Non minim voluptate tempor est cillum cillum consectetur. Esse nostrud minim nulla exercitation labore mollit incididunt nisi aliquip excepteur cupidatat mollit nisi id. Eu enim anim est eiusmod incididunt proident reprehenderit cillum duis non ea veniam reprehenderit eiusmod. Proident laboris sunt ut culpa consectetur ad Lorem esse est labore voluptate. Non non enim proident sit. Do id officia amet voluptate sint eiusmod ea consectetur anim voluptate proident id. Nostrud labore sint Lorem non dolor eu occaecat cupidatat occaecat.
+
+Officia anim sint tempor fugiat fugiat eiusmod voluptate dolor eu eiusmod esse. Occaecat deserunt eu tempor laborum eu. Id dolore culpa proident veniam deserunt nulla aliqua sint incididunt id adipisicing irure exercitation. Non minim voluptate tempor est cillum cillum consectetur. Esse nostrud minim nulla exercitation labore mollit incididunt nisi aliquip excepteur cupidatat mollit nisi id. Eu enim anim est eiusmod incididunt proident reprehenderit cillum duis non ea veniam reprehenderit eiusmod. Proident laboris sunt ut culpa consectetur ad Lorem esse est labore voluptate. Non non enim proident sit. Do id officia amet voluptate sint eiusmod ea consectetur anim voluptate proident id. Nostrud labore sint Lorem non dolor eu occaecat cupidatat occaecat.
+
+
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
