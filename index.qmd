@@ -1,20 +1,53 @@
 ---
-title: "R for the Rest of Us Handbook"
+title: "Welcome"
 ---
 
-This is a Quarto website.
+Welcome! You are reading an in-progress version of the R for the Rest of Us handbook.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+# Mission
 
-Officia anim sint tempor fugiat fugiat eiusmod voluptate dolor eu eiusmod esse. Occaecat deserunt eu tempor laborum eu. Id dolore culpa proident veniam deserunt nulla aliqua sint incididunt id adipisicing irure exercitation. Non minim voluptate tempor est cillum cillum consectetur. Esse nostrud minim nulla exercitation labore mollit incididunt nisi aliquip excepteur cupidatat mollit nisi id. Eu enim anim est eiusmod incididunt proident reprehenderit cillum duis non ea veniam reprehenderit eiusmod. Proident laboris sunt ut culpa consectetur ad Lorem esse est labore voluptate. Non non enim proident sit. Do id officia amet voluptate sint eiusmod ea consectetur anim voluptate proident id. Nostrud labore sint Lorem non dolor eu occaecat cupidatat occaecat.
+The goal of R for the Rest of Us is to help people use R to do good in the world.
 
-Officia anim sint tempor fugiat fugiat eiusmod voluptate dolor eu eiusmod esse. Occaecat deserunt eu tempor laborum eu. Id dolore culpa proident veniam deserunt nulla aliqua sint incididunt id adipisicing irure exercitation. Non minim voluptate tempor est cillum cillum consectetur. Esse nostrud minim nulla exercitation labore mollit incididunt nisi aliquip excepteur cupidatat mollit nisi id. Eu enim anim est eiusmod incididunt proident reprehenderit cillum duis non ea veniam reprehenderit eiusmod. Proident laboris sunt ut culpa consectetur ad Lorem esse est labore voluptate. Non non enim proident sit. Do id officia amet voluptate sint eiusmod ea consectetur anim voluptate proident id. Nostrud labore sint Lorem non dolor eu occaecat cupidatat occaecat.
+## Our Work
 
-Officia anim sint tempor fugiat fugiat eiusmod voluptate dolor eu eiusmod esse. Occaecat deserunt eu tempor laborum eu. Id dolore culpa proident veniam deserunt nulla aliqua sint incididunt id adipisicing irure exercitation. Non minim voluptate tempor est cillum cillum consectetur. Esse nostrud minim nulla exercitation labore mollit incididunt nisi aliquip excepteur cupidatat mollit nisi id. Eu enim anim est eiusmod incididunt proident reprehenderit cillum duis non ea veniam reprehenderit eiusmod. Proident laboris sunt ut culpa consectetur ad Lorem esse est labore voluptate. Non non enim proident sit. Do id officia amet voluptate sint eiusmod ea consectetur anim voluptate proident id. Nostrud labore sint Lorem non dolor eu occaecat cupidatat occaecat.
+The business has two main arms: education and consulting.
 
+### Education
 
+On the education side, we offer:
 
-```{r}
-library(tidyverse)
-library(palmerpenguins)
-```
+1.  Self-paced and cohort-based courses
+
+2.  In-person public workshops
+
+3.  Custom training for organizations
+
+### Consulting
+
+On the consulting side, we do a range of projects. Almost all of them involve some combination of:
+
+1.  Data visualization
+
+2.  Using R to improve workflows
+
+3.  Automating reporting (especially with parameterized reporting)
+
+## Roadmap
+
+As a business that does both education and consulting work, the [R for the Rest of Us Roadmap](https://www.notion.so/R-for-the-Rest-of-Us-Roadmap-7adbf96e7c66498590f07b4219b042e6) is guided by internal and external factors. We do our best to be thoughtful about future directions we think are useful based on customer feedback while also leaving space to adjust based on new information.
+
+## A Business with a Social Conscience
+
+R for the Rest of Us is not just a money-making enterprise. I also want it to be a business with a social conscience. We put this into practice by:
+
+1.  Highlighting important issues in the work we do (e.g. the types of projects we work on)
+
+2.  Making it possible for people of various means to learn R (through parity purchasing power and scholarships)
+
+3.  Donating a portion of revenue to organizations working for social justice
+
+## People
+
+R for the Rest of Us is headed by David Keyes. I've outlined my role in [David's Responsibilities](https://www.notion.so/David-s-Responsibilities-4572e4cd4a334b76aff7d6a491375192).
+
+Current **consultants** include Charlie Hadley, Thomas Vroylandt, and Cara Thompson. Other consultants are brought in for individual projects.

@@ -1,15 +1,92 @@
 [
   {
+    "objectID": "course-manual.html",
+    "href": "course-manual.html",
+    "title": "Course Manual",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "website.html",
+    "href": "website.html",
+    "title": "Website",
+    "section": "",
+    "text": "About this site"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "R for the Rest of Us Handbook",
+    "title": "Welcome",
     "section": "",
-    "text": "To learn more about Quarto websites visit https://quarto.org/docs/websites.\nOfficia anim sint tempor fugiat fugiat eiusmod voluptate dolor eu eiusmod esse. Occaecat deserunt eu tempor laborum eu. Id dolore culpa proident veniam deserunt nulla aliqua sint incididunt id adipisicing irure exercitation. Non minim voluptate tempor est cillum cillum consectetur. Esse nostrud minim nulla exercitation labore mollit incididunt nisi aliquip excepteur cupidatat mollit nisi id. Eu enim anim est eiusmod incididunt proident reprehenderit cillum duis non ea veniam reprehenderit eiusmod. Proident laboris sunt ut culpa consectetur ad Lorem esse est labore voluptate. Non non enim proident sit. Do id officia amet voluptate sint eiusmod ea consectetur anim voluptate proident id. Nostrud labore sint Lorem non dolor eu occaecat cupidatat occaecat.\nOfficia anim sint tempor fugiat fugiat eiusmod voluptate dolor eu eiusmod esse. Occaecat deserunt eu tempor laborum eu. Id dolore culpa proident veniam deserunt nulla aliqua sint incididunt id adipisicing irure exercitation. Non minim voluptate tempor est cillum cillum consectetur. Esse nostrud minim nulla exercitation labore mollit incididunt nisi aliquip excepteur cupidatat mollit nisi id. Eu enim anim est eiusmod incididunt proident reprehenderit cillum duis non ea veniam reprehenderit eiusmod. Proident laboris sunt ut culpa consectetur ad Lorem esse est labore voluptate. Non non enim proident sit. Do id officia amet voluptate sint eiusmod ea consectetur anim voluptate proident id. Nostrud labore sint Lorem non dolor eu occaecat cupidatat occaecat.\nOfficia anim sint tempor fugiat fugiat eiusmod voluptate dolor eu eiusmod esse. Occaecat deserunt eu tempor laborum eu. Id dolore culpa proident veniam deserunt nulla aliqua sint incididunt id adipisicing irure exercitation. Non minim voluptate tempor est cillum cillum consectetur. Esse nostrud minim nulla exercitation labore mollit incididunt nisi aliquip excepteur cupidatat mollit nisi id. Eu enim anim est eiusmod incididunt proident reprehenderit cillum duis non ea veniam reprehenderit eiusmod. Proident laboris sunt ut culpa consectetur ad Lorem esse est labore voluptate. Non non enim proident sit. Do id officia amet voluptate sint eiusmod ea consectetur anim voluptate proident id. Nostrud labore sint Lorem non dolor eu occaecat cupidatat occaecat.\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✓ ggplot2 3.3.5     ✓ purrr   0.3.4\n✓ tibble  3.1.6     ✓ dplyr   1.0.8\n✓ tidyr   1.2.0     ✓ stringr 1.4.0\n✓ readr   2.1.2     ✓ forcats 0.5.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\nx dplyr::filter() masks stats::filter()\nx dplyr::lag()    masks stats::lag()\n\nlibrary(palmerpenguins)"
+    "text": "Welcome! You are reading an in-progress version of the R for the Rest of Us handbook."
+  },
+  {
+    "objectID": "index.html#our-work",
+    "href": "index.html#our-work",
+    "title": "Welcome",
+    "section": "Our Work",
+    "text": "Our Work\nThe business has two main arms: education and consulting.\n\nEducation\nOn the education side, we offer:\n\nSelf-paced and cohort-based courses\nIn-person public workshops\nCustom training for organizations\n\n\n\nConsulting\nOn the consulting side, we do a range of projects. Almost all of them involve some combination of:\n\nData visualization\nUsing R to improve workflows\nAutomating reporting (especially with parameterized reporting)"
+  },
+  {
+    "objectID": "index.html#roadmap",
+    "href": "index.html#roadmap",
+    "title": "Welcome",
+    "section": "Roadmap",
+    "text": "Roadmap\nAs a business that does both education and consulting work, the R for the Rest of Us Roadmap is guided by internal and external factors. We do our best to be thoughtful about future directions we think are useful based on customer feedback while also leaving space to adjust based on new information."
+  },
+  {
+    "objectID": "index.html#a-business-with-a-social-conscience",
+    "href": "index.html#a-business-with-a-social-conscience",
+    "title": "Welcome",
+    "section": "A Business with a Social Conscience",
+    "text": "A Business with a Social Conscience\nR for the Rest of Us is not just a money-making enterprise. I also want it to be a business with a social conscience. We put this into practice by:\n\nHighlighting important issues in the work we do (e.g. the types of projects we work on)\nMaking it possible for people of various means to learn R (through parity purchasing power and scholarships)\nDonating a portion of revenue to organizations working for social justice"
+  },
+  {
+    "objectID": "index.html#people",
+    "href": "index.html#people",
+    "title": "Welcome",
+    "section": "People",
+    "text": "People\nR for the Rest of Us is headed by David Keyes. I’ve outlined my role in David’s Responsibilities.\nCurrent consultants include Charlie Hadley, Thomas Vroylandt, and Cara Thompson. Other consultants are brought in for individual projects."
+  },
+  {
+    "objectID": "branding.html",
+    "href": "branding.html",
+    "title": "Branding",
+    "section": "",
+    "text": "About this site"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "social-media.html",
+    "href": "social-media.html",
+    "title": "Social Media",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "project-management.html",
+    "href": "project-management.html",
+    "title": "Project Management",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "content-strategy.html",
+    "href": "content-strategy.html",
+    "title": "Content Strategy",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "marketing-overview.html",
+    "href": "marketing-overview.html",
+    "title": "Marketing Overview",
     "section": "",
     "text": "About this site"
   }

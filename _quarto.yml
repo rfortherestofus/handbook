@@ -4,32 +4,43 @@ project:
 website:
   title: "R for the Rest of Us Handbook"
   search: false
-  navbar:
-    background: "#6cabdd"
-    right:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+ 
 
   sidebar:
     style: "floating"
     search: true
     border: true
+    logo: assets/rru-logo-text-right-stacked.svg
+    
     contents:
-      - section: "Basics"
+      - index.qmd
+      - section: "Operations"
         contents:
-          - index.qmd
-          - basics-knitr.qmd
-          - basics-jupyter.qmd
-      - section: "Layout"
+        - david-responsibilities.qmd
+        - tools.qmd
+        - communication.qmd
+        - finances.qmd
+        - contracts.qmd
+        - clients.qmd
+      - section: "Marketing"
         contents:
-          - layout.qmd
-          - layout-knitr.qmd
-          - layout-jupyter.qmd
+        - marketing-overview.qmd
+        - branding.qmd
+        - website.qmd
+        - content-strategy.qmd
+        - email-automations.qmd
+        - social-media.qmd
+      - section: "Course Manual"
+        contents: 
+        - course-manual.qmd
+      - section: "Consulting"
+        contents:
+        - project-management.qmd
 
 format:
   html:
-    theme: cosmo
+    toc: true
+    theme: litera
     css: styles.css
 
 
