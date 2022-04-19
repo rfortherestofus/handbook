@@ -1,4 +1,172 @@
 ---
 title: "Email Automations"
-editor: visual
 ---
+
+```{r}
+library(tidyverse)
+library(reactable)
+
+source("functions.R")
+```
+
+Email marketing is the main way that R for the Rest of Us brings in revenue.
+
+All external marketing is designed to get people onto the R for the Rest of Us email list. Once they're on the list, we send them regular emails that educate them about R, interspersing emails that attempt to sell them on our offerings.
+
+The specifics of how our email marketing system works comes largely from [Brennan Dunn's Mastering ConvertKit course](https://createandsell.co/courses/mastering-convertkit). The process gets fairly complicated, but at the highest level, here's what it does:
+
+1.  Get people onto the list
+
+2.  Send them a series of welcome emails
+
+3.  If they're not signed up for the free Getting Started course (most are), try to get them to sign up for that
+
+4.  When they complete the Getting Started course or \~2 weeks after they sign up for the list, try to get them to sign up for the Fundamentals course
+
+5.  Put them onto the "shadow newsletter" (i.e. a series of pre-planned emails they receive every week)
+
+6.  Every \~3 months, try to sell them on a different paid course
+
+# Email Automations
+
+Here are details about how email automations work. Note that sequences aren't included because they are generally just called from Visual Automations below.
+
+## New Subscribers
+
+A new subscriber can get on the list in the following ways:
+
+### Newsletter signup
+
+1.  If they sign up for the newsletter through [this form](https://rfortherestofus.com/wp-admin/admin.php?page=ninja-forms&form_id=3), the Ninja Forms action applies the Flag - New Subscriber tag to them.
+
+### You can do that with R signup
+
+Note: This one is basically archived. It was a lead magnet early on but isn't really necessary anymore because most people sign up for Getting Started.
+
+1.  If user signs up for you can do that, it happens with [this form](https://rfortherestofus.com/wp-admin/admin.php?page=ninja-forms&form_id=4).
+
+2.  Then, [this automation rule](https://app.convertkit.com/rules#/1977704) assigns them the tag Flag - New Subscriber.
+
+### Course signup
+
+1.  If they sign up for a course, each Woo products assigns them the appropriate tag (e.g. Purchased - Getting Started).
+
+2.  Then, they go through a visual automation for each course (e.g. Fundamentals - Signup - Automation)
+
+3.  Then, [this automation rule](https://app.convertkit.com/rules#/1977704) assigns them the tag Flag - New Subscriber.
+
+### R in 3 Months signup
+
+1.  If they sign up for R in 3, WooCommerce assigns them the tag Purchased - R in 3 Months.
+
+2.  Then, they go through [this visual automation](https://app.convertkit.com/automations/618611/edit), which takes them out of welcome sequences for Fundamentals and Going Deeper because they'll get more personal emails. I also intentionally don't assign them the tag Flag - New Subscriber because I want to handle the onboarding in a more personal way.
+
+## Visual Automations
+
+```{r}
+tibble::tribble(
+  ~Automation,                                                                                                             ~How.Someone.Gets.On.It,                                                                                                                                                                                                                                                                                                                                                       ~What.it.Does,
+  "Data Cleaning - Pitch - Automation",                                                                                        "From Function - Move to Pitch - Automation",                                                                                                                                                                                                                                                                                                                                            "Pitches them on course",
+  "Data Cleaning - Signup - Automation",                                                                                              "When they purchase course on website",                                                                                                                                                                                 "Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course",
+  "Function - Calculate Offer Funnel and Expertise Level - Automation", "Flag - Recalculate Offer and Expertise Level is added, through the New Subscriber - Automation, or when organization_size changes",                                                "It sets their available_offers custom field to all products I offer, then it goes through looking at what they’ve purchased. Each item they’ve purchased is removed from available_offers, sets next_offer as the next course they should purchase in the sequence I’ve set up (core courses, then topics courses)",
+  "Function - Move to Pitch - Automation",                                                          "Locked - Pitching tag added at the end of each part of shadow newsletter",                                                                                                    "Removes user from shadow newsletter with Flag - Remove from Shadow Newsletter, based on their next_offer field, puts them in a pitch automation, at the end, it removes Locked - Pitching tag and adds Flag - Start Shadow Newsletter to put them back on that",
+  "Function - Tag Custom Training/Consulting Clients - Automation",                                                                                                                               "???",                                                                                                                                                                                                                                                                                "Adds them to custom training / consulting tags based on emails that I add manually",
+  "Fundamentals - Bridge - Automation",                                                                               "Added after they sign up for Getting Started with R",                                                                                             "If user has completed Getting Started, they get put into Fundamentals - Bridge - Hot, If user has NOT completed Getting Started, they get put into Fundamentals - Bridge - Cold, At the end of each Bridge sequence, user goes into Fundamentals - Pitch - Automation",
+  "Fundamentals - Pitch - Automation",                                             "From Function - Move to Pitch - Automation or from Fundamentals - Bridge - Automation", "Flag - Pitch Window Open - Fundamentals added. This triggers creation of a coupon that is saved in fundamentals_coupon custom field. User goes through Fundamentals - Pitch Sequence. At end, Flag - Pitch Window Open - Fundamentals removed, Completed - Onboarding tag added and Flag- Start Shadow Newsletter tag added, putting them into shadow newsletter.",
+  "Fundamentals - Signup - Automation",                                                                                              "When they purchase course on website",                                                                                                                                                                                 "Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course",
+  "Getting Started - Pitch - Automation",                   "If new user hasn't signed up for Getting Started, they get pitched on it as part of New Subscriber - Automation",                                                                                                                                                                                                                                                                                                                                   "Pitches them on Getting Started",
+  "Getting Started - Signup - Automation",                                                                                                 "User signs up for Getting Started",                                                                                                                                                                                                                                                               "Sends three emails about Getting Started course, then moves them into pitch for Fundamentals course",
+  "Going Deeper - Pitch - Automation",                                                                                        "From Function - Move to Pitch - Automation",                                                                                                                                                                                                                                                                                                                                            "Pitches them on course",
+  "Going Deeper - Signup - Automation",                                                                                              "When they purchase course on website",                                                                                                                                                                                 "Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course",
+  "Inferential Stats - Pitch - Automation",                                                                                        "From Function - Move to Pitch - Automation",                                                                                                                                                                                                                                                                                                                                            "Pitches them on course",
+  "Inferential Stats - Signup - Automation",                                                                                              "When they purchase course on website",                                                                                                                                                                                 "Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course",
+  "New Subscriber - Automation",                                                                                                "Whenever new subscriber joins list",                                                                                                                                                                                                                "If they haven't signed up for Getting Started, pitches them on that. Otherwise, goes through welcome sequence then puts them on shadow newsletter.",
+  "R in 3 Months - Pitch - Automation",                                                                                        "From Function - Move to Pitch - Automation",                                                                                                                                                                                                                                                                                                                                            "Pitches them on course",
+  "R in 3 Months - Signup - Automation",                                                                                                      "When they sign up for R in 3",                                                                                                                                                                "Adds tags for Purchased - Getting Started, Purchased - Fundamentals, and Purchased - Going Deeper, removes from shadow newsletter. Then all emailing with participants happens directly via Gmail.",
+  "Shadow Newsletter - Automation",                                                                                                    "After they complete onboarding",                                                                                                                                                                                                                                           "Adds them to appropriate shadow newsletter part. After each part, puts them into Function - Move to Pitch - Automation."
+) %>% 
+  paginated_table()
+  
+
+
+```
+
+## Tags
+
+```{r}
+tibble::tribble(
+  ~Tag,                                                                                                               ~Description,
+  "Completed - Data Cleaning",                                                                                    "Completed Data Cleaning with R course",
+  "Completed - Fundamentals",                                                                                       "Completed Fundamentals of R course",
+  "Completed - Fundamentals - Bridge - Cold",                                                                 "Completed Fundamentals - Bridge - Cold visual automation",
+  "Completed - Fundamentals - Bridge - Hot",                                                                  "Completed Fundamentals - Bridge - Hot visual automation",
+  "Completed - Getting Started",                                                                                  "Completed Getting Started with R course",
+  "Completed - Going Deeper",                                                                                     "Completed Going Deeper with R course",
+  "Completed - Inferential Stats",                                                                                "Completed Inferential Stats with R course",
+  "Completed - Onboarding",                                                                                    "Completed New Subscriber - Automation",
+  "Completed - Shadow Newsletter - Part 1",                                                 "Completed portion of shadow newsletter in Shadow Newsletter - Automation",
+  "Completed - Shadow Newsletter - Part 2",                                                 "Completed portion of shadow newsletter in Shadow Newsletter - Automation",
+  "Completed - Shadow Newsletter - Part 3",                                                 "Completed portion of shadow newsletter in Shadow Newsletter - Automation",
+  "Completed - Shadow Newsletter - Part 4",                                                 "Completed portion of shadow newsletter in Shadow Newsletter - Automation",
+  "Customer",                                                                               "Purchased anything (including free course)",
+  "Customer - Course/Workshop",                                                                               "Purchased anything (including free course)",
+  "Customer - Custom Training/Consulting", "Custom training or consulting client (added through Function - Tag Custom Training/Consulting Clients Visual Automation)",
+  "Customer - Paid Offering",                                                                               "Purchased anything (excluding free course)",
+  "Flag - Does Nothing",                                               "Doesn't do anything, but exists for when I need to do something with a tag",
+  "Flag - New Subscriber",                                                                               "Added via https://app.convertkit.com/rules",
+  "Flag - Newsletter Signup",                                                                      "Added when someone signs up directly for email list",
+  "Flag - Pitch Window Open - Data Cleaning",                                                                    "Added when someone is in pitch window for this course",
+  "Flag - Pitch Window Open - Fundamentals",                                                                    "Added when someone is in pitch window for this course",
+  "Flag - Pitch Window Open - Going Deeper",                                                                    "Added when someone is in pitch window for this course",
+  "Flag - Pitch Window Open - Inferential Stats",                                                                    "Added when someone is in pitch window for this course",
+  "Flag - Pitch Window Open - R in 3 Months - Spring 2021",                                                                    "Added when someone is in pitch window for this course",
+  "Flag - Recalculate Custom Training/Consulting Status",                             "Added to trigger someone into Function - Tag Custom Training/Consulting Clients - Automation",
+  "Flag - Recalculate Offer and Expertise Level",                     "Added to trigger someone into the Function - Calculate Offer Funnel and Expertise Level - Automation",
+  "Flag - Remove from Shadow Newsletter",                                                                           "Added to remove someone from shadow newsletter",
+  "Flag - Start Shadow Newsletter",                                                                 "Added to put someone into Shadow Newsletter - Automation",
+  "Flag - You Can Do That in R Signup",                                                                                 "Signed up for You Can Do That in R ebook",
+  "GDPR: Advertising Consent",                                                                                                               "GDPR stuff",
+  "GDPR: Email Consent",                                                                                                               "GDPR stuff",
+  "Interested - R in 3 Months",                                                           "Put email in on R in 3 Months page saying they were interested",
+  "Locked - Pitching",         "Locked because currently pitching on some product. Added at end of each phase in Shadow Newsletter - Automation.",
+  "Newsletter - Live",                                                                                  "Currently on live version of newsletter",
+  "Notifications - Live Coding",                                                  "Want to be notified of live coding (signed up on Live page on website).",
+  "Pitched - Fundamentals",                                                                                                   "Pitched on this course",
+  "Pitched - Getting Started",                                                                                                   "Pitched on this course",
+  "Pitched - Going Deeper",                                                                                                   "Pitched on this course",
+  "Pitched - Inferential Stats",                                                                                                   "Pitched on this course",
+  "Purchased - AEA eStudy - 2020",                                                                                                  "Purchased this offering",
+  "Purchased - AEA Workshop - 2019",                                                                                                  "Purchased this offering",
+  "Purchased - AEA Workshop - 2019 Special Session",                                                                                                  "Purchased this offering",
+  "Purchased - Consulting",                                                                             "Purchased this offering (tag added manually)",
+  "Purchased - Custom Training",                                                                                                  "Purchased this offering",
+  "Purchased - Data Cleaning with R",                                                                                                  "Purchased this offering",
+  "Purchased - Free Community Membership",                                                                                                  "Purchased this offering",
+  "Purchased - Fundamentals",                                                                                                  "Purchased this offering",
+  "Purchased - Fundamentals or Equivalent",                                         "Purchased this offering. Added because workshops are equivalent of Fundamentals.",
+  "Purchased - Getting Started",                                                                                                  "Purchased this offering",
+  "Purchased - Going Deeper",                                                                                                  "Purchased this offering",
+  "Purchased - Inferential Stats",                                                                                                  "Purchased this offering",
+  "Purchased - R for Eval Workshop - 2018",                                                                                                  "Purchased this offering",
+  "Purchased - R in 3 Months",                                                                                                  "Purchased this offering",
+  "Purchased - R in 3 Months - Spring 2021",                                                                                                  "Purchased this offering",
+  "Purchased - Roadshow 2019 - Bay Area",                                                                                                  "Purchased this offering",
+  "Purchased - Roadshow 2019 - DC",                                                                                                  "Purchased this offering",
+  "Purchased - Roadshow 2019 - NYC",                                                                                                  "Purchased this offering",
+  "Purchased - Roadshow 2019 - Seattle",                                                                                                  "Purchased this offering",
+  "Purchased - Roadshow 2019 - Vancouver",                                                                                                  "Purchased this offering",
+  "Unsubscribe - Custom Training Pitch",                                                                                                  "Unsubscribed from pitch",
+  "Unsubscribe - Data Cleaning Pitch",                                                                                                  "Unsubscribed from pitch",
+  "Unsubscribe - Fundamentals Pitch",                                                                                                  "Unsubscribed from pitch",
+  "Unsubscribe - Going Deeper Pitch",                                                                                                  "Unsubscribed from pitch",
+  "Unsubscribe - Inferential Stats Pitch",                                                                                                  "Unsubscribed from pitch",
+  "Unsubscribe - R in 3 Months - Pitch - Spring 2021",                                                                                                  "Unsubscribed from pitch",
+  "Workshop Interest - Chicago",                                                                                      "Interested in workshop in this city",
+  "Workshop Interest - Denver",                                                                                      "Interested in workshop in this city",
+  "Workshop Interest - Research Triangle",                                                                                      "Interested in workshop in this city",
+  "Workshop Interest - Twin Cities",                                                                                      "Interested in workshop in this city"
+) %>% 
+  paginated_table()
+
+```
+

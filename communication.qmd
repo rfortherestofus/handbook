@@ -1,4 +1,4 @@
 ---
 title: "Communication"
-editor: visual
+
 ---

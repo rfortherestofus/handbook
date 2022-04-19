@@ -1,4 +1,4 @@
 ---
 title: "David's Responsibilities"
-editor: visual
+
 ---

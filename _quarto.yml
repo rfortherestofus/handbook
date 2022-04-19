@@ -1,6 +1,11 @@
 project:
   type: website
 
+execute:
+  echo: false
+  warning: false
+  message: false
+
 website:
   title: "R for the Rest of Us Handbook"
   search: false

@@ -84,6 +84,34 @@
     "text": "About this site"
   },
   {
+    "objectID": "email-automations.html",
+    "href": "email-automations.html",
+    "title": "Email Automations",
+    "section": "",
+    "text": "Email marketing is the main way that R for the Rest of Us brings in revenue.\nAll external marketing is designed to get people onto the R for the Rest of Us email list. Once they’re on the list, we send them regular emails that educate them about R, interspersing emails that attempt to sell them on our offerings.\nThe specifics of how our email marketing system works comes largely from Brennan Dunn’s Mastering ConvertKit course. The process gets fairly complicated, but at the highest level, here’s what it does:"
+  },
+  {
+    "objectID": "email-automations.html#new-subscribers",
+    "href": "email-automations.html#new-subscribers",
+    "title": "Email Automations",
+    "section": "New Subscribers",
+    "text": "New Subscribers\nA new subscriber can get on the list in the following ways:\n\nNewsletter signup\n\nIf they sign up for the newsletter through this form, the Ninja Forms action applies the Flag - New Subscriber tag to them.\n\n\n\nYou can do that with R signup\nNote: This one is basically archived. It was a lead magnet early on but isn’t really necessary anymore because most people sign up for Getting Started.\n\nIf user signs up for you can do that, it happens with this form.\nThen, this automation rule assigns them the tag Flag - New Subscriber.\n\n\n\nCourse signup\n\nIf they sign up for a course, each Woo products assigns them the appropriate tag (e.g. Purchased - Getting Started).\nThen, they go through a visual automation for each course (e.g. Fundamentals - Signup - Automation)\nThen, this automation rule assigns them the tag Flag - New Subscriber.\n\n\n\nR in 3 Months signup\n\nIf they sign up for R in 3, WooCommerce assigns them the tag Purchased - R in 3 Months.\nThen, they go through this visual automation, which takes them out of welcome sequences for Fundamentals and Going Deeper because they’ll get more personal emails. I also intentionally don’t assign them the tag Flag - New Subscriber because I want to handle the onboarding in a more personal way."
+  },
+  {
+    "objectID": "email-automations.html#visual-automations",
+    "href": "email-automations.html#visual-automations",
+    "title": "Email Automations",
+    "section": "Visual Automations",
+    "text": "Visual Automations"
+  },
+  {
+    "objectID": "email-automations.html#tags",
+    "href": "email-automations.html#tags",
+    "title": "Email Automations",
+    "section": "Tags",
+    "text": "Tags"
+  },
+  {
     "objectID": "marketing-overview.html",
     "href": "marketing-overview.html",
     "title": "Marketing Overview",
