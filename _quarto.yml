@@ -10,7 +10,7 @@ website:
     style: "floating"
     search: true
     border: true
-    logo: assets/rru-logo-text-right-stacked.svg
+    logo: assets/rru-logo-text-right-stacked.png
     
     contents:
       - index.qmd
