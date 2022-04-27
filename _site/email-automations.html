@@ -200,15 +200,19 @@
         <nav id="TOC" role="doc-toc">
 <h2 id="toc-title">On this page</h2>
 <ul>
-<li><a href="#email-automations" id="toc-email-automations" class="nav-link active" data-scroll-target="#email-automations">Email Automations</a>
+<li><a href="#email-schedule" id="toc-email-schedule" class="nav-link active" data-scroll-target="#email-schedule">Email Schedule</a></li>
+<li><a href="#email-journeys" id="toc-email-journeys" class="nav-link" data-scroll-target="#email-journeys">Email Journeys</a>
 <ul class="collapse">
-<li><a href="#new-subscribers" id="toc-new-subscribers" class="nav-link" data-scroll-target="#new-subscribers">New Subscribers</a>
-<ul class="collapse">
-<li><a href="#newsletter-signup" id="toc-newsletter-signup" class="nav-link" data-scroll-target="#newsletter-signup">Newsletter signup</a></li>
-<li><a href="#you-can-do-that-with-r-signup" id="toc-you-can-do-that-with-r-signup" class="nav-link" data-scroll-target="#you-can-do-that-with-r-signup">You can do that with R signup</a></li>
-<li><a href="#course-signup" id="toc-course-signup" class="nav-link" data-scroll-target="#course-signup">Course signup</a></li>
-<li><a href="#r-in-3-months-signup" id="toc-r-in-3-months-signup" class="nav-link" data-scroll-target="#r-in-3-months-signup">R in 3 Months signup</a></li>
+<li><a href="#signup" id="toc-signup" class="nav-link" data-scroll-target="#signup">Signup</a></li>
+<li><a href="#segmentation" id="toc-segmentation" class="nav-link" data-scroll-target="#segmentation">Segmentation</a></li>
+<li><a href="#calculate-next-offer" id="toc-calculate-next-offer" class="nav-link" data-scroll-target="#calculate-next-offer">Calculate Next Offer</a></li>
+<li><a href="#shadow-newsletter" id="toc-shadow-newsletter" class="nav-link" data-scroll-target="#shadow-newsletter">Shadow Newsletter</a></li>
+<li><a href="#course-pitches" id="toc-course-pitches" class="nav-link" data-scroll-target="#course-pitches">Course Pitches</a></li>
+<li><a href="#live-launches" id="toc-live-launches" class="nav-link" data-scroll-target="#live-launches">Live Launches</a></li>
+<li><a href="#custom-training-consulting-pitches" id="toc-custom-training-consulting-pitches" class="nav-link" data-scroll-target="#custom-training-consulting-pitches">Custom Training + Consulting Pitches</a></li>
 </ul></li>
+<li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a>
+<ul class="collapse">
 <li><a href="#visual-automations" id="toc-visual-automations" class="nav-link" data-scroll-target="#visual-automations">Visual Automations</a></li>
 <li><a href="#tags" id="toc-tags" class="nav-link" data-scroll-target="#tags">Tags</a></li>
 </ul></li>
@@ -235,57 +239,122 @@
 <li><p>Put them onto the “shadow newsletter” (i.e.&nbsp;a series of pre-planned emails they receive every week)</p></li>
 <li><p>Every ~3 months, try to sell them on a different paid course</p></li>
 </ol>
-<section id="email-automations" class="level1">
-<h1>Email Automations</h1>
-<p>Here are details about how email automations work. Note that sequences aren’t included because they are generally just called from Visual Automations below.</p>
-<section id="new-subscribers" class="level2">
-<h2 class="anchored" data-anchor-id="new-subscribers">New Subscribers</h2>
-<p>A new subscriber can get on the list in the following ways:</p>
-<section id="newsletter-signup" class="level3">
-<h3 class="anchored" data-anchor-id="newsletter-signup">Newsletter signup</h3>
+<p>Below are details about how email automations work. Note that sequences aren’t included because they are generally just called from Visual Automations below.</p>
+<section id="email-schedule" class="level2">
+<h2 class="anchored" data-anchor-id="email-schedule">Email Schedule</h2>
+<p>TODO</p>
+</section>
+<section id="email-journeys" class="level2">
+<h2 class="anchored" data-anchor-id="email-journeys">Email Journeys</h2>
+<section id="signup" class="level3">
+<h3 class="anchored" data-anchor-id="signup">Signup</h3>
+<p>Here are the journeys that experience on the R for the Rest of Us email list.</p>
+<section id="getting-started-signup" class="level4">
+<h4 class="anchored" data-anchor-id="getting-started-signup">Getting Started Signup</h4>
+<p>If the user gets onto the list by signing up for Getting Started, <a href="https://rfortherestofus.com/wp-admin/post.php?post=2816&amp;action=edit">they get the tag Purchased - Getting Started applied through the WooCommerce-ConvertKit integration</a>.</p>
+<p>They then go through the <a href="https://app.convertkit.com/automations/547465/edit">Getting Started - Signup - Automation</a>. This does the following:</p>
 <ol type="1">
-<li>If they sign up for the newsletter through <a href="https://rfortherestofus.com/wp-admin/admin.php?page=ninja-forms&amp;form_id=3">this form</a>, the Ninja Forms action applies the Flag - New Subscriber tag to them.</li>
+<li>Assigns the tag Customer - Course/Workshop</li>
+<li>Assigns the tag Customer</li>
+<li>Assigns the tag Flag - Calculate Next offer (which sends them through the <a href="https://app.convertkit.com/automations/545987/edit">Function - Calculate Offer Funnel and Expertise Level - Automation</a>)</li>
+<li>Assigns the Flag - Remove from Shadow Newsletter tag, which does what it says</li>
+<li>Puts them through the <a href="https://app.convertkit.com/sequences/744617">Getting Started - Signup - Sequence</a>, which sends a set of emails about the course</li>
+<li>When they complete the course or the Getting Started - Signup - Sequence, they get pulled to the end and go into the Fundamentals - Bridge - Automation</li>
+</ol>
+<p>The Fundamentals - Bridge - Automation pitches people on Fundamentals. It happens in two ways depending on what the user has done so far on Getting Started.</p>
+<ol type="1">
+<li>If the user has the Completed - Getting Started tag, they go into the Fundamentals - Bridge - Hot. This goes straight to the pitch for Fundamentals.</li>
+<li>If the user has not completed Getting Started, they go into the Fundamentals - Bridge - Cold. This sends them a few emails before pitching them on Fundamentals.</li>
+</ol>
+<p>After they go through the bridge sequences, they go into the Fundamentals - Pitch - Automation.</p>
+<ol type="1">
+<li>The tag Flag - Pitch Window Open - Fundamentals gets applied. <a href="https://zapier.com/editor/106477759/published">This triggers Zapier to create a personalized coupon on WooCommerce</a>.</li>
+<li>The user gets an email on Friday telling them their personal window is open to purchase Fundamentals.</li>
+<li>The user goes through the Fundamentals - Pitch - Sequence, which sends an email every day the next week with info on purchasing Fundamentals.</li>
+<li>The tag Completed - Onboarding is applied.</li>
+<li>The tag Flag - Start Shadow Newsletter is applied. This triggers the <a href="https://app.convertkit.com/automations/547446/edit">Shadow Newsletter - Automation</a> and adds them to the shadow newsletter.</li>
 </ol>
 </section>
-<section id="you-can-do-that-with-r-signup" class="level3">
-<h3 class="anchored" data-anchor-id="you-can-do-that-with-r-signup">You can do that with R signup</h3>
-<p>Note: This one is basically archived. It was a lead magnet early on but isn’t really necessary anymore because most people sign up for Getting Started.</p>
+<section id="other-courses-signup" class="level4">
+<h4 class="anchored" data-anchor-id="other-courses-signup">Other Courses Signup</h4>
+<ol type="1">
+<li><p>If they sign up for a course, each Woo products assigns them the appropriate tag (e.g.&nbsp;Purchased - Fundamentals).</p></li>
+<li><p>Then, they go through a visual automation for each course (e.g.&nbsp;Fundamentals - Signup - Automation)</p></li>
+<li><p>Then, <a href="https://app.convertkit.com/rules#/1977704">this automation rule</a> assigns them the tag Flag - New Subscriber.</p></li>
+</ol>
+</section>
+<section id="r-in-3-months-signup" class="level4">
+<h4 class="anchored" data-anchor-id="r-in-3-months-signup">R in 3 Months Signup</h4>
+<ol type="1">
+<li>If they sign up for R in 3, WooCommerce assigns them the tag Purchased - R in 3 Months.</li>
+</ol>
+<p>TODO Start here</p>
+<ol start="2" type="1">
+<li>Then, they go through <a href="https://app.convertkit.com/automations/618611/edit">this visual automation</a>, which takes them out of welcome sequences for Fundamentals and Going Deeper because they’ll get more personal emails. I also intentionally don’t assign them the tag Flag - New Subscriber because I want to handle the onboarding in a more personal way.</li>
+</ol>
+</section>
+<section id="newsletter-signup" class="level4">
+<h4 class="anchored" data-anchor-id="newsletter-signup">Newsletter signup</h4>
+<p>If someone signs up for the newsletter using <a href="https://rfortherestofus.com/wp-admin/admin.php?page=ninja-forms&amp;form_id=3">this form</a>, the following happens:</p>
+<ol type="1">
+<li>The Flag - New Subscriber tag is added to them through <a href="https://app.convertkit.com/rules#/1977704">this automation rule</a>
+<ol type="1">
+<li>The Flag - New Subscriber tag puts them into the Global - Welcome - Sequence using <a href="https://app.convertkit.com/rules#/2104767">this automation rule</a></li>
+</ol></li>
+<li>The Flag - New Subscriber tag being added puts them onto the <a href="https://app.convertkit.com/automations/545990/edit">New Subscriber - Automation</a></li>
+<li>The New Subscriber - Automation moves them through the <a href="https://app.convertkit.com/automations/545987/edit">Function - Calculate Offer Funnel and Expertise Level - Automation</a></li>
+<li>The New Subscriber - Automation moves them through the <a href="https://app.convertkit.com/automations/586488/edit">Function - Tag Custom Training/Consulting Clients - Automation</a>
+<ol type="1">
+<li>If they are a custom training/consulting client, they get the Completed - Onboarding and the Flag - Start Shadow Newsletter tags applied, which moves them onto the shadow newsletter</li>
+<li>If they are not a custom training/consulting client, they are moved to the Getting Started - Pitch - Automation (if they haven’t signed up for it)</li>
+</ol></li>
+</ol>
+</section>
+<section id="you-can-do-that-with-r-signup" class="level4">
+<h4 class="anchored" data-anchor-id="you-can-do-that-with-r-signup">You can do that with R signup</h4>
+<p><em>Note: This one is basically archived. It was a lead magnet early on but isn’t really necessary anymore because most people sign up for Getting Started.</em></p>
 <ol type="1">
 <li><p>If user signs up for you can do that, it happens with <a href="https://rfortherestofus.com/wp-admin/admin.php?page=ninja-forms&amp;form_id=4">this form</a>.</p></li>
 <li><p>Then, <a href="https://app.convertkit.com/rules#/1977704">this automation rule</a> assigns them the tag Flag - New Subscriber.</p></li>
 </ol>
 </section>
-<section id="course-signup" class="level3">
-<h3 class="anchored" data-anchor-id="course-signup">Course signup</h3>
-<ol type="1">
-<li><p>If they sign up for a course, each Woo products assigns them the appropriate tag (e.g.&nbsp;Purchased - Getting Started).</p></li>
-<li><p>Then, they go through a visual automation for each course (e.g.&nbsp;Fundamentals - Signup - Automation)</p></li>
-<li><p>Then, <a href="https://app.convertkit.com/rules#/1977704">this automation rule</a> assigns them the tag Flag - New Subscriber.</p></li>
-</ol>
 </section>
-<section id="r-in-3-months-signup" class="level3">
-<h3 class="anchored" data-anchor-id="r-in-3-months-signup">R in 3 Months signup</h3>
-<ol type="1">
-<li><p>If they sign up for R in 3, WooCommerce assigns them the tag Purchased - R in 3 Months.</p></li>
-<li><p>Then, they go through <a href="https://app.convertkit.com/automations/618611/edit">this visual automation</a>, which takes them out of welcome sequences for Fundamentals and Going Deeper because they’ll get more personal emails. I also intentionally don’t assign them the tag Flag - New Subscriber because I want to handle the onboarding in a more personal way.</p></li>
-</ol>
+<section id="segmentation" class="level3">
+<h3 class="anchored" data-anchor-id="segmentation">Segmentation</h3>
+</section>
+<section id="calculate-next-offer" class="level3">
+<h3 class="anchored" data-anchor-id="calculate-next-offer">Calculate Next Offer</h3>
+</section>
+<section id="shadow-newsletter" class="level3">
+<h3 class="anchored" data-anchor-id="shadow-newsletter">Shadow Newsletter</h3>
+</section>
+<section id="course-pitches" class="level3">
+<h3 class="anchored" data-anchor-id="course-pitches">Course Pitches</h3>
+</section>
+<section id="live-launches" class="level3">
+<h3 class="anchored" data-anchor-id="live-launches">Live Launches</h3>
+</section>
+<section id="custom-training-consulting-pitches" class="level3">
+<h3 class="anchored" data-anchor-id="custom-training-consulting-pitches">Custom Training + Consulting Pitches</h3>
 </section>
 </section>
-<section id="visual-automations" class="level2">
-<h2 class="anchored" data-anchor-id="visual-automations">Visual Automations</h2>
+<section id="reference" class="level2">
+<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<section id="visual-automations" class="level3">
+<h3 class="anchored" data-anchor-id="visual-automations">Visual Automations</h3>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-4bd432da53e8ab325414" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-4bd432da53e8ab325414">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Automation":["Data Cleaning - Pitch - Automation","Data Cleaning - Signup - Automation","Function - Calculate Offer Funnel and Expertise Level - Automation","Function - Move to Pitch - Automation","Function - Tag Custom Training/Consulting Clients - Automation","Fundamentals - Bridge - Automation","Fundamentals - Pitch - Automation","Fundamentals - Signup - Automation","Getting Started - Pitch - Automation","Getting Started - Signup - Automation","Going Deeper - Pitch - Automation","Going Deeper - Signup - Automation","Inferential Stats - Pitch - Automation","Inferential Stats - Signup - Automation","New Subscriber - Automation","R in 3 Months - Pitch - Automation","R in 3 Months - Signup - Automation","Shadow Newsletter - Automation"],"How.Someone.Gets.On.It":["From Function - Move to Pitch - Automation","When they purchase course on website","Flag - Recalculate Offer and Expertise Level is added, through the New Subscriber - Automation, or when organization_size changes","Locked - Pitching tag added at the end of each part of shadow newsletter","???","Added after they sign up for Getting Started with R","From Function - Move to Pitch - Automation or from Fundamentals - Bridge - Automation","When they purchase course on website","If new user hasn't signed up for Getting Started, they get pitched on it as part of New Subscriber - Automation","User signs up for Getting Started","From Function - Move to Pitch - Automation","When they purchase course on website","From Function - Move to Pitch - Automation","When they purchase course on website","Whenever new subscriber joins list","From Function - Move to Pitch - Automation","When they sign up for R in 3","After they complete onboarding"],"What.it.Does":["Pitches them on course","Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course","It sets their available_offers custom field to all products I offer, then it goes through looking at what they’ve purchased. Each item they’ve purchased is removed from available_offers, sets next_offer as the next course they should purchase in the sequence I’ve set up (core courses, then topics courses)","Removes user from shadow newsletter with Flag - Remove from Shadow Newsletter, based on their next_offer field, puts them in a pitch automation, at the end, it removes Locked - Pitching tag and adds Flag - Start Shadow Newsletter to put them back on that","Adds them to custom training / consulting tags based on emails that I add manually","If user has completed Getting Started, they get put into Fundamentals - Bridge - Hot, If user has NOT completed Getting Started, they get put into Fundamentals - Bridge - Cold, At the end of each Bridge sequence, user goes into Fundamentals - Pitch - Automation","Flag - Pitch Window Open - Fundamentals added. This triggers creation of a coupon that is saved in fundamentals_coupon custom field. User goes through Fundamentals - Pitch Sequence. At end, Flag - Pitch Window Open - Fundamentals removed, Completed - Onboarding tag added and Flag- Start Shadow Newsletter tag added, putting them into shadow newsletter.","Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course","Pitches them on Getting Started","Sends three emails about Getting Started course, then moves them into pitch for Fundamentals course","Pitches them on course","Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course","Pitches them on course","Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course","If they haven't signed up for Getting Started, pitches them on that. Otherwise, goes through welcome sequence then puts them on shadow newsletter.","Pitches them on course","Adds tags for Purchased - Getting Started, Purchased - Fundamentals, and Purchased - Going Deeper, removes from shadow newsletter. Then all emailing with participants happens directly via Gmail.","Adds them to appropriate shadow newsletter part. After each part, puts them into Function - Move to Pitch - Automation."]},"columns":[{"accessor":"Automation","name":"Automation","type":"character"},{"accessor":"How.Someone.Gets.On.It","name":"How.Someone.Gets.On.It","type":"character"},{"accessor":"What.it.Does","name":"What.it.Does","type":"character"}],"searchable":true,"defaultPageSize":5,"paginationType":"numbers","showPageInfo":true,"minRows":1,"compact":true,"className":"rrutable","dataKey":"e00ec10a65818d7301fd972e5d5d76df","key":"e00ec10a65818d7301fd972e5d5d76df"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-8297882cd5227cb4f28f" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-8297882cd5227cb4f28f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Automation":["Data Cleaning - Pitch - Automation","Data Cleaning - Signup - Automation","Function - Calculate Offer Funnel and Expertise Level - Automation","Function - Move to Pitch - Automation","Function - Tag Custom Training/Consulting Clients - Automation","Fundamentals - Bridge - Automation","Fundamentals - Pitch - Automation","Fundamentals - Signup - Automation","Getting Started - Pitch - Automation","Getting Started - Signup - Automation","Going Deeper - Pitch - Automation","Going Deeper - Signup - Automation","Inferential Stats - Pitch - Automation","Inferential Stats - Signup - Automation","New Subscriber - Automation","R in 3 Months - Pitch - Automation","R in 3 Months - Signup - Automation","Shadow Newsletter - Automation"],"How Someone Gets On It":["From Function - Move to Pitch - Automation","When they purchase course on website","Flag - Recalculate Offer and Expertise Level is added, through the New Subscriber - Automation, or when organization_size changes","Locked - Pitching tag added at the end of each part of shadow newsletter","???","Added after they sign up for Getting Started with R","From Function - Move to Pitch - Automation or from Fundamentals - Bridge - Automation","When they purchase course on website","If new user hasn't signed up for Getting Started, they get pitched on it as part of New Subscriber - Automation","User signs up for Getting Started","From Function - Move to Pitch - Automation","When they purchase course on website","From Function - Move to Pitch - Automation","When they purchase course on website","Whenever new subscriber joins list","From Function - Move to Pitch - Automation","When they sign up for R in 3","After they complete onboarding"],"What it Does":["Pitches them on course","Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course","It sets their available_offers custom field to all products I offer, then it goes through looking at what they’ve purchased. Each item they’ve purchased is removed from available_offers, sets next_offer as the next course they should purchase in the sequence I’ve set up (core courses, then topics courses)","Removes user from shadow newsletter with Flag - Remove from Shadow Newsletter, based on their next_offer field, puts them in a pitch automation, at the end, it removes Locked - Pitching tag and adds Flag - Start Shadow Newsletter to put them back on that","Adds them to custom training / consulting tags based on emails that I add manually","If user has completed Getting Started, they get put into Fundamentals - Bridge - Hot, If user has NOT completed Getting Started, they get put into Fundamentals - Bridge - Cold, At the end of each Bridge sequence, user goes into Fundamentals - Pitch - Automation","Flag - Pitch Window Open - Fundamentals added. This triggers creation of a coupon that is saved in fundamentals_coupon custom field. User goes through Fundamentals - Pitch Sequence. At end, Flag - Pitch Window Open - Fundamentals removed, Completed - Onboarding tag added and Flag- Start Shadow Newsletter tag added, putting them into shadow newsletter.","Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course","Pitches them on Getting Started","Sends three emails about Getting Started course, then moves them into pitch for Fundamentals course","Pitches them on course","Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course","Pitches them on course","Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course","If they haven't signed up for Getting Started, pitches them on that. Otherwise, goes through welcome sequence then puts them on shadow newsletter.","Pitches them on course","Adds tags for Purchased - Getting Started, Purchased - Fundamentals, and Purchased - Going Deeper, removes from shadow newsletter. Then all emailing with participants happens directly via Gmail.","Adds them to appropriate shadow newsletter part. After each part, puts them into Function - Move to Pitch - Automation."]},"columns":[{"accessor":"Automation","name":"Automation","type":"character"},{"accessor":"How Someone Gets On It","name":"How Someone Gets On It","type":"character"},{"accessor":"What it Does","name":"What it Does","type":"character"}],"searchable":true,"defaultPageSize":5,"paginationType":"numbers","showPageInfo":true,"minRows":1,"compact":true,"className":"rrutable","dataKey":"87e2377bbae3c16436edbcb6e84e6932","key":"87e2377bbae3c16436edbcb6e84e6932"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
-<section id="tags" class="level2">
-<h2 class="anchored" data-anchor-id="tags">Tags</h2>
+<section id="tags" class="level3">
+<h3 class="anchored" data-anchor-id="tags">Tags</h3>
 <div class="cell">
 <div class="cell-output-display">
-<div id="htmlwidget-26e8995ad24ea098ecdd" class="reactable html-widget" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-26e8995ad24ea098ecdd">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Tag":["Completed - Data Cleaning","Completed - Fundamentals","Completed - Fundamentals - Bridge - Cold","Completed - Fundamentals - Bridge - Hot","Completed - Getting Started","Completed - Going Deeper","Completed - Inferential Stats","Completed - Onboarding","Completed - Shadow Newsletter - Part 1","Completed - Shadow Newsletter - Part 2","Completed - Shadow Newsletter - Part 3","Completed - Shadow Newsletter - Part 4","Customer","Customer - Course/Workshop","Customer - Custom Training/Consulting","Customer - Paid Offering","Flag - Does Nothing","Flag - New Subscriber","Flag - Newsletter Signup","Flag - Pitch Window Open - Data Cleaning","Flag - Pitch Window Open - Fundamentals","Flag - Pitch Window Open - Going Deeper","Flag - Pitch Window Open - Inferential Stats","Flag - Pitch Window Open - R in 3 Months - Spring 2021","Flag - Recalculate Custom Training/Consulting Status","Flag - Recalculate Offer and Expertise Level","Flag - Remove from Shadow Newsletter","Flag - Start Shadow Newsletter","Flag - You Can Do That in R Signup","GDPR: Advertising Consent","GDPR: Email Consent","Interested - R in 3 Months","Locked - Pitching","Newsletter - Live","Notifications - Live Coding","Pitched - Fundamentals","Pitched - Getting Started","Pitched - Going Deeper","Pitched - Inferential Stats","Purchased - AEA eStudy - 2020","Purchased - AEA Workshop - 2019","Purchased - AEA Workshop - 2019 Special Session","Purchased - Consulting","Purchased - Custom Training","Purchased - Data Cleaning with R","Purchased - Free Community Membership","Purchased - Fundamentals","Purchased - Fundamentals or Equivalent","Purchased - Getting Started","Purchased - Going Deeper","Purchased - Inferential Stats","Purchased - R for Eval Workshop - 2018","Purchased - R in 3 Months","Purchased - R in 3 Months - Spring 2021","Purchased - Roadshow 2019 - Bay Area","Purchased - Roadshow 2019 - DC","Purchased - Roadshow 2019 - NYC","Purchased - Roadshow 2019 - Seattle","Purchased - Roadshow 2019 - Vancouver","Unsubscribe - Custom Training Pitch","Unsubscribe - Data Cleaning Pitch","Unsubscribe - Fundamentals Pitch","Unsubscribe - Going Deeper Pitch","Unsubscribe - Inferential Stats Pitch","Unsubscribe - R in 3 Months - Pitch - Spring 2021","Workshop Interest - Chicago","Workshop Interest - Denver","Workshop Interest - Research Triangle","Workshop Interest - Twin Cities"],"Description":["Completed Data Cleaning with R course","Completed Fundamentals of R course","Completed Fundamentals - Bridge - Cold visual automation","Completed Fundamentals - Bridge - Hot visual automation","Completed Getting Started with R course","Completed Going Deeper with R course","Completed Inferential Stats with R course","Completed New Subscriber - Automation","Completed portion of shadow newsletter in Shadow Newsletter - Automation","Completed portion of shadow newsletter in Shadow Newsletter - Automation","Completed portion of shadow newsletter in Shadow Newsletter - Automation","Completed portion of shadow newsletter in Shadow Newsletter - Automation","Purchased anything (including free course)","Purchased anything (including free course)","Custom training or consulting client (added through Function - Tag Custom Training/Consulting Clients Visual Automation)","Purchased anything (excluding free course)","Doesn't do anything, but exists for when I need to do something with a tag","Added via https://app.convertkit.com/rules","Added when someone signs up directly for email list","Added when someone is in pitch window for this course","Added when someone is in pitch window for this course","Added when someone is in pitch window for this course","Added when someone is in pitch window for this course","Added when someone is in pitch window for this course","Added to trigger someone into Function - Tag Custom Training/Consulting Clients - Automation","Added to trigger someone into the Function - Calculate Offer Funnel and Expertise Level - Automation","Added to remove someone from shadow newsletter","Added to put someone into Shadow Newsletter - Automation","Signed up for You Can Do That in R ebook","GDPR stuff","GDPR stuff","Put email in on R in 3 Months page saying they were interested","Locked because currently pitching on some product. Added at end of each phase in Shadow Newsletter - Automation.","Currently on live version of newsletter","Want to be notified of live coding (signed up on Live page on website).","Pitched on this course","Pitched on this course","Pitched on this course","Pitched on this course","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering (tag added manually)","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering. Added because workshops are equivalent of Fundamentals.","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Unsubscribed from pitch","Unsubscribed from pitch","Unsubscribed from pitch","Unsubscribed from pitch","Unsubscribed from pitch","Unsubscribed from pitch","Interested in workshop in this city","Interested in workshop in this city","Interested in workshop in this city","Interested in workshop in this city"]},"columns":[{"accessor":"Tag","name":"Tag","type":"character"},{"accessor":"Description","name":"Description","type":"character"}],"searchable":true,"defaultPageSize":5,"paginationType":"numbers","showPageInfo":true,"minRows":1,"compact":true,"className":"rrutable","dataKey":"557deb4bbb128c736a82900a31d4eef2","key":"557deb4bbb128c736a82900a31d4eef2"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-48d0ea1df5557e4bffcc" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-48d0ea1df5557e4bffcc">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Tag":["Completed - Data Cleaning","Completed - Fundamentals","Completed - Fundamentals - Bridge - Cold","Completed - Fundamentals - Bridge - Hot","Completed - Getting Started","Completed - Going Deeper","Completed - Inferential Stats","Completed - Onboarding","Completed - Shadow Newsletter - Part 1","Completed - Shadow Newsletter - Part 2","Completed - Shadow Newsletter - Part 3","Completed - Shadow Newsletter - Part 4","Customer","Customer - Course/Workshop","Customer - Custom Training/Consulting","Customer - Paid Offering","Flag - Does Nothing","Flag - New Subscriber","Flag - Newsletter Signup","Flag - Pitch Window Open - Data Cleaning","Flag - Pitch Window Open - Fundamentals","Flag - Pitch Window Open - Going Deeper","Flag - Pitch Window Open - Inferential Stats","Flag - Pitch Window Open - R in 3 Months - Spring 2021","Flag - Recalculate Custom Training/Consulting Status","Flag - Recalculate Offer and Expertise Level","Flag - Remove from Shadow Newsletter","Flag - Start Shadow Newsletter","Flag - You Can Do That in R Signup","GDPR: Advertising Consent","GDPR: Email Consent","Interested - R in 3 Months","Locked - Pitching","Newsletter - Live","Notifications - Live Coding","Pitched - Fundamentals","Pitched - Getting Started","Pitched - Going Deeper","Pitched - Inferential Stats","Purchased - AEA eStudy - 2020","Purchased - AEA Workshop - 2019","Purchased - AEA Workshop - 2019 Special Session","Purchased - Consulting","Purchased - Custom Training","Purchased - Data Cleaning with R","Purchased - Free Community Membership","Purchased - Fundamentals","Purchased - Fundamentals or Equivalent","Purchased - Getting Started","Purchased - Going Deeper","Purchased - Inferential Stats","Purchased - R for Eval Workshop - 2018","Purchased - R in 3 Months","Purchased - R in 3 Months - Spring 2021","Purchased - Roadshow 2019 - Bay Area","Purchased - Roadshow 2019 - DC","Purchased - Roadshow 2019 - NYC","Purchased - Roadshow 2019 - Seattle","Purchased - Roadshow 2019 - Vancouver","Unsubscribe - Custom Training Pitch","Unsubscribe - Data Cleaning Pitch","Unsubscribe - Fundamentals Pitch","Unsubscribe - Going Deeper Pitch","Unsubscribe - Inferential Stats Pitch","Unsubscribe - R in 3 Months - Pitch - Spring 2021","Workshop Interest - Chicago","Workshop Interest - Denver","Workshop Interest - Research Triangle","Workshop Interest - Twin Cities"],"Description":["Completed Data Cleaning with R course","Completed Fundamentals of R course","Completed Fundamentals - Bridge - Cold visual automation","Completed Fundamentals - Bridge - Hot visual automation","Completed Getting Started with R course","Completed Going Deeper with R course","Completed Inferential Stats with R course","Completed New Subscriber - Automation","Completed portion of shadow newsletter in Shadow Newsletter - Automation","Completed portion of shadow newsletter in Shadow Newsletter - Automation","Completed portion of shadow newsletter in Shadow Newsletter - Automation","Completed portion of shadow newsletter in Shadow Newsletter - Automation","Purchased anything (including free course)","Purchased anything (including free course)","Custom training or consulting client (added through Function - Tag Custom Training/Consulting Clients Visual Automation)","Purchased anything (excluding free course)","Doesn't do anything, but exists for when I need to do something with a tag","Added via https://app.convertkit.com/rules","Added when someone signs up directly for email list","Added when someone is in pitch window for this course","Added when someone is in pitch window for this course","Added when someone is in pitch window for this course","Added when someone is in pitch window for this course","Added when someone is in pitch window for this course","Added to trigger someone into Function - Tag Custom Training/Consulting Clients - Automation","Added to trigger someone into the Function - Calculate Offer Funnel and Expertise Level - Automation","Added to remove someone from shadow newsletter","Added to put someone into Shadow Newsletter - Automation","Signed up for You Can Do That in R ebook","GDPR stuff","GDPR stuff","Put email in on R in 3 Months page saying they were interested","Locked because currently pitching on some product. Added at end of each phase in Shadow Newsletter - Automation.","Currently on live version of newsletter","Want to be notified of live coding (signed up on Live page on website).","Pitched on this course","Pitched on this course","Pitched on this course","Pitched on this course","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering (tag added manually)","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering. Added because workshops are equivalent of Fundamentals.","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Purchased this offering","Unsubscribed from pitch","Unsubscribed from pitch","Unsubscribed from pitch","Unsubscribed from pitch","Unsubscribed from pitch","Unsubscribed from pitch","Interested in workshop in this city","Interested in workshop in this city","Interested in workshop in this city","Interested in workshop in this city"]},"columns":[{"accessor":"Tag","name":"Tag","type":"character"},{"accessor":"Description","name":"Description","type":"character"}],"searchable":true,"defaultPageSize":20,"paginationType":"numbers","showPageInfo":true,"minRows":1,"compact":true,"className":"rrutable","dataKey":"557deb4bbb128c736a82900a31d4eef2","key":"557deb4bbb128c736a82900a31d4eef2"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 

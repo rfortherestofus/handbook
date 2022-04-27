@@ -20,9 +20,6 @@ h2 {
   margin-bottom: 0.25rem;
 }
 
-p {
-  font-size: 18px;
-}
 
 .sidebar-item-section {
     margin-bottom: 1em;
@@ -41,4 +38,8 @@ a {
 
 .rrutable {
   font-size: 14px;
+}
+
+.content li {
+  margin-bottom: 0.5rem;
 }

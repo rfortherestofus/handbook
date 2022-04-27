@@ -15,57 +15,121 @@ All external marketing is designed to get people onto the R for the Rest of Us e
 
 The specifics of how our email marketing system works comes largely from [Brennan Dunn's Mastering ConvertKit course](https://createandsell.co/courses/mastering-convertkit). The process gets fairly complicated, but at the highest level, here's what it does:
 
-1.  Get people onto the list
+1. Get people onto the list
 
-2.  Send them a series of welcome emails
+2. Send them a series of welcome emails
 
-3.  If they're not signed up for the free Getting Started course (most are), try to get them to sign up for that
+3. If they're not signed up for the free Getting Started course (most are), try to get them to sign up for that
 
-4.  When they complete the Getting Started course or \~2 weeks after they sign up for the list, try to get them to sign up for the Fundamentals course
+4. When they complete the Getting Started course or \~2 weeks after they sign up for the list, try to get them to sign up for the Fundamentals course
 
-5.  Put them onto the "shadow newsletter" (i.e. a series of pre-planned emails they receive every week)
+5. Put them onto the "shadow newsletter" (i.e. a series of pre-planned emails they receive every week)
 
-6.  Every \~3 months, try to sell them on a different paid course
+6. Every \~3 months, try to sell them on a different paid course
 
-# Email Automations
 
-Here are details about how email automations work. Note that sequences aren't included because they are generally just called from Visual Automations below.
+Below are details about how email automations work. Note that sequences aren't included because they are generally just called from Visual Automations below.
 
-## New Subscribers
 
-A new subscriber can get on the list in the following ways:
+## Email Schedule
 
-### Newsletter signup
+TODO
 
-1.  If they sign up for the newsletter through [this form](https://rfortherestofus.com/wp-admin/admin.php?page=ninja-forms&form_id=3), the Ninja Forms action applies the Flag - New Subscriber tag to them.
 
-### You can do that with R signup
+## Email Journeys
 
-Note: This one is basically archived. It was a lead magnet early on but isn't really necessary anymore because most people sign up for Getting Started.
+### Signup
 
-1.  If user signs up for you can do that, it happens with [this form](https://rfortherestofus.com/wp-admin/admin.php?page=ninja-forms&form_id=4).
+Here are the journeys that experience on the R for the Rest of Us email list.
 
-2.  Then, [this automation rule](https://app.convertkit.com/rules#/1977704) assigns them the tag Flag - New Subscriber.
+#### Getting Started Signup
 
-### Course signup
+If the user gets onto the list by signing up for Getting Started, [they get the tag Purchased - Getting Started applied through the WooCommerce-ConvertKit integration](https://rfortherestofus.com/wp-admin/post.php?post=2816&action=edit). 
 
-1.  If they sign up for a course, each Woo products assigns them the appropriate tag (e.g. Purchased - Getting Started).
+They then go through the [Getting Started - Signup - Automation](https://app.convertkit.com/automations/547465/edit). This does the following:
 
-2.  Then, they go through a visual automation for each course (e.g. Fundamentals - Signup - Automation)
+1. Assigns the tag Customer - Course/Workshop
+1. Assigns the tag Customer
+1. Assigns the tag Flag - Calculate Next offer (which sends them through the [Function - Calculate Offer Funnel and Expertise Level - Automation](https://app.convertkit.com/automations/545987/edit))
+1. Assigns the Flag - Remove from Shadow Newsletter tag, which does what it says
+1. Puts them through the [Getting Started - Signup - Sequence](https://app.convertkit.com/sequences/744617), which sends a set of emails about the course
+1. When they complete the course or the Getting Started - Signup - Sequence, they get pulled to the end and go into the Fundamentals - Bridge - Automation
 
-3.  Then, [this automation rule](https://app.convertkit.com/rules#/1977704) assigns them the tag Flag - New Subscriber.
+The Fundamentals - Bridge - Automation pitches people on Fundamentals. It happens in two ways depending on what the user has done so far on Getting Started.
 
-### R in 3 Months signup
+1. If the user has the Completed - Getting Started tag, they go into the Fundamentals - Bridge - Hot. This goes straight to the pitch for Fundamentals.
+1. If the user has not completed Getting Started, they go into the Fundamentals - Bridge - Cold. This sends them a few emails before pitching them on Fundamentals.
 
-1.  If they sign up for R in 3, WooCommerce assigns them the tag Purchased - R in 3 Months.
+After they go through the bridge sequences, they go into the Fundamentals - Pitch - Automation. 
 
-2.  Then, they go through [this visual automation](https://app.convertkit.com/automations/618611/edit), which takes them out of welcome sequences for Fundamentals and Going Deeper because they'll get more personal emails. I also intentionally don't assign them the tag Flag - New Subscriber because I want to handle the onboarding in a more personal way.
+1. The tag Flag - Pitch Window Open - Fundamentals gets applied. [This triggers Zapier to create a personalized coupon on WooCommerce](https://zapier.com/editor/106477759/published).
+1. The user gets an email on Friday telling them their personal window is open to purchase Fundamentals. 
+1. The user goes through the Fundamentals - Pitch - Sequence, which sends an email every day the next week with info on purchasing Fundamentals.
+1. The tag Completed - Onboarding is applied.
+1. The tag Flag - Start Shadow Newsletter is applied. This triggers the [Shadow Newsletter - Automation](https://app.convertkit.com/automations/547446/edit) and adds them to the shadow newsletter.
 
-## Visual Automations
+
+#### Other Courses Signup
+
+1. If they sign up for a course, each Woo products assigns them the appropriate tag (e.g. Purchased - Fundamentals).
+
+2. Then, they go through a visual automation for each course (e.g. Fundamentals - Signup - Automation)
+
+3. Then, [this automation rule](https://app.convertkit.com/rules#/1977704) assigns them the tag Flag - New Subscriber.
+
+#### R in 3 Months Signup
+
+1. If they sign up for R in 3, WooCommerce assigns them the tag Purchased - R in 3 Months.
+
+TODO Start here
+
+2. Then, they go through [this visual automation](https://app.convertkit.com/automations/618611/edit), which takes them out of welcome sequences for Fundamentals and Going Deeper because they'll get more personal emails. I also intentionally don't assign them the tag Flag - New Subscriber because I want to handle the onboarding in a more personal way.
+
+#### Newsletter signup
+
+
+If someone signs up for the newsletter using [this form](https://rfortherestofus.com/wp-admin/admin.php?page=ninja-forms&form_id=3), the following happens:
+
+1. The Flag - New Subscriber tag is added to them through [this automation rule](https://app.convertkit.com/rules#/1977704)
+    1. The Flag - New Subscriber tag puts them into the Global - Welcome - Sequence using [this automation rule](https://app.convertkit.com/rules#/2104767)
+1. The Flag - New Subscriber tag being added puts them onto the [New Subscriber - Automation](https://app.convertkit.com/automations/545990/edit)
+1. The New Subscriber - Automation moves them through the [Function - Calculate Offer Funnel and Expertise Level - Automation](https://app.convertkit.com/automations/545987/edit)
+1. The New Subscriber - Automation moves them through the [Function - Tag Custom Training/Consulting Clients - Automation](https://app.convertkit.com/automations/586488/edit)
+    1. If they are a custom training/consulting client, they get the Completed - Onboarding and the Flag - Start Shadow Newsletter tags applied, which moves them onto the shadow newsletter
+    1. If they are not a custom training/consulting client, they are moved to the Getting Started - Pitch - Automation (if they haven't signed up for it)
+
+
+
+#### You can do that with R signup
+
+*Note: This one is basically archived. It was a lead magnet early on but isn't really necessary anymore because most people sign up for Getting Started.*
+
+1. If user signs up for you can do that, it happens with [this form](https://rfortherestofus.com/wp-admin/admin.php?page=ninja-forms&form_id=4).
+
+2. Then, [this automation rule](https://app.convertkit.com/rules#/1977704) assigns them the tag Flag - New Subscriber.
+
+### Segmentation
+
+### Calculate Next Offer
+
+
+### Shadow Newsletter
+
+### Course Pitches
+
+### Live Launches
+
+### Custom Training + Consulting Pitches
+
+
+## Reference
+
+
+### Visual Automations
 
 ```{r}
 tibble::tribble(
-  ~Automation,                                                                                                             ~How.Someone.Gets.On.It,                                                                                                                                                                                                                                                                                                                                                       ~What.it.Does,
+  ~Automation,                                                                                                             ~`How Someone Gets On It`,                                                                                                                                                                                                                                                                                                                                                       ~`What it Does`,
   "Data Cleaning - Pitch - Automation",                                                                                        "From Function - Move to Pitch - Automation",                                                                                                                                                                                                                                                                                                                                            "Pitches them on course",
   "Data Cleaning - Signup - Automation",                                                                                              "When they purchase course on website",                                                                                                                                                                                 "Takes them off of shadow newsletter, assigns tags, recalculates offers, and adds to sequence that sends emails every week for 4 weeks after they sign up with content from course",
   "Function - Calculate Offer Funnel and Expertise Level - Automation", "Flag - Recalculate Offer and Expertise Level is added, through the New Subscriber - Automation, or when organization_size changes",                                                "It sets their available_offers custom field to all products I offer, then it goes through looking at what they’ve purchased. Each item they’ve purchased is removed from available_offers, sets next_offer as the next course they should purchase in the sequence I’ve set up (core courses, then topics courses)",
@@ -91,7 +155,7 @@ tibble::tribble(
 
 ```
 
-## Tags
+### Tags
 
 ```{r}
 tibble::tribble(
@@ -166,7 +230,7 @@ tibble::tribble(
   "Workshop Interest - Research Triangle",                                                                                      "Interested in workshop in this city",
   "Workshop Interest - Twin Cities",                                                                                      "Interested in workshop in this city"
 ) %>% 
-  paginated_table()
+  paginated_table(page_size = 20)
 
 ```
 

@@ -1,6 +1,6 @@
-paginated_table <- function(df) {
+paginated_table <- function(df, page_size = 5) {
   df %>% 
-    reactable(defaultPageSize = 5,
+    reactable(defaultPageSize = page_size,
               searchable = TRUE,
               compact = TRUE,
               class = "rrutable")
