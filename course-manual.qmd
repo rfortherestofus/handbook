@@ -2,4 +2,204 @@
 title: "Course Manual"
 ---
 
-About this site
+## Overview 
+
+These are instructions for making an R for the Rest of Us online course.
+The overall process from start to finish looks something like this:
+
+Intro Call
+
+- Go over terms
+- Discuss timing
+- Share course-making manual 
+- Confirm instructor has access to external camera and mic
+
+Contract + Advance
+
+- David + instructor sign contract and 
+- David pays advance to instructor
+
+Set up Infrastructure 
+
+- David sets up shared Google Drive folder 
+- David creates Google Sheet for course outline
+
+Develop Outline 
+
+- Explain how lessons work (e.g. video, your turn, solutions, learn more) 
+
+Develop slides 
+
+- David shares rruthemes package to be used
+- Instructor develops slides
+- David approves slides
+
+Record Videos
+
+- Instructor records single test video 
+- David approves test video 
+- Instructor records remaining videos, including solutions
+
+Edit videos 
+
+- David's video editor edits videos
+
+Put content on website 
+
+- Final approval from instructor 
+
+Marketing for course launch
+
+- David + instructor develop email sequence 
+- David + instructor plan out social media launch
+
+Add content to website 
+
+- Make landing page for course 
+- All material added to website
+
+Course launch!
+
+
+## Legal and Financial
+
+Here are the legal and financial terms that I typically use when working with course instructors. I'm flexible and happy to work with you to come up with a solution that meets both of our needs. 
+
+### Compensation
+
+I pay an advance to the course creator of $500, half on signing the contract to work together, and the other half when all videos for the course are recorded and uploaded to Google Drive.  
+
+Revenue for the courses is split 60/40 (60% for R for the Rest of Us, 40% for the course creator). I pay any royalties owed to the course creator on a quarterly basis. 
+
+### Ownership
+
+All videos are owned by R for the Rest of Us. 
+
+All non-video materials will be made freely available on the R for the Rest of Us organization GitHub using a CC-BY-SA-4.0 License.
+
+### Exclusivity
+
+The instructor agrees not to create a course that covers the same topic on another online platform for at least 12 months from the release of this course. 
+
+### Agreement Expiration
+
+These terms remain in effect for one year after the course is released. After that, David and the instructor will discuss any possible changes to the terms.
+
+
+
+
+
+## Curriculum Development
+
+You'll develop your curriculum as a combination of slides, exercises,
+and examples. Here's how I've used the three, but please note that this
+is just my approach. I want you to think about what's going to work best
+for your materials.
+
+I start out each section of my course with slides. In my courses, a
+section is RMarkdown or data wrangling and analysis or data
+visualization. I have a slide with the section title that I display as I
+talk through an overview of that section.
+
+Each lesson within a section should be short and focus on a single
+topic. As you're making your materials, if you think that a video
+demonstrating the concept will go beyond 5 minutes or so, consider
+breaking it into multiple lessons.
+
+I typically start a lesson with slides. I'll start with a slide that
+lays out the concept. I'll often have code on this slide.
+
+![](images/slide-example.png) I'll usually then flip over to RStudio to
+show myself typing out the code to demonstrate this concept in an
+exercises file. 
+
+You can see an example of a whole lesson, complete with all parts [here](https://rfortherestofus.com/lessons/group_by/). 
+
+### Lesson Content
+
+I usually use a Google Sheet to help collaborate with the instructor on course materials. [Here's a sample of what the Google Sheet includes](https://docs.google.com/spreadsheets/d/145ucNRSx1FBUv8I-L6cFS3fHWFH1wZ3jOtpxvWSUn5c/edit?usp=sharing). The Google Sheet has places for thinking about lesson content, data, exercises, solutions, and learn more resources. 
+
+
+## Course Materials
+
+### GitHub Repo
+
+Each course will have a GitHub repo on the R for the Rest of Us
+organization account. David will create this and add you to the repo.
+
+### Project Organization
+
+### Slides
+
+#### Slides Template
+
+Slides for R for the Rest of Us courses are made using the [`xaringan`
+package](https://github.com/yihui/xaringan).
+
+There is a custom template to use to make slides in the R for the Rest
+of Us style. You can access this by installing the [`rfortherestofus`
+package](https://github.com/rfortherestofus/rfortherestofus) using the
+following code:
+
+```{r eval = FALSE}
+devtools::install_github("rfortherestofus/rfortherestofus")
+```
+
+Please create a slides directory where all of your slides will live.
+
+You can create slides as follows:
+
+#### Slides Organization
+
+Most lessons should have a My Turn and a Your Turn section. The slide for
+the My Turn section should have an orange background and the slide for
+the Your Turn section should have a dark background.
+
+To do this, add the class `my-turn` and the class `inverse` to your
+slides as follows:
+
+![](https://p218.p3.n0.cdn.getcloudapp.com/items/7Ku0nre6/Image%202020-05-14%20at%207.39.37%20AM.png?v=87bac6e27ab8c5c303df01a64519ae0d)
+
+## RStudio Setup
+
+### Defaults
+
+Please use default fonts while you are teaching. Pretty as they are,
+please don't use fonts like [Fira
+Code](https://benjaminlmoore.wordpress.com/2017/07/19/ligature-fonts-for-r/),
+as the differences in how they render the assignment operator, for
+example, can be confusing for newbies.
+
+## Code Style
+
+Please follow the [tidyverse style guide](https://style.tidyverse.org/) as closely as possible. The most important thing is to have code that is easy to read for new learners. You're welcome to use the [`styler` package](https://styler.r-lib.org/) to format your code.
+
+## Recording Videos
+
+I record using Screenflow. If you're on a Mac, you'll get a license for it. If not, we'll discuss options. 
+
+### Recording Procedures
+
+I'm generally not that fussy about making sure everything is super high
+quality, but please use an external camera and external mic to record.
+Please put your mic as close to you as possible, but make sure it
+doesn't show up on camera. If you are interested in learning some tips
+about high-quality screencasting, [this guide from
+Egghead](https://howtoegghead.com/instructor/screencasting/) is helpful.
+
+My general experience is that it's easier to record videos by just
+hitting record and going through your lesson as many times as you need
+to. I often make mistakes along the way, but that's ok because we can
+edit them out after the fact. Just go back to right before you messed up
+and start again! You can, of course, record so you get a single
+high-quality take, but I find that hard to do and way too much pressure.
+
+### Sharing Videos with David
+
+Please share the raw videos you record in the Google Drive folder that
+David sets up for you. Make sure they are labeled so I know what each
+video is.
+
+## Video Editing
+
+David will edit all of your videos. 

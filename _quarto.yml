@@ -12,7 +12,7 @@ website:
  
 
   sidebar:
-    style: "floating"
+    style: "docked"
     search: true
     border: true
     logo: assets/rru-logo-text-right-stacked.png

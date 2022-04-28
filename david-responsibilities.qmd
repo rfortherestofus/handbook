@@ -1,4 +1,53 @@
 ---
 title: "David's Responsibilities"
-
 ---
+
+As R for the Rest of Us has grown, my work away from doing all of the teaching and all of the consulting to being someone who facilitates others doing this work. In 2021, I make a conscious decision to try to achieve two goals:
+
+1. Increase course revenue
+2. Project manage (not do) most consulting projects
+
+To achieve the first goal, I did two things: 
+
+1. I developed a complex system of email automations (see [Email Automation](email-automations.html)) based on what I have learned in the Mastering ConvertKit course
+2. Partner with other R users to develop topics courses in areas of their expertise
+
+To achieve the second goal, I have worked with consultants throughout 2021 on a range of projects. 
+
+## Core Responsibilities
+
+As of mid-2021, my core responsibilities are below. To be clear, I do a LOT more than just these things. But these are the high-leverage things that I should focus my time and attention on. 
+
+### Strategy
+
+Think about the future direction of R for the Rest of Us
+
+Ensure we have the team necessary to achieve goals
+
+### Marketing
+
+Develop blog posts and other content
+
+Maintain email automation system
+
+Regularly share useful R content through social media
+
+### Consulting Business Development
+
+Meet with potential clients about consulting projects
+
+Develop proposals for clients
+
+### Consulting Project Management
+
+Communicate with clients about project progress
+
+Work with consultants to get projects done on time
+
+### Course Development
+
+Reach out to potential instructors to gauge interest
+
+Work with instructors to develop courses
+
+Create courses on website

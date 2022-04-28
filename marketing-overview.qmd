@@ -2,4 +2,9 @@
 title: "Marketing Overview"
 ---
 
-About this site
+Our basic approach to marketing is simple: 
+
+> Don't market, educate.
+> 
+
+By educating, we show people what R is and what you can do with it. Once they appreciate these things, they're more likely to want to learn R themselves or to hire us to help them do something with it.

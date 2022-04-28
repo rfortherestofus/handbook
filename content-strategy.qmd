@@ -2,4 +2,23 @@
 title: "Content Strategy"
 ---
 
-About this site
+R for the Rest of Us produces multiple types of content. All content that is produced for one place should be reused on social media as much as possible to get the word out about R for the Rest of Us. For example:
+
+- Videos from courses can be shared on social media
+- Blog posts can be turned into Twitter threads
+- Etc.
+
+## Paid Content
+
+Courses are obviously paid content. 
+
+## Free Content
+
+We use free content to build authority so that people see R for the Rest of Us as worth purchasing things (courses, custom training, consulting services) from
+
+The main content that we produce is on our blog. There are two types of articles that we write:
+
+1. Tutorials
+2. Posts that explain why R is worth learning
+
+The other main content is emails (see [Email Marketing](https://www.notion.so/Email-Marketing-cd082f1d53b44cfd9ab210648f72ebe3)). Although most emails are simply introductions and links to other content, some emails are unique content on their own.

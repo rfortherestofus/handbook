@@ -1,4 +1,25 @@
 ---
 title: "Communication"
-
 ---
+
+## Internal Communication
+
+As a fully remote company, we try to communicate by writing as much as possible. Doing so has many benefits:
+
+1. It forces us to clarify our thinking
+2. It provides a record of decisions for those who may join things midstream
+3. It allows people to work on their own time without feeling the need to join live calls etc
+
+Internal communication happens, as much as possible, in Twist. There are currently two channels:
+
+- #admin for David and Nicole to discuss admin tasks
+- #general for everything else
+
+Other places internal communication happens include:
+
+- GitHub for discussion of specific issues on code-based projects
+- Todoist comments for questions on specific tasks to be done
+
+## External Communication
+
+External communication with clients and others happens mostly through email.

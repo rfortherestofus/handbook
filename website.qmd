@@ -2,4 +2,50 @@
 title: "Website"
 ---
 
-About this site
+R for the Rest of Us runs on a **WordPress** website hosted by **Kinsta**. 
+
+## Theme
+
+The site uses the [BuddyBoss theme](https://www.buddyboss.com/resources/docs/buddyboss-theme/). Some of the most important pages (e.g. Home, About, Consulting) are generated with custom templates that use Tailwind CSS. These are edited locally, the templates are pushed to [this GitHub repo](https://github.com/rfortherestofus/buddyboss-theme-child), and then the **WP Pusher** plugin adds them to the website. 
+
+## Custom Post Types
+
+I've created several custom post types using the **Pods** plugin:
+
+- **Clients** hosts pages with content for specific clients
+- **Presentations**
+- **Resources** hosts resources for the [resources page](https://rfortherestofus.com/resources/)
+- **Success Stories** hosts pages that highlight successful projects we've worked on
+- **Thanks** hosts various pages that say thanks to people (used mostly for when people click things in ConvertKit)
+
+## Plugins
+
+The website uses many plugins. Here are some of the most important and less obvious ones. 
+
+**AffiliateWP** enables us to have affiliates who are paid for referring customers (not currently using this)
+
+**BuddyBoss Platform + BuddyBoss Platform Pro** hosts groups and forums for cohort-based courses
+
+**ConvertKit** allows me to do things like apply a tag to a customer whenever they purchase a course
+
+**FacetWP** is what I use to create a searchable, filterable resources page
+
+**LearnDash** is probably the most important plugin. It is what we use to manage all courses. BuddyBoss integrates with it, making the course pages even more attractive. The one thing to note with LearnDash is that we use WooCommerce for signup and just use LearnDash itself for the course stuff.
+
+**Loco Translate** allows us to use different terms for things (e.g. Meetings instead of Zoom in BuddyBoss)
+
+**NinjaForms** is what we use for all forms
+
+**Pods** creates custom post types
+
+**SEOPress + SEOPress Pro** is used for all SEO stuff
+
+**WooCommerce** is how we handle all ecommerce on the site. We also use add-on Woo plugins:
+
+- **WooCommerce Price Based on Country** allows us to set lower prices for those in lower GDP countries
+- **WooCommerce Product Vendors** allows us to track commissions for course instructors
+- **WooCommerce Smart Coupons** allows us to set up coupons for gift certificates
+- **WooCommerce Stripe Gateway** allows us to use Stripe to process credit cards (we also reluctantly use PayPal)
+- **WooCommerce Zapier** allows us to create coupons for users from using Zapier when they are in their pitch window (see [Email Marketing](https://www.notion.so/Email-Marketing-cd082f1d53b44cfd9ab210648f72ebe3))
+
+**WP Pusher** syncs our child theme from [this GitHub repo](https://www.notion.so/Website-19a7362de25746679ea61ccac1bae983) to the website

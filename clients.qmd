@@ -1,4 +1,35 @@
 ---
 title: "Clients"
-
 ---
+
+Here is a list of clients we have worked with and a sample of the projects we've worked on with them.
+
+**API Council:** San Francisco-based non-profit that advocates for the Asian Pacific Islander community. We built a [food resources map](https://foodmap.apicouncil.org/) for them in 2021.
+
+**Aspect Evaluation:** Very small (one-person, I believe) evaluation firm in Seattle. We made some visualizations for them in 2020. 
+
+**CTData:** Connecticut-based non-profit. [We worked with them and their client the Partnership for Strong Communities to make housing reports in 2020](https://rfortherestofus.com/success-stories/pschousing/). 
+
+**Evaluation by Design:** Very small (one-person, I believe) evaluation firm in the Bay Area. We helped them to develop strategy and reporting on their [21st century skills training program](https://evaluationbydesign.com/survey21cs/).
+
+**Ford Family Foundation:** The client we've worked with the longest (since ~2017). We've done several data viz projects for them. The most notable is [Oregon by the Numbers](http://tfff.org/obtn), but we've also done multiple internal projects.
+
+**ISTE/EdSurge:** A non-profit education news site. We did a couple data visualizations for them focused on COVID and school reopening in 2020. 
+
+**Michigan Fitness Foundation:** Non-profit focused on health. We have been doing custom training with them (mostly in the form of regular check-in calls) since 2020.
+
+**OMNI Institute:** Colorado-based evaluation firm. We trained their staff on R in 2019. Since then, we've done some additional training for them as well as some smaller consulting projects around survey reporting. 
+
+**ORS Impact:** Seattle-based evaluation firm. We're currently helping them with a set of reports on 2020 Census outreach efforts. 
+
+**Pacific Research and Evaluation:** A Portland-based evaluation firm, we trained them in R in 2019. Since then, we've done a few small consulting projects for them, mostly around making maps. 
+
+**Prosper Portland:** Small business development agency for the city of Portland. We did a training with their data team in 2019. We've also done a series of smaller consulting projects with them since then. 
+
+**Public Profit:** Oakland-based evaluation firm. We trained their team in 2018.
+
+**Reading Partners:** National non-profit that promotes literacy. We trained their team in 2019. We also developed an internal dashboard for them.
+
+**TORV LLC:** Colorado-based consulting firm that works with golf courses and sports fields. We're helping them to automate reporting.
+
+**The Mark:** Southern California-based evaluation firm. They took some of our courses as a group in 2020 and had us develop some docs for them.

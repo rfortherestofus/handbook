@@ -43,7 +43,7 @@
   <![endif]-->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="floating fullcontent">
+<body class="docked">
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -58,7 +58,7 @@
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="./">
       <img src="./assets/rru-logo-text-right-stacked.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -190,16 +190,52 @@
     </div>
 </nav>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+<h2 id="toc-title">On this page</h2>
+<ul>
+<li><a href="#tools" id="toc-tools" class="nav-link active" data-scroll-target="#tools">Tools</a></li>
+<li><a href="#client-communication" id="toc-client-communication" class="nav-link" data-scroll-target="#client-communication">Client Communication</a></li>
+</ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <header id="title-block-header" class="quarto-title-block default">
 
 <div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Project Management</h1></div></header>
-<p>About this site</p>
+
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<p>The overall way we manage projects is this:</p>
+<ol type="1">
+<li>Overall milestones live in Todoist</li>
+<li>Code-related granular issues live in GitHub</li>
+<li>Any general discussion about projects can go in GitHub discussions or in a thread on Twist</li>
+</ol>
+<p>Starting out, think about the major milestones in a project. These should be put into <strong>Todoist</strong>. This allows David (or anyone, in fact) to see the major milestones and associated timing for a project.</p>
+<p>From there, a <strong>GitHub repo</strong> (set to private unless the client is ok with it being public) should be created.</p>
+<ul>
+<li>Use the <strong>README</strong> to lay out the overall project scope, deliverables, etc.</li>
+<li>Use <strong>issues</strong> to manage code-related questions at a granular level.</li>
+<li>If it’s helpful, feel free to use <strong>milestones</strong> (they would largely just mirror the Todoist tasks, though, so it’s not necessary).</li>
+<li>You can also enable <strong>GitHub Discussions</strong> to discuss more general things.</li>
+</ul>
+<p>We can also use Twist to communicate about projects. This is a good place for things we’d like to keep confidential (because we work more and more with clients directly in GitHub, that isn’t the best place for confidential discussions).</p>
+</section>
+<section id="client-communication" class="level2">
+<h2 class="anchored" data-anchor-id="client-communication">Client Communication</h2>
+<p>The most important thing we can do is communicate effectively and regularly. This means getting back to clients within 24 hours.</p>
+<p>The type of communication we use with clients depends on the client.</p>
+<ul>
+<li>If clients are comfortable working in GtiHub, feel free to add them to the appropriate repo.</li>
+<li>If they don’t want to work in GitHub (most don’t), email is generally best.</li>
+</ul>
+<p>I generally try to send clients updates by email about overall progress every 1-2 weeks to make sure they know what’s going on and see if they have any questions.</p>
 
 
 
+</section>
 </main> <!-- /main -->
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

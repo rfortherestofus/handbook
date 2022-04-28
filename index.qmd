@@ -4,7 +4,7 @@ title: "Welcome"
 
 Welcome! You are reading an in-progress version of the R for the Rest of Us handbook.
 
-# Mission
+## Mission
 
 The goal of R for the Rest of Us is to help people use R to do good in the world.
 
@@ -34,7 +34,7 @@ On the consulting side, we do a range of projects. Almost all of them involve so
 
 ## Roadmap
 
-As a business that does both education and consulting work, the [R for the Rest of Us Roadmap](https://www.notion.so/R-for-the-Rest-of-Us-Roadmap-7adbf96e7c66498590f07b4219b042e6) is guided by internal and external factors. We do our best to be thoughtful about future directions we think are useful based on customer feedback while also leaving space to adjust based on new information.
+As a business that does both education and consulting work, the R for the Rest of Us roadmap is guided by internal and external factors. We do our best to be thoughtful about future directions we think are useful based on customer feedback while also leaving space to adjust based on new information.
 
 ## A Business with a Social Conscience
 
@@ -48,6 +48,6 @@ R for the Rest of Us is not just a money-making enterprise. I also want it to be
 
 ## People
 
-R for the Rest of Us is headed by David Keyes. I've outlined my role in [David's Responsibilities](https://www.notion.so/David-s-Responsibilities-4572e4cd4a334b76aff7d6a491375192).
+R for the Rest of Us is headed by David Keyes. I've outlined my role in [David's Responsibilities](david-responsibilities.html).
 
 Current **consultants** include Charlie Hadley, Thomas Vroylandt, and Cara Thompson. Other consultants are brought in for individual projects.

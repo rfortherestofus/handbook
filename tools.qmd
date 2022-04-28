@@ -1,4 +1,80 @@
 ---
 title: "Tools"
-
 ---
+
+This is an overview of tools we use. Details on how we use them are laid out in other pages in the handbook.
+
+## Handbook
+
+You're reading the handbook in **Notion**. We use Notion to create internal docs that show how R for the Rest of Us runs. 
+
+## Communication
+
+Email happens through **Gmail**. We have access to the full Google Suite tools, but only use Docs, Sheets, etc periodically. 
+
+**Twist** is where we communicate internally. 
+
+## Task/Project Management
+
+We use **Todoist** to lay out tasks to be done on projects. Generally speaking, we only lay out major milestones on Todoist projects (e.g. finish all data viz on X project on July 23). Communication about specific tasks should happen in the comments section of those tasks. 
+
+Code-based projects have major milestones laid out in Todoist, but then use **GitHub** to discuss individual issues. 
+
+## **Time Tracking**
+
+Time tracking happens in **Toggl**.
+
+## Scheduling
+
+We use **SavvyCal** to schedule meetings with clients.
+
+## Financial
+
+We use **QuickBooks** for accounting and invoicing. 
+
+Payroll happens through **Gusto**.
+
+## Proposal and Contracts
+
+Proposals and contracts are written and sent with **PandaDoc**.
+
+## **Design**
+
+We use **Figma** to make all design assets.
+
+## Passwords
+
+We manage passwords with **1Password**.
+
+## Website
+
+The website runs on **WordPress** and is hosted by **Kinsta**. There are **various paid plugins** that help do specific things on the website. See [Website](website.html).
+
+Website analytics are provided by **Fathom**.
+
+## Video Creation
+
+When providing quick feedback videos, we use **CloudApp**.
+
+To record videos for courses, we use either **Screenflow**, **OBS Studio**, **Streamlabs** (depending on instructor operating system + preferences).
+
+Video editing happens in **Screenflow**.
+
+Captions for videos are made using **muse.ai**.
+
+## Video Hosting
+
+Course videos, teaching videos, etc are hosted on **muse.ai** and embedded on the website.
+
+There is an R for the Rest of Us YouTube channel that I've only periodically used. 
+
+## Social Media
+
+We use two tools to schedule social media content:
+
+1. **Buffer** is where we set up a queue of regular R content created by others to go out on Twitter. 
+2. If we need to schedule Twitter threads, we use **Typefully**.
+
+## Automation
+
+We use **Zapier** to automate various processes (e.g. when a user completes a course, Zapier sends that data to ConvertKit).
