@@ -26,7 +26,6 @@ website:
         - communication.qmd
         - finances.qmd
         - contracts.qmd
-        - clients.qmd
       - section: "Marketing"
         contents:
         - marketing-overview.qmd
