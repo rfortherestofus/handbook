@@ -121,56 +121,56 @@
   {
     "objectID": "course-manual.html",
     "href": "course-manual.html",
-    "title": "Course Manual",
+    "title": "Making an R for the Rest of Us Course",
     "section": "",
     "text": "These are instructions for making an R for the Rest of Us online course. The overall process from start to finish looks something like this:\nIntro Call\n\nGo over terms\nDiscuss timing\nShare course-making manual\nConfirm instructor has access to external camera and mic\n\nContract + Advance\n\nDavid + instructor sign contract and\nDavid pays advance to instructor\n\nSet up Infrastructure\n\nDavid sets up shared Google Drive folder\nDavid creates Google Sheet for course outline\n\nDevelop Outline\n\nExplain how lessons work (e.g. video, your turn, solutions, learn more)\n\nDevelop slides\n\nDavid shares rruthemes package to be used\nInstructor develops slides\nDavid approves slides\n\nRecord Videos\n\nInstructor records single test video\nDavid approves test video\nInstructor records remaining videos, including solutions\n\nEdit videos\n\nDavid’s video editor edits videos\n\nPut content on website\n\nFinal approval from instructor\n\nMarketing for course launch\n\nDavid + instructor develop email sequence\nDavid + instructor plan out social media launch\n\nAdd content to website\n\nMake landing page for course\nAll material added to website\n\nCourse launch!"
   },
   {
     "objectID": "course-manual.html#legal-and-financial",
     "href": "course-manual.html#legal-and-financial",
-    "title": "Course Manual",
+    "title": "Making an R for the Rest of Us Course",
     "section": "Legal and Financial",
     "text": "Legal and Financial\nHere are the legal and financial terms that I typically use when working with course instructors. I’m flexible and happy to work with you to come up with a solution that meets both of our needs.\n\nCompensation\nI pay an advance to the course creator of $500, half on signing the contract to work together, and the other half when all videos for the course are recorded and uploaded to Google Drive.\nRevenue for the courses is split 60/40 (60% for R for the Rest of Us, 40% for the course creator). I pay any royalties owed to the course creator on a quarterly basis.\n\n\nOwnership\nAll videos are owned by R for the Rest of Us.\nAll non-video materials will be made freely available on the R for the Rest of Us organization GitHub using a CC-BY-SA-4.0 License.\n\n\nExclusivity\nThe instructor agrees not to create a course that covers the same topic on another online platform for at least 12 months from the release of this course.\n\n\nAgreement Expiration\nThese terms remain in effect for one year after the course is released. After that, David and the instructor will discuss any possible changes to the terms."
   },
   {
     "objectID": "course-manual.html#curriculum-development",
     "href": "course-manual.html#curriculum-development",
-    "title": "Course Manual",
+    "title": "Making an R for the Rest of Us Course",
     "section": "Curriculum Development",
     "text": "Curriculum Development\nYou’ll develop your curriculum as a combination of slides, exercises, and examples. Here’s how I’ve used the three, but please note that this is just my approach. I want you to think about what’s going to work best for your materials.\nI start out each section of my course with slides. In my courses, a section is RMarkdown or data wrangling and analysis or data visualization. I have a slide with the section title that I display as I talk through an overview of that section.\nEach lesson within a section should be short and focus on a single topic. As you’re making your materials, if you think that a video demonstrating the concept will go beyond 5 minutes or so, consider breaking it into multiple lessons.\nI typically start a lesson with slides. I’ll start with a slide that lays out the concept. I’ll often have code on this slide.\n I’ll usually then flip over to RStudio to show myself typing out the code to demonstrate this concept in an exercises file.\nYou can see an example of a whole lesson, complete with all parts here.\n\nLesson Content\nI usually use a Google Sheet to help collaborate with the instructor on course materials. Here’s a sample of what the Google Sheet includes. The Google Sheet has places for thinking about lesson content, data, exercises, solutions, and learn more resources."
   },
   {
     "objectID": "course-manual.html#course-materials",
     "href": "course-manual.html#course-materials",
-    "title": "Course Manual",
+    "title": "Making an R for the Rest of Us Course",
     "section": "Course Materials",
     "text": "Course Materials\n\nGitHub Repo\nEach course will have a GitHub repo on the R for the Rest of Us organization account. David will create this and add you to the repo.\n\n\nProject Organization\n\n\nSlides\n\nSlides Template\nSlides for R for the Rest of Us courses are made using the xaringan package.\nThere is a custom template to use to make slides in the R for the Rest of Us style. You can access this by installing the rfortherestofus package using the following code:\n\n\n\nPlease create a slides directory where all of your slides will live.\nYou can create slides as follows:\n\n\nSlides Organization\nMost lessons should have a My Turn and a Your Turn section. The slide for the My Turn section should have an orange background and the slide for the Your Turn section should have a dark background.\nTo do this, add the class my-turn and the class inverse to your slides as follows:"
   },
   {
     "objectID": "course-manual.html#rstudio-setup",
     "href": "course-manual.html#rstudio-setup",
-    "title": "Course Manual",
+    "title": "Making an R for the Rest of Us Course",
     "section": "RStudio Setup",
     "text": "RStudio Setup\n\nDefaults\nPlease use default fonts while you are teaching. Pretty as they are, please don’t use fonts like Fira Code, as the differences in how they render the assignment operator, for example, can be confusing for newbies."
   },
   {
     "objectID": "course-manual.html#code-style",
     "href": "course-manual.html#code-style",
-    "title": "Course Manual",
+    "title": "Making an R for the Rest of Us Course",
     "section": "Code Style",
     "text": "Code Style\nPlease follow the tidyverse style guide as closely as possible. The most important thing is to have code that is easy to read for new learners. You’re welcome to use the styler package to format your code."
   },
   {
     "objectID": "course-manual.html#recording-videos",
     "href": "course-manual.html#recording-videos",
-    "title": "Course Manual",
+    "title": "Making an R for the Rest of Us Course",
     "section": "Recording Videos",
     "text": "Recording Videos\nI record using Screenflow. If you’re on a Mac, you’ll get a license for it. If not, we’ll discuss options.\n\nRecording Procedures\nI’m generally not that fussy about making sure everything is super high quality, but please use an external camera and external mic to record. Please put your mic as close to you as possible, but make sure it doesn’t show up on camera. If you are interested in learning some tips about high-quality screencasting, this guide from Egghead is helpful.\nMy general experience is that it’s easier to record videos by just hitting record and going through your lesson as many times as you need to. I often make mistakes along the way, but that’s ok because we can edit them out after the fact. Just go back to right before you messed up and start again! You can, of course, record so you get a single high-quality take, but I find that hard to do and way too much pressure.\n\n\nSharing Videos with David\nPlease share the raw videos you record in the Google Drive folder that David sets up for you. Make sure they are labeled so I know what each video is."
   },
   {
     "objectID": "course-manual.html#video-editing",
     "href": "course-manual.html#video-editing",
-    "title": "Course Manual",
+    "title": "Making an R for the Rest of Us Course",
     "section": "Video Editing",
     "text": "Video Editing\nDavid will edit all of your videos."
   },
