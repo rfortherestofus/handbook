@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.183">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>R for the Rest of Us Handbook - Welcome</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+
+  <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+  <script src="site_libs/quarto-nav/headroom.min.js"></script>
+  <script src="site_libs/clipboard/clipboard.min.js"></script>
+  <script src="site_libs/quarto-html/quarto.js"></script>
+  <script src="site_libs/quarto-html/popper.min.js"></script>
+  <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="site_libs/quarto-html/anchor.min.js"></script>
+  <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+  <link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="site_libs/bootstrap/bootstrap.min.js"></script>
+  <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <script id="quarto-search-options" type="application/json">{
+    "language": {
+      "search-no-results-text": "No results",
+      "search-matching-documents-text": "matching documents",
+      "search-copy-link-title": "Copy link to search",
+      "search-hide-matches-text": "Hide additional matches",
+      "search-more-match-text": "more match in this document",
+      "search-more-matches-text": "more matches in this document",
+      "search-clear-button-title": "Clear",
+      "search-detached-cancel-button-title": "Cancel",
+      "search-submit-button-title": "Submit"
+    }
+  }</script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="docked">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Welcome</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./">
+      <img src="./assets/rru-logo-text-right-stacked.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">Welcome</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Operations</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./david-work.html" class="sidebar-item-text sidebar-link">David’s Work</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tools.html" class="sidebar-item-text sidebar-link">Tools</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./communication.html" class="sidebar-item-text sidebar-link">Communication</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./finances.html" class="sidebar-item-text sidebar-link">Finances</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./contracts.html" class="sidebar-item-text sidebar-link">Contracts</a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Marketing</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./marketing-overview.html" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./branding.html" class="sidebar-item-text sidebar-link">Branding</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./website.html" class="sidebar-item-text sidebar-link">Website</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./content-strategy.html" class="sidebar-item-text sidebar-link">Content Strategy</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./email-automations.html" class="sidebar-item-text sidebar-link">Email Automations</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./social-media.html" class="sidebar-item-text sidebar-link">Social Media</a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Courses</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./courses-overview.html" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./courses-legal-financial.html" class="sidebar-item-text sidebar-link">Terms</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./courses-curriculum.html" class="sidebar-item-text sidebar-link">Curriculum</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./courses-recording.html" class="sidebar-item-text sidebar-link">Recording</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./courses-production.html" class="sidebar-item-text sidebar-link">Production</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./courses-marketing.html" class="sidebar-item-text sidebar-link">Marketing</a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Consulting</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./project-management.html" class="sidebar-item-text sidebar-link">Project Management</a>
+  </div>
+</li>
+    </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+<h2 id="toc-title">On this page</h2>
+<ul>
+<li><a href="#mission" id="toc-mission" class="nav-link active" data-scroll-target="#mission">Mission</a></li>
+<li><a href="#our-work" id="toc-our-work" class="nav-link" data-scroll-target="#our-work">Our Work</a>
+<ul class="collapse">
+<li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">Education</a></li>
+<li><a href="#consulting" id="toc-consulting" class="nav-link" data-scroll-target="#consulting">Consulting</a></li>
+</ul></li>
+<li><a href="#roadmap" id="toc-roadmap" class="nav-link" data-scroll-target="#roadmap">Roadmap</a></li>
+<li><a href="#a-business-with-a-social-conscience" id="toc-a-business-with-a-social-conscience" class="nav-link" data-scroll-target="#a-business-with-a-social-conscience">A Business with a Social Conscience</a></li>
+<li><a href="#people" id="toc-people" class="nav-link" data-scroll-target="#people">People</a></li>
+<li><a href="#clients" id="toc-clients" class="nav-link" data-scroll-target="#clients">Clients</a></li>
+</ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+
+<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Welcome</h1></div></header>
+
+<p>Welcome! You are reading an in-progress version of the R for the Rest of Us handbook.</p>
+<section id="mission" class="level2">
+<h2 class="anchored" data-anchor-id="mission">Mission</h2>
+<p>The goal of R for the Rest of Us is to help people use R to do good in the world.</p>
+</section>
+<section id="our-work" class="level2">
+<h2 class="anchored" data-anchor-id="our-work">Our Work</h2>
+<p>The business has two main arms: education and consulting.</p>
+<section id="education" class="level3">
+<h3 class="anchored" data-anchor-id="education">Education</h3>
+<p>On the education side, we offer:</p>
+<ol type="1">
+<li><p>Self-paced and cohort-based courses</p></li>
+<li><p>In-person public workshops</p></li>
+<li><p>Custom training for organizations</p></li>
+</ol>
+</section>
+<section id="consulting" class="level3">
+<h3 class="anchored" data-anchor-id="consulting">Consulting</h3>
+<p>On the consulting side, we do a range of projects. Almost all of them involve some combination of:</p>
+<ol type="1">
+<li><p>Data visualization</p></li>
+<li><p>Using R to improve workflows</p></li>
+<li><p>Automating reporting (especially with parameterized reporting)</p></li>
+</ol>
+</section>
+</section>
+<section id="roadmap" class="level2">
+<h2 class="anchored" data-anchor-id="roadmap">Roadmap</h2>
+<p>As a business that does both education and consulting work, the R for the Rest of Us roadmap is guided by internal and external factors. We do our best to be thoughtful about future directions we think are useful based on customer feedback while also leaving space to adjust based on new information.</p>
+</section>
+<section id="a-business-with-a-social-conscience" class="level2">
+<h2 class="anchored" data-anchor-id="a-business-with-a-social-conscience">A Business with a Social Conscience</h2>
+<p>R for the Rest of Us is not just a money-making enterprise. I also want it to be a business with a social conscience. We put this into practice by:</p>
+<ol type="1">
+<li><p>Highlighting important issues in the work we do (e.g.&nbsp;the types of projects we work on)</p></li>
+<li><p>Making it possible for people of various means to learn R (through parity purchasing power and scholarships)</p></li>
+<li><p>Donating a portion of revenue to organizations working for social justice</p></li>
+</ol>
+</section>
+<section id="people" class="level2">
+<h2 class="anchored" data-anchor-id="people">People</h2>
+<p>R for the Rest of Us is headed by David Keyes. I’ve outlined my role in <a href="david-responsibilities.html">David’s Responsibilities</a>.</p>
+<p>Current <strong>consultants</strong> include Charlie Hadley, Thomas Vroylandt, and Cara Thompson. Other consultants are brought in for individual projects.</p>
+</section>
+<section id="clients" class="level2">
+<h2 class="anchored" data-anchor-id="clients">Clients</h2>
+<p>Here is a list of clients we have worked with and a sample of the projects we’ve worked on with them.</p>
+<p><strong>API Council:</strong> San Francisco-based non-profit that advocates for the Asian Pacific Islander community. We built a <a href="https://foodmap.apicouncil.org/">food resources map</a> for them in 2021.</p>
+<p><strong>Aspect Evaluation:</strong> Very small (one-person, I believe) evaluation firm in Seattle. We made some visualizations for them in 2020.</p>
+<p><strong>CTData:</strong> Connecticut-based non-profit. <a href="https://rfortherestofus.com/success-stories/pschousing/">We worked with them and their client the Partnership for Strong Communities to make housing reports in 2020</a>.</p>
+<p><strong>Evaluation by Design:</strong> Very small (one-person, I believe) evaluation firm in the Bay Area. We helped them to develop strategy and reporting on their <a href="https://evaluationbydesign.com/survey21cs/">21st century skills training program</a>.</p>
+<p><strong>Ford Family Foundation:</strong> The client we’ve worked with the longest (since ~2017). We’ve done several data viz projects for them. The most notable is <a href="http://tfff.org/obtn">Oregon by the Numbers</a>, but we’ve also done multiple internal projects.</p>
+<p><strong>ISTE/EdSurge:</strong> A non-profit education news site. We did a couple data visualizations for them focused on COVID and school reopening in 2020.</p>
+<p><strong>Michigan Fitness Foundation:</strong> Non-profit focused on health. We have been doing custom training with them (mostly in the form of regular check-in calls) since 2020.</p>
+<p><strong>OMNI Institute:</strong> Colorado-based evaluation firm. We trained their staff on R in 2019. Since then, we’ve done some additional training for them as well as some smaller consulting projects around survey reporting.</p>
+<p><strong>ORS Impact:</strong> Seattle-based evaluation firm. We’re currently helping them with a set of reports on 2020 Census outreach efforts.</p>
+<p><strong>Pacific Research and Evaluation:</strong> A Portland-based evaluation firm, we trained them in R in 2019. Since then, we’ve done a few small consulting projects for them, mostly around making maps.</p>
+<p><strong>Prosper Portland:</strong> Small business development agency for the city of Portland. We did a training with their data team in 2019. We’ve also done a series of smaller consulting projects with them since then.</p>
+<p><strong>Public Profit:</strong> Oakland-based evaluation firm. We trained their team in 2018.</p>
+<p><strong>Reading Partners:</strong> National non-profit that promotes literacy. We trained their team in 2019. We also developed an internal dashboard for them.</p>
+<p><strong>TORV LLC:</strong> Colorado-based consulting firm that works with golf courses and sports fields. We’re helping them to automate reporting.</p>
+<p><strong>The Mark:</strong> Southern California-based evaluation firm. They took some of our courses as a group in 2020 and had us develop some docs for them.</p>
+
+
+
+</section>
+</main> <!-- /main -->
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+</body></html>
