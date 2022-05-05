@@ -1,0 +1,54 @@
+---
+title: "Overview"
+---
+
+R for the Rest of Us has multiple [self-paced online courses](https://rfortherestofus.com/online-courses). The core courses (i.e. for those just learning R) are taught by David. There are also topics courses taught by others. 
+
+These are instructions for making an R for the Rest of Us online course.
+The overall process from start to finish looks something like this:
+
+## Intro Call
+
+- Discuss course idea
+- Go over legal and financial terms
+- Discuss timing
+- Confirm instructor has access to external camera and mic
+- Share course-making instructions (i.e. what you're looking at) 
+
+## Terms
+
+- David + instructor sign contract
+- David pays 50% of advance to instructor
+
+## Curriculum
+
+- David explains how lessons work (e.g. video, your turn, solutions, learn more) 
+- David explains how to create course outline
+- David shares [rfortherestofus package](https://github.com/rfortherestofus/rfortherestofus) to be used for the custom xaringan template
+- Instructor develops slides
+- David approves slides
+
+## Recording
+
+- David sets up shared Google Drive folder for raw videos
+- Instructor records single test video 
+- David approves test video
+- Instructor records all lesson and solutions videos
+
+## Production
+
+- David edits videos
+- David has transcripts created for all videos
+- David puts videos and related materials on website
+- Instructor reviews and approves videos and course materials
+
+## Marketing
+
+- David makes course sales page
+- David develops launch email sequence 
+- David puts together social media launch
+
+## Course Launch!
+- Email goes out to list announcing that course is live
+
+

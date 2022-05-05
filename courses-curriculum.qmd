@@ -1,0 +1,121 @@
+---
+title: "Curriculum"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+
+## Outline
+
+You'll start out by creating an outline of your course. This will be
+done in the GitHub repo that David creates for your course.
+
+Please just create an outline.Rmd file for this. Use the following
+format:
+
+**Section Name (H1)**
+
+**Lesson Title (H2)**
+
+Overview of lesson
+
+**My Turn (H3)**
+
+Overview of what you'll demonstrate
+
+**Your Turn (H3)**
+
+Exercise for student
+
+**Solutions Code (H3)**
+
+Code used for solution to Your Turn
+
+**Learn More (H3)**
+
+Text with additional info, resources, etc on topic of lesson
+
+## Sections
+
+R for the Rest of Us courses are broken up into lessons and sections.
+Related lessons should be combined into sections. For example, my
+Fundamentals of R course has sections on RMarkdown, Data Wrangling and
+Analysis, and Data Visualization. ![](assets/course-sections.png)
+
+## Lessons
+
+The number of lessons varies by course. However, as a general rule, core
+courses tend to be longer (between 30 and 40 lessons) while topics
+courses tend to be shorter (15 to 30 lessons).
+
+Each lesson should cover one distinct topic. Each lesson within a
+section should be short and focus on a single topic. As you're making
+your materials, if you think that a video demonstrating the concept will
+go beyond 10 minutes or so, consider breaking it into multiple lessons.
+
+Each lesson has the following sections:
+
+1.  Video overview
+2.  Your Turn exercise (some lessons don't lend themselves to this and
+    don't have an exercise)
+3.  Code and video solutions (only if there is a Your Turn)
+4.  Learn More section with links to resources on that topic
+
+Here's what it looks like (you can see this lesson
+[here](https://rfortherestofus.com/lessons/group_by/)).
+
+![](assets/sample-lesson.png)
+
+I typically start a lesson with slides. I'll start with a slide that
+lays out the concept. I'll often have code on this slide. 
+
+I'll usually then flip over to RStudio to show myself typing out the code to
+demonstrate this concept in an exercises file. I call this the My Turn. Here's a sample lesson. 
+
+::: {.muse-video-player data-video="7VqNKJc" data-logo="0" data-width="600"}
+:::
+
+```{=html}
+<script src="https://muse.ai/static/js/embed-player.min.js"></script>
+```
+
+
+## Materials
+
+The materials for each courses lives in a GitHub repo on the R for the Rest of Us
+organization account. David will create this and add you to the repo.
+
+### Slides
+
+Slides for R for the Rest of Us courses are made using the [`xaringan`
+package](https://github.com/yihui/xaringan).
+
+There is a custom template to use to make slides in the R for the Rest
+of Us style. You can access this by installing the [`rfortherestofus`
+package](https://github.com/rfortherestofus/rfortherestofus) using the
+following code:
+
+```{r eval = FALSE}
+devtools::install_github("rfortherestofus/rfortherestofus")
+```
+
+You can then add slides by going to File > New File > RMarkdown and selecting the R for the Rest of Us template.
+
+![](assets/rru-xaringan-template.png)
+
+
+Please create a `slides` directory where all of your slides will live.
+
+You can create slides as follows:
+
+Most lessons should have a My Turn and a Your Turn section. The slide
+for the My Turn section should have an orange background and the slide
+for the Your Turn section should have a dark background. To do this, add the class `my-turn` and the class `inverse` to your
+slides as follows:
+
+![](assets/your-turn.png)
+
+### Other Materials
+
+Any other materials that you want people to access can live in the repo. Please organize however you see fit.

@@ -21,7 +21,7 @@ website:
       - index.qmd
       - section: "Operations"
         contents:
-        - david-responsibilities.qmd
+        - david-work.qmd
         - tools.qmd
         - communication.qmd
         - finances.qmd
@@ -34,9 +34,14 @@ website:
         - content-strategy.qmd
         - email-automations.qmd
         - social-media.qmd
-      - section: "Course Manual"
+      - section: "Courses"
         contents: 
-        - course-manual.qmd
+        - courses-overview.qmd
+        - courses-legal-financial.qmd
+        - courses-curriculum.qmd
+        - courses-recording.qmd
+        - courses-production.qmd
+        - courses-marketing.qmd
       - section: "Consulting"
         contents:
         - project-management.qmd

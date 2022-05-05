@@ -1,0 +1,50 @@
+---
+title: "Recording"
+---
+
+Once you've developed the course curriculum, you're ready to record. Here are some tips to help you do so successfully. 
+
+## Defaults
+
+Please use defaults when you teach. This means having your RStudio set up to look like it would for a student. If you move your panels around, for example, please revert to the default when recording lessons. 
+
+Please also use default fonts while you are teaching. Pretty as they are,
+please don't use fonts like [Fira
+Code](https://benjaminlmoore.wordpress.com/2017/07/19/ligature-fonts-for-r/),
+as the differences in how they render the assignment operator, for
+example, can be confusing for newbies.
+
+## Code Style
+
+Please follow the [tidyverse style guide](https://style.tidyverse.org/) as closely as possible. The most important thing is to have code that is easy to read for new learners. You're welcome to use the [`styler` package](https://styler.r-lib.org/) to format your code.
+
+
+## Recording Videos
+
+I record using Screenflow. If you're on a Mac, you'll get a license for it. If not, we'll discuss options. 
+
+### Recording Procedures
+
+I'm generally not that fussy about making sure everything is super high
+quality, but please use an external camera and external mic to record.
+Please put your mic as close to you as possible, but make sure it
+doesn't show up on camera. If you are interested in learning some tips
+about high-quality screencasting, [this guide from
+Egghead](https://howtoegghead.com/instructor/screencasting/) is helpful.
+
+My general experience is that it's easier to record videos by just
+hitting record and going through your lesson as many times as you need
+to. I often make mistakes along the way, but that's ok because we can
+edit them out after the fact. Just go back to right before you messed up
+and start again! You can, of course, record so you get a single
+high-quality take, but I find that hard to do and way too much pressure.
+
+### Sharing Videos with David
+
+Please share the raw videos you record in the Google Drive folder that
+David sets up for you. Make sure they are labeled so I know what each
+video is.
+
+## Video Editing
+
+David will edit all of your videos. 
