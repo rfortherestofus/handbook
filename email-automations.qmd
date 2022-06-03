@@ -117,7 +117,17 @@ After the user completes each part of the shadow newsletter, they get the tag Lo
 When the user gets put onto Function - Move to Pitch - Automation: 
 
 1. The user goes through the Function - Calculate Offer Funnel and Expertise Level - Automation, which calculates their next offer
-1. Based on the custom field next_offer, the user is put onto a PRODUCT - Pitch - Auomation for their next offer.
+1. Based on the custom field next_offer, the user is put onto a PRODUCT - Pitch - Automation for their next offer.
+
+#### Overview (how it works)
+
+*This is from my notes as I'm redoing this*
+
+Check what type of course they're interested in (core vs topics)
+
+If interested in topics courses, pitch in order: mapping, data cleaning, inferential stats
+
+If interested in core courses, pitch in order from easiest to hardest 
 
 ### Self-Paced Course Pitch
 
