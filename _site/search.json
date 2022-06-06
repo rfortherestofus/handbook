@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "courses-production.html",
+    "href": "courses-production.html",
+    "title": "Production",
+    "section": "",
+    "text": "After the instructor provides raw videos, David edits them. Most lessons have the following structure:\n\nFull screen on instructor as they introduce topic\nSwitch to instructor in corner with their screen as background\nZoom in on specific pieces of code as appropriate\nDo pans on other websites etc as appropriate\nMy Turn as appropriate\nYour Turn as appropriate"
+  },
+  {
+    "objectID": "courses-production.html#captions",
+    "href": "courses-production.html#captions",
+    "title": "Production",
+    "section": "Captions",
+    "text": "Captions"
+  },
+  {
+    "objectID": "courses-production.html#putting-content-on-website",
+    "href": "courses-production.html#putting-content-on-website",
+    "title": "Production",
+    "section": "Putting Content on Website",
+    "text": "Putting Content on Website"
+  },
+  {
     "objectID": "tools.html",
     "href": "tools.html",
     "title": "Tools",
@@ -60,7 +81,7 @@
     "href": "tools.html#design",
     "title": "Tools",
     "section": "Design",
-    "text": "Design\nWe use Figma to make all design assets."
+    "text": "Design\nWe use Figma and Canva to make all design assets."
   },
   {
     "objectID": "tools.html#passwords",
@@ -81,7 +102,7 @@
     "href": "tools.html#video-creation",
     "title": "Tools",
     "section": "Video Creation",
-    "text": "Video Creation\nWhen providing quick feedback videos, we use CloudApp.\nTo record videos for courses, we use either Screenflow, OBS Studio, Streamlabs (depending on instructor operating system + preferences).\nVideo editing happens in Screenflow.\nCaptions for videos are made using muse.ai."
+    "text": "Video Creation\nWhen providing quick feedback videos, we use CloudApp or CleanShot.\nTo record videos for courses, we use either Screenflow, OBS Studio, Streamlabs (depending on instructor operating system + preferences).\nVideo editing happens in Screenflow.\nCaptions for videos are made using Descript or muse.ai."
   },
   {
     "objectID": "tools.html#video-hosting",
@@ -95,7 +116,7 @@
     "href": "tools.html#social-media",
     "title": "Tools",
     "section": "Social Media",
-    "text": "Social Media\nWe use two tools to schedule social media content:\n\nBuffer is where we set up a queue of regular R content created by others to go out on Twitter.\nIf we need to schedule Twitter threads, we use Typefully."
+    "text": "Social Media\nWe use two tools to schedule social media content:\n\nBuffer is where we set up a queue of regular R content created by others to go out on Twitter. We also post our own content using Buffer, often piped through a Zapier automation from Airtable.\nIf we need to schedule Twitter threads, we use Typefully."
   },
   {
     "objectID": "tools.html#automation",
@@ -137,14 +158,14 @@
     "href": "david-work.html",
     "title": "David’s Work",
     "section": "",
-    "text": "As R for the Rest of Us has grown, my work away from doing all of the teaching and all of the consulting to being someone who facilitates others doing this work. In 2021, I make a conscious decision to try to achieve two goals:\nTo achieve the first goal, I did two things:\nTo achieve the second goal, I have worked with consultants throughout 2021 on a range of projects."
+    "text": "As R for the Rest of Us has grown, my work away from doing all of the teaching and all of the consulting to being someone who facilitates others doing this work. In 2021, I make a conscious decision to try to achieve two goals:\nTo achieve the first goal, I did two things:\nTo achieve the second goal, I have worked with consultants on a range of projects."
   },
   {
     "objectID": "david-work.html#core-responsibilities",
     "href": "david-work.html#core-responsibilities",
     "title": "David’s Work",
     "section": "Core Responsibilities",
-    "text": "Core Responsibilities\nAs of mid-2021, my core responsibilities are below. To be clear, I do a LOT more than just these things. But these are the high-leverage things that I should focus my time and attention on.\n\nStrategy\nThink about the future direction of R for the Rest of Us\nEnsure we have the team necessary to achieve goals\n\n\nMarketing\nDevelop blog posts and other content\nMaintain email automation system\nRegularly share useful R content through social media\n\n\nConsulting Business Development\nMeet with potential clients about consulting projects\nDevelop proposals for clients\n\n\nConsulting Project Management\nCommunicate with clients about project progress\nWork with consultants to get projects done on time\n\n\nCourse Development\nReach out to potential instructors to gauge interest\nWork with instructors to develop courses\nCreate courses on website"
+    "text": "Core Responsibilities\nDavid’s core responsibilities are below. To be clear, I do a LOT more than just these things. But these are the high-leverage things that I should focus my time and attention on.\n\nStrategy\nThink about the future direction of R for the Rest of Us\nEnsure we have the team necessary to achieve goals\n\n\nMarketing\nDevelop blog posts and other content\nMaintain email automation system\nRegularly share useful R content through social media\n\n\nConsulting Business Development\nMeet with potential clients about consulting projects\nDevelop proposals for clients\n\n\nConsulting Project Management\nCommunicate with clients about project progress\nWork with consultants to get projects done on time\n\n\nCourse Development\nReach out to potential instructors to gauge interest\nWork with instructors to develop courses\nCreate courses on website\nMarketing courses"
   },
   {
     "objectID": "courses-legal-financial.html",
@@ -207,7 +228,7 @@
     "href": "website.html#plugins",
     "title": "Website",
     "section": "Plugins",
-    "text": "Plugins\nThe website uses many plugins. Here are some of the most important and less obvious ones.\nAffiliateWP enables us to have affiliates who are paid for referring customers (not currently using this)\nBuddyBoss Platform + BuddyBoss Platform Pro hosts groups and forums for cohort-based courses\nConvertKit allows me to do things like apply a tag to a customer whenever they purchase a course\nFacetWP is what I use to create a searchable, filterable resources page\nLearnDash is probably the most important plugin. It is what we use to manage all courses. BuddyBoss integrates with it, making the course pages even more attractive. The one thing to note with LearnDash is that we use WooCommerce for signup and just use LearnDash itself for the course stuff.\nLoco Translate allows us to use different terms for things (e.g. Meetings instead of Zoom in BuddyBoss)\nNinjaForms is what we use for all forms\nPods creates custom post types\nSEOPress + SEOPress Pro is used for all SEO stuff\nWooCommerce is how we handle all ecommerce on the site. We also use add-on Woo plugins:\n\nWooCommerce Price Based on Country allows us to set lower prices for those in lower GDP countries\nWooCommerce Product Vendors allows us to track commissions for course instructors\nWooCommerce Smart Coupons allows us to set up coupons for gift certificates\nWooCommerce Stripe Gateway allows us to use Stripe to process credit cards (we also reluctantly use PayPal)\nWooCommerce Zapier allows us to create coupons for users from using Zapier when they are in their pitch window (see Email Marketing)\n\nWP Pusher syncs our child theme from this GitHub repo to the website"
+    "text": "Plugins\nThe website uses many plugins. Here are some of the most important and less obvious ones.\nAffiliateWP enables us to have affiliates who are paid for referring customers (not currently using this)\nBuddyBoss Platform + BuddyBoss Platform Pro hosts groups and forums for cohort-based courses\nConvertKit allows me to do things like apply a tag to a customer whenever they purchase a course\nFacetWP is what I use to create a searchable, filterable resources page\nLearnDash is probably the most important plugin. It is what we use to manage all courses. BuddyBoss integrates with it, making the course pages even more attractive. The one thing to note with LearnDash is that we use WooCommerce for signup and just use LearnDash itself for the course stuff.\n\nLearnDash Course Duplicator allows us to duplicate courses (e.g. for new cohorts of R in 3 Months)\n\nNinjaForms is what we use for all forms\nPods creates custom post types\nSEOPress + SEOPress Pro is used for all SEO stuff\nUncanny Automator + Uncanny Automator Pro allow us to automate various things (e.g. sending notifications on new comments to Twist)\nWooCommerce is how we handle all ecommerce on the site. We also use add-on Woo plugins:\n\nWooCommerce Price Based on Country allows us to set lower prices for those in lower GDP countries\nWooCommerce Product Vendors allows us to track commissions for course instructors\nWooCommerce Smart Coupons allows us to set up coupons for gift certificates\nWooCommerce Stripe Gateway allows us to use Stripe to process credit cards (we also reluctantly use PayPal)\nWooCommerce Zapier allows us to create coupons for users from using Zapier when they are in their pitch window (see Email Marketing)\n\nWP Pusher syncs our child theme from this GitHub repo to the website"
   },
   {
     "objectID": "index.html",
@@ -277,14 +298,14 @@
     "href": "social-media.html#twitter",
     "title": "Social Media",
     "section": "Twitter",
-    "text": "Twitter\nActive R users are on Twitter. We try to reach them not so much to sell to them directly (though this does sometimes happen), but more to have them connect people looking to learn R (who currently users are likely to know) with R for the Rest of Us.\n\nWe find R content produced by others and tweet it out on weekdays at 6am using Buffer.\nWe share R for the Rest of Us content on Thursdays at 9am using MeetEdgar. We have a library full of content that we’ve created, each of which has multiple variations. MeetEdgar automatically picks out a random tweet from the RRU Content category and shares it every week.\nWe also regularly share promotional material (i.e. links directly to a course) using Buffer, MeetEdgar, or Typefully (if we want to schedule a thread). We don’t currently have a schedule for this, but probably should."
+    "text": "Twitter\nActive R users are on Twitter. We try to reach them not so much to sell to them directly (though this does sometimes happen), but more to have them connect people looking to learn R (who currently users are likely to know) with R for the Rest of Us.\n\nWe find R content produced by others and tweet it out on weekdays at 6am using Buffer.\nWe share R for the Rest of Us content on Thursdays at 9am. I’ve done this by using a Zapier integration that connects Airtable to Buffer.\nWe also regularly share promotional material (i.e. links directly to a course) using Buffer or Typefully (if we want to schedule a thread). We don’t currently have a schedule for this, but probably should."
   },
   {
     "objectID": "social-media.html#linkedin",
     "href": "social-media.html#linkedin",
     "title": "Social Media",
     "section": "LinkedIn",
-    "text": "LinkedIn\nWe don’t currently have a plan for using LinkedIn, but we should. Where Twitter is focused on for connecting with individuals, our LinkedIn strategy should be focused on getting management-type people to think about inquiring about our custom training and/or consulting offerings."
+    "text": "LinkedIn\nIn the first half of 2022, we set up content to go out to LinkedIn. We should continue to do this."
   },
   {
     "objectID": "courses-recording.html",
@@ -338,9 +359,9 @@
   {
     "objectID": "clients.html",
     "href": "clients.html",
-    "title": "Clients",
+    "title": "Clients and Projects",
     "section": "",
-    "text": "Here is a list of clients we have worked with and a sample of the projects we’ve worked on with them.\nAPI Council: San Francisco-based non-profit that advocates for the Asian Pacific Islander community. We built a food resources map for them in 2021.\nAspect Evaluation: Very small (one-person, I believe) evaluation firm in Seattle. We made some visualizations for them in 2020.\nCTData: Connecticut-based non-profit. We worked with them and their client the Partnership for Strong Communities to make housing reports in 2020.\nEvaluation by Design: Very small (one-person, I believe) evaluation firm in the Bay Area. We helped them to develop strategy and reporting on their 21st century skills training program.\nFord Family Foundation: The client we’ve worked with the longest (since ~2017). We’ve done several data viz projects for them. The most notable is Oregon by the Numbers, but we’ve also done multiple internal projects.\nISTE/EdSurge: A non-profit education news site. We did a couple data visualizations for them focused on COVID and school reopening in 2020.\nMichigan Fitness Foundation: Non-profit focused on health. We have been doing custom training with them (mostly in the form of regular check-in calls) since 2020.\nOMNI Institute: Colorado-based evaluation firm. We trained their staff on R in 2019. Since then, we’ve done some additional training for them as well as some smaller consulting projects around survey reporting.\nORS Impact: Seattle-based evaluation firm. We’re currently helping them with a set of reports on 2020 Census outreach efforts.\nPacific Research and Evaluation: A Portland-based evaluation firm, we trained them in R in 2019. Since then, we’ve done a few small consulting projects for them, mostly around making maps.\nProsper Portland: Small business development agency for the city of Portland. We did a training with their data team in 2019. We’ve also done a series of smaller consulting projects with them since then.\nPublic Profit: Oakland-based evaluation firm. We trained their team in 2018.\nReading Partners: National non-profit that promotes literacy. We trained their team in 2019. We also developed an internal dashboard for them.\nTORV LLC: Colorado-based consulting firm that works with golf courses and sports fields. We’re helping them to automate reporting.\nThe Mark: Southern California-based evaluation firm. They took some of our courses as a group in 2020 and had us develop some docs for them."
+    "text": "API Council: San Francisco-based non-profit that advocates for the Asian Pacific Islander community. We built a food resources map for them in 2021.\nAspect Evaluation: Very small (one-person, I believe) evaluation firm in Seattle. We made some visualizations for them in 2020.\nColibri Consulting: One-person evaluation firm. We partnered with them to do a report on Oregon farmworkers in 2021-2022.\nCTData: Connecticut-based non-profit. We worked with them and their client the Partnership for Strong Communities to make housing reports in 2020.\nEvaluation by Design: Very small (one-person, I believe) evaluation firm in the Bay Area. We helped them to develop strategy and reporting on their 21st century skills training program.\nFord Family Foundation: The client we’ve worked with the longest (since ~2017). We’ve done several data viz projects for them. The most notable is Oregon by the Numbers, but we’ve also done multiple internal projects.\nISTE/EdSurge: A non-profit education news site. We did a couple data visualizations for them focused on COVID and school reopening in 2020.\nMichigan Fitness Foundation: Non-profit focused on health. We have been doing custom training with them (mostly in the form of regular check-in calls) since 2020.\nOMNI Institute: Colorado-based evaluation firm. We trained their staff on R in 2019. Since then, we’ve done some additional training for them as well as some smaller consulting projects around survey reporting.\nORS Impact: Seattle-based evaluation firm. We’re currently helping them with a set of reports on 2020 Census outreach efforts.\nPacific Research and Evaluation: A Portland-based evaluation firm, we trained them in R in 2019. Since then, we’ve done a few small consulting projects for them, mostly around making maps.\nProsper Portland: Small business development agency for the city of Portland. We did a training with their data team in 2019. We’ve also done a series of smaller consulting projects with them since then.\nPublic Profit: Oakland-based evaluation firm. We trained their team in 2018.\nReading Partners: National non-profit that promotes literacy. We trained their team in 2019. We also developed an internal dashboard for them.\nTORV LLC: Colorado-based consulting firm that works with golf courses and sports fields. We’re helping them to automate reporting.\nThe Mark: Southern California-based evaluation firm. They took some of our courses as a group in 2020 and had us develop some docs for them."
   },
   {
     "objectID": "finances.html",
@@ -362,6 +383,13 @@
     "title": "Finances",
     "section": "Annual Tasks",
     "text": "Annual Tasks\nWe send out 1099s to all contractors by Gusto. I’ve set Gusto up to make sure this happens, but we should check to confirm this in mid-January."
+  },
+  {
+    "objectID": "proposals.html",
+    "href": "proposals.html",
+    "title": "Proposals",
+    "section": "",
+    "text": "We use PandaDoc to create proposals for clients."
   },
   {
     "objectID": "content-strategy.html",
@@ -389,7 +417,7 @@
     "href": "contracts.html",
     "title": "Contracts",
     "section": "",
-    "text": "R for the Rest of Us contract templates live in PandaDoc. There are three templates that we adapt as appropriate:\n\nThe R for the Rest of Us Client Service Agreement is for training and consulting engagements.\nThe R for the Rest of Us Master Consulting Services Agreement Template is for hiring contractors.\nThe R for the Rest of Us Course Creation Agreement is for partnering with instructors to create courses."
+    "text": "R for the Rest of Us contract templates live in PandaDoc. There are three main templates that we adapt as appropriate:\n\nThe R for the Rest of Us Client Service Agreement is for training and consulting engagements.\nThe R for the Rest of Us Master Consulting Services Agreement Template is for hiring contractors.\nThe R for the Rest of Us Course Creation Agreement is for partnering with instructors to create courses."
   },
   {
     "objectID": "email-automations.html",
@@ -508,7 +536,7 @@
     "href": "communication.html",
     "title": "Communication",
     "section": "",
-    "text": "As a fully remote company, we try to communicate by writing as much as possible. Doing so has many benefits:\n\nIt forces us to clarify our thinking\nIt provides a record of decisions for those who may join things midstream\nIt allows people to work on their own time without feeling the need to join live calls etc\n\nInternal communication happens, as much as possible, in Twist. There are currently two channels:\n\n#admin for David and Nicole to discuss admin tasks\n#general for everything else\n\nOther places internal communication happens include:\n\nGitHub for discussion of specific issues on code-based projects\nTodoist comments for questions on specific tasks to be done"
+    "text": "As a fully remote company, we try to communicate by writing as much as possible. Doing so has many benefits:\n\nIt forces us to clarify our thinking\nIt provides a record of decisions for those who may join things midstream\nIt allows people to work on their own time without feeling the need to join live calls etc\n\nInternal communication happens, as much as possible, in Twist. There are several channels:\n\nConsulting\nCourse Questions\nCourses\nGeneral\nOrders (all paid course orders go through here)\nR in 3 Months\nTraining\n\nWithin each channel, we typically use one thread per project (sometimes more depending on its complexity).\nOther places internal communication happens include:\n\nGitHub for discussion of specific issues on code-based projects\nTodoist comments for questions on specific tasks to be done"
   },
   {
     "objectID": "communication.html#external-communication",

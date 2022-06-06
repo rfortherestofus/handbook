@@ -2,3 +2,19 @@
 title: "Production"
 ---
 
+## Video Editing
+
+After the instructor provides raw videos, David edits them. Most lessons have the following structure:
+
+- Full screen on instructor as they introduce topic
+- Switch to instructor in corner with their screen as background
+- Zoom in on specific pieces of code as appropriate
+- Do pans on other websites etc as appropriate
+- My Turn as appropriate
+- Your Turn as appropriate
+
+
+## Captions
+
+
+## Putting Content on Website

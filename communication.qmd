@@ -10,10 +10,17 @@ As a fully remote company, we try to communicate by writing as much as possible.
 2. It provides a record of decisions for those who may join things midstream
 3. It allows people to work on their own time without feeling the need to join live calls etc
 
-Internal communication happens, as much as possible, in Twist. There are currently two channels:
+Internal communication happens, as much as possible, in Twist. There are several channels:
 
-- #admin for David and Nicole to discuss admin tasks
-- #general for everything else
+- Consulting
+- Course Questions
+- Courses
+- General
+- Orders (all paid course orders go through here)
+- R in 3 Months
+- Training
+
+Within each channel, we typically use one thread per project (sometimes more depending on its complexity).
 
 Other places internal communication happens include:
 

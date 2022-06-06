@@ -4,16 +4,17 @@ title: "Social Media"
 
 Social media is the main marketing strategy to help people become aware of R for the Rest of Us. The main platform we use is Twitter, as that's where most R users are. We also market through LinkedIn.
 
-All social media is designed not so much to sell directly (though we do a bit of this), but to get people on the R for the Rest of Us email list (see [Email Marketing](https://www.notion.so/Email-Marketing-cd082f1d53b44cfd9ab210648f72ebe3)). Once they are on that list, we attempt to educate them and convince them to buy products form us.
+All social media is designed not so much to sell directly (though we do a bit of this), but to get people on the R for the Rest of Us email list (see [Email Marketing](email-marketing.html)). Once they are on that list, we attempt to educate them and convince them to buy products form us.
+
 
 ## Twitter
 
 Active R users are on Twitter. We try to reach them not so much to sell to them directly (though this does sometimes happen), but more to have them connect people looking to learn R (who currently users are likely to know) with R for the Rest of Us. 
 
 1. We find R content produced by others and tweet it out on weekdays at 6am using Buffer.
-2. We share **R for the Rest of Us content** on Thursdays at 9am using MeetEdgar. We have a library full of content that we've created, each of which has multiple variations. MeetEdgar automatically picks out a random tweet from the RRU Content category and shares it every week.
-3. We also regularly share **promotional material** (i.e. links directly to a course) using Buffer, MeetEdgar, or Typefully (if we want to schedule a thread). We don't currently have a schedule for this, but probably should.
+2. We share **R for the Rest of Us content** on Thursdays at 9am. I've done this by using a Zapier integration that connects Airtable to Buffer.
+3. We also regularly share **promotional material** (i.e. links directly to a course) using Buffer or Typefully (if we want to schedule a thread). We don't currently have a schedule for this, but probably should.
 
 ## LinkedIn
 
-We don't currently have a plan for using LinkedIn, but we should. Where Twitter is focused on for connecting with individuals, our LinkedIn strategy should be focused on getting management-type people to think about inquiring about our custom training and/or consulting offerings.
+In the first half of 2022, we set up content to go out to LinkedIn. We should continue to do this.

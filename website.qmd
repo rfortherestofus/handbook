@@ -32,13 +32,15 @@ The website uses many plugins. Here are some of the most important and less obvi
 
 **LearnDash** is probably the most important plugin. It is what we use to manage all courses. BuddyBoss integrates with it, making the course pages even more attractive. The one thing to note with LearnDash is that we use WooCommerce for signup and just use LearnDash itself for the course stuff.
 
-**Loco Translate** allows us to use different terms for things (e.g. Meetings instead of Zoom in BuddyBoss)
+- **LearnDash Course Duplicator** allows us to duplicate courses (e.g. for new cohorts of R in 3 Months)
 
 **NinjaForms** is what we use for all forms
 
 **Pods** creates custom post types
 
 **SEOPress + SEOPress Pro** is used for all SEO stuff
+
+**Uncanny Automator** + **Uncanny Automator Pro** allow us to automate various things (e.g. sending notifications on new comments to Twist)
 
 **WooCommerce** is how we handle all ecommerce on the site. We also use add-on Woo plugins:
 

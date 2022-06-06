@@ -21,4 +21,4 @@ The main content that we produce is on our blog. There are two types of articles
 1. Tutorials
 2. Posts that explain why R is worth learning
 
-The other main content is emails (see [Email Marketing](https://www.notion.so/Email-Marketing-cd082f1d53b44cfd9ab210648f72ebe3)). Although most emails are simply introductions and links to other content, some emails are unique content on their own.
+The other main content is emails (see [Email Marketing](email-marketing.html)). Although most emails are simply introductions and links to other content, some emails are unique content on their own.

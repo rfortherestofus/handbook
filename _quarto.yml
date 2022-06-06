@@ -19,7 +19,9 @@ website:
     
     contents:
       - index.qmd
-      - clients.qmd
+      - section: "Clients"
+        contents:
+        - clients.qmd
       - section: "Operations"
         contents:
         - david-work.qmd
@@ -27,6 +29,7 @@ website:
         - communication.qmd
         - finances.qmd
         - contracts.qmd
+        - proposals.qmd
       - section: "Marketing"
         contents:
         - marketing-overview.qmd
@@ -46,6 +49,7 @@ website:
       - section: "Consulting"
         contents:
         - project-management.qmd
+        - github.qmd
 
 format:
   html:

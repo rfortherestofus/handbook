@@ -12,11 +12,11 @@ To achieve the first goal, I did two things:
 1. I developed a complex system of email automations (see [Email Automation](email-automations.html)) based on what I have learned in the Mastering ConvertKit course
 2. Partner with other R users to develop topics courses in areas of their expertise
 
-To achieve the second goal, I have worked with consultants throughout 2021 on a range of projects. 
+To achieve the second goal, I have worked with consultants on a range of projects. 
 
 ## Core Responsibilities
 
-As of mid-2021, my core responsibilities are below. To be clear, I do a LOT more than just these things. But these are the high-leverage things that I should focus my time and attention on. 
+David's core responsibilities are below. To be clear, I do a LOT more than just these things. But these are the high-leverage things that I should focus my time and attention on. 
 
 ### Strategy
 
@@ -51,3 +51,5 @@ Reach out to potential instructors to gauge interest
 Work with instructors to develop courses
 
 Create courses on website
+
+Marketing courses

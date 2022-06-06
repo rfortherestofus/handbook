@@ -38,9 +38,9 @@ Payroll happens through **Gusto**.
 
 Proposals and contracts are written and sent with **PandaDoc**.
 
-## **Design**
+## Design
 
-We use **Figma** to make all design assets.
+We use **Figma** and **Canva** to make all design assets.
 
 ## Passwords
 
@@ -54,13 +54,13 @@ Website analytics are provided by **Fathom**.
 
 ## Video Creation
 
-When providing quick feedback videos, we use **CloudApp**.
+When providing quick feedback videos, we use **CloudApp** or **CleanShot**.
 
 To record videos for courses, we use either **Screenflow**, **OBS Studio**, **Streamlabs** (depending on instructor operating system + preferences).
 
 Video editing happens in **Screenflow**.
 
-Captions for videos are made using **muse.ai**.
+Captions for videos are made using **Descript** or **muse.ai**.
 
 ## Video Hosting
 
@@ -72,7 +72,7 @@ There is an R for the Rest of Us YouTube channel that I've only periodically use
 
 We use two tools to schedule social media content:
 
-1. **Buffer** is where we set up a queue of regular R content created by others to go out on Twitter. 
+1. **Buffer** is where we set up a queue of regular R content created by others to go out on Twitter. We also post our own content using Buffer, often piped through a Zapier automation from **Airtable**.
 2. If we need to schedule Twitter threads, we use **Typefully**.
 
 ## Automation

@@ -1,5 +1,5 @@
 ---
-title: "Clients"
+title: "Clients and Projects"
 ---
 
 Here is a list of clients we have worked with and a sample of the projects we've worked on with them.
