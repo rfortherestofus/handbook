@@ -19,6 +19,7 @@ website:
     
     contents:
       - index.qmd
+      - clients.qmd
       - section: "Operations"
         contents:
         - david-work.qmd
