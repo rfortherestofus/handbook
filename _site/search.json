@@ -4,14 +4,14 @@
     "href": "courses-production.html",
     "title": "Production",
     "section": "",
-    "text": "After the instructor provides raw videos, David edits them. Most lessons have the following structure:\n\nFull screen on instructor as they introduce topic\nSwitch to instructor in corner with their screen as background\nZoom in on specific pieces of code as appropriate\nDo pans on other websites etc as appropriate\nMy Turn as appropriate\nYour Turn as appropriate"
+    "text": "After the instructor provides raw videos, David edits them. Most lessons have the following structure:\n\nFull screen on instructor as they introduce topic\nSwitch to instructor in corner with their screen as background\nZoom in on specific pieces of code as appropriate\nDo pans on other websites etc as appropriate\nMy Turn as appropriate\nYour Turn as appropriate\n\n\n\n\nUse a 0.2 second length Cross Blur transition\nDetach audio and use audio smoothing\nMake sure audio doesn’t have any transitions\nYou can take full-length screenshots with Firefox\n\nExample walkthrough of me editing video: https://show.rfor.us/z1fUk4"
   },
   {
     "objectID": "courses-production.html#captions",
     "href": "courses-production.html#captions",
     "title": "Production",
     "section": "Captions",
-    "text": "Captions"
+    "text": "Captions\nCaptions are added using muse.ai or Descript. Captions for courses are then edited by hand to make sure they are accurate."
   },
   {
     "objectID": "courses-production.html#putting-content-on-website",
@@ -32,7 +32,7 @@
     "href": "tools.html#handbook",
     "title": "Tools",
     "section": "Handbook",
-    "text": "Handbook\nYou’re reading the handbook in Notion. We use Notion to create internal docs that show how R for the Rest of Us runs."
+    "text": "Handbook\nYou’re reading the handbook made in Quarto. We use Quarto to create internal docs that show how R for the Rest of Us runs."
   },
   {
     "objectID": "tools.html#communication",

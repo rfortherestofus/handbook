@@ -13,8 +13,17 @@ After the instructor provides raw videos, David edits them. Most lessons have th
 - My Turn as appropriate
 - Your Turn as appropriate
 
+### Misc
+
+- Use a 0.2 second length Cross Blur transition
+- Detach audio and use audio smoothing
+- Make sure audio doesn't have any transitions
+- [You can take full-length screenshots with Firefox](https://support.mozilla.org/en-US/kb/take-screenshots-firefox)
+
+Example walkthrough of me editing video: https://show.rfor.us/z1fUk4
 
 ## Captions
 
+Captions are added using muse.ai or Descript. Captions for courses are then edited by hand to make sure they are accurate.
 
 ## Putting Content on Website

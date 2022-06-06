@@ -6,7 +6,7 @@ This is an overview of tools we use. Details on how we use them are laid out in 
 
 ## Handbook
 
-You're reading the handbook in **Notion**. We use Notion to create internal docs that show how R for the Rest of Us runs. 
+You're reading the handbook made in **Quarto**. We use Quarto to create internal docs that show how R for the Rest of Us runs. 
 
 ## Communication
 
