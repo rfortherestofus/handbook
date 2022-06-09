@@ -343,18 +343,32 @@
     "text": "Video Editing\nDavid will edit all of your videos."
   },
   {
+    "objectID": "consulting-overview.html",
+    "href": "consulting-overview.html",
+    "title": "Overview",
+    "section": "",
+    "text": "In general, consulting projects we take on involve some combination of the following:\n\nData visualization\nLayout using RMarkdown and pagedown\nParameterized reporting\n\nYou can see examples of several such projects on the consulting page of the R for the Rest of Us website."
+  },
+  {
+    "objectID": "consulting-overview.html#projects-we-dont-take-on",
+    "href": "consulting-overview.html#projects-we-dont-take-on",
+    "title": "Overview",
+    "section": "Projects We Don’t Take On",
+    "text": "Projects We Don’t Take On\nProjects that have been less successful for R for the Rest of Us are:\n\nAd hoc data analysis\nLack clear scope and involve “looking to see what data is out there”"
+  },
+  {
     "objectID": "project-management.html",
     "href": "project-management.html",
     "title": "Project Management",
     "section": "",
-    "text": "The overall way we manage projects is this:\n\nOverall milestones live in Todoist\nCode-related granular issues live in GitHub\nAny general discussion about projects can go in GitHub discussions or in a thread on Twist\n\nStarting out, think about the major milestones in a project. These should be put into Todoist. This allows David (or anyone, in fact) to see the major milestones and associated timing for a project.\nFrom there, a GitHub repo (set to private unless the client is ok with it being public) should be created.\n\nUse the README to lay out the overall project scope, deliverables, etc.\nUse issues to manage code-related questions at a granular level.\nIf it’s helpful, feel free to use milestones (they would largely just mirror the Todoist tasks, though, so it’s not necessary).\nYou can also enable GitHub Discussions to discuss more general things.\n\nWe can also use Twist to communicate about projects. This is a good place for things we’d like to keep confidential (because we work more and more with clients directly in GitHub, that isn’t the best place for confidential discussions)."
+    "text": "Create a GitHub repo (set to private unless the client is ok with it being public):\n\nUse the README to lay out the overall project scope, deliverables, etc.\nUse issues to manage code-related questions at a granular level.\nIf the project is large enough, use milestones.\n\nCreate a thread in the #consulting channel on Twist for the project. This is a good place for things we’d like to keep confidential (because we work more and more with clients directly in GitHub, that isn’t the best place for confidential discussions). Communicate updates on overall progress with David using Twist. An update once a week or so is helpful."
   },
   {
     "objectID": "project-management.html#client-communication",
     "href": "project-management.html#client-communication",
     "title": "Project Management",
     "section": "Client Communication",
-    "text": "Client Communication\nThe most important thing we can do is communicate effectively and regularly. This means getting back to clients within 24 hours.\nThe type of communication we use with clients depends on the client.\n\nIf clients are comfortable working in GtiHub, feel free to add them to the appropriate repo.\nIf they don’t want to work in GitHub (most don’t), email is generally best.\n\nI generally try to send clients updates by email about overall progress every 1-2 weeks to make sure they know what’s going on and see if they have any questions."
+    "text": "Client Communication\nThe most important thing we can do is communicate effectively and regularly. This means getting back to clients within 24 hours.\nThe type of communication we use with clients depends on the client.\n\nIf clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.\nIf they don’t want to work in GitHub (most don’t), email is generally best.\n\nI generally try to send clients updates by email about overall progress every 1-2 weeks to make sure they know what’s going on and see if they have any questions."
   },
   {
     "objectID": "clients.html",

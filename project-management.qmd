@@ -2,24 +2,15 @@
 title: "Project Management"
 ---
 
-## Tools
+## Overview
 
-The overall way we manage projects is this:
-
-1. Overall milestones live in Todoist
-2. Code-related granular issues live in GitHub
-3. Any general discussion about projects can go in GitHub discussions or in a thread on Twist
-
-Starting out, think about the major milestones in a project. These should be put into **Todoist**. This allows David (or anyone, in fact) to see the major milestones and associated timing for a project.
-
-From there, a **GitHub repo** (set to private unless the client is ok with it being public) should be created. 
+Create a **GitHub repo** (set to private unless the client is ok with it being public):
 
 - Use the **README** to lay out the overall project scope, deliverables, etc.
 - Use **issues** to manage code-related questions at a granular level.
-- If it's helpful, feel free to use **milestones** (they would largely just mirror the Todoist tasks, though, so it's not necessary).
-- You can also enable **GitHub Discussions** to discuss more general things.
+- If the project is large enough, use **milestones**. 
 
-We can also use Twist to communicate about projects. This is a good place for things we'd like to keep confidential (because we work more and more with clients directly in GitHub, that isn't the best place for confidential discussions).
+Create a thread in the #consulting channel on Twist for the project. This is a good place for things we'd like to keep confidential (because we work more and more with clients directly in GitHub, that isn't the best place for confidential discussions). Communicate updates on overall progress with David using Twist. An update once a week or so is helpful.  
 
 ## Client Communication
 
@@ -27,7 +18,7 @@ The most important thing we can do is communicate effectively and regularly. Thi
 
 The type of communication we use with clients depends on the client. 
 
-- If clients are comfortable working in GtiHub, feel free to add them to the appropriate repo.
+- If clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.
 - If they don't want to work in GitHub (most don't), email is generally best.
 
 I generally try to send clients updates by email about overall progress every 1-2 weeks to make sure they know what's going on and see if they have any questions.

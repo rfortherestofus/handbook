@@ -1,0 +1,20 @@
+---
+title: "Overview"
+---
+
+## Projects We Take On
+
+In general, consulting projects we take on involve some combination of the following:
+
+- Data visualization
+- Layout using RMarkdown and pagedown
+- Parameterized reporting
+
+You can see examples of several such projects on the [consulting page of the R for the Rest of Us website](https://rfortherestofus.com/consulting).
+
+## Projects We Don't Take On
+
+Projects that have been less successful for R for the Rest of Us are:
+
+- Ad hoc data analysis
+- Lack clear scope and involve "looking to see what data is out there"

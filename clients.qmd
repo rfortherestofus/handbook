@@ -2,7 +2,7 @@
 title: "Clients and Projects"
 ---
 
-Here is a list of clients we have worked with and a sample of the projects we've worked on with them.
+Here is a partial list of clients we have worked with and a sample of the projects we've worked on with them.
 
 **API Council:** San Francisco-based non-profit that advocates for the Asian Pacific Islander community. We built a [food resources map](https://foodmap.apicouncil.org/) for them in 2021.
 
