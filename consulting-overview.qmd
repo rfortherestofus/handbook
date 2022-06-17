@@ -18,3 +18,7 @@ Projects that have been less successful for R for the Rest of Us are:
 
 - Ad hoc data analysis
 - Lack clear scope and involve "looking to see what data is out there"
+
+This tweet thread has good examples of red flags to look for when considering clients/projects.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Fastest way to kill your business? <br>Taking on the wrong clients. <br><br>Here are 15 client red flags you must learn to spot:<br><br>👇</p>&mdash; Shane Martin (@Shane___Martin) <a href="https://twitter.com/Shane___Martin/status/1534553016266653696?ref_src=twsrc%5Etfw">June 8, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

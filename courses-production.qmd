@@ -8,7 +8,8 @@ After the instructor provides raw videos, David edits them. Most lessons have th
 
 - Full screen on instructor as they introduce topic
 - Switch to instructor in corner with their screen as background
-- Zoom in on specific pieces of code as appropriate
+- As the instructor talks about code, zoom in on it (pan back out when they're done talking about the specific code)
+- Switch back to full-screen on instructor when they're not talking about code at all
 - Do pans on other websites etc as appropriate
 - My Turn as appropriate
 - Your Turn as appropriate
