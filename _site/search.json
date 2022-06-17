@@ -4,7 +4,7 @@
     "href": "courses-production.html",
     "title": "Production",
     "section": "",
-    "text": "After the instructor provides raw videos, David edits them. Most lessons have the following structure:\n\nFull screen on instructor as they introduce topic\nSwitch to instructor in corner with their screen as background\nZoom in on specific pieces of code as appropriate\nDo pans on other websites etc as appropriate\nMy Turn as appropriate\nYour Turn as appropriate\n\n\n\n\nUse a 0.2 second length Cross Blur transition\nDetach audio and use audio smoothing\nMake sure audio doesn’t have any transitions\nYou can take full-length screenshots with Firefox\n\nExample walkthrough of me editing video: https://show.rfor.us/z1fUk4"
+    "text": "After the instructor provides raw videos, David edits them. Most lessons have the following structure:\n\nFull screen on instructor as they introduce topic\nSwitch to instructor in corner with their screen as background\nAs the instructor talks about code, zoom in on it (pan back out when they’re done talking about the specific code)\nSwitch back to full-screen on instructor when they’re not talking about code at all\nDo pans on other websites etc as appropriate\nMy Turn as appropriate\nYour Turn as appropriate\n\n\n\n\nUse a 0.2 second length Cross Blur transition\nDetach audio and use audio smoothing\nMake sure audio doesn’t have any transitions\nYou can take full-length screenshots with Firefox\n\nExample walkthrough of me editing video: https://show.rfor.us/z1fUk4"
   },
   {
     "objectID": "courses-production.html#captions",
@@ -481,6 +481,13 @@
     "title": "Email Automations",
     "section": "Reference",
     "text": "Reference\n\nSchedule\n\nSelf-paced course pitch emails go out FMTWTF at 6am\nFundamentals bridge emails (hot and cold) go out MTWTF at 6am\nCourse signup emails go out MTWTF at 6am\nShadow newsletter emails go out at 9am on Thursdays\nEmails in the Global - Welcome - Sequence go out at noon on MWF\n\n\n\nSequences\nTODO\n\n\nVisual Automations\nTODO\n\n\n\n\n\nTags\nTODO\n\n\n\n\n\nAutomation Rules\nTODO\n\n\nSegments"
+  },
+  {
+    "objectID": "code-style.html",
+    "href": "code-style.html",
+    "title": "Code Style",
+    "section": "",
+    "text": "https://github.com/tgerke/r-code-review-checklist"
   },
   {
     "objectID": "courses-overview.html",

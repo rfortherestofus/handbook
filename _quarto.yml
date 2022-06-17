@@ -52,6 +52,7 @@ website:
         - project-management.qmd
       - section: "Code"
         contents:
+        - code-style.qmd
         - github.qmd
 format:
   html:
