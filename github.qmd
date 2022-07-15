@@ -2,4 +2,24 @@
 title: "Git and GitHub"
 ---
 
+At R For The Rest Of Us, we collaborate on projects using Git and GitHub. Git is the gold standard for version control, and using it in conjunction with GitHub provides a neat way of exploring the more advanced Git features within a friendly interface. This section covers the basics of the Git etiquette we adopt, as well as a few how-tos and worked examples.
+
+## How we organise the basics
+
+- Each project has its own unique repository
+- The central repository for each project lives on GitHub
+- Everyone working on that project is invited to the GitHub repo, and we then `clone` the repo to our own computers (this gives us what we call local repos)
+
+## Git etiquette
+
+### Commit messages
+
+There is an art to writing good commit messages, and some organisations have very strict guidelines on that. Here, we just try to follow the following rules:
+- Commit frequently; this allow you to easily backtrack to the point where your code was doing what it should be!
+- Write clear commit messages. Things like "I fixed it!" are not all that helpful when trying to find a commit that addressed a specific problem
+- If the change you're making is linked to an issue on GitHub (we'll come to issues later), include the number of the issue in the commit message (e.g. "Added section on commit messages - #4"). GitHub picks this up and adds a message into the issue, which allows us to easily keep track of progress. 
+
+
+
+
 
