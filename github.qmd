@@ -94,7 +94,7 @@ Some organisations have very strict guidelines on that. Here, we just try to fol
 - Write clear commit messages. Things like "I fixed it!" are not all that helpful when trying to find a commit that addressed a specific problem!
 - If the change you're making is linked to an issue on GitHub (we'll come to issues later), include the number of the issue in the commit message (e.g. "Added section on commit messages - #4"). GitHub picks this up and adds a message into the issue, which allows us to easily keep track of progress.
 
-![TODO Add image of issue with tracked commit]
+![Screenshot of GitHub issue #4 featuring the commit above](assets/git-section/gh-issue-commit.png)
 
 ### Using branches
 
