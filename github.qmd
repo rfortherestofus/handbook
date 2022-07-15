@@ -7,7 +7,7 @@ At R For The Rest Of Us, we collaborate on projects using Git and GitHub. Git is
 ## How we organise (and talk about) the basics
 
 - Each project has its own unique repository
-- The central repository for each project lives on GitHub
+- The central repository for each project lives on GitHub; this is also referred to as `origin`
 - Everyone working on that project is invited to the GitHub repo, and we then `clone` the repo to our own computers (this gives us what we call local repos)
 
 The rest of this section assumes a basic understanding of how Git works. The main thing to note for new users is that, unlike something like Dropbox, changes only make it to the central repo (and from there to others), if Git is explicitly told about them via `add`, `commit` and `push` commands. 
@@ -67,14 +67,17 @@ To clone a repo from GitHub, it either needs to be public, or you need to have b
 
 To clone the repo, go to [its GitHub page](https://github.com/rfortherestofus/sandbox) and click on Code, copy the text provided by GitHub by clicking on the copy icon.
 
-![copy cloning text](assets/git-section/clone-sandbox.png)
+![screenshot showing how to copy the url of the repo we want to clone](assets/git-section/clone-sandbox.png)
 
-Next, create a new folder called `sandbox` somewhere on your computer. Navigate to that folder in your terminal, and type
+Next, create a new folder called `sandbox` somewhere on your computer. Navigate to that folder in your terminal, and type `git clone`
+then paste in the text you've just copied, type space then ` .` and hit `Enter`. That full stop means "clone the folder into the directory where I am currently". If you miss that out, you'll end up with this git folder called `sandbox` inside your `sandbox` folder which will make things very confusing. Your command should look like this:
 
 ```
-git clone 
+git clone https://github.com/rfortherestofus/sandbox.git .
 ```
-then paste, and type `.`. That full stop means "clone the folder into the directory where I am currently". 
+This will create a local copy of the repo on your computer.
+
+Depending on how your computer is set up, you may see a folder called `.git`. This is a hidden folder. Do not edit its contents! 
 
 
 ## Git etiquette
@@ -124,7 +127,8 @@ While you're working on your feature, you can keep your branch backed up on GitH
 ```
 git push -u origin adding-timeline-feature
 ```
-This allows others to view your branch (useful if you want to get feedback along the process), and ensures that if something bad happens to your computer, your work is stored somewhere else. 
+
+Every time after that, you can just use `git push`. Pushing your branch to `origin` allows others to view your branch (useful if you want to get feedback along the process), and ensures that if something bad happens to your computer, your work is stored somewhere else. 
 
 Give it a go in our `sandbox` repo.
 
@@ -132,9 +136,37 @@ Create a new branch, with a name of your choosing, and add a quote to `quotes/cl
 
 #### Creating a pull request
 
+Pull request are the way we merge the work you've done in a branch back into our "stable universe" while allowing someone else to review the changes in the process. 
+
+TODO: example create a pull request for the added quote
+TODO: best for the branch author / person who made the most recent contribution to it to initiate the pull request
+TODO: get up to speed with `main` first.
+
+#### Reviewing a pull request
+
+TODO: We haven't really done this, but it might be worth thinking about if projects get bigger - you can set things so that a merge into `main` needs to be approved by someone other than the person creating the pull request; a useful way to keep things safe, but we need to all be happy with pull requests first
+
+#### Merging etiquette and branch hygiene
+
+At this point comes a policy decision, which can be influenced by workload: who completes the approved merge? It could be the person who did the work, or the person who approved the merge. If there happen to be conflicts (see below), this can be non trivial. GitHub will tell you if there will be a conflict, in which case we can discuss who is best placed to resolve it. 
+
+And a second policy decision, which can be influenced by how we want to use the branches: should a branch be deleted once it has been merged in? The advantage of deleting branches as part of the merge is that this avoids needing to tidy them up at a later stage. You might have a feature you're working on where a quick bug fix was needed, but you'd like to keep working on it to improve the code once the immediate need for the bug fix has passed. In that case, it might be best to keep the branch, but we'll need to make sure we keep it up to speed with the "stable universe" by merging `main` into that branch before picking it up again.
+
+To check the status of your branch(es) compared to others, click on the "branches" icon in the repo's GitHub page. Here you can see by how many commits a branch is ahead and behind the default branch (typically `main`). A branch that is "behind" `main` by a large number of commits and hasn't been updated for a while is probably a candidate for deletion, but if it wasn't your branch, check with its author first! 
 
 
+### Dealing with merge conflicts
 
+The best way to deal with conflicts is to avoid causing them in the first place!
+
+TODO: pull across info from my old team doc
+
+TODO: I use TortoiseGit as a merge tool; makes it easier to compare the changes; what do others use? 
+
+
+### Writing good issues
+
+TODO: Decide if we want a section on this
 
 
 
