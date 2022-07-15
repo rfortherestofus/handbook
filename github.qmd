@@ -4,20 +4,72 @@ title: "Git and GitHub"
 
 At R For The Rest Of Us, we collaborate on projects using Git and GitHub. Git is the gold standard for version control, and using it in conjunction with GitHub provides a neat way of exploring the more advanced Git features within a friendly interface. This section covers the basics of the Git etiquette we adopt, as well as a few how-tos and worked examples.
 
-## How we organise the basics
+## How we organise (and talk about) the basics
 
 - Each project has its own unique repository
 - The central repository for each project lives on GitHub
 - Everyone working on that project is invited to the GitHub repo, and we then `clone` the repo to our own computers (this gives us what we call local repos)
 
+The rest of this section assumes a basic understanding of how Git works. The main thing to note for new users is that, unlike something like Dropbox, changes only make it to the central repo (and from there to others), if Git is explicitly told about them via `add`, `commit` and `push` commands. 
+
+### Setting up a new repo
+When creating a new repo, we want to add three files: `README.md`, `.gitignore` and `.gitattributes`. 
+
+#### README.md
+
+This file should contain information about the purpose of the repo, and any information useful to other team members interacting with it. We sometimes make our repos available to clients towards the end of projects, so keep the contents of the `README` accessible to non R specialists. 
+
+#### .gitignore
+The best way to do this is by using `{usethis}` within `R`. Navigate to your repo, and type: 
+
+```{r}
+#| echo: true
+
+usethis::git_vaccinate()
+```
+
+This will add a .gitignore file that excludes files with the following extensions from being tracked by Git.
+```
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
+```
+
+#### .gitattributes
+
+This file allows us to work across different Operating Systems, which have different behaviours for handling line endings. Create a text file and rename it to `.gitattributes` (note, not `gitattributes.txt`) and copy the following content into it:
+
+```
+# Let Git's auto-detection algorithm infer if a file is text. If it is,
+# enforce LF line endings regardless of OS or git configurations.
+* text=auto eol=lf
+
+# Isolate binary files in case the auto-detection algorithm fails and
+# marks them as text files (which could break them).
+*.{png,jpg,jpeg,gif,webp,woff,woff2} binary
+
+```
+
 ## Git etiquette
+
+### Using branches
+
 
 ### Commit messages
 
-There is an art to writing good commit messages, and some organisations have very strict guidelines on that. Here, we just try to follow the following rules:
-- Commit frequently; this allow you to easily backtrack to the point where your code was doing what it should be!
-- Write clear commit messages. Things like "I fixed it!" are not all that helpful when trying to find a commit that addressed a specific problem
-- If the change you're making is linked to an issue on GitHub (we'll come to issues later), include the number of the issue in the commit message (e.g. "Added section on commit messages - #4"). GitHub picks this up and adds a message into the issue, which allows us to easily keep track of progress. 
+There is an art to writing good commit messages.
+
+![commit messages from xkcd.com](https://imgs.xkcd.com/comics/git_commit_2x.png)
+
+Some organisations have very strict guidelines on that. Here, we just try to follow the following rules:
+
+- Commit often and frequently; this allow you to easily backtrack to the point where your code was doing what it should be.
+- Write clear commit messages. Things like "I fixed it!" are not all that helpful when trying to find a commit that addressed a specific problem!
+- If the change you're making is linked to an issue on GitHub (we'll come to issues later), include the number of the issue in the commit message (e.g. "Added section on commit messages - #4"). GitHub picks this up and adds a message into the issue, which allows us to easily keep track of progress.
+
+### 
 
 
 
