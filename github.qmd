@@ -17,7 +17,7 @@ The rest of this section assumes a basic understanding of how Git works. The mai
 The easiest way to create a new repo is to do it on GitHub. Make sure to give it a name that clearly identifies the project! 
 
 ![screenshot of a repo being created](assets/git-section/new-repo.png)
-Then follow the instrutions that come up once you've clicked on Create Repository. Pick the option that best corresponds to the stage you have reached. If you have already used `git init` to make your local folder into a Git repo, pick the second option. If not, pick the first. 
+Then follow the instructions that come up once you've clicked on Create Repository. Pick the option that best corresponds to the stage you have reached. If you have already used `git init` to make your local folder into a Git repo, pick the second option. If not, pick the first. 
 
 ![screenshot of init instructions](assets/git-section/initial-clone.png)
 
@@ -25,9 +25,10 @@ When creating a new repo, we want to add three files: `README.md` (which is adde
 
 #### README.md
 
-This file should contain information about the purpose of the repo, and any information useful to other team members interacting with it. We sometimes make our repos available to clients towards the end of projects, so keep the contents of the `README` accessible to non R specialists. 
+This file should contain information about the purpose of the repo, and any information useful to other team members interacting with it. We sometimes make our repos available to clients towards the end of projects, so keep the contents of the `README` accessible to non-R specialists. 
 
 #### .gitignore
+
 The best way to do this is by using `{usethis}` within `R`. Navigate to your repo, and type: 
 
 ```{r}
@@ -75,6 +76,7 @@ then paste in the text you've just copied, type space then ` .` and hit `Enter`.
 ```
 git clone https://github.com/rfortherestofus/sandbox.git .
 ```
+
 This will create a local copy of the repo on your computer.
 
 Depending on how your computer is set up, you may see a folder called `.git`. This is a hidden folder. Do not edit its contents! 
@@ -91,7 +93,9 @@ There is an art to writing good commit messages.
 Some organisations have very strict guidelines on that. Here, we just try to follow the following rules:
 
 - Commit often and frequently; this allow you to easily backtrack to the point where your code was doing what it should be.
+
 - Write clear commit messages. Things like "I fixed it!" are not all that helpful when trying to find a commit that addressed a specific problem!
+
 - If the change you're making is linked to an issue on GitHub (we'll come to issues later), include the number of the issue in the commit message (e.g. "Added section on commit messages - #4"). GitHub picks this up and adds a message into the issue, which allows us to easily keep track of progress.
 
 ![Screenshot of GitHub issue #4 featuring the commit above](assets/git-section/gh-issue-commit.png)
@@ -105,8 +109,11 @@ We encourage the use of branches when collaborating on projects. These can be da
 We mentioned the default branch, `main` earlier. Think of this as the "stable universe" as far as the project is concerned. It contains up-to-date code that others can reliably use. A branch is essentially an "alternate universe" for the project, where we can experiment, make changes, test new things, all without disrupting the "stable universe" that others rely on.
 
 Some organisations only ever allow changes to be made via a branch. There's lot of wisdom in that, but sometimes it can become cumbersome. Here are some use cases where you could consider working in the `main` branch:
+
 - you are the only person working on the project
+
 - you are adding something to the project that doesn't interact at all with the code others are writing
+
 But even in those cases, you could consider using a new branch to be on the safe side. If in doubt, check with David. 
 
 #### Creating a new branch
@@ -114,12 +121,17 @@ But even in those cases, you could consider using a new branch to be on the safe
 Creating a new branch is trivial. As with commit messages, we want to make sure the name of the branch gives a clear indication of its purpose. Say a client wants to add a new timeline to their report. The report is otherwise working as it should be. To work in a branch, and thereby allow them to keep using the report as is while you figure this out, you'll want to
 
 - make sure you're branching off an up-to-date `main`: `git pull`
+
 - create a new branch with a clear name: `git checkout -b adding-timeline-feature`
+
+You can also do this in RStudio or in GitHub Desktop.
 
 Now the files that you see are ones that belong to your alternate universe called "adding timeline feature". Everything will look the same, but changes you add and commit here won't affect anything in `main`; if it all goes horribly wrong, you can delete this branch and know all is still well in the "stable universe". You can then switch between universes as follows:
 
 - Commit (or stash) everything you've done within your branch
+
 - Go back to the "stable universe": `git checkout main`, probably followed by `git pull` to see what's happened there in your absence. The modifications you've made within `adding-timeline-feature` will no longer be visible to you.
+
 - Go back to your own alternate universe: `git checkout adding-timeline-feature`, and your modifications are back!
 
 While you're working on your feature, you can keep your branch backed up on GitHub, safe in the knowledge that it doesn't affect anything in `main`. The first time you push, you need to "set the upstream".
@@ -129,7 +141,6 @@ git push -u origin adding-timeline-feature
 ```
 
 Every time after that, you can just use `git push`. Pushing your branch to `origin` allows others to view your branch (useful if you want to get feedback along the process), and ensures that if something bad happens to your computer, your work is stored somewhere else. 
-
 Give it a go in our `sandbox` repo.
 
 Create a new branch, with a name of your choosing, and add a quote to `quotes/client-quotes.txt`. Add, commit and push (remember to set the upstream branch!). Then checkout main again, and open the `client-quotes.txt` file. The quote you've added should no longer be there. Switch back to your branch, and it will reappear. The GitHub page for this repo should also now include your branch in the list of branches. 
