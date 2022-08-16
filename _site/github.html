@@ -1,49 +1,118 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-  <meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.183">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>R for the Rest of Us Handbook - Git and GitHub</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
-  </style>
 
-  <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-  <script src="site_libs/quarto-nav/headroom.min.js"></script>
-  <script src="site_libs/clipboard/clipboard.min.js"></script>
-  <script src="site_libs/quarto-html/quarto.js"></script>
-  <script src="site_libs/quarto-html/popper.min.js"></script>
-  <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-  <script src="site_libs/quarto-html/anchor.min.js"></script>
-  <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-  <link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
-  <script src="site_libs/bootstrap/bootstrap.min.js"></script>
-  <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-  <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
-  <script id="quarto-search-options" type="application/json">{
-    "language": {
-      "search-no-results-text": "No results",
-      "search-matching-documents-text": "matching documents",
-      "search-copy-link-title": "Copy link to search",
-      "search-hide-matches-text": "Hide additional matches",
-      "search-more-match-text": "more match in this document",
-      "search-more-matches-text": "more matches in this document",
-      "search-clear-button-title": "Clear",
-      "search-detached-cancel-button-title": "Cancel",
-      "search-submit-button-title": "Submit"
-    }
-  }</script>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>R for the Rest of Us Handbook - Git and GitHub</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
 </head>
-<body class="docked fullcontent">
+
+<body class="nav-sidebar docked">
+
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -60,7 +129,7 @@
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./">
+      <a href="./" class="sidebar-logo-link">
       <img src="./assets/rru-logo-text-right-stacked.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       </div>
@@ -77,196 +146,412 @@
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
-    <div class="sidebar-item-container"> 
-        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Clients</a>
-      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
-        <i class="bi bi-chevron-right ms-2"></i>
-      </a>
-    </div>
-    <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-        <li class="sidebar-item">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Clients</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./clients.html" class="sidebar-item-text sidebar-link">Clients and Projects</a>
   </div>
 </li>
-    </ul>
+      </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-    <div class="sidebar-item-container"> 
-        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Operations</a>
-      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
-        <i class="bi bi-chevron-right ms-2"></i>
-      </a>
-    </div>
-    <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-        <li class="sidebar-item">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Operations</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./david-work.html" class="sidebar-item-text sidebar-link">David’s Work</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tools.html" class="sidebar-item-text sidebar-link">Tools</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./communication.html" class="sidebar-item-text sidebar-link">Communication</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./finances.html" class="sidebar-item-text sidebar-link">Finances</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./contracts.html" class="sidebar-item-text sidebar-link">Contracts</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./proposals.html" class="sidebar-item-text sidebar-link">Proposals</a>
   </div>
 </li>
-    </ul>
+      </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-    <div class="sidebar-item-container"> 
-        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Marketing</a>
-      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
-        <i class="bi bi-chevron-right ms-2"></i>
-      </a>
-    </div>
-    <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-        <li class="sidebar-item">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Marketing</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./marketing-overview.html" class="sidebar-item-text sidebar-link">Overview</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./branding.html" class="sidebar-item-text sidebar-link">Branding</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./website.html" class="sidebar-item-text sidebar-link">Website</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./content-strategy.html" class="sidebar-item-text sidebar-link">Content Strategy</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./email-automations.html" class="sidebar-item-text sidebar-link">Email Automations</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./social-media.html" class="sidebar-item-text sidebar-link">Social Media</a>
   </div>
 </li>
-    </ul>
+      </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-    <div class="sidebar-item-container"> 
-        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Courses</a>
-      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
-        <i class="bi bi-chevron-right ms-2"></i>
-      </a>
-    </div>
-    <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-        <li class="sidebar-item">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Courses</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./courses-overview.html" class="sidebar-item-text sidebar-link">Overview</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./courses-legal-financial.html" class="sidebar-item-text sidebar-link">Terms</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./courses-curriculum.html" class="sidebar-item-text sidebar-link">Curriculum</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./courses-recording.html" class="sidebar-item-text sidebar-link">Recording</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./courses-production.html" class="sidebar-item-text sidebar-link">Production</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./courses-marketing.html" class="sidebar-item-text sidebar-link">Marketing</a>
   </div>
 </li>
-    </ul>
+      </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-    <div class="sidebar-item-container"> 
-        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Consulting</a>
-      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
-        <i class="bi bi-chevron-right ms-2"></i>
-      </a>
-    </div>
-    <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-        <li class="sidebar-item">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Consulting</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./consulting-overview.html" class="sidebar-item-text sidebar-link">Overview</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./project-management.html" class="sidebar-item-text sidebar-link">Project Management</a>
   </div>
 </li>
-    </ul>
+      </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-    <div class="sidebar-item-container"> 
-        <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Code</a>
-      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
-        <i class="bi bi-chevron-right ms-2"></i>
-      </a>
-    </div>
-    <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
-        <li class="sidebar-item">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Code</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./code-style.html" class="sidebar-item-text sidebar-link">Code Style</a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./github.html" class="sidebar-item-text sidebar-link active">Git and GitHub</a>
   </div>
 </li>
-    </ul>
+      </ul>
   </li>
     </ul>
     </div>
 </nav>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-we-organise-and-talk-about-the-basics" id="toc-how-we-organise-and-talk-about-the-basics" class="nav-link active" data-scroll-target="#how-we-organise-and-talk-about-the-basics">How we organise (and talk about) the basics</a>
+  <ul class="collapse">
+  <li><a href="#setting-up-a-new-repo" id="toc-setting-up-a-new-repo" class="nav-link" data-scroll-target="#setting-up-a-new-repo">Setting up a new repo</a>
+  <ul class="collapse">
+  <li><a href="#readme.md" id="toc-readme.md" class="nav-link" data-scroll-target="#readme.md">README.md</a></li>
+  <li><a href="#gitignore" id="toc-gitignore" class="nav-link" data-scroll-target="#gitignore">.gitignore</a></li>
+  <li><a href="#gitattributes" id="toc-gitattributes" class="nav-link" data-scroll-target="#gitattributes">.gitattributes</a></li>
+  </ul></li>
+  <li><a href="#cloning-an-existing-repo" id="toc-cloning-an-existing-repo" class="nav-link" data-scroll-target="#cloning-an-existing-repo">Cloning an existing repo</a></li>
+  </ul></li>
+  <li><a href="#git-etiquette" id="toc-git-etiquette" class="nav-link" data-scroll-target="#git-etiquette">Git etiquette</a>
+  <ul class="collapse">
+  <li><a href="#commit-messages" id="toc-commit-messages" class="nav-link" data-scroll-target="#commit-messages">Commit messages</a></li>
+  <li><a href="#using-branches" id="toc-using-branches" class="nav-link" data-scroll-target="#using-branches">Using branches</a>
+  <ul class="collapse">
+  <li><a href="#what-are-branches" id="toc-what-are-branches" class="nav-link" data-scroll-target="#what-are-branches">What are branches?</a></li>
+  <li><a href="#creating-a-new-branch" id="toc-creating-a-new-branch" class="nav-link" data-scroll-target="#creating-a-new-branch">Creating a new branch</a></li>
+  <li><a href="#creating-a-pull-request" id="toc-creating-a-pull-request" class="nav-link" data-scroll-target="#creating-a-pull-request">Creating a pull request</a></li>
+  <li><a href="#reviewing-a-pull-request" id="toc-reviewing-a-pull-request" class="nav-link" data-scroll-target="#reviewing-a-pull-request">Reviewing a pull request</a></li>
+  <li><a href="#merging-etiquette-and-branch-hygiene" id="toc-merging-etiquette-and-branch-hygiene" class="nav-link" data-scroll-target="#merging-etiquette-and-branch-hygiene">Merging etiquette and branch hygiene</a></li>
+  </ul></li>
+  <li><a href="#dealing-with-merge-conflicts" id="toc-dealing-with-merge-conflicts" class="nav-link" data-scroll-target="#dealing-with-merge-conflicts">Dealing with merge conflicts</a></li>
+  <li><a href="#writing-good-issues" id="toc-writing-good-issues" class="nav-link" data-scroll-target="#writing-good-issues">Writing good issues</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Git and GitHub</h1>
+</div>
 
-<div class="quarto-title"><h1 class="title d-none d-lg-block display-7">Git and GitHub</h1></div></header>
 
 
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>At R For The Rest Of Us, we collaborate on projects using Git and GitHub. Git is the gold standard for version control, and using it in conjunction with GitHub provides a neat way of exploring the more advanced Git features within a friendly interface. This section covers the basics of the Git etiquette we adopt, as well as a few how-tos and worked examples.</p>
+<section id="how-we-organise-and-talk-about-the-basics" class="level2">
+<h2 class="anchored" data-anchor-id="how-we-organise-and-talk-about-the-basics">How we organise (and talk about) the basics</h2>
+<ul>
+<li>Each project has its own unique repository</li>
+<li>The central repository for each project lives on GitHub; this is also referred to as <code>origin</code></li>
+<li>Everyone working on that project is invited to the GitHub repo, and we then <code>clone</code> the repo to our own computers (this gives us what we call local repos)</li>
+</ul>
+<p>The rest of this section assumes a basic understanding of how Git works. The main thing to note for new users is that, unlike something like Dropbox, changes only make it to the central repo (and from there to others), if Git is explicitly told about them via <code>add</code>, <code>commit</code> and <code>push</code> commands.</p>
+<section id="setting-up-a-new-repo" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-a-new-repo">Setting up a new repo</h3>
+<p>The easiest way to create a new repo is to do it on GitHub. Make sure to give it a name that clearly identifies the project!</p>
+<p><img src="assets/git-section/new-repo.png" class="img-fluid" alt="screenshot of a repo being created"> Then follow the instructions that come up once you’ve clicked on Create Repository. Pick the option that best corresponds to the stage you have reached. If you have already used <code>git init</code> to make your local folder into a Git repo, pick the second option. If not, pick the first.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/git-section/initial-clone.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">screenshot of init instructions</figcaption><p></p>
+</figure>
+</div>
+<p>When creating a new repo, we want to add three files: <code>README.md</code> (which is added automatically in the first option), <code>.gitignore</code> and <code>.gitattributes</code>. The default branch of a new repo should be called <code>main</code>. This is GitHub’s new default, so should happen automatically.</p>
+<section id="readme.md" class="level4">
+<h4 class="anchored" data-anchor-id="readme.md">README.md</h4>
+<p>This file should contain information about the purpose of the repo, and any information useful to other team members interacting with it. We sometimes make our repos available to clients towards the end of projects, so keep the contents of the <code>README</code> accessible to non-R specialists.</p>
+</section>
+<section id="gitignore" class="level4">
+<h4 class="anchored" data-anchor-id="gitignore">.gitignore</h4>
+<p>The best way to do this is by using <code>{usethis}</code> within <code>R</code>. Navigate to your repo, and type:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_vaccinate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This will add a .gitignore file that excludes files with the following extensions from being tracked by Git.</p>
+<pre><code>.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store</code></pre>
+</section>
+<section id="gitattributes" class="level4">
+<h4 class="anchored" data-anchor-id="gitattributes">.gitattributes</h4>
+<p>This file allows us to work across different Operating Systems, which have different behaviours for handling line endings. Create a text file and rename it to <code>.gitattributes</code> (note, not <code>gitattributes.txt</code>) and copy the following content into it:</p>
+<pre><code># Let Git's auto-detection algorithm infer if a file is text. If it is,
+# enforce LF line endings regardless of OS or git configurations.
+* text=auto eol=lf
+
+# Isolate binary files in case the auto-detection algorithm fails and
+# marks them as text files (which could break them).
+*.{png,jpg,jpeg,gif,webp,woff,woff2} binary
+</code></pre>
+</section>
+</section>
+<section id="cloning-an-existing-repo" class="level3">
+<h3 class="anchored" data-anchor-id="cloning-an-existing-repo">Cloning an existing repo</h3>
+<p>To clone a repo from GitHub, it either needs to be public, or you need to have been invited to the repo. We invite all team members to the <code>sandbox</code> repo we created, and use it as a way of exploring different Git tricks.</p>
+<p>To clone the repo, go to <a href="https://github.com/rfortherestofus/sandbox">its GitHub page</a> and click on Code, copy the text provided by GitHub by clicking on the copy icon.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/git-section/clone-sandbox.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">screenshot showing how to copy the url of the repo we want to clone</figcaption><p></p>
+</figure>
+</div>
+<p>Next, create a new folder called <code>sandbox</code> somewhere on your computer. Navigate to that folder in your terminal, and type <code>git clone</code> then paste in the text you’ve just copied, type space then <code>.</code> and hit <code>Enter</code>. That full stop means “clone the folder into the directory where I am currently”. If you miss that out, you’ll end up with this git folder called <code>sandbox</code> inside your <code>sandbox</code> folder which will make things very confusing. Your command should look like this:</p>
+<pre><code>git clone https://github.com/rfortherestofus/sandbox.git .</code></pre>
+<p>This will create a local copy of the repo on your computer.</p>
+<p>Depending on how your computer is set up, you may see a folder called <code>.git</code>. This is a hidden folder. Do not edit its contents!</p>
+</section>
+</section>
+<section id="git-etiquette" class="level2">
+<h2 class="anchored" data-anchor-id="git-etiquette">Git etiquette</h2>
+<section id="commit-messages" class="level3">
+<h3 class="anchored" data-anchor-id="commit-messages">Commit messages</h3>
+<p>There is an art to writing good commit messages.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://imgs.xkcd.com/comics/git_commit_2x.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Commit messages comic illustrating how not to do it! From xkcd.com</figcaption><p></p>
+</figure>
+</div>
+<p>Some organisations have very strict guidelines on that. Here, we just try to follow the following rules:</p>
+<ul>
+<li><p>Commit often and frequently; this allow you to easily backtrack to the point where your code was doing what it should be.</p></li>
+<li><p>Write clear commit messages. Things like “I fixed it!” are not all that helpful when trying to find a commit that addressed a specific problem!</p></li>
+<li><p>If the change you’re making is linked to an issue on GitHub (we’ll come to issues later), include the number of the issue in the commit message (e.g.&nbsp;“Added section on commit messages - #4”). GitHub picks this up and adds a message into the issue, which allows us to easily keep track of progress.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/git-section/gh-issue-commit.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Screenshot of GitHub issue #4 featuring the commit above</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="using-branches" class="level3">
+<h3 class="anchored" data-anchor-id="using-branches">Using branches</h3>
+<p>We encourage the use of branches when collaborating on projects. These can be daunting to new Git users, but once we get the hang of them, there’s no looking back!</p>
+<section id="what-are-branches" class="level4">
+<h4 class="anchored" data-anchor-id="what-are-branches">What are branches?</h4>
+<p>We mentioned the default branch, <code>main</code> earlier. Think of this as the “stable universe” as far as the project is concerned. It contains up-to-date code that others can reliably use. A branch is essentially an “alternate universe” for the project, where we can experiment, make changes, test new things, all without disrupting the “stable universe” that others rely on.</p>
+<p>Some organisations only ever allow changes to be made via a branch. There’s lot of wisdom in that, but sometimes it can become cumbersome. Here are some use cases where you could consider working in the <code>main</code> branch:</p>
+<ul>
+<li><p>you are the only person working on the project</p></li>
+<li><p>you are adding something to the project that doesn’t interact at all with the code others are writing</p></li>
+</ul>
+<p>But even in those cases, you could consider using a new branch to be on the safe side. If in doubt, check with David.</p>
+</section>
+<section id="creating-a-new-branch" class="level4">
+<h4 class="anchored" data-anchor-id="creating-a-new-branch">Creating a new branch</h4>
+<p>Creating a new branch is trivial. As with commit messages, we want to make sure the name of the branch gives a clear indication of its purpose. Say a client wants to add a new timeline to their report. The report is otherwise working as it should be. To work in a branch, and thereby allow them to keep using the report as is while you figure this out, you’ll want to</p>
+<ul>
+<li><p>make sure you’re branching off an up-to-date <code>main</code>: <code>git pull</code></p></li>
+<li><p>create a new branch with a clear name: <code>git checkout -b adding-timeline-feature</code></p></li>
+</ul>
+<p>You can also do this in RStudio or in GitHub Desktop.</p>
+<p>Now the files that you see are ones that belong to your alternate universe called “adding timeline feature”. Everything will look the same, but changes you add and commit here won’t affect anything in <code>main</code>; if it all goes horribly wrong, you can delete this branch and know all is still well in the “stable universe”. You can then switch between universes as follows:</p>
+<ul>
+<li><p>Commit (or stash) everything you’ve done within your branch</p></li>
+<li><p>Go back to the “stable universe”: <code>git checkout main</code>, probably followed by <code>git pull</code> to see what’s happened there in your absence. The modifications you’ve made within <code>adding-timeline-feature</code> will no longer be visible to you.</p></li>
+<li><p>Go back to your own alternate universe: <code>git checkout adding-timeline-feature</code>, and your modifications are back!</p></li>
+</ul>
+<p>While you’re working on your feature, you can keep your branch backed up on GitHub, safe in the knowledge that it doesn’t affect anything in <code>main</code>. The first time you push, you need to “set the upstream”.</p>
+<pre><code>git push -u origin adding-timeline-feature</code></pre>
+<p>Every time after that, you can just use <code>git push</code>. Pushing your branch to <code>origin</code> allows others to view your branch (useful if you want to get feedback along the process), and ensures that if something bad happens to your computer, your work is stored somewhere else. Give it a go in our <code>sandbox</code> repo.</p>
+<p>Create a new branch, with a name of your choosing, and add a quote to <code>quotes/client-quotes.txt</code>. Add, commit and push (remember to set the upstream branch!). Then checkout main again, and open the <code>client-quotes.txt</code> file. The quote you’ve added should no longer be there. Switch back to your branch, and it will reappear. The GitHub page for this repo should also now include your branch in the list of branches.</p>
+</section>
+<section id="creating-a-pull-request" class="level4">
+<h4 class="anchored" data-anchor-id="creating-a-pull-request">Creating a pull request</h4>
+<p>Pull request are the way we merge the work you’ve done in a branch back into our “stable universe” while allowing someone else to review the changes in the process.</p>
+<p>TODO: example create a pull request for the added quote TODO: best for the branch author / person who made the most recent contribution to it to initiate the pull request TODO: get up to speed with <code>main</code> first.</p>
+</section>
+<section id="reviewing-a-pull-request" class="level4">
+<h4 class="anchored" data-anchor-id="reviewing-a-pull-request">Reviewing a pull request</h4>
+<p>TODO: We haven’t really done this, but it might be worth thinking about if projects get bigger - you can set things so that a merge into <code>main</code> needs to be approved by someone other than the person creating the pull request; a useful way to keep things safe, but we need to all be happy with pull requests first</p>
+</section>
+<section id="merging-etiquette-and-branch-hygiene" class="level4">
+<h4 class="anchored" data-anchor-id="merging-etiquette-and-branch-hygiene">Merging etiquette and branch hygiene</h4>
+<p>At this point comes a policy decision, which can be influenced by workload: who completes the approved merge? It could be the person who did the work, or the person who approved the merge. If there happen to be conflicts (see below), this can be non trivial. GitHub will tell you if there will be a conflict, in which case we can discuss who is best placed to resolve it.</p>
+<p>And a second policy decision, which can be influenced by how we want to use the branches: should a branch be deleted once it has been merged in? The advantage of deleting branches as part of the merge is that this avoids needing to tidy them up at a later stage. You might have a feature you’re working on where a quick bug fix was needed, but you’d like to keep working on it to improve the code once the immediate need for the bug fix has passed. In that case, it might be best to keep the branch, but we’ll need to make sure we keep it up to speed with the “stable universe” by merging <code>main</code> into that branch before picking it up again.</p>
+<p>To check the status of your branch(es) compared to others, click on the “branches” icon in the repo’s GitHub page. Here you can see by how many commits a branch is ahead and behind the default branch (typically <code>main</code>). A branch that is “behind” <code>main</code> by a large number of commits and hasn’t been updated for a while is probably a candidate for deletion, but if it wasn’t your branch, check with its author first!</p>
+</section>
+</section>
+<section id="dealing-with-merge-conflicts" class="level3">
+<h3 class="anchored" data-anchor-id="dealing-with-merge-conflicts">Dealing with merge conflicts</h3>
+<p>The best way to deal with conflicts is to avoid causing them in the first place!</p>
+<p>TODO: pull across info from my old team doc</p>
+<p>TODO: I use TortoiseGit as a merge tool; makes it easier to compare the changes; what do others use?</p>
+</section>
+<section id="writing-good-issues" class="level3">
+<h3 class="anchored" data-anchor-id="writing-good-issues">Writing good issues</h3>
+<p>TODO: Decide if we want a section on this</p>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -286,7 +571,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.blur();
     // flash "checked"
     button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
     setTimeout(function() {
+      button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
     // clear code selection
@@ -342,6 +630,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 </body></html>
