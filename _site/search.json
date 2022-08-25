@@ -21,6 +21,13 @@
     "text": "Putting Content on Website"
   },
   {
+    "objectID": "data-viz.html",
+    "href": "data-viz.html",
+    "title": "Data Viz",
+    "section": "",
+    "text": "When making data viz for R for the Rest of Us, we abide by three main principles:\n\nHighlight\nDeclutter\nExplain\nSparkle\n\nI talk about these principles in a video I made for the Going Deeper with R course.\n\n\n\n\nWhat this means in practice is the following:\nWe highlight important findings using descriptive titles that show what’s happening with the data. Things like “90% of people do X” rather than “Percent of people who do X.” The rationale for this is laid out in this article by Stephanie Everegreen.\nWe declutter our charts by removing unnecessary elements. Here’s an example of such a chart. Note that we have removed most grid lines, and the y axis title. This makes the data easier to read and make sense of.\n\nWe explain by using annotations where possible.\nWe make our charts sparkle by using custom fonts and custom themes. We have an internal custom theme in the rfortherestofus package.\n\n\n\n\n\nBut more often, we create a custom theme for clients we work with. This involves using their fonts and colors. In cases where clients have branding guidelines, we use those. If not, we get colors and fonts from their website and use them."
+  },
+  {
     "objectID": "tools.html",
     "href": "tools.html",
     "title": "Tools",

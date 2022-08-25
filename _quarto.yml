@@ -54,6 +54,7 @@ website:
         contents:
         - code-style.qmd
         - github.qmd
+        - data-viz.qmd
 format:
   html:
     toc: true

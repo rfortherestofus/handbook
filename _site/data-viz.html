@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R for the Rest of Us Handbook - Branding</title>
+<title>R for the Rest of Us Handbook - Data Viz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,7 +54,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Branding</h1>
+      <h1 class="quarto-secondary-nav-title">Data Viz</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -152,7 +152,7 @@ ul.task-list{list-style: none;}
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./branding.html" class="sidebar-item-text sidebar-link active">Branding</a>
+  <a href="./branding.html" class="sidebar-item-text sidebar-link">Branding</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -257,7 +257,7 @@ ul.task-list{list-style: none;}
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data-viz.html" class="sidebar-item-text sidebar-link">Data Viz</a>
+  <a href="./data-viz.html" class="sidebar-item-text sidebar-link active">Data Viz</a>
   </div>
 </li>
       </ul>
@@ -267,20 +267,14 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#logo-colors-typography" id="toc-logo-colors-typography" class="nav-link active" data-scroll-target="#logo-colors-typography">Logo, colors, typography</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Branding</h1>
+<h1 class="title d-none d-lg-block">Data Viz</h1>
 </div>
 
 
@@ -294,27 +288,33 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>The best description of branding that I’ve read is from <a href="https://www.notion.so/e3e2678e40df453eaea065bd0e7a8f10">Gumroad</a>:</p>
-<blockquote class="blockquote">
-<p>A brand is nothing more than people’s perceptions. Since Gumroad is defined by how the world feels about us, we like to make a good impression.</p>
-</blockquote>
-<p>When I think about who typical customers are for education products, here’s the persona I have in mind:</p>
-<blockquote class="blockquote">
-<p>40-something year old woman with a Master’s degree who does some type of social science-related work. She is really good with Excel and probably learned to use some other statistical software (SPSS, SAS, Stata, etc) in grad school. She’s heard about other people using R and is intrigued but at the same time is scared by what she’s heard about how hard R is to learn.</p>
-</blockquote>
-<p>With this persona in mind, I’ve intentionally tried to make the R for the Rest of Us personality:</p>
-<ul>
-<li>Friendly</li>
-<li>Welcoming</li>
-<li>Not too serious</li>
-</ul>
-<p>All of the marketing I do takes a laid-back, conversational approach. I start all emails, for example, with the phrase “Hi friend”. Any time someone asks a question, I reassure them it’s a good question (people are afraid to ask “dumb” questions when it comes to R). These are a couple ways I try to implement the brand.</p>
-<section id="logo-colors-typography" class="level2">
-<h2 class="anchored" data-anchor-id="logo-colors-typography">Logo, colors, typography</h2>
-<p>When most people think of branding, this is what they’re asking about. You can find the various logos, colors, and typography that I use on <a href="https://www.canva.com/brand/kAEm5_d142Q">Canva</a>.</p>
+<p>We do a lot of data viz at R for the Rest of Us. Most of the work we do is for general audiences, or at least for folks not super familiar with data. As a result, our data viz tends to look more like data viz seen in the media rather than like that seen in, say, academia.</p>
+<p>When making data viz for R for the Rest of Us, we abide by three main principles:</p>
+<ol type="1">
+<li>Highlight</li>
+<li>Declutter</li>
+<li>Explain</li>
+<li>Sparkle</li>
+</ol>
+<p>I talk about these principles in a video I made for the <a href="https://rfortherestofus.com/courses/going-deeper/">Going Deeper with R course</a>.</p>
+<div class="muse-video-player" data-video="mC3j51J" data-links="0" data-logo="0" data-width="100%">
+
+</div>
+<script src="https://muse.ai/static/js/embed-player.min.js"></script>
+<p>What this means in practice is the following:</p>
+<p>We <strong>highlight</strong> important findings using descriptive titles that show what’s happening with the data. Things like “90% of people do X” rather than “Percent of people who do X.” The rationale for this is laid out in <a href="https://stephanieevergreen.com/strong-titles/">this article by Stephanie Everegreen</a>.</p>
+<p>We <strong>declutter</strong> our charts by removing unnecessary elements. Here’s an example of such a chart. Note that we have removed most grid lines, and the y axis title. This makes the data easier to read and make sense of.</p>
+<p><img src="assets/psc-sample.png" class="img-fluid"></p>
+<p>We <strong>explain</strong> by using annotations where possible.</p>
+<p>We make our charts <strong>sparkle</strong> by using custom fonts and custom themes. We have an internal custom theme in the <a href="https://rfortherestofus.github.io/rfortherestofus/reference/theme_rru.html"><code>rfortherestofus</code> package</a>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="data-viz_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>But more often, we create a custom theme for clients we work with. This involves using their fonts and colors. In cases where clients have branding guidelines, we use those. If not, we get colors and fonts from their website and use them.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
