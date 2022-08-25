@@ -4,7 +4,7 @@ title: "Data Viz"
 
 We do a lot of data viz at R for the Rest of Us. Most of the work we do is for general audiences, or at least for folks not super familiar with data. As a result, our data viz tends to look more like data viz seen in the media rather than like that seen in, say, academia. 
 
-When making data viz for R for the Rest of Us, we abide by three main principles:
+When making data viz for R for the Rest of Us, we abide by four main principles:
 
 1. Highlight
 2. Declutter
