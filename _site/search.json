@@ -375,7 +375,7 @@
     "href": "project-management.html#client-communication",
     "title": "Project Management",
     "section": "Client Communication",
-    "text": "Client Communication\nThe most important thing we can do is communicate effectively and regularly. This means getting back to clients within 24 hours.\nThe type of communication we use with clients depends on the client.\n\nIf clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.\nIf they don’t want to work in GitHub (most don’t), email is generally best.\n\nI generally try to send clients updates by email about overall progress every 1-2 weeks to make sure they know what’s going on and see if they have any questions."
+    "text": "Client Communication\nThe most important thing we can do is communicate effectively and regularly. This means getting back to clients within 24 hours.\nThe type of communication we use with clients depends on the client.\n\nIf clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.\nIf they don’t want to work in GitHub (most don’t), email is generally best.\n\nWe should email clients each week to give them an overall update on progress and see if they have any questions."
   },
   {
     "objectID": "clients.html",
@@ -572,5 +572,12 @@
     "title": "Communication",
     "section": "External Communication",
     "text": "External Communication\nExternal communication with clients and others happens mostly through email."
+  },
+  {
+    "objectID": "project-management.html#schedule",
+    "href": "project-management.html#schedule",
+    "title": "Project Management",
+    "section": "Schedule",
+    "text": "Schedule\nFor each client, we create a file that outlines the milestones in the project and the tasks to be done. This is created as a .qmd file and then rendered to HTML. We then set up Netlify to host the HTML file and share the link with the client. Here is an example document.\n\nThe schedule should be updated each week when we email the client an update."
   }
 ]
