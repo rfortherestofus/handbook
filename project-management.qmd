@@ -25,7 +25,7 @@ We should email clients each week to give them an overall update on progress and
 
 ## Schedule
 
-For each client, we create a file that outlines the milestones in the project and the tasks to be done. This is created as a .qmd file and then rendered to HTML. We then set up Netlify to host the HTML file and share the link with the client. Here is an example document.
+For each client, we create a file that outlines the milestones in the project and the tasks to be done. This is created as a .qmd file and then rendered to HTML. We then set up Netlify to host the HTML file and share the link with the client. [Here is an example document](https://pmpbusinessreports.netlify.app/).
 
 ![](assets/schedule.png)
 
