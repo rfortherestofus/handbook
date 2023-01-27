@@ -151,7 +151,7 @@
     "href": "courses-curriculum.html#lessons",
     "title": "Curriculum",
     "section": "Lessons",
-    "text": "Lessons\nThe number of lessons varies by course. However, as a general rule, core courses tend to be longer (between 30 and 40 lessons) while topics courses tend to be shorter (15 to 30 lessons).\nEach lesson should cover one distinct topic. Each lesson within a section should be short and focus on a single topic. As you’re making your materials, if you think that a video demonstrating the concept will go beyond 10 minutes or so, consider breaking it into multiple lessons.\nEach lesson has the following sections:\n\nVideo overview\nYour Turn exercise (some lessons don’t lend themselves to this and don’t have an exercise)\nCode and video solutions (only if there is a Your Turn)\nLearn More section with links to resources on that topic\n\nHere’s what it looks like (you can see this lesson here).\n\nI typically start a lesson with slides. I’ll start with a slide that lays out the concept. I’ll often have code on this slide.\nI’ll usually then flip over to RStudio to show myself typing out the code to demonstrate this concept in an exercises file. I call this the My Turn. Here’s a sample lesson."
+    "text": "Lessons\nThe number of lessons varies by course. However, as a general rule, core courses tend to be longer (between 30 and 40 lessons) while topics courses tend to be shorter (15 to 30 lessons).\nEach lesson should cover one distinct topic. Each lesson within a section should be short and focus on a single topic. As you’re making your materials, if you think that a video demonstrating the concept will go beyond 10 minutes or so, consider breaking it into multiple lessons.\nEach lesson has the following sections:\n\nVideo overview\nYour Turn exercise (some lessons don’t lend themselves to this and don’t have an exercise)\nCode and video solutions (only if there is a Your Turn)\nLearn More section with links to resources on that topic\n\nHere’s what it looks like (you can see this lesson here).\n\nLessons will typically start with your face on camera, then go to full screen of your slides/RStudio. Here’s an example."
   },
   {
     "objectID": "courses-curriculum.html#materials",
@@ -340,14 +340,14 @@
     "href": "courses-recording.html#recording-videos",
     "title": "Recording",
     "section": "Recording Videos",
-    "text": "Recording Videos\nI record using Screenflow. If you’re on a Mac, you’ll get a license for it. If not, we’ll discuss options.\n\nRecording Procedures\nI’m generally not that fussy about making sure everything is super high quality, but please use an external camera and external mic to record. Please put your mic as close to you as possible, but make sure it doesn’t show up on camera. If you are interested in learning some tips about high-quality screencasting, this guide from Egghead is helpful.\nMy general experience is that it’s easier to record videos by just hitting record and going through your lesson as many times as you need to. I often make mistakes along the way, but that’s ok because we can edit them out after the fact. Just go back to right before you messed up and start again! You can, of course, record so you get a single high-quality take, but I find that hard to do and way too much pressure.\n\n\nSharing Videos with David\nPlease share the raw videos you record in the Google Drive folder that David sets up for you. Make sure they are labeled so I know what each video is."
+    "text": "Recording Videos\nFor those on Mac or Windows, recording happens with Descript. David will set you up with a license so you can use it.\n\nGetting Ready to Record\nThis image from Egghead is an accurate representation of what goes into making videos.\n\nBefore you record there are several things to take into consideration.\nPlease tidy whatever portion of your workspace will show in the background of videos. No need to go 100% Marie Kondo, but please try to keep it neat. Not only does it look more professional, it also encourages people to focus on what you’re teaching, not whatever random object is on your bookshelf.\nPlease use an external microphone. Try to keep it as close to you as possible, though I generally try to keep it off screen.\nAdjust your screen resolution. Adjusting your screen resolution makes your code much easier to read.\nWorking on a Mac, I go to Settings > Displays and select 1024 x 576 (HiDPI). As Egghead explains about HiDPI:\n\nHiDPI mode—also known broadly as DPI scaling, or Retina display on Macs—doubles each pixel, allowing for highly readable text on very high-resolution screens.\n\nThere are some instructions for doing the same thing on Windows here.\nPlease hit the top menu bar when you record. Please go into full screen mode in RStudio. This hides your top menu bar and keeps the focus on your code.\n\nPlease use an external webcam. They tend to be higher quality than built-in ones.\nIf you are interested in learning more tips about high-quality screencasting, this guide from Egghead is helpful.\n\n\nRecording Lessons in Descript\nYou will record videos using Descript. It’s a great tool and has extensive documentation.\nPlease create a new project for each lesson. Use the blue new project button, not the classic project option.\n\nHere’s how to record a lesson.\n\n\n\nYou can re-record as much as you’d like. It’s helpful if you can delete bad takes that you don’t want included. Just highlight the text and hit delete."
   },
   {
     "objectID": "courses-recording.html#video-editing",
     "href": "courses-recording.html#video-editing",
     "title": "Recording",
     "section": "Video Editing",
-    "text": "Video Editing\nDavid will edit all of your videos."
+    "text": "Video Editing\nOnce you’ve finished recording all lessons, David will then edit them."
   },
   {
     "objectID": "consulting-overview.html",
@@ -376,6 +376,13 @@
     "title": "Project Management",
     "section": "Client Communication",
     "text": "Client Communication\nThe most important thing we can do is communicate effectively and regularly. This means getting back to clients within 24 hours.\nThe type of communication we use with clients depends on the client.\n\nIf clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.\nIf they don’t want to work in GitHub (most don’t), email is generally best.\n\nWe should email clients each week to give them an overall update on progress and see if they have any questions."
+  },
+  {
+    "objectID": "project-management.html#schedule",
+    "href": "project-management.html#schedule",
+    "title": "Project Management",
+    "section": "Schedule",
+    "text": "Schedule\nFor each client, we create a file that outlines the milestones in the project and the tasks to be done. This is created as a .qmd file and then rendered to HTML. We then set up Netlify to host the HTML file and share the link with the client. Here is an example document.\n\nThe schedule should be updated each week when we email the client an update."
   },
   {
     "objectID": "clients.html",
@@ -572,12 +579,5 @@
     "title": "Communication",
     "section": "External Communication",
     "text": "External Communication\nExternal communication with clients and others happens mostly through email."
-  },
-  {
-    "objectID": "project-management.html#schedule",
-    "href": "project-management.html#schedule",
-    "title": "Project Management",
-    "section": "Schedule",
-    "text": "Schedule\nFor each client, we create a file that outlines the milestones in the project and the tasks to be done. This is created as a .qmd file and then rendered to HTML. We then set up Netlify to host the HTML file and share the link with the client. Here is an example document.\n\nThe schedule should be updated each week when we email the client an update."
   }
 ]

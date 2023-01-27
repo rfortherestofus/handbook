@@ -67,13 +67,9 @@ Here's what it looks like (you can see this lesson
 
 ![](assets/sample-lesson.png)
 
-I typically start a lesson with slides. I'll start with a slide that
-lays out the concept. I'll often have code on this slide. 
+Lessons will typically start with your face on camera, then go to full screen of your slides/RStudio. Here's an example.
 
-I'll usually then flip over to RStudio to show myself typing out the code to
-demonstrate this concept in an exercises file. I call this the My Turn. Here's a sample lesson. 
-
-::: {.muse-video-player data-video="7VqNKJc" data-logo="0" data-width="600"}
+::: {.muse-video-player data-video="Fb9mw8y" data-logo="0" data-width="100%"}
 :::
 
 ```{=html}
@@ -103,7 +99,6 @@ devtools::install_github("rfortherestofus/rfortherestofus")
 You can then add slides by going to File > New File > RMarkdown and selecting the R for the Rest of Us template.
 
 ![](assets/rru-xaringan-template.png)
-
 
 Please create a `slides` directory where all of your slides will live.
 
