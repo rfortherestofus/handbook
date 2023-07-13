@@ -1,21 +1,24 @@
 on:
-  workflow_dispatch:
   push:
     branches: main
 
-name: Quarto Publish
+name: Publish
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    container: rocker/verse:4.3.0
     steps:
+      - name: Install dependencies
+        run: |
+         install.packages("remotes")
+         remotes::install_github("rfortherestofus/rfortherestofus")
+        shell: Rscript {0}
+
       - name: Check out repository
-        uses: actions/checkout@v3 
-
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Render and Publish 
+        uses: actions/checkout@v3
+        
+      - name: Render and Publish to Netlify
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: netlify
