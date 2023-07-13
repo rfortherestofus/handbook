@@ -4,28 +4,35 @@
     "href": "courses-production.html",
     "title": "Production",
     "section": "",
-    "text": "After the instructor provides raw videos, David edits them. Most lessons have the following structure:\n\nFull screen on instructor as they introduce topic\nSwitch to instructor in corner with their screen as background\nAs the instructor talks about code, zoom in on it (pan back out when they’re done talking about the specific code)\nSwitch back to full-screen on instructor when they’re not talking about code at all\nDo pans on other websites etc as appropriate\nMy Turn as appropriate\nYour Turn as appropriate\n\n\n\n\nUse a 0.2 second length Cross Blur transition\nDetach audio and use audio smoothing\nMake sure audio doesn’t have any transitions\nYou can take full-length screenshots with Firefox\n\nExample walkthrough of me editing video: https://show.rfor.us/z1fUk4"
+    "text": "After videos are edited, they are uploaded to muse.ai."
+  },
+  {
+    "objectID": "courses-production.html#uploading-videos",
+    "href": "courses-production.html#uploading-videos",
+    "title": "Production",
+    "section": "",
+    "text": "After videos are edited, they are uploaded to muse.ai."
   },
   {
     "objectID": "courses-production.html#captions",
     "href": "courses-production.html#captions",
     "title": "Production",
     "section": "Captions",
-    "text": "Captions\nCaptions are added using muse.ai or Descript. Captions for courses are then edited by hand to make sure they are accurate."
+    "text": "Captions\nmuse.ai will add pretty good captions. For videos that need further cleaning up, someone will edit the captions manually."
   },
   {
-    "objectID": "courses-production.html#putting-content-on-website",
-    "href": "courses-production.html#putting-content-on-website",
+    "objectID": "courses-production.html#adding-content-to-website",
+    "href": "courses-production.html#adding-content-to-website",
     "title": "Production",
-    "section": "Putting Content on Website",
-    "text": "Putting Content on Website"
+    "section": "Adding Content to Website",
+    "text": "Adding Content to Website\nTODO"
   },
   {
     "objectID": "data-viz.html",
     "href": "data-viz.html",
     "title": "Data Viz",
     "section": "",
-    "text": "When making data viz for R for the Rest of Us, we abide by four main principles:\n\nHighlight\nDeclutter\nExplain\nSparkle\n\nI talk about these principles in a video I made for the Going Deeper with R course.\n\n\n\n\nWhat this means in practice is the following:\nWe highlight important findings using descriptive titles that show what’s happening with the data. Things like “90% of people do X” rather than “Percent of people who do X.” The rationale for this is laid out in this article by Stephanie Everegreen.\nWe declutter our charts by removing unnecessary elements. Here’s an example of such a chart. Note that we have removed most grid lines, and the y axis title. This makes the data easier to read and make sense of.\n\nWe explain by using annotations where possible.\nWe make our charts sparkle by using custom fonts and custom themes. We have an internal custom theme in the rfortherestofus package.\n\n\n\n\n\nBut more often, we create a custom theme for clients we work with. This involves using their fonts and colors. In cases where clients have branding guidelines, we use those. If not, we get colors and fonts from their website and use them."
+    "text": "We do a lot of data viz at R for the Rest of Us. Most of the work we do is for general audiences, or at least for folks not super familiar with data. As a result, our data viz tends to look more like data viz seen in the media rather than like that seen in, say, academia.\nWhen making data viz for R for the Rest of Us, we abide by four main principles:\n\nHighlight\nDeclutter\nExplain\nSparkle\n\nI talk about these principles in a video I made for the Going Deeper with R course.\n\n\n\n\nWhat this means in practice is the following:\nWe highlight important findings using descriptive titles that show what’s happening with the data. Things like “90% of people do X” rather than “Percent of people who do X.” The rationale for this is laid out in this article by Stephanie Everegreen.\nWe declutter our charts by removing unnecessary elements. Here’s an example of such a chart. Note that we have removed most grid lines, and the y axis title. This makes the data easier to read and make sense of.\n\nWe explain by using annotations where possible.\nWe make our charts sparkle by using custom fonts and custom themes. We have an internal custom theme in the rfortherestofus package.\n\n\n\n\n\nBut more often, we create a custom theme for clients we work with. This involves using their fonts and colors. In cases where clients have branding guidelines, we use those. If not, we get colors and fonts from their website and use them."
   },
   {
     "objectID": "tools.html",
@@ -140,6 +147,13 @@
     "text": "You’ll start out by creating an outline of your course. This will be done in the GitHub repo that David creates for your course.\nPlease just create an outline.Rmd file for this. Use the following format:\nSection Name (H1)\nLesson Title (H2)\nOverview of lesson\nMy Turn (H3)\nOverview of what you’ll demonstrate\nYour Turn (H3)\nExercise for student\nSolutions Code (H3)\nCode used for solution to Your Turn\nLearn More (H3)\nText with additional info, resources, etc on topic of lesson"
   },
   {
+    "objectID": "courses-curriculum.html#outline",
+    "href": "courses-curriculum.html#outline",
+    "title": "Curriculum",
+    "section": "",
+    "text": "You’ll start out by creating an outline of your course. This will be done in the GitHub repo that David creates for your course.\nPlease just create an outline.Rmd file for this. Use the following format:\nSection Name (H1)\nLesson Title (H2)\nOverview of lesson\nMy Turn (H3)\nOverview of what you’ll demonstrate\nYour Turn (H3)\nExercise for student\nSolutions Code (H3)\nCode used for solution to Your Turn\nLearn More (H3)\nText with additional info, resources, etc on topic of lesson"
+  },
+  {
     "objectID": "courses-curriculum.html#sections",
     "href": "courses-curriculum.html#sections",
     "title": "Curriculum",
@@ -158,7 +172,7 @@
     "href": "courses-curriculum.html#materials",
     "title": "Curriculum",
     "section": "Materials",
-    "text": "Materials\nThe materials for each courses lives in a GitHub repo on the R for the Rest of Us organization account. David will create this and add you to the repo.\n\nSlides\nSlides for R for the Rest of Us courses are made using the xaringan package.\nThere is a custom template to use to make slides in the R for the Rest of Us style. You can access this by installing the rfortherestofus package using the following code:\n\n\n\nYou can then add slides by going to File > New File > RMarkdown and selecting the R for the Rest of Us template.\n\nPlease create a slides directory where all of your slides will live.\nYou can create slides as follows:\nMost lessons should have a My Turn and a Your Turn section. The slide for the My Turn section should have an orange background and the slide for the Your Turn section should have a dark background. To do this, add the class my-turn and the class inverse to your slides as follows:\n\n\n\nOther Materials\nAny other materials that you want people to access can live in the repo. Please organize however you see fit."
+    "text": "Materials\nThe materials for each courses lives in a GitHub repo on the R for the Rest of Us organization account. David will create this and add you to the repo.\n\nSlides\nSlides for R for the Rest of Us courses are made using the xaringan package.\nThere is a custom template to use to make slides in the R for the Rest of Us style. You can access this by installing the rfortherestofus package using the following code:\nYou can then add slides by going to File &gt; New File &gt; RMarkdown and selecting the R for the Rest of Us template.\n\nPlease create a slides directory where all of your slides will live.\nYou can create slides as follows:\nMost lessons should have a My Turn and a Your Turn section. The slide for the My Turn section should have an orange background and the slide for the Your Turn section should have a dark background. To do this, add the class my-turn and the class inverse to your slides as follows:\n\n\n\nOther Materials\nAny other materials that you want people to access can live in the repo. Please organize however you see fit."
   },
   {
     "objectID": "david-work.html",
@@ -340,7 +354,7 @@
     "href": "courses-recording.html#recording-videos",
     "title": "Recording",
     "section": "Recording Videos",
-    "text": "Recording Videos\nFor those on Mac or Windows, recording happens with Descript. David will set you up with a license so you can use it.\n\nGetting Ready to Record\nThis image from Egghead is an accurate representation of what goes into making videos.\n\nBefore you record there are several things to take into consideration.\nPlease tidy whatever portion of your workspace will show in the background of videos. No need to go 100% Marie Kondo, but please try to keep it neat. Not only does it look more professional, it also encourages people to focus on what you’re teaching, not whatever random object is on your bookshelf.\nPlease use an external microphone. Try to keep it as close to you as possible, though I generally try to keep it off screen.\nAdjust your screen resolution. Adjusting your screen resolution makes your code much easier to read.\nWorking on a Mac, I go to Settings > Displays and select 1024 x 576 (HiDPI). As Egghead explains about HiDPI:\n\nHiDPI mode—also known broadly as DPI scaling, or Retina display on Macs—doubles each pixel, allowing for highly readable text on very high-resolution screens.\n\nThere are some instructions for doing the same thing on Windows here.\nPlease hit the top menu bar when you record. Please go into full screen mode in RStudio. This hides your top menu bar and keeps the focus on your code.\n\nPlease use an external webcam. They tend to be higher quality than built-in ones.\nIf you are interested in learning more tips about high-quality screencasting, this guide from Egghead is helpful.\n\n\nRecording Lessons in Descript\nYou will record videos using Descript. It’s a great tool and has extensive documentation.\nPlease create a new project for each lesson. Use the blue new project button, not the classic project option.\n\nHere’s how to record a lesson.\n\n\n\nYou can re-record as much as you’d like. It’s helpful if you can delete bad takes that you don’t want included. Just highlight the text and hit delete."
+    "text": "Recording Videos\nFor those on Mac or Windows, recording happens with Descript. David will set you up with a license so you can use it.\n\nGetting Ready to Record\nThis image from Egghead is an accurate representation of what goes into making videos.\n\nBefore you record there are several things to take into consideration.\nPlease tidy whatever portion of your workspace will show in the background of videos. No need to go 100% Marie Kondo, but please try to keep it neat. Not only does it look more professional, it also encourages people to focus on what you’re teaching, not whatever random object is on your bookshelf.\nPlease use an external microphone. Try to keep it as close to you as possible, though I generally try to keep it off screen.\nAdjust your screen resolution. Adjusting your screen resolution makes your code much easier to read.\nWorking on a Mac, I go to Settings &gt; Displays and select 1024 x 576 (HiDPI). As Egghead explains about HiDPI:\n\nHiDPI mode—also known broadly as DPI scaling, or Retina display on Macs—doubles each pixel, allowing for highly readable text on very high-resolution screens.\n\nThere are some instructions for doing the same thing on Windows here.\nPlease hit the top menu bar when you record. Please go into full screen mode in RStudio. This hides your top menu bar and keeps the focus on your code.\n\nPlease use an external webcam. They tend to be higher quality than built-in ones.\nIf you are interested in learning more tips about high-quality screencasting, this guide from Egghead is helpful.\n\n\nRecording Lessons in Descript\nYou will record videos using Descript. It’s a great tool and has extensive documentation.\nPlease create a new project for each lesson. Use the blue new project button, not the classic project option.\n\nHere’s how to record a lesson.\n\n\n\nYou can re-record as much as you’d like. It’s helpful if you can delete bad takes that you don’t want included. Just highlight the text and hit delete."
   },
   {
     "objectID": "courses-recording.html#video-editing",
@@ -357,6 +371,13 @@
     "text": "In general, consulting projects we take on involve some combination of the following:\n\nData visualization\nLayout using RMarkdown and pagedown\nParameterized reporting\n\nYou can see examples of several such projects on the consulting page of the R for the Rest of Us website."
   },
   {
+    "objectID": "consulting-overview.html#projects-we-take-on",
+    "href": "consulting-overview.html#projects-we-take-on",
+    "title": "Overview",
+    "section": "",
+    "text": "In general, consulting projects we take on involve some combination of the following:\n\nData visualization\nLayout using RMarkdown and pagedown\nParameterized reporting\n\nYou can see examples of several such projects on the consulting page of the R for the Rest of Us website."
+  },
+  {
     "objectID": "consulting-overview.html#projects-we-dont-take-on",
     "href": "consulting-overview.html#projects-we-dont-take-on",
     "title": "Overview",
@@ -364,8 +385,50 @@
     "text": "Projects We Don’t Take On\nProjects that have been less successful for R for the Rest of Us are:\n\nAd hoc data analysis\nLack clear scope and involve “looking to see what data is out there”\n\nThis tweet thread has good examples of red flags to look for when considering clients/projects.\n\n\nFastest way to kill your business? Taking on the wrong clients. Here are 15 client red flags you must learn to spot:👇\n\n— Shane Martin (@Shane___Martin) June 8, 2022"
   },
   {
+    "objectID": "courses-editing.html",
+    "href": "courses-editing.html",
+    "title": "Editing",
+    "section": "",
+    "text": "After the instructor records videos on Descript, David and team edit them.\nMost lessons will have the following structure:\n\nFull video on instructor as they introduce topic\nFull screen on slides/RSutdio as instructor presents lesson\nFull screen on Your Turn section\n\nAfter editing each video, the intro and outro animation should be added."
+  },
+  {
+    "objectID": "courses-editing.html#video-editing",
+    "href": "courses-editing.html#video-editing",
+    "title": "Editing",
+    "section": "",
+    "text": "After the instructor records videos on Descript, David and team edit them.\nMost lessons will have the following structure:\n\nFull video on instructor as they introduce topic\nFull screen on slides/RSutdio as instructor presents lesson\nFull screen on Your Turn section\n\nAfter editing each video, the intro and outro animation should be added."
+  },
+  {
+    "objectID": "courses-editing.html#descript-tips",
+    "href": "courses-editing.html#descript-tips",
+    "title": "Editing",
+    "section": "Descript Tips",
+    "text": "Descript Tips\nThe easiest way to start out is to remove word gaps. I do this for any gaps greater than 1 second. This ensures that any times the instructor paused to gather their thoughts etc, those blank spaces are removed.\nWhere appropriate, use stock videos/photos on Descript to highlight a concept.\nYou can zoom into sections of the screen on Descript. For example, in a video showing the pieces of RStudio, it may make sense to zoom into each one as I discuss it. Use this sparingly as it takes a lot of time!\nAnnotations can be added as appropriate. For example, if the instructor mentions a link in the video, we can add an annotation to say “link is below” or something similar."
+  },
+  {
+    "objectID": "courses-editing.html#sound",
+    "href": "courses-editing.html#sound",
+    "title": "Editing",
+    "section": "Sound",
+    "text": "Sound\nSound levels should be fairly consistent assuming recording conditions remain consistent. However, if necessary you can auto-level clips.\nStudio sound: TODO figure out if we should use it"
+  },
+  {
+    "objectID": "courses-editing.html#export",
+    "href": "courses-editing.html#export",
+    "title": "Editing",
+    "section": "Export",
+    "text": "Export\nThere are two ways to export videos:\n\nExporting directly\nPublishing and then downloading\n\nIt is best to do the second option, as it is much quicker. Simply hit publish in the top right. Once the project is published, you can then hit the download button. If you make changes to the project, simply hit Update and then re-download."
+  },
+  {
     "objectID": "project-management.html",
     "href": "project-management.html",
+    "title": "Project Management",
+    "section": "",
+    "text": "Create a GitHub repo (set to private unless the client is ok with it being public):\n\nUse the README to lay out the overall project scope, deliverables, etc.\nUse issues to manage code-related questions at a granular level.\nIf the project is large enough, use milestones.\n\nCreate a thread in the #consulting channel on Twist for the project. This is a good place for things we’d like to keep confidential (because we work more and more with clients directly in GitHub, that isn’t the best place for confidential discussions). Communicate updates on overall progress with David using Twist. An update once a week or so is helpful."
+  },
+  {
+    "objectID": "project-management.html#overview",
+    "href": "project-management.html#overview",
     "title": "Project Management",
     "section": "",
     "text": "Create a GitHub repo (set to private unless the client is ok with it being public):\n\nUse the README to lay out the overall project scope, deliverables, etc.\nUse issues to manage code-related questions at a granular level.\nIf the project is large enough, use milestones.\n\nCreate a thread in the #consulting channel on Twist for the project. This is a good place for things we’d like to keep confidential (because we work more and more with clients directly in GitHub, that isn’t the best place for confidential discussions). Communicate updates on overall progress with David using Twist. An update once a week or so is helpful."
@@ -389,7 +452,7 @@
     "href": "clients.html",
     "title": "Clients and Projects",
     "section": "",
-    "text": "API Council: San Francisco-based non-profit that advocates for the Asian Pacific Islander community. We built a food resources map for them in 2021.\nAspect Evaluation: Very small (one-person, I believe) evaluation firm in Seattle. We made some visualizations for them in 2020.\nColibri Consulting: One-person evaluation firm. We partnered with them to do a report on Oregon farmworkers in 2021-2022.\nCTData: Connecticut-based non-profit. We worked with them and their client the Partnership for Strong Communities to make housing reports in 2020.\nEvaluation by Design: Very small (one-person, I believe) evaluation firm in the Bay Area. We helped them to develop strategy and reporting on their 21st century skills training program.\nFord Family Foundation: The client we’ve worked with the longest (since ~2017). We’ve done several data viz projects for them. The most notable is Oregon by the Numbers, but we’ve also done multiple internal projects.\nISTE/EdSurge: A non-profit education news site. We did a couple data visualizations for them focused on COVID and school reopening in 2020.\nMichigan Fitness Foundation: Non-profit focused on health. We have been doing custom training with them (mostly in the form of regular check-in calls) since 2020.\nOMNI Institute: Colorado-based evaluation firm. We trained their staff on R in 2019. Since then, we’ve done some additional training for them as well as some smaller consulting projects around survey reporting.\nORS Impact: Seattle-based evaluation firm. We’re currently helping them with a set of reports on 2020 Census outreach efforts.\nPacific Research and Evaluation: A Portland-based evaluation firm, we trained them in R in 2019. Since then, we’ve done a few small consulting projects for them, mostly around making maps.\nProsper Portland: Small business development agency for the city of Portland. We did a training with their data team in 2019. We’ve also done a series of smaller consulting projects with them since then.\nPublic Profit: Oakland-based evaluation firm. We trained their team in 2018.\nReading Partners: National non-profit that promotes literacy. We trained their team in 2019. We also developed an internal dashboard for them.\nTORV LLC: Colorado-based consulting firm that works with golf courses and sports fields. We’re helping them to automate reporting.\nThe Mark: Southern California-based evaluation firm. They took some of our courses as a group in 2020 and had us develop some docs for them."
+    "text": "Here is a partial list of clients we have worked with and a sample of the projects we’ve worked on with them.\nAPI Council: San Francisco-based non-profit that advocates for the Asian Pacific Islander community. We built a food resources map for them in 2021.\nAspect Evaluation: Very small (one-person, I believe) evaluation firm in Seattle. We made some visualizations for them in 2020.\nColibri Consulting: One-person evaluation firm. We partnered with them to do a report on Oregon farmworkers in 2021-2022.\nCTData: Connecticut-based non-profit. We worked with them and their client the Partnership for Strong Communities to make housing reports in 2020.\nEvaluation by Design: Very small (one-person, I believe) evaluation firm in the Bay Area. We helped them to develop strategy and reporting on their 21st century skills training program.\nFord Family Foundation: The client we’ve worked with the longest (since ~2017). We’ve done several data viz projects for them. The most notable is Oregon by the Numbers, but we’ve also done multiple internal projects.\nISTE/EdSurge: A non-profit education news site. We did a couple data visualizations for them focused on COVID and school reopening in 2020.\nMichigan Fitness Foundation: Non-profit focused on health. We have been doing custom training with them (mostly in the form of regular check-in calls) since 2020.\nOMNI Institute: Colorado-based evaluation firm. We trained their staff on R in 2019. Since then, we’ve done some additional training for them as well as some smaller consulting projects around survey reporting.\nORS Impact: Seattle-based evaluation firm. We’re currently helping them with a set of reports on 2020 Census outreach efforts.\nPacific Research and Evaluation: A Portland-based evaluation firm, we trained them in R in 2019. Since then, we’ve done a few small consulting projects for them, mostly around making maps.\nProsper Portland: Small business development agency for the city of Portland. We did a training with their data team in 2019. We’ve also done a series of smaller consulting projects with them since then.\nPublic Profit: Oakland-based evaluation firm. We trained their team in 2018.\nReading Partners: National non-profit that promotes literacy. We trained their team in 2019. We also developed an internal dashboard for them.\nTORV LLC: Colorado-based consulting firm that works with golf courses and sports fields. We’re helping them to automate reporting.\nThe Mark: Southern California-based evaluation firm. They took some of our courses as a group in 2020 and had us develop some docs for them."
   },
   {
     "objectID": "finances.html",
@@ -445,7 +508,7 @@
     "href": "contracts.html",
     "title": "Contracts",
     "section": "",
-    "text": "R for the Rest of Us contract templates live in PandaDoc. There are three main templates that we adapt as appropriate:\n\nThe R for the Rest of Us Client Service Agreement is for training and consulting engagements.\nThe R for the Rest of Us Master Consulting Services Agreement Template is for hiring contractors.\nThe R for the Rest of Us Course Creation Agreement is for partnering with instructors to create courses."
+    "text": "We mostly use our own contracts, but if clients prefer to use their contracts (and they look ok), that’s fine too.\nR for the Rest of Us contract templates live in PandaDoc. There are three main templates that we adapt as appropriate:\n\nThe R for the Rest of Us Client Service Agreement is for training and consulting engagements.\nThe R for the Rest of Us Master Consulting Services Agreement Template is for hiring contractors.\nThe R for the Rest of Us Course Creation Agreement is for partnering with instructors to create courses."
   },
   {
     "objectID": "email-automations.html",
@@ -494,14 +557,14 @@
     "href": "email-automations.html#reference",
     "title": "Email Automations",
     "section": "Reference",
-    "text": "Reference\n\nSchedule\n\nSelf-paced course pitch emails go out FMTWTF at 6am\nFundamentals bridge emails (hot and cold) go out MTWTF at 6am\nCourse signup emails go out MTWTF at 6am\nShadow newsletter emails go out at 9am on Thursdays\nEmails in the Global - Welcome - Sequence go out at noon on MWF\n\n\n\nSequences\nTODO\n\n\nVisual Automations\nTODO\n\n\n\n\n\nTags\nTODO\n\n\n\n\n\nAutomation Rules\nTODO\n\n\nSegments"
+    "text": "Reference\n\nSchedule\n\nSelf-paced course pitch emails go out FMTWTF at 6am\nFundamentals bridge emails (hot and cold) go out MTWTF at 6am\nCourse signup emails go out MTWTF at 6am\nShadow newsletter emails go out at 9am on Thursdays\nEmails in the Global - Welcome - Sequence go out at noon on MWF\n\n\n\nSequences\nTODO\n\n\nVisual Automations\nTODO\n\n\nTags\nTODO\n\n\nAutomation Rules\nTODO\n\n\nSegments"
   },
   {
     "objectID": "code-style.html",
     "href": "code-style.html",
     "title": "Code Style",
     "section": "",
-    "text": "I’ll add more soon"
+    "text": "https://github.com/tgerke/r-code-review-checklist\nI’ll add more soon"
   },
   {
     "objectID": "courses-overview.html",
@@ -564,11 +627,18 @@
     "href": "marketing-overview.html",
     "title": "Overview",
     "section": "",
-    "text": "Don’t market, educate.\n\nBy educating, we show people what R is and what you can do with it. Once they appreciate these things, they’re more likely to want to learn R themselves or to hire us to help them do something with it."
+    "text": "Our basic approach to marketing is simple:\n\nDon’t market, educate.\n\nBy educating, we show people what R is and what you can do with it. Once they appreciate these things, they’re more likely to want to learn R themselves or to hire us to help them do something with it."
   },
   {
     "objectID": "communication.html",
     "href": "communication.html",
+    "title": "Communication",
+    "section": "",
+    "text": "As a fully remote company, we try to communicate by writing as much as possible. Doing so has many benefits:\n\nIt forces us to clarify our thinking\nIt provides a record of decisions for those who may join things midstream\nIt allows people to work on their own time without feeling the need to join live calls etc\n\nInternal communication happens, as much as possible, in Twist. There are several channels:\n\nConsulting\nCourse Questions\nCourses\nGeneral\nOrders (all paid course orders go through here)\nR in 3 Months\nTraining\n\nWithin each channel, we typically use one thread per project (sometimes more depending on its complexity).\nOther places internal communication happens include:\n\nGitHub for discussion of specific issues on code-based projects\nTodoist comments for questions on specific tasks to be done"
+  },
+  {
+    "objectID": "communication.html#internal-communication",
+    "href": "communication.html#internal-communication",
     "title": "Communication",
     "section": "",
     "text": "As a fully remote company, we try to communicate by writing as much as possible. Doing so has many benefits:\n\nIt forces us to clarify our thinking\nIt provides a record of decisions for those who may join things midstream\nIt allows people to work on their own time without feeling the need to join live calls etc\n\nInternal communication happens, as much as possible, in Twist. There are several channels:\n\nConsulting\nCourse Questions\nCourses\nGeneral\nOrders (all paid course orders go through here)\nR in 3 Months\nTraining\n\nWithin each channel, we typically use one thread per project (sometimes more depending on its complexity).\nOther places internal communication happens include:\n\nGitHub for discussion of specific issues on code-based projects\nTodoist comments for questions on specific tasks to be done"
