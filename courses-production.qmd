@@ -2,29 +2,14 @@
 title: "Production"
 ---
 
-## Video Editing
+## Uploading Videos
 
-After the instructor provides raw videos, David edits them. Most lessons have the following structure:
-
-- Full screen on instructor as they introduce topic
-- Switch to instructor in corner with their screen as background
-- As the instructor talks about code, zoom in on it (pan back out when they're done talking about the specific code)
-- Switch back to full-screen on instructor when they're not talking about code at all
-- Do pans on other websites etc as appropriate
-- My Turn as appropriate
-- Your Turn as appropriate
-
-### Misc
-
-- Use a 0.2 second length Cross Blur transition
-- Detach audio and use audio smoothing
-- Make sure audio doesn't have any transitions
-- [You can take full-length screenshots with Firefox](https://support.mozilla.org/en-US/kb/take-screenshots-firefox)
-
-Example walkthrough of me editing video: https://show.rfor.us/z1fUk4
+After videos are edited, they are uploaded to muse.ai. 
 
 ## Captions
 
-Captions are added using muse.ai or Descript. Captions for courses are then edited by hand to make sure they are accurate.
+muse.ai will add pretty good captions. For videos that need further cleaning up, someone will edit the captions manually. 
 
-## Putting Content on Website
+## Adding Content to Website
+
+TODO

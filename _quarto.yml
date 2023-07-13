@@ -44,6 +44,7 @@ website:
         - courses-legal-financial.qmd
         - courses-curriculum.qmd
         - courses-recording.qmd
+        - courses-editing.qmd
         - courses-production.qmd
         - courses-marketing.qmd
       - section: "Consulting"
