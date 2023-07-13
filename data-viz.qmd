@@ -27,7 +27,7 @@ We **explain** by using annotations where possible.
 
 We make our charts **sparkle** by using custom fonts and custom themes. We have an internal custom theme in the [`rfortherestofus` package](https://rfortherestofus.github.io/rfortherestofus/reference/theme_rru.html). 
 
-```{r eval = FALSE}
+```{r}
 library(tidyverse)
 library(rfortherestofus)
 library(palmerpenguins)
