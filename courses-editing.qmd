@@ -1,0 +1,41 @@
+---
+title: "Editing"
+---
+
+## Video Editing
+
+After the instructor records videos on Descript, David and team edit them. 
+
+Most lessons will have the following structure:
+
+- Full video on instructor as they introduce topic
+- Full screen on slides/RSutdio as instructor presents lesson
+- Full screen on Your Turn section
+
+After editing each video, the intro and outro animation should be added.
+
+## Descript Tips
+
+The easiest way to start out is to [remove word gaps](https://help.descript.com/hc/en-us/articles/10164807277453-Adjusting-word-gaps-in-bulk). I do this for any gaps greater than 1 second. This ensures that any times the instructor paused to gather their thoughts etc, those blank spaces are removed.
+
+Where appropriate, use stock videos/photos on Descript to highlight a concept.
+
+You can zoom into sections of the screen on Descript. For example, in a video showing the pieces of RStudio, it may make sense to zoom into each one as I discuss it. Use this sparingly as it takes a lot of time!
+
+Annotations can be added as appropriate. For example, if the instructor mentions a link in the video, we can add an annotation to say "link is below" or something similar.
+
+## Sound
+
+Sound levels should be fairly consistent assuming recording conditions remain consistent. However, if necessary you can [auto-level clips](https://help.descript.com/hc/en-us/articles/10249334057357-Auto-leveling-individual-clips).
+
+Studio sound: TODO figure out if we should use it
+
+## Export
+
+There are two ways to export videos:
+
+1. Exporting directly
+
+1. Publishing and then downloading
+
+It is best to do the second option, as it is much quicker. Simply hit publish in the top right. Once the project is published, you can then hit the download button. If you make changes to the project, simply hit Update and then re-download. 
