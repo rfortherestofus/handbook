@@ -8,9 +8,11 @@ After the instructor records videos on Descript, David and team edit them.
 
 Most lessons will have the following structure:
 
+- Intro sting
 - Full video on instructor as they introduce topic
 - Full screen on slides/RSutdio as instructor presents lesson
 - Full screen on Your Turn section
+- Outro sting
 
 After editing each video, the intro and outro animation should be added.
 
