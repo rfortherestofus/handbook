@@ -17,6 +17,7 @@ Most lessons will have the following structure:
 After editing each video, the intro and outro animation should be added.
 
 ## Descript Tips
+
 The easiest way to start out is to remove word gaps. I do this for any gaps greater than 1 second. This ensures that any times the instructor paused to gather their thoughts etc, those blank spaces are removed.
 
 Leave 0.25 seconds gaps between clips where the instructor is on camera and clips where they're showing their screen.
@@ -25,11 +26,9 @@ When there are two back-to-back clips of the speaker on camera, do a 0.5 second 
 
 Where appropriate, use stock videos/photos on Descript to highlight a concept.
 
-You can zoom into sections of the screen on Descript. For example, in a video showing the pieces of RStudio, it may make sense to zoom into each one as I discuss it. Make Zooms quicker — around 1 second. Use Zooms sparingly as it takes a lot of time!
+You can zoom into sections of the screen on Descript. For example, in a video showing the pieces of RStudio, it may make sense to zoom into each one as I discuss it. Make zooms quicker — around 1 second. 
 
-Where appropriate, use callout boxes, arrows, and text to draw the learner's attention to a specific area of the screen (for example, when the instructor says "you can see here..."). Use color code ff7400 consistently when adding these attention grabbers.
-
-Annotations can be added as appropriate. For example, if the instructor mentions a link in the video, we can add an annotation to say "link is below" or something similar.
+Where appropriate, use callout boxes, arrows, and text to draw the learner's attention to a specific area of the screen (for example, when the instructor says "you can see here..."). Use the R for the Rest of Us oragne color (#ff7400) consistently when adding these attention grabbers.
 
 ## Sound
 
