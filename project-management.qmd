@@ -2,15 +2,13 @@
 title: "Project Management"
 ---
 
-## Overview
-
-We use three tools to manage each project:
+We use three tools to manage projects:
 
 1. **GitHub** for code discussions
 2. **Todoist** to keep track of deadlines
 3. **Twist** for general discussion
 
-### GitHub
+## GitHub
 
 Create a **GitHub repo** (set to private unless the client is ok with it being public):
 
@@ -19,7 +17,7 @@ Create a **GitHub repo** (set to private unless the client is ok with it being p
 - If the project is large enough so that there are multiple issues per type of work (e.g. creating various pieces of data viz), use **milestones**. 
 - If the client is working in GitHub with us, create a **project** that they can see. Make the default view a Kanban (see example [here](https://github.com/orgs/rfortherestofus/projects/14))  so the client can see the status of various tasks.
 
-### Todoist
+## Todoist
 
 In addition to using GitHub to manage code, we also use Todoist to keep track of due dates. For each project, we create a corresponding project on **Todoist**. Within that project, put various deadlines. Make sure to add the label `deadline` to the tasks (this way, David can see them in a special view he has created). Here's an example:
 
@@ -27,7 +25,7 @@ In addition to using GitHub to manage code, we also use Todoist to keep track of
 
 It's generally ok to move due dates as necessary (please just ask David if you have questions about whether it is a problem on any specific project). Please just update the due dates on the project README on GitHub to match.
 
-### Twist
+## Twist
 
 Create a thread in the #consulting channel on Twist for the project. If it is large project, we can create a separate channel just for the project so we can have multiple threads. 
 
@@ -42,6 +40,4 @@ The type of communication we use with clients depends on the client.
 - If clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.
 - If they don't want to work in GitHub, email is generally best.
 
-## Weekly Updates
-
-We should email clients each week to give them a quick overall update on progress and see if they have any questions. Please make sure to cc David on these weekly updates. 
+We should also email clients each week to give them a quick overall update on progress and see if they have any questions. Please make sure to cc David on these weekly updates. 

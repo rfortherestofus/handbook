@@ -268,7 +268,7 @@
     "href": "project-management.html",
     "title": "Project Management",
     "section": "",
-    "text": "We use three tools to manage each project:\n\nGitHub for code discussions\nTodoist to keep track of deadlines\nTwist for general discussion\n\n\n\nCreate a GitHub repo (set to private unless the client is ok with it being public):\n\nUse the README to lay out the overall project scope, schedule, deliverables, etc. Please also lay out an overall schedule of due dates in the README.\nUse issues to manage code-related questions at a granular level.\nIf the project is large enough so that there are multiple issues per type of work (e.g. creating various pieces of data viz), use milestones.\nIf the client is working in GitHub with us, create a project that they can see. Make the default view a Kanban (see example here) so the client can see the status of various tasks.\n\n\n\n\nIn addition to using GitHub to manage code, we also use Todoist to keep track of due dates. For each project, we create a corresponding project on Todoist. Within that project, put various deadlines. Make sure to add the label deadline to the tasks (this way, David can see them in a special view he has created). Here’s an example:\n\nIt’s generally ok to move due dates as necessary (please just ask David if you have questions about whether it is a problem on any specific project). Please just update the due dates on the project README on GitHub to match.\n\n\n\nCreate a thread in the #consulting channel on Twist for the project. If it is large project, we can create a separate channel just for the project so we can have multiple threads.\nTwist is a good place for things we’d like to keep confidential (because we work more and more with clients directly in GitHub, that isn’t the best place for confidential discussions). Also, while Todoist has the ability to communicate within tasks, it’s not as user friendly as Twist so we use Twist for general communication.",
+    "text": "We use three tools to manage projects:",
     "crumbs": [
       "Consulting",
       "Project Management"
@@ -290,29 +290,7 @@
     "href": "project-management.html#client-communication",
     "title": "Project Management",
     "section": "Client Communication",
-    "text": "Client Communication\nThe most important thing we can do is communicate effectively and regularly. This means getting back to clients within 24 hours via the means they message us (email, GitHub issues, etc).\nThe type of communication we use with clients depends on the client.\n\nIf clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.\nIf they don’t want to work in GitHub, email is generally best.",
-    "crumbs": [
-      "Consulting",
-      "Project Management"
-    ]
-  },
-  {
-    "objectID": "project-management.html#weekly-updates",
-    "href": "project-management.html#weekly-updates",
-    "title": "Project Management",
-    "section": "Weekly Updates",
-    "text": "Weekly Updates\nWe should email clients each week to give them a quick overall update on progress and see if they have any questions. Please make sure to cc David on these weekly updates.",
-    "crumbs": [
-      "Consulting",
-      "Project Management"
-    ]
-  },
-  {
-    "objectID": "project-management.html#schedule",
-    "href": "project-management.html#schedule",
-    "title": "Project Management",
-    "section": "Schedule",
-    "text": "Schedule\nFor each client, we create a file that outlines the milestones in the project and the tasks to be done. This is created as a .qmd file and then rendered to HTML. We then set up Netlify to host the HTML file and share the link with the client. Here is an example document.\n\nThe schedule should be updated each week when we email the client an update.",
+    "text": "Client Communication\nThe most important thing we can do is communicate effectively and regularly. This means getting back to clients within 24 hours via the means they message us (email, GitHub issues, etc).\nThe type of communication we use with clients depends on the client.\n\nIf clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.\nIf they don’t want to work in GitHub, email is generally best.\n\nWe should also email clients each week to give them a quick overall update on progress and see if they have any questions. Please make sure to cc David on these weekly updates.",
     "crumbs": [
       "Consulting",
       "Project Management"
@@ -1025,6 +1003,39 @@
     "crumbs": [
       "Marketing",
       "Overview"
+    ]
+  },
+  {
+    "objectID": "project-management.html#github",
+    "href": "project-management.html#github",
+    "title": "Project Management",
+    "section": "GitHub",
+    "text": "GitHub\nCreate a GitHub repo (set to private unless the client is ok with it being public):\n\nUse the README to lay out the overall project scope, schedule, deliverables, etc. Please also lay out an overall schedule of due dates in the README.\nUse issues to manage code-related questions at a granular level.\nIf the project is large enough so that there are multiple issues per type of work (e.g. creating various pieces of data viz), use milestones.\nIf the client is working in GitHub with us, create a project that they can see. Make the default view a Kanban (see example here) so the client can see the status of various tasks.",
+    "crumbs": [
+      "Consulting",
+      "Project Management"
+    ]
+  },
+  {
+    "objectID": "project-management.html#todoist",
+    "href": "project-management.html#todoist",
+    "title": "Project Management",
+    "section": "Todoist",
+    "text": "Todoist\nIn addition to using GitHub to manage code, we also use Todoist to keep track of due dates. For each project, we create a corresponding project on Todoist. Within that project, put various deadlines. Make sure to add the label deadline to the tasks (this way, David can see them in a special view he has created). Here’s an example:\n\nIt’s generally ok to move due dates as necessary (please just ask David if you have questions about whether it is a problem on any specific project). Please just update the due dates on the project README on GitHub to match.",
+    "crumbs": [
+      "Consulting",
+      "Project Management"
+    ]
+  },
+  {
+    "objectID": "project-management.html#twist",
+    "href": "project-management.html#twist",
+    "title": "Project Management",
+    "section": "Twist",
+    "text": "Twist\nCreate a thread in the #consulting channel on Twist for the project. If it is large project, we can create a separate channel just for the project so we can have multiple threads.\nTwist is a good place for things we’d like to keep confidential (because we work more and more with clients directly in GitHub, that isn’t the best place for confidential discussions). Also, while Todoist has the ability to communicate within tasks, it’s not as user friendly as Twist so we use Twist for general communication.",
+    "crumbs": [
+      "Consulting",
+      "Project Management"
     ]
   }
 ]
