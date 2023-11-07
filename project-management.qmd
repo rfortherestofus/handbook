@@ -19,15 +19,24 @@ Create a **GitHub repo** (set to private unless the client is ok with it being p
 
 ## Todoist
 
-In addition to using GitHub to manage code, we also use Todoist to keep track of due dates. For each project, we create a corresponding project on **Todoist**. Within that project, put various deadlines. Make sure to add the label `deadline` to the tasks (this way, David can see them in a special view he has created). Here's an example:
+In addition to using GitHub to manage code, we also use Todoist to keep track of due dates. For each project, we create a corresponding project on **Todoist**. Within that project, create two sections:
 
-![](assets/todoist-deadlines.png)
+1. Schedule
+2. Misc
+
+In the **Schedule section**, put various deadlines. Make sure to add the label `deadline` to the tasks (this way, David can see them in a special view he has created). 
 
 It's generally ok to move due dates as necessary (please just ask David if you have questions about whether it is a problem on any specific project). Please just update the due dates on the project README on GitHub to match.
 
+In the **Misc section**, create a recurring task to email the client each week (see below) as well as any miscellaneous tasks to keep track of.
+
+Here's what a project might look like:
+
+![](assets/todoist-deadlines.png)
+
 ## Twist
 
-Create a thread in the #consulting channel on Twist for the project. If it is large project, we can create a separate channel just for the project so we can have multiple threads. 
+Create a thread in the Consulting channel on Twist for the project. If it is large project, we can create a separate channel just for the project so we can have multiple threads. 
 
 Twist is a good place for things we'd like to keep confidential (because we work more and more with clients directly in GitHub, that isn't the best place for confidential discussions). Also, while Todoist has the ability to communicate within tasks, it's not as user friendly as Twist so we use Twist for general communication. 
 
@@ -40,4 +49,4 @@ The type of communication we use with clients depends on the client.
 - If clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.
 - If they don't want to work in GitHub, email is generally best.
 
-We should also email clients each week to give them a quick overall update on progress and see if they have any questions. Please make sure to cc David on these weekly updates. 
+We should also email clients every week or two (determine which is appropriate at the beginning of the project) to give them a quick overall update on progress and see if they have any questions. Please make sure to cc David on these weekly updates. 
