@@ -20,7 +20,7 @@ On the education side, we offer:
 
 2.  In-person public workshops
 
-3.  Custom training for organizations
+3.  Custom training for organizations (currently paused in favor of offering group rates in [R in 3 Months](https://rfortherestofus.com/3months))
 
 ### Consulting
 
@@ -50,5 +50,5 @@ R for the Rest of Us is not just a money-making enterprise. I also want it to be
 
 R for the Rest of Us is headed by David Keyes. I've outlined my role in [David's Responsibilities](david-responsibilities.html).
 
-Current **consultants** include Charlie Hadley, Thomas Vroylandt, Cara Thompson, Crystal Lewis, and Joscelin Rocha-Hidalgo. Other consultants are brought in for individual projects.
+Current **consultants** include Thomas Vroylandt, Cara Thompson, Gracielle Higino, and Libby Heeren. Other consultants are brought in for individual projects. Joe Wanyua is the assistant. 
 

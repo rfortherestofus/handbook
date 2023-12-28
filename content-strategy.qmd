@@ -5,7 +5,7 @@ title: "Content Strategy"
 R for the Rest of Us produces multiple types of content. All content that is produced for one place should be reused on social media as much as possible to get the word out about R for the Rest of Us. For example:
 
 - Videos from courses can be shared on social media
-- Blog posts can be turned into Twitter threads
+- Blog posts can be turned into LinkedIn posts
 - Etc.
 
 ## Paid Content
@@ -21,4 +21,17 @@ The main content that we produce is on our blog. There are two types of articles
 1. Tutorials
 2. Posts that explain why R is worth learning
 
-The other main content is emails (see [Email Marketing](email-marketing.html)). Although most emails are simply introductions and links to other content, some emails are unique content on their own.
+The other main content is emails (see [Email Marketing](email-marketing.html)). Although most emails are simply introductions and links to other content, some emails are unique content on their own. 
+
+Starting in 2024, we will have a What's New in R email series that highlights new things in the R world. 
+
+# Schedule
+
+In 2024, we plan to produce several types of content. Every other, we will produce:
+
+- What's New in R email
+- Video walkthrough of What's New in R email
+- Blog post and accompanying YouTube video
+- Podcast episode
+
+We will also periodically produce short videos called R in 2 Minutes that demonstrate one thing that can be done in R in 2 minutes or less.

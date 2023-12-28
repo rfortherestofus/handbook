@@ -34,7 +34,7 @@ Where appropriate, use callout boxes, arrows, and text to draw the learner's att
 
 Sound levels should be fairly consistent assuming recording conditions remain consistent. However, if necessary you can [auto-level clips](https://help.descript.com/hc/en-us/articles/10249334057357-Auto-leveling-individual-clips).
 
-Studio sound: TODO figure out if we should use it
+We should Studio Sound when possible.
 
 ## Export
 
