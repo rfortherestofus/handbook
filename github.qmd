@@ -4,7 +4,7 @@ title: "Git and GitHub"
 
 At R For The Rest Of Us, we collaborate on projects using Git and GitHub. Git is the gold standard for version control, and using it in conjunction with GitHub provides a neat way of exploring the more advanced Git features within a friendly interface. This section covers the basics of the Git etiquette we adopt, as well as a few how-tos and worked examples.
 
-## How we organise (and talk about) the basics
+## Overview
 
 - Each project has its own unique repository
 - The central repository for each project lives on GitHub; this is also referred to as `origin`
@@ -12,7 +12,7 @@ At R For The Rest Of Us, we collaborate on projects using Git and GitHub. Git is
 
 The rest of this section assumes a basic understanding of how Git works. The main thing to note for new users is that, unlike something like Dropbox, changes only make it to the central repo (and from there to others), if Git is explicitly told about them via `add`, `commit` and `push` commands. 
 
-### Setting up a new repo
+### Setting Up a New Repo
 
 The easiest way to create a new repo is to do it on GitHub. Make sure to give it a name that clearly identifies the project! 
 
@@ -62,7 +62,7 @@ This file allows us to work across different Operating Systems, which have diffe
 
 ```
 
-### Cloning an existing repo
+### Cloning an Existing Repo
 
 To clone a repo from GitHub, it either needs to be public, or you need to have been invited to the repo. We invite all team members to the `sandbox` repo we created, and use it as a way of exploring different Git tricks. 
 
@@ -82,7 +82,7 @@ This will create a local copy of the repo on your computer.
 Depending on how your computer is set up, you may see a folder called `.git`. This is a hidden folder. Do not edit its contents! 
 
 
-## Git etiquette
+## Git Etiquette
 
 ### Commit messages
 
@@ -116,7 +116,7 @@ Some organisations only ever allow changes to be made via a branch. There's lot 
 
 But even in those cases, you could consider using a new branch to be on the safe side. If in doubt, check with David. 
 
-#### Creating a new branch
+#### Creating a New Branch
 
 Creating a new branch is trivial. As with commit messages, we want to make sure the name of the branch gives a clear indication of its purpose. Say a client wants to add a new timeline to their report. The report is otherwise working as it should be. To work in a branch, and thereby allow them to keep using the report as is while you figure this out, you'll want to
 
@@ -145,7 +145,7 @@ Give it a go in our `sandbox` repo.
 
 Create a new branch, with a name of your choosing, and add a quote to `quotes/client-quotes.txt`. Add, commit and push (remember to set the upstream branch!). Then checkout main again, and open the `client-quotes.txt` file. The quote you've added should no longer be there. Switch back to your branch, and it will reappear. The GitHub page for this repo should also now include your branch in the list of branches. 
 
-#### Creating a pull request
+#### Creating a Pull Request
 
 Pull request are the way we merge the work you've done in a branch back into our "stable universe" while allowing someone else to review the changes in the process. 
 
@@ -153,7 +153,7 @@ TODO: example create a pull request for the added quote
 TODO: best for the branch author / person who made the most recent contribution to it to initiate the pull request
 TODO: get up to speed with `main` first.
 
-#### Reviewing a pull request
+#### Reviewing a Pull Request
 
 TODO: We haven't really done this, but it might be worth thinking about if projects get bigger - you can set things so that a merge into `main` needs to be approved by someone other than the person creating the pull request; a useful way to keep things safe, but we need to all be happy with pull requests first
 
@@ -178,18 +178,3 @@ TODO: I use TortoiseGit as a merge tool; makes it easier to compare the changes;
 ### Writing good issues
 
 TODO: Decide if we want a section on this
-
-
-
-
-
-
-
-
-
-### 
-
-
-
-
-

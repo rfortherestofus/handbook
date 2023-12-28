@@ -342,30 +342,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#how-we-organise-and-talk-about-the-basics" id="toc-how-we-organise-and-talk-about-the-basics" class="nav-link active" data-scroll-target="#how-we-organise-and-talk-about-the-basics">How we organise (and talk about) the basics</a>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
   <ul>
-  <li><a href="#setting-up-a-new-repo" id="toc-setting-up-a-new-repo" class="nav-link" data-scroll-target="#setting-up-a-new-repo">Setting up a new repo</a>
+  <li><a href="#setting-up-a-new-repo" id="toc-setting-up-a-new-repo" class="nav-link" data-scroll-target="#setting-up-a-new-repo">Setting Up a New Repo</a>
   <ul class="collapse">
   <li><a href="#readme.md" id="toc-readme.md" class="nav-link" data-scroll-target="#readme.md">README.md</a></li>
   <li><a href="#gitignore" id="toc-gitignore" class="nav-link" data-scroll-target="#gitignore">.gitignore</a></li>
   <li><a href="#gitattributes" id="toc-gitattributes" class="nav-link" data-scroll-target="#gitattributes">.gitattributes</a></li>
   </ul></li>
-  <li><a href="#cloning-an-existing-repo" id="toc-cloning-an-existing-repo" class="nav-link" data-scroll-target="#cloning-an-existing-repo">Cloning an existing repo</a></li>
+  <li><a href="#cloning-an-existing-repo" id="toc-cloning-an-existing-repo" class="nav-link" data-scroll-target="#cloning-an-existing-repo">Cloning an Existing Repo</a></li>
   </ul></li>
-  <li><a href="#git-etiquette" id="toc-git-etiquette" class="nav-link" data-scroll-target="#git-etiquette">Git etiquette</a>
+  <li><a href="#git-etiquette" id="toc-git-etiquette" class="nav-link" data-scroll-target="#git-etiquette">Git Etiquette</a>
   <ul>
   <li><a href="#commit-messages" id="toc-commit-messages" class="nav-link" data-scroll-target="#commit-messages">Commit messages</a></li>
   <li><a href="#using-branches" id="toc-using-branches" class="nav-link" data-scroll-target="#using-branches">Using branches</a>
   <ul class="collapse">
   <li><a href="#what-are-branches" id="toc-what-are-branches" class="nav-link" data-scroll-target="#what-are-branches">What are branches?</a></li>
-  <li><a href="#creating-a-new-branch" id="toc-creating-a-new-branch" class="nav-link" data-scroll-target="#creating-a-new-branch">Creating a new branch</a></li>
-  <li><a href="#creating-a-pull-request" id="toc-creating-a-pull-request" class="nav-link" data-scroll-target="#creating-a-pull-request">Creating a pull request</a></li>
-  <li><a href="#reviewing-a-pull-request" id="toc-reviewing-a-pull-request" class="nav-link" data-scroll-target="#reviewing-a-pull-request">Reviewing a pull request</a></li>
+  <li><a href="#creating-a-new-branch" id="toc-creating-a-new-branch" class="nav-link" data-scroll-target="#creating-a-new-branch">Creating a New Branch</a></li>
+  <li><a href="#creating-a-pull-request" id="toc-creating-a-pull-request" class="nav-link" data-scroll-target="#creating-a-pull-request">Creating a Pull Request</a></li>
+  <li><a href="#reviewing-a-pull-request" id="toc-reviewing-a-pull-request" class="nav-link" data-scroll-target="#reviewing-a-pull-request">Reviewing a Pull Request</a></li>
   <li><a href="#merging-etiquette-and-branch-hygiene" id="toc-merging-etiquette-and-branch-hygiene" class="nav-link" data-scroll-target="#merging-etiquette-and-branch-hygiene">Merging etiquette and branch hygiene</a></li>
   </ul></li>
   <li><a href="#dealing-with-merge-conflicts" id="toc-dealing-with-merge-conflicts" class="nav-link" data-scroll-target="#dealing-with-merge-conflicts">Dealing with merge conflicts</a></li>
   <li><a href="#writing-good-issues" id="toc-writing-good-issues" class="nav-link" data-scroll-target="#writing-good-issues">Writing good issues</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -391,8 +390,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <p>At R For The Rest Of Us, we collaborate on projects using Git and GitHub. Git is the gold standard for version control, and using it in conjunction with GitHub provides a neat way of exploring the more advanced Git features within a friendly interface. This section covers the basics of the Git etiquette we adopt, as well as a few how-tos and worked examples.</p>
-<section id="how-we-organise-and-talk-about-the-basics" class="level2">
-<h2 class="anchored" data-anchor-id="how-we-organise-and-talk-about-the-basics">How we organise (and talk about) the basics</h2>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <ul>
 <li>Each project has its own unique repository</li>
 <li>The central repository for each project lives on GitHub; this is also referred to as <code>origin</code></li>
@@ -400,7 +399,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>The rest of this section assumes a basic understanding of how Git works. The main thing to note for new users is that, unlike something like Dropbox, changes only make it to the central repo (and from there to others), if Git is explicitly told about them via <code>add</code>, <code>commit</code> and <code>push</code> commands.</p>
 <section id="setting-up-a-new-repo" class="level3">
-<h3 class="anchored" data-anchor-id="setting-up-a-new-repo">Setting up a new repo</h3>
+<h3 class="anchored" data-anchor-id="setting-up-a-new-repo">Setting Up a New Repo</h3>
 <p>The easiest way to create a new repo is to do it on GitHub. Make sure to give it a name that clearly identifies the project!</p>
 <p><img src="assets/git-section/new-repo.png" class="img-fluid" alt="screenshot of a repo being created"> Then follow the instructions that come up once you’ve clicked on Create Repository. Pick the option that best corresponds to the stage you have reached. If you have already used <code>git init</code> to make your local folder into a Git repo, pick the second option. If not, pick the first.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -441,7 +440,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="cloning-an-existing-repo" class="level3">
-<h3 class="anchored" data-anchor-id="cloning-an-existing-repo">Cloning an existing repo</h3>
+<h3 class="anchored" data-anchor-id="cloning-an-existing-repo">Cloning an Existing Repo</h3>
 <p>To clone a repo from GitHub, it either needs to be public, or you need to have been invited to the repo. We invite all team members to the <code>sandbox</code> repo we created, and use it as a way of exploring different Git tricks.</p>
 <p>To clone the repo, go to <a href="https://github.com/rfortherestofus/sandbox">its GitHub page</a> and click on Code, copy the text provided by GitHub by clicking on the copy icon.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -457,7 +456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="git-etiquette" class="level2">
-<h2 class="anchored" data-anchor-id="git-etiquette">Git etiquette</h2>
+<h2 class="anchored" data-anchor-id="git-etiquette">Git Etiquette</h2>
 <section id="commit-messages" class="level3">
 <h3 class="anchored" data-anchor-id="commit-messages">Commit messages</h3>
 <p>There is an art to writing good commit messages.</p>
@@ -494,7 +493,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>But even in those cases, you could consider using a new branch to be on the safe side. If in doubt, check with David.</p>
 </section>
 <section id="creating-a-new-branch" class="level4">
-<h4 class="anchored" data-anchor-id="creating-a-new-branch">Creating a new branch</h4>
+<h4 class="anchored" data-anchor-id="creating-a-new-branch">Creating a New Branch</h4>
 <p>Creating a new branch is trivial. As with commit messages, we want to make sure the name of the branch gives a clear indication of its purpose. Say a client wants to add a new timeline to their report. The report is otherwise working as it should be. To work in a branch, and thereby allow them to keep using the report as is while you figure this out, you’ll want to</p>
 <ul>
 <li><p>make sure you’re branching off an up-to-date <code>main</code>: <code>git pull</code></p></li>
@@ -513,12 +512,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Create a new branch, with a name of your choosing, and add a quote to <code>quotes/client-quotes.txt</code>. Add, commit and push (remember to set the upstream branch!). Then checkout main again, and open the <code>client-quotes.txt</code> file. The quote you’ve added should no longer be there. Switch back to your branch, and it will reappear. The GitHub page for this repo should also now include your branch in the list of branches.</p>
 </section>
 <section id="creating-a-pull-request" class="level4">
-<h4 class="anchored" data-anchor-id="creating-a-pull-request">Creating a pull request</h4>
+<h4 class="anchored" data-anchor-id="creating-a-pull-request">Creating a Pull Request</h4>
 <p>Pull request are the way we merge the work you’ve done in a branch back into our “stable universe” while allowing someone else to review the changes in the process.</p>
 <p>TODO: example create a pull request for the added quote TODO: best for the branch author / person who made the most recent contribution to it to initiate the pull request TODO: get up to speed with <code>main</code> first.</p>
 </section>
 <section id="reviewing-a-pull-request" class="level4">
-<h4 class="anchored" data-anchor-id="reviewing-a-pull-request">Reviewing a pull request</h4>
+<h4 class="anchored" data-anchor-id="reviewing-a-pull-request">Reviewing a Pull Request</h4>
 <p>TODO: We haven’t really done this, but it might be worth thinking about if projects get bigger - you can set things so that a merge into <code>main</code> needs to be approved by someone other than the person creating the pull request; a useful way to keep things safe, but we need to all be happy with pull requests first</p>
 </section>
 <section id="merging-etiquette-and-branch-hygiene" class="level4">
@@ -537,9 +536,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="writing-good-issues" class="level3">
 <h3 class="anchored" data-anchor-id="writing-good-issues">Writing good issues</h3>
 <p>TODO: Decide if we want a section on this</p>
-</section>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
 
 
 </section>
