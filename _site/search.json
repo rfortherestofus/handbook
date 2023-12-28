@@ -172,7 +172,7 @@
     "href": "courses-curriculum.html#materials",
     "title": "Curriculum",
     "section": "Materials",
-    "text": "Materials\nThe materials for each courses lives in a GitHub repo on the R for the Rest of Us organization account. David will create this and add you to the repo.\n\nSlides\nSlides for R for the Rest of Us courses are made using the xaringan package.\nThere is a custom template to use to make slides in the R for the Rest of Us style. You can access this by installing the rfortherestofus package using the following code:\n\n\n\nYou can then add slides by going to File > New File > RMarkdown and selecting the R for the Rest of Us template.\n\nPlease create a slides directory where all of your slides will live.\nYou can create slides as follows:\nMost lessons should have a My Turn and a Your Turn section. The slide for the My Turn section should have an orange background and the slide for the Your Turn section should have a dark background. To do this, add the class my-turn and the class inverse to your slides as follows:\n\n\n\nOther Materials\nAny other materials that you want people to access can live in the repo. Please organize however you see fit."
+    "text": "Materials\nThe materials for each courses lives in a GitHub repo on the R for the Rest of Us organization account. David will create this and add you to the repo.\n\nSlides\nSlides for R for the Rest of Us courses are made using the xaringan package.\nThere is a custom template to use to make slides in the R for the Rest of Us style. You can access this by installing the rfortherestofus package using the following code:\nYou can then add slides by going to File &gt; New File &gt; RMarkdown and selecting the R for the Rest of Us template.\n\nPlease create a slides directory where all of your slides will live.\nYou can create slides as follows:\nMost lessons should have a My Turn and a Your Turn section. The slide for the My Turn section should have an orange background and the slide for the Your Turn section should have a dark background. To do this, add the class my-turn and the class inverse to your slides as follows:\n\n\n\nOther Materials\nAny other materials that you want people to access can live in the repo. Please organize however you see fit."
   },
   {
     "objectID": "david-work.html",
@@ -452,7 +452,7 @@
     "href": "contracts.html",
     "title": "Contracts",
     "section": "",
-    "text": "R for the Rest of Us contract templates live in PandaDoc. There are three main templates that we adapt as appropriate:\n\nThe R for the Rest of Us Client Service Agreement is for training and consulting engagements.\nThe R for the Rest of Us Master Consulting Services Agreement Template is for hiring contractors.\nThe R for the Rest of Us Course Creation Agreement is for partnering with instructors to create courses."
+    "text": "We mostly use our own contracts, but if clients prefer to use their contracts (and they look ok), that’s fine too.\nR for the Rest of Us contract templates live in PandaDoc. There are three main templates that we adapt as appropriate:\n\nThe R for the Rest of Us Client Service Agreement is for training and consulting engagements.\nThe R for the Rest of Us Master Consulting Services Agreement Template is for hiring contractors.\nThe R for the Rest of Us Course Creation Agreement is for partnering with instructors to create courses."
   },
   {
     "objectID": "email-automations.html",
@@ -586,5 +586,40 @@
     "title": "Communication",
     "section": "External Communication",
     "text": "External Communication\nExternal communication with clients and others happens mostly through email."
+  },
+  {
+    "objectID": "communication.html#internal-communication",
+    "href": "communication.html#internal-communication",
+    "title": "Communication",
+    "section": "",
+    "text": "As a fully remote company, we try to communicate by writing as much as possible. Doing so has many benefits:\n\nIt forces us to clarify our thinking\nIt provides a record of decisions for those who may join things midstream\nIt allows people to work on their own time without feeling the need to join live calls etc\n\nInternal communication happens, as much as possible, in Twist. There are several channels:\n\nConsulting\nCourse Questions\nCourses\nGeneral\nOrders (all paid course orders go through here)\nR in 3 Months\nTraining\n\nWithin each channel, we typically use one thread per project (sometimes more depending on its complexity).\nOther places internal communication happens include:\n\nGitHub for discussion of specific issues on code-based projects\nTodoist comments for questions on specific tasks to be done"
+  },
+  {
+    "objectID": "project-management.html#overview",
+    "href": "project-management.html#overview",
+    "title": "Project Management",
+    "section": "",
+    "text": "Create a GitHub repo (set to private unless the client is ok with it being public):\n\nUse the README to lay out the overall project scope, deliverables, etc.\nUse issues to manage code-related questions at a granular level.\nIf the project is large enough, use milestones.\n\nCreate a thread in the #consulting channel on Twist for the project. This is a good place for things we’d like to keep confidential (because we work more and more with clients directly in GitHub, that isn’t the best place for confidential discussions). Communicate updates on overall progress with David using Twist. An update once a week or so is helpful."
+  },
+  {
+    "objectID": "consulting-overview.html#projects-we-take-on",
+    "href": "consulting-overview.html#projects-we-take-on",
+    "title": "Overview",
+    "section": "",
+    "text": "In general, consulting projects we take on involve some combination of the following:\n\nData visualization\nLayout using RMarkdown and pagedown\nParameterized reporting\n\nYou can see examples of several such projects on the consulting page of the R for the Rest of Us website."
+  },
+  {
+    "objectID": "courses-curriculum.html#outline",
+    "href": "courses-curriculum.html#outline",
+    "title": "Curriculum",
+    "section": "",
+    "text": "You’ll start out by creating an outline of your course. This will be done in the GitHub repo that David creates for your course.\nPlease just create an outline.Rmd file for this. Use the following format:\nSection Name (H1)\nLesson Title (H2)\nOverview of lesson\nMy Turn (H3)\nOverview of what you’ll demonstrate\nYour Turn (H3)\nExercise for student\nSolutions Code (H3)\nCode used for solution to Your Turn\nLearn More (H3)\nText with additional info, resources, etc on topic of lesson"
+  },
+  {
+    "objectID": "courses-production.html#video-editing",
+    "href": "courses-production.html#video-editing",
+    "title": "Production",
+    "section": "",
+    "text": "After the instructor provides raw videos, David edits them. Most lessons have the following structure:\n\nFull screen on instructor as they introduce topic\nSwitch to instructor in corner with their screen as background\nAs the instructor talks about code, zoom in on it (pan back out when they’re done talking about the specific code)\nSwitch back to full-screen on instructor when they’re not talking about code at all\nDo pans on other websites etc as appropriate\nMy Turn as appropriate\nYour Turn as appropriate\n\n\n\n\nUse a 0.2 second length Cross Blur transition\nDetach audio and use audio smoothing\nMake sure audio doesn’t have any transitions\nYou can take full-length screenshots with Firefox\n\nExample walkthrough of me editing video: https://show.rfor.us/z1fUk4"
   }
 ]
