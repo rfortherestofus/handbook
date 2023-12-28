@@ -18,62 +18,33 @@ example, can be confusing for newbies.
 
 Please follow the [tidyverse style guide](https://style.tidyverse.org/) as closely as possible. The most important thing is to have code that is easy to read for new learners. You're welcome to use the [`styler` package](https://styler.r-lib.org/) to format your code.
 
+
 ## Recording Videos
 
-For those on Mac or Windows, recording happens with [Descript](https://www.descript.com/). David will set you up with a license so you can use it.
+I record using Screenflow. If you're on a Mac, you'll get a license for it. If not, we'll discuss options. 
 
-### Getting Ready to Record
+### Recording Procedures
 
-[This image from Egghead](https://howtoegghead.com/instructor/screencasting/) is an accurate representation of what goes into making videos.
-
-![](https://howtoegghead.com/static/afff7c59d68f3670093f9c7aad4f3c09/0b533/ch4_s3_iceberg.png)
-
-Before you record there are several things to take into consideration. 
-
-**Please tidy whatever portion of your workspace will show in the background of videos**. No need to go 100% Marie Kondo, but please try to keep it neat. Not only does it look more professional, it also encourages people to focus on what you're teaching, not whatever random object is on your bookshelf.
-
-**Please use an external microphone**. Try to keep it as close to you as possible, though I generally try to keep it off screen.
-
-**Adjust your screen resolution**. Adjusting your screen resolution makes your code much easier to read.
-
-Working on a Mac, I go to Settings > Displays and select 1024 x 576 (HiDPI). [As Egghead explains about HiDPI](https://howtoegghead.com/instructor/screencasting/screen-setup/): 
-
-> HiDPI mode—also known broadly as DPI scaling, or Retina display on Macs—doubles each pixel, allowing for highly readable text on very high-resolution screens.
-
-There are some instructions for doing the same thing on Windows [here](https://www.digitaltrends.com/computing/how-to-adjust-high-dpi-scaling-in-windows-10/).
-
-**Please hit the top menu bar when you record**. Please go into full screen mode in RStudio. This hides your top menu bar and keeps the focus on your code.
-
-![](assets/full-screen.png)
-
-**Please use an external webcam**. They tend to be higher quality than built-in ones.
-
-If you are interested in learning more tips
+I'm generally not that fussy about making sure everything is super high
+quality, but please use an external camera and external mic to record.
+Please put your mic as close to you as possible, but make sure it
+doesn't show up on camera. If you are interested in learning some tips
 about high-quality screencasting, [this guide from
 Egghead](https://howtoegghead.com/instructor/screencasting/) is helpful.
 
-### Recording Lessons in Descript
+My general experience is that it's easier to record videos by just
+hitting record and going through your lesson as many times as you need
+to. I often make mistakes along the way, but that's ok because we can
+edit them out after the fact. Just go back to right before you messed up
+and start again! You can, of course, record so you get a single
+high-quality take, but I find that hard to do and way too much pressure.
 
-You will record videos using Descript. It's a great tool and has [extensive documentation](https://help.descript.com/hc/en-us).
+### Sharing Videos with David
 
-Please create a new project for each lesson. Use the blue new project button, not the classic project option.
-
-![](assets/new-project.png)
-
-Here's how to record a lesson.
-
-::: {.muse-video-player data-video="Cev4WJs" data-logo="0" data-width="100%"}
-:::
-
-You can re-record as much as you'd like. It's helpful if you can delete bad takes that you don't want included. Just highlight the text and hit delete.
-
-::: {.muse-video-player data-video="XHUQPMZ" data-logo="0" data-width="100%"}
-:::
+Please share the raw videos you record in the Google Drive folder that
+David sets up for you. Make sure they are labeled so I know what each
+video is.
 
 ## Video Editing
 
-Once you've finished recording all lessons, David will then edit them.
-
-```{=html}
-<script src="https://muse.ai/static/js/embed-player.min.js"></script>
-```
+David will edit all of your videos. 

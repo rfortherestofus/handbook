@@ -9,5 +9,3 @@ R for the Rest of Us contract templates live in PandaDoc. There are three main t
 1. The [R for the Rest of Us Client Service Agreement](https://app.pandadoc.com/a/#/templates/dKnzNZCNLWytydj859stoB) is for training and consulting engagements.
 2. The [R for the Rest of Us Master Consulting Services Agreement Template](https://app.pandadoc.com/a/#/templates/k8EqrCmJwoQGbiUPUTcDBj) is for hiring contractors.
 3. The [R for the Rest of Us Course Creation Agreement](https://app.pandadoc.com/a/#/templates/nCvjHXXYP4gBGYnWe8ov5Y) is for partnering with instructors to create courses.
-
-We are likely switching to using Google Docs for contracts moving forward.

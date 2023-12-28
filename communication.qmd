@@ -16,12 +16,9 @@ Internal communication happens, as much as possible, in Twist. There are several
 - Course Questions
 - Courses
 - General
-- Marketing
 - Orders (all paid course orders go through here)
 - R in 3 Months
-- Random
 - Training
-- Website
 
 Within each channel, we typically use one thread per project (sometimes more depending on its complexity).
 
@@ -32,4 +29,4 @@ Other places internal communication happens include:
 
 ## External Communication
 
-External communication with clients and others happens mostly through email. For clients who use GitHub, we communicate using GitHub issues.
+External communication with clients and others happens mostly through email.

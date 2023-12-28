@@ -1,5 +1,5 @@
 ---
-title: "Email Marketing"
+title: "Email Automations"
 ---
 
 ```{r}

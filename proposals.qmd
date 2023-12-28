@@ -3,5 +3,3 @@ title: "Proposals"
 ---
   
 We use PandaDoc to create proposals for clients.
-
-We are likely switching to using Google Docs for proposals moving forward.

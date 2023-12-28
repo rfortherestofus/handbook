@@ -1,322 +1,45 @@
 [
   {
-    "objectID": "communication.html",
-    "href": "communication.html",
-    "title": "Communication",
+    "objectID": "github.html",
+    "href": "github.html",
+    "title": "Git and GitHub",
     "section": "",
-    "text": "As a fully remote company, we try to communicate by writing as much as possible. Doing so has many benefits:\n\nIt forces us to clarify our thinking\nIt provides a record of decisions for those who may join things midstream\nIt allows people to work on their own time without feeling the need to join live calls etc\n\nInternal communication happens, as much as possible, in Twist. There are several channels:\n\nConsulting\nCourse Questions\nCourses\nGeneral\nMarketing\nOrders (all paid course orders go through here)\nR in 3 Months\nRandom\nTraining\nWebsite\n\nWithin each channel, we typically use one thread per project (sometimes more depending on its complexity).\nOther places internal communication happens include:\n\nGitHub for discussion of specific issues on code-based projects\nTodoist comments for questions on specific tasks to be done"
+    "text": "At R For The Rest Of Us, we collaborate on projects using Git and GitHub. Git is the gold standard for version control, and using it in conjunction with GitHub provides a neat way of exploring the more advanced Git features within a friendly interface. This section covers the basics of the Git etiquette we adopt, as well as a few how-tos and worked examples."
   },
   {
-    "objectID": "communication.html#internal-communication",
-    "href": "communication.html#internal-communication",
-    "title": "Communication",
+    "objectID": "github.html#how-we-organise-and-talk-about-the-basics",
+    "href": "github.html#how-we-organise-and-talk-about-the-basics",
+    "title": "Git and GitHub",
+    "section": "How we organise (and talk about) the basics",
+    "text": "How we organise (and talk about) the basics\n\nEach project has its own unique repository\nThe central repository for each project lives on GitHub; this is also referred to as origin\nEveryone working on that project is invited to the GitHub repo, and we then clone the repo to our own computers (this gives us what we call local repos)\n\nThe rest of this section assumes a basic understanding of how Git works. The main thing to note for new users is that, unlike something like Dropbox, changes only make it to the central repo (and from there to others), if Git is explicitly told about them via add, commit and push commands.\n\nSetting up a new repo\nThe easiest way to create a new repo is to do it on GitHub. Make sure to give it a name that clearly identifies the project!\n Then follow the instructions that come up once you’ve clicked on Create Repository. Pick the option that best corresponds to the stage you have reached. If you have already used git init to make your local folder into a Git repo, pick the second option. If not, pick the first.\n\n\n\nscreenshot of init instructions\n\n\nWhen creating a new repo, we want to add three files: README.md (which is added automatically in the first option), .gitignore and .gitattributes. The default branch of a new repo should be called main. This is GitHub’s new default, so should happen automatically.\n\nREADME.md\nThis file should contain information about the purpose of the repo, and any information useful to other team members interacting with it. We sometimes make our repos available to clients towards the end of projects, so keep the contents of the README accessible to non-R specialists.\n\n\n.gitignore\nThe best way to do this is by using {usethis} within R. Navigate to your repo, and type:\n\nusethis::git_vaccinate()\n\nThis will add a .gitignore file that excludes files with the following extensions from being tracked by Git.\n.Rproj.user\n.Rhistory\n.Rdata\n.httr-oauth\n.DS_Store\n\n\n.gitattributes\nThis file allows us to work across different Operating Systems, which have different behaviours for handling line endings. Create a text file and rename it to .gitattributes (note, not gitattributes.txt) and copy the following content into it:\n# Let Git's auto-detection algorithm infer if a file is text. If it is,\n# enforce LF line endings regardless of OS or git configurations.\n* text=auto eol=lf\n\n# Isolate binary files in case the auto-detection algorithm fails and\n# marks them as text files (which could break them).\n*.{png,jpg,jpeg,gif,webp,woff,woff2} binary\n\n\n\n\nCloning an existing repo\nTo clone a repo from GitHub, it either needs to be public, or you need to have been invited to the repo. We invite all team members to the sandbox repo we created, and use it as a way of exploring different Git tricks.\nTo clone the repo, go to its GitHub page and click on Code, copy the text provided by GitHub by clicking on the copy icon.\n\n\n\nscreenshot showing how to copy the url of the repo we want to clone\n\n\nNext, create a new folder called sandbox somewhere on your computer. Navigate to that folder in your terminal, and type git clone then paste in the text you’ve just copied, type space then . and hit Enter. That full stop means “clone the folder into the directory where I am currently”. If you miss that out, you’ll end up with this git folder called sandbox inside your sandbox folder which will make things very confusing. Your command should look like this:\ngit clone https://github.com/rfortherestofus/sandbox.git .\nThis will create a local copy of the repo on your computer.\nDepending on how your computer is set up, you may see a folder called .git. This is a hidden folder. Do not edit its contents!"
+  },
+  {
+    "objectID": "github.html#git-etiquette",
+    "href": "github.html#git-etiquette",
+    "title": "Git and GitHub",
+    "section": "Git etiquette",
+    "text": "Git etiquette\n\nCommit messages\nThere is an art to writing good commit messages.\n\n\n\nCommit messages comic illustrating how not to do it! From xkcd.com\n\n\nSome organisations have very strict guidelines on that. Here, we just try to follow the following rules:\n\nCommit often and frequently; this allow you to easily backtrack to the point where your code was doing what it should be.\nWrite clear commit messages. Things like “I fixed it!” are not all that helpful when trying to find a commit that addressed a specific problem!\nIf the change you’re making is linked to an issue on GitHub (we’ll come to issues later), include the number of the issue in the commit message (e.g. “Added section on commit messages - #4”). GitHub picks this up and adds a message into the issue, which allows us to easily keep track of progress.\n\n\n\n\nScreenshot of GitHub issue #4 featuring the commit above\n\n\n\n\nUsing branches\nWe encourage the use of branches when collaborating on projects. These can be daunting to new Git users, but once we get the hang of them, there’s no looking back!\n\nWhat are branches?\nWe mentioned the default branch, main earlier. Think of this as the “stable universe” as far as the project is concerned. It contains up-to-date code that others can reliably use. A branch is essentially an “alternate universe” for the project, where we can experiment, make changes, test new things, all without disrupting the “stable universe” that others rely on.\nSome organisations only ever allow changes to be made via a branch. There’s lot of wisdom in that, but sometimes it can become cumbersome. Here are some use cases where you could consider working in the main branch:\n\nyou are the only person working on the project\nyou are adding something to the project that doesn’t interact at all with the code others are writing\n\nBut even in those cases, you could consider using a new branch to be on the safe side. If in doubt, check with David.\n\n\nCreating a new branch\nCreating a new branch is trivial. As with commit messages, we want to make sure the name of the branch gives a clear indication of its purpose. Say a client wants to add a new timeline to their report. The report is otherwise working as it should be. To work in a branch, and thereby allow them to keep using the report as is while you figure this out, you’ll want to\n\nmake sure you’re branching off an up-to-date main: git pull\ncreate a new branch with a clear name: git checkout -b adding-timeline-feature\n\nYou can also do this in RStudio or in GitHub Desktop.\nNow the files that you see are ones that belong to your alternate universe called “adding timeline feature”. Everything will look the same, but changes you add and commit here won’t affect anything in main; if it all goes horribly wrong, you can delete this branch and know all is still well in the “stable universe”. You can then switch between universes as follows:\n\nCommit (or stash) everything you’ve done within your branch\nGo back to the “stable universe”: git checkout main, probably followed by git pull to see what’s happened there in your absence. The modifications you’ve made within adding-timeline-feature will no longer be visible to you.\nGo back to your own alternate universe: git checkout adding-timeline-feature, and your modifications are back!\n\nWhile you’re working on your feature, you can keep your branch backed up on GitHub, safe in the knowledge that it doesn’t affect anything in main. The first time you push, you need to “set the upstream”.\ngit push -u origin adding-timeline-feature\nEvery time after that, you can just use git push. Pushing your branch to origin allows others to view your branch (useful if you want to get feedback along the process), and ensures that if something bad happens to your computer, your work is stored somewhere else. Give it a go in our sandbox repo.\nCreate a new branch, with a name of your choosing, and add a quote to quotes/client-quotes.txt. Add, commit and push (remember to set the upstream branch!). Then checkout main again, and open the client-quotes.txt file. The quote you’ve added should no longer be there. Switch back to your branch, and it will reappear. The GitHub page for this repo should also now include your branch in the list of branches.\n\n\nCreating a pull request\nPull request are the way we merge the work you’ve done in a branch back into our “stable universe” while allowing someone else to review the changes in the process.\nTODO: example create a pull request for the added quote TODO: best for the branch author / person who made the most recent contribution to it to initiate the pull request TODO: get up to speed with main first.\n\n\nReviewing a pull request\nTODO: We haven’t really done this, but it might be worth thinking about if projects get bigger - you can set things so that a merge into main needs to be approved by someone other than the person creating the pull request; a useful way to keep things safe, but we need to all be happy with pull requests first\n\n\nMerging etiquette and branch hygiene\nAt this point comes a policy decision, which can be influenced by workload: who completes the approved merge? It could be the person who did the work, or the person who approved the merge. If there happen to be conflicts (see below), this can be non trivial. GitHub will tell you if there will be a conflict, in which case we can discuss who is best placed to resolve it.\nAnd a second policy decision, which can be influenced by how we want to use the branches: should a branch be deleted once it has been merged in? The advantage of deleting branches as part of the merge is that this avoids needing to tidy them up at a later stage. You might have a feature you’re working on where a quick bug fix was needed, but you’d like to keep working on it to improve the code once the immediate need for the bug fix has passed. In that case, it might be best to keep the branch, but we’ll need to make sure we keep it up to speed with the “stable universe” by merging main into that branch before picking it up again.\nTo check the status of your branch(es) compared to others, click on the “branches” icon in the repo’s GitHub page. Here you can see by how many commits a branch is ahead and behind the default branch (typically main). A branch that is “behind” main by a large number of commits and hasn’t been updated for a while is probably a candidate for deletion, but if it wasn’t your branch, check with its author first!\n\n\n\nDealing with merge conflicts\nThe best way to deal with conflicts is to avoid causing them in the first place!\nTODO: pull across info from my old team doc\nTODO: I use TortoiseGit as a merge tool; makes it easier to compare the changes; what do others use?\n\n\nWriting good issues\nTODO: Decide if we want a section on this"
+  },
+  {
+    "objectID": "courses-production.html",
+    "href": "courses-production.html",
+    "title": "Production",
     "section": "",
-    "text": "As a fully remote company, we try to communicate by writing as much as possible. Doing so has many benefits:\n\nIt forces us to clarify our thinking\nIt provides a record of decisions for those who may join things midstream\nIt allows people to work on their own time without feeling the need to join live calls etc\n\nInternal communication happens, as much as possible, in Twist. There are several channels:\n\nConsulting\nCourse Questions\nCourses\nGeneral\nMarketing\nOrders (all paid course orders go through here)\nR in 3 Months\nRandom\nTraining\nWebsite\n\nWithin each channel, we typically use one thread per project (sometimes more depending on its complexity).\nOther places internal communication happens include:\n\nGitHub for discussion of specific issues on code-based projects\nTodoist comments for questions on specific tasks to be done"
+    "text": "After the instructor provides raw videos, David edits them. Most lessons have the following structure:\n\nFull screen on instructor as they introduce topic\nSwitch to instructor in corner with their screen as background\nAs the instructor talks about code, zoom in on it (pan back out when they’re done talking about the specific code)\nSwitch back to full-screen on instructor when they’re not talking about code at all\nDo pans on other websites etc as appropriate\nMy Turn as appropriate\nYour Turn as appropriate\n\n\n\n\nUse a 0.2 second length Cross Blur transition\nDetach audio and use audio smoothing\nMake sure audio doesn’t have any transitions\nYou can take full-length screenshots with Firefox\n\nExample walkthrough of me editing video: https://show.rfor.us/z1fUk4"
   },
   {
-    "objectID": "communication.html#external-communication",
-    "href": "communication.html#external-communication",
-    "title": "Communication",
-    "section": "External Communication",
-    "text": "External Communication\nExternal communication with clients and others happens mostly through email. For clients who use GitHub, we communicate using GitHub issues."
+    "objectID": "courses-production.html#captions",
+    "href": "courses-production.html#captions",
+    "title": "Production",
+    "section": "Captions",
+    "text": "Captions\nCaptions are added using muse.ai or Descript. Captions for courses are then edited by hand to make sure they are accurate."
   },
   {
-    "objectID": "courses-overview.html",
-    "href": "courses-overview.html",
-    "title": "Overview",
-    "section": "",
-    "text": "R for the Rest of Us has multiple self-paced online courses. The core courses (i.e. for those just learning R) are taught by David. There are also topics courses taught by others.\nThese are instructions for making an R for the Rest of Us online course. The overall process from start to finish looks something like this:"
-  },
-  {
-    "objectID": "courses-overview.html#intro-call",
-    "href": "courses-overview.html#intro-call",
-    "title": "Overview",
-    "section": "Intro Call",
-    "text": "Intro Call\n\nDiscuss course idea\nGo over legal and financial terms\nDiscuss timing\nConfirm instructor has access to external camera and mic\nShare course-making instructions (i.e. what you’re looking at)"
-  },
-  {
-    "objectID": "courses-overview.html#terms",
-    "href": "courses-overview.html#terms",
-    "title": "Overview",
-    "section": "Terms",
-    "text": "Terms\n\nDavid + instructor sign contract\nDavid pays 50% of advance to instructor"
-  },
-  {
-    "objectID": "courses-overview.html#curriculum",
-    "href": "courses-overview.html#curriculum",
-    "title": "Overview",
-    "section": "Curriculum",
-    "text": "Curriculum\n\nDavid explains how lessons work (e.g. video, your turn, solutions, learn more)\nDavid explains how to create course outline\nDavid shares custom template for sldies to be used\nInstructor develops slides\nDavid approves slides"
-  },
-  {
-    "objectID": "courses-overview.html#recording",
-    "href": "courses-overview.html#recording",
-    "title": "Overview",
-    "section": "Recording",
-    "text": "Recording\n\nDavid sets up shared folder on Descript for raw videos\nInstructor records single test video\nDavid approves test video\nInstructor records all lesson and solutions videos"
-  },
-  {
-    "objectID": "courses-overview.html#production",
-    "href": "courses-overview.html#production",
-    "title": "Overview",
-    "section": "Production",
-    "text": "Production\n\nDavid edits videos\nDavid uploads videos to muse.ai\nDavid puts videos and related materials on website\nInstructor reviews and approves videos and course materials"
-  },
-  {
-    "objectID": "courses-overview.html#marketing",
-    "href": "courses-overview.html#marketing",
-    "title": "Overview",
-    "section": "Marketing",
-    "text": "Marketing\n\nDavid makes course sales page\nDavid develops launch email sequence\nDavid puts together social media launch"
-  },
-  {
-    "objectID": "courses-overview.html#course-launch",
-    "href": "courses-overview.html#course-launch",
-    "title": "Overview",
-    "section": "Course Launch!",
-    "text": "Course Launch!\n\nEmail goes out to list announcing that course is live"
-  },
-  {
-    "objectID": "email-automations.html",
-    "href": "email-automations.html",
-    "title": "Email Automations",
-    "section": "",
-    "text": "Email marketing is the main way that R for the Rest of Us brings in revenue.\nAll external marketing is designed to get people onto the R for the Rest of Us email list. Once they’re on the list, we send them regular emails that educate them about R, interspersing emails that attempt to sell them on our offerings.\nThe specifics of how our email marketing system works comes largely from Brennan Dunn’s Mastering ConvertKit course. The process gets fairly complicated, but at the highest level, here’s what it does:\nBelow are details about how email automations work. Note that sequences aren’t included because they are generally just called from Visual Automations below.",
-    "crumbs": [
-      "Marketing",
-      "Email Automations"
-    ]
-  },
-  {
-    "objectID": "email-automations.html#signup",
-    "href": "email-automations.html#signup",
-    "title": "Email Automations",
-    "section": "Signup",
-    "text": "Signup\nHere are the signup journeys that users experience on the R for the Rest of Us email list.\n\nGetting Started\nIf the user gets onto the list by signing up for Getting Started, they get the tag Purchased - Getting Started applied through the WooCommerce-ConvertKit integration.\nThey then go through the Getting Started - Signup - Automation. This does the following:\n\nAssigns the tag Customer - Course/Workshop\nAssigns the tag Customer\nAssigns the tag Flag - Calculate Next offer (which sends them through the Function - Calculate Next Offer - Automation)\nAssigns the Flag - Remove from Shadow Newsletter tag, which does what it says\nPuts them through the Getting Started - Signup - Sequence, which sends a set of emails about the course\nWhen they complete the course or the Getting Started - Signup - Sequence, they get pulled to the end and go into the Fundamentals - Bridge - Automation\n\nThe Fundamentals - Bridge - Automation pitches people on Fundamentals. It happens in two ways depending on what the user has done so far on Getting Started.\n\nIf the user has the Completed - Getting Started tag, they go into the Fundamentals - Bridge - Hot. This goes straight to the pitch for Fundamentals.\nIf the user has not completed Getting Started, they go into the Fundamentals - Bridge - Cold. This sends them a few emails before pitching them on Fundamentals.\n\nAfter they go through the bridge sequences, they go into the Fundamentals - Pitch - Automation.\n\nThe tag Flag - Pitch Window Open - Fundamentals gets applied. This triggers Zapier to create a personalized coupon on WooCommerce.\nThe user gets an email on Friday telling them their personal window is open to purchase Fundamentals.\nThe user goes through the Fundamentals - Pitch - Sequence, which sends an email every day the next week with info on purchasing Fundamentals.\nThe tag Completed - Onboarding is applied.\nThe tag Flag - Start Shadow Newsletter is applied. This triggers the Shadow Newsletter - Automation and adds them to the shadow newsletter.\n\n\n\nOther Courses\n\nIf they sign up for a course, each Woo products assigns them the appropriate tag (e.g. Purchased - Fundamentals).\nThen, they go through a visual automation for each course (e.g. Fundamentals - Signup - Automation)\nThen, this automation rule assigns them the tag Flag - New Subscriber.\n\n\n\nR in 3 Months\n\nIf they sign up for R in 3, WooCommerce assigns them the tag Purchased - R in 3 Months.\nThen, they go through this visual automation, which sends them an email that welcomes them. All other communication about R in 3 Months happens directly via Gmail.\n\n\n\nNewsletter\nIf someone signs up for the newsletter using this form, the following happens:\n\nThe Flag - New Subscriber tag is added to them through this automation rule\n\nThe Flag - New Subscriber tag puts them into the Global - Welcome - Sequence using this automation rule\n\nThe Flag - New Subscriber tag being added puts them onto the New Subscriber - Automation\nThe New Subscriber - Automation moves them through the Function - Calculate Next Offer - Automation and Function - Tag Custom Training/Consulting Clients - Automation\nThe New Subscriber - Automation moves them through the Function - Calculate Topics vs Core Courses\n\nIf they are a custom training/consulting client, they get the Completed - Onboarding and the Flag - Start Shadow Newsletter tags applied, which moves them onto the shadow newsletter\nIf they are not a custom training/consulting client, they are moved to the Getting Started - Pitch - Automation (if they haven’t signed up for it already)\n\n\n\n\nYou can do that with R\nNote: This one is basically archived. It was a lead magnet early on but isn’t really necessary anymore because most people sign up for Getting Started.\n\nIf user signs up for you can do that, it happens with this form.\nThen, this automation rule assigns them the tag Flag - New Subscriber.",
-    "crumbs": [
-      "Marketing",
-      "Email Automations"
-    ]
-  },
-  {
-    "objectID": "email-automations.html#shadow-newsletter",
-    "href": "email-automations.html#shadow-newsletter",
-    "title": "Email Automations",
-    "section": "Shadow Newsletter",
-    "text": "Shadow Newsletter\nAny time the tag Flag - Start Shadow Newsletter is added to a user, they go through the Shadow Newsletter - Automation. This does the following:\n\nRemoves the Flag - Start Shadow Newsletter tag (so it can be added again)\nChecks if they’ve completed part 1 of the shadow newsletter. If not, puts them onto that sequence. If so, moves onto the next part.\nRepeats the previous step through each part of the shadow newsletter.\n\nAfter the user completes each part of the shadow newsletter, they get the tag Locked - Pitched added. This puts them onto Function - Move to Pitch - Automation.\nNew content is constantly added to the last part of the shadow newsletter sequences so that people continually receive emails.",
-    "crumbs": [
-      "Marketing",
-      "Email Automations"
-    ]
-  },
-  {
-    "objectID": "email-automations.html#pitching",
-    "href": "email-automations.html#pitching",
-    "title": "Email Automations",
-    "section": "Pitching",
-    "text": "Pitching\n\nCalculate Next Offer\nFunction - Calculate Next Offer - Automation calculates the next offer for the user by doing the following:\n\nRuns Function - Calculate Topics vs Core Courses to see what type of course user should be pitched on. That automation adds Flag - Pitch on Topics Courses to those for whom it is appropriate (if they have said they are intermediate/advanced, have said they’re interested in topics courses, or have been pitched on all core courses).\nIf user has Flag - Pitch on Topics Courses, the automation looks at which course they’ve yet to have been pitched on. It then adds the next course in the following order as their next_offer custom field: Mapping, Data Cleaning, Inferential Stats.\n\n\n\nMove to Pitch\nWhen the user gets put onto Function - Move to Pitch - Automation:\n\nThe user gets the Flag - Remove from Shadow Newsletter tag added so they don’t get newsletter emails while being pitched.\nThe user goes through the Function - Calculate Next Offer - Automation, which calculates their next offer\nBased on the custom field next_offer, the user is put onto a PRODUCT - Pitch - Automation for their next offer.\n\n\n\nSelf-Paced Course Pitch\nAll self-paced course pitches follow the same rough pattern as Fundamentals:\n\nThe user gets an email on Friday (for some courses it’s Monday) telling them their personal window is open to purchase Fundamentals.\nThe user goes through the Fundamentals - Pitch - Sequence, which sends an email every day the next week with info on purchasing Fundamentals.\n\n\n\nLive Launch\nTODO\n\n\nCustom Training Pitch\nTODO\n\n\nConsulting Pitch\nTODO",
-    "crumbs": [
-      "Marketing",
-      "Email Automations"
-    ]
-  },
-  {
-    "objectID": "email-automations.html#segmentation",
-    "href": "email-automations.html#segmentation",
-    "title": "Email Automations",
-    "section": "Segmentation",
-    "text": "Segmentation\nUsers are segmented by asking questions in the survey on this page:\n\nHow would you describe your level of expertise with R?\nWhy do you want to learn R (or, if you already use it, learn more)?\nWhat has stopped you from learning R (or learning more R if you already use it)?\nWhat’s your main tool for working with data?\nHow big is the organization you work in?\nWhat type of courses are you interested in?\n\nData submitted through this form gets piped back to ConvertKit using Zapier.\nNew users also get added to the Global - Profiling - Sequence through the New Subscriber - Automation. This sequences sends them an email each Sunday asking them one of the questions above.",
-    "crumbs": [
-      "Marketing",
-      "Email Automations"
-    ]
-  },
-  {
-    "objectID": "email-automations.html#email-templates",
-    "href": "email-automations.html#email-templates",
-    "title": "Email Automations",
-    "section": "Email Templates",
-    "text": "Email Templates\nTODO",
-    "crumbs": [
-      "Marketing",
-      "Email Automations"
-    ]
-  },
-  {
-    "objectID": "email-automations.html#reference",
-    "href": "email-automations.html#reference",
-    "title": "Email Automations",
-    "section": "Reference",
-    "text": "Reference\n\nSchedule\n\nSelf-paced course pitch emails go out FMTWTF at 6am\nFundamentals bridge emails (hot and cold) go out MTWTF at 6am\nCourse signup emails go out MTWTF at 6am\nShadow newsletter emails go out at 9am on Thursdays\nEmails in the Global - Welcome - Sequence go out at noon on MWF\n\n\n\nSequences\nTODO\n\n\nVisual Automations\nTODO\n\n\nTags\nTODO\n\n\nAutomation Rules\nTODO\n\n\nSegments",
-    "crumbs": [
-      "Marketing",
-      "Email Automations"
-    ]
-  },
-  {
-    "objectID": "content-strategy.html",
-    "href": "content-strategy.html",
-    "title": "Content Strategy",
-    "section": "",
-    "text": "R for the Rest of Us produces multiple types of content. All content that is produced for one place should be reused on social media as much as possible to get the word out about R for the Rest of Us. For example:"
-  },
-  {
-    "objectID": "content-strategy.html#paid-content",
-    "href": "content-strategy.html#paid-content",
-    "title": "Content Strategy",
-    "section": "Paid Content",
-    "text": "Paid Content\nCourses are obviously paid content."
-  },
-  {
-    "objectID": "content-strategy.html#free-content",
-    "href": "content-strategy.html#free-content",
-    "title": "Content Strategy",
-    "section": "Free Content",
-    "text": "Free Content\nWe use free content to build authority so that people see R for the Rest of Us as worth purchasing things (courses, custom training, consulting services) from\nThe main content that we produce is on our blog. There are two types of articles that we write:\n\nTutorials\nPosts that explain why R is worth learning\n\nThe other main content is emails (see Email Marketing). Although most emails are simply introductions and links to other content, some emails are unique content on their own.\nStarting in 2024, we will have a What’s New in R email series that highlights new things in the R world."
-  },
-  {
-    "objectID": "finances.html",
-    "href": "finances.html",
-    "title": "Finances",
-    "section": "",
-    "text": "R for the Rest of Us finances are managed using QuickBooks.\nWe do the following tasks in the first week of each month:\nCategorize and approve all expenses in QuickBooks: If unclear on category, first look at previous months. If still unclear, ask David.\nSend invoices to clients with QuickBooks: Time should be checked on Toggl reports and an invoice should be generated for each client. Some projects are billed hourly while others are billed at a flat rate (details are in the associated Todoist tasks).\nPay contractors with Gusto: All contractors will submit an invoice each month using this form. They are then paid with Gusto."
-  },
-  {
-    "objectID": "finances.html#quarterly-tasks",
-    "href": "finances.html#quarterly-tasks",
-    "title": "Finances",
-    "section": "Quarterly Tasks",
-    "text": "Quarterly Tasks\nEach quarter we reconcile accounts in QuickBooks. This is done by getting statements from both Advantis Credit Union and Mercury and then entering balances here. This compares the balances in my bank accounts to those in QuickBooks to make sure everything matches up.\nI also pay course instructors each quarter. This is done using the pay-course-instructors.R script in the rru-finances project."
-  },
-  {
-    "objectID": "finances.html#annual-tasks",
-    "href": "finances.html#annual-tasks",
-    "title": "Finances",
-    "section": "Annual Tasks",
-    "text": "Annual Tasks\nWe send out 1099s to all contractors by Gusto. I’ve set Gusto up to make sure this happens, but we should check to confirm this in mid-January.\nWe also need to add end-of-year taxes for Stripe and PayPal fees. This is done in early January (see Todoist task)."
-  },
-  {
-    "objectID": "project-management.html",
-    "href": "project-management.html",
-    "title": "Project Management",
-    "section": "",
-    "text": "We use three tools to manage projects:"
-  },
-  {
-    "objectID": "project-management.html#overview",
-    "href": "project-management.html#overview",
-    "title": "Project Management",
-    "section": "",
-    "text": "We use three tools to manage each project:\n\nGitHub for code discussions\nTodoist to keep track of deadlines\nTwist for general discussion\n\n\n\nCreate a GitHub repo (set to private unless the client is ok with it being public):\n\nUse the README to lay out the overall project scope, schedule, deliverables, etc. Please also lay out an overall schedule of due dates in the README.\nUse issues to manage code-related questions at a granular level.\nIf the project is large enough so that there are multiple issues per type of work (e.g. creating various pieces of data viz), use milestones.\nIf the client is working in GitHub with us, create a project that they can see. Make the default view a Kanban (see example here) so the client can see the status of various tasks.\n\n\n\n\nIn addition to using GitHub to manage code, we also use Todoist to keep track of due dates. For each project, we create a corresponding project on Todoist. Within that project, put various deadlines. Make sure to add the label deadline to the tasks (this way, David can see them in a special view he has created). Here’s an example:\n\nIt’s generally ok to move due dates as necessary (please just ask David if you have questions about whether it is a problem on any specific project). Please just update the due dates on the project README on GitHub to match.\n\n\n\nCreate a thread in the #consulting channel on Twist for the project. If it is large project, we can create a separate channel just for the project so we can have multiple threads.\nTwist is a good place for things we’d like to keep confidential (because we work more and more with clients directly in GitHub, that isn’t the best place for confidential discussions). Also, while Todoist has the ability to communicate within tasks, it’s not as user friendly as Twist so we use Twist for general communication.",
-    "crumbs": [
-      "Consulting",
-      "Project Management"
-    ]
-  },
-  {
-    "objectID": "project-management.html#client-communication",
-    "href": "project-management.html#client-communication",
-    "title": "Project Management",
-    "section": "Client Communication",
-    "text": "Client Communication\nThe most important thing we can do is communicate effectively and regularly. This means getting back to clients within 24 hours via the means they message us (email, GitHub issues, etc).\nThe type of communication we use with clients depends on the client.\n\nIf clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.\nIf they don’t want to work in GitHub, email is generally best.\n\nWe should also email clients every week or two (determine which is appropriate at the beginning of the project) to give them a quick overall update on progress and see if they have any questions. Please make sure to cc David on these weekly updates."
-  },
-  {
-    "objectID": "consulting-overview.html",
-    "href": "consulting-overview.html",
-    "title": "Overview",
-    "section": "",
-    "text": "In general, consulting projects we take on involve some combination of the following:\n\nData visualization\nLayout using RMarkdown/Quarto\nParameterized reporting\n\nYou can see examples of several such projects on the consulting page of the R for the Rest of Us website."
-  },
-  {
-    "objectID": "consulting-overview.html#projects-we-take-on",
-    "href": "consulting-overview.html#projects-we-take-on",
-    "title": "Overview",
-    "section": "",
-    "text": "In general, consulting projects we take on involve some combination of the following:\n\nData visualization\nLayout using RMarkdown/Quarto\nParameterized reporting\n\nYou can see examples of several such projects on the consulting page of the R for the Rest of Us website."
-  },
-  {
-    "objectID": "consulting-overview.html#projects-we-dont-take-on",
-    "href": "consulting-overview.html#projects-we-dont-take-on",
-    "title": "Overview",
-    "section": "Projects We Don’t Take On",
-    "text": "Projects We Don’t Take On\nProjects that have been less successful for R for the Rest of Us are:\n\nAd hoc data analysis\nLack clear scope and involve “looking to see what data is out there”\n\nThis tweet thread has good examples of red flags to look for when considering clients/projects.\n\n\nFastest way to kill your business? Taking on the wrong clients. Here are 15 client red flags you must learn to spot:👇\n\n— Shane Martin (@Shane___Martin) June 8, 2022"
-  },
-  {
-    "objectID": "social-media.html",
-    "href": "social-media.html",
-    "title": "Social Media",
-    "section": "",
-    "text": "Social media is the main marketing strategy to help people become aware of R for the Rest of Us. The main platforms we use are YouTube and LinkedIn.\nAll social media is designed not so much to sell directly (though we do a bit of this), but to get people on the R for the Rest of Us email list (see Email Marketing). Once they are on that list, we attempt to educate them and convince them to buy products form us."
-  },
-  {
-    "objectID": "social-media.html#twitter",
-    "href": "social-media.html#twitter",
-    "title": "Social Media",
-    "section": "Twitter",
-    "text": "Twitter\nActive R users are on Twitter. We try to reach them not so much to sell to them directly (though this does sometimes happen), but more to have them connect people looking to learn R (who currently users are likely to know) with R for the Rest of Us.\n\nWe find R content produced by others and tweet it out on weekdays at 6am using Buffer.\nWe share R for the Rest of Us content on Thursdays at 9am. I’ve done this by using a Zapier integration that connects Airtable to Buffer.\nWe also regularly share promotional material (i.e. links directly to a course) using Buffer or Typefully (if we want to schedule a thread). We don’t currently have a schedule for this, but probably should."
-  },
-  {
-    "objectID": "social-media.html#linkedin",
-    "href": "social-media.html#linkedin",
-    "title": "Social Media",
-    "section": "LinkedIn",
-    "text": "LinkedIn\nWe use LinkedIn to post content that we create. This includes:\n\nWhat’s New in R emails\nBlog posts and accompanying YouTube videos\nPodcast episodes"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "Welcome! You are reading an in-progress version of the R for the Rest of Us handbook."
-  },
-  {
-    "objectID": "index.html#mission",
-    "href": "index.html#mission",
-    "title": "Welcome",
-    "section": "Mission",
-    "text": "Mission\nThe goal of R for the Rest of Us is to help people use R to do good in the world."
-  },
-  {
-    "objectID": "index.html#our-work",
-    "href": "index.html#our-work",
-    "title": "Welcome",
-    "section": "Our Work",
-    "text": "Our Work\nThe business has two main arms: education and consulting.\n\nEducation\nOn the education side, we offer:\n\nSelf-paced and cohort-based courses\nIn-person public workshops\nCustom training for organizations (currently paused in favor of offering group rates in R in 3 Months)\n\n\n\nConsulting\nOn the consulting side, we do a range of projects. Almost all of them involve some combination of:\n\nData visualization\nUsing R to improve workflows\nAutomating reporting (especially with parameterized reporting)"
-  },
-  {
-    "objectID": "index.html#roadmap",
-    "href": "index.html#roadmap",
-    "title": "Welcome",
-    "section": "Roadmap",
-    "text": "Roadmap\nAs a business that does both education and consulting work, the R for the Rest of Us roadmap is guided by internal and external factors. We do our best to be thoughtful about future directions we think are useful based on customer feedback while also leaving space to adjust based on new information."
-  },
-  {
-    "objectID": "index.html#a-business-with-a-social-conscience",
-    "href": "index.html#a-business-with-a-social-conscience",
-    "title": "Welcome",
-    "section": "A Business with a Social Conscience",
-    "text": "A Business with a Social Conscience\nR for the Rest of Us is not just a money-making enterprise. I also want it to be a business with a social conscience. We put this into practice by:\n\nHighlighting important issues in the work we do (e.g. the types of projects we work on)\nMaking it possible for people of various means to learn R (through parity purchasing power and scholarships)\nDonating a portion of revenue to organizations working for social justice"
-  },
-  {
-    "objectID": "index.html#people",
-    "href": "index.html#people",
-    "title": "Welcome",
-    "section": "People",
-    "text": "People\nR for the Rest of Us is headed by David Keyes. I’ve outlined my role in David’s Responsibilities.\nCurrent consultants include Thomas Vroylandt, Cara Thompson, Gracielle Higino, and Libby Heeren. Other consultants are brought in for individual projects. Joe Wanyua is the assistant."
-  },
-  {
-    "objectID": "david-work.html",
-    "href": "david-work.html",
-    "title": "David’s Work",
-    "section": "",
-    "text": "As R for the Rest of Us has grown, my work away from doing all of the teaching and all of the consulting to being someone who facilitates others doing this work. In 2021, I make a conscious decision to try to achieve two goals:\nTo achieve the first goal, I do several things:\nTo achieve the second goal, I have worked with consultants on a range of projects."
-  },
-  {
-    "objectID": "david-work.html#core-responsibilities",
-    "href": "david-work.html#core-responsibilities",
-    "title": "David’s Work",
-    "section": "Core Responsibilities",
-    "text": "Core Responsibilities\nDavid’s core responsibilities are below. To be clear, I do a LOT more than just these things. But these are the high-leverage things that I should focus my time and attention on.\n\nStrategy\nThink about the future direction of R for the Rest of Us\nEnsure we have the team necessary to achieve goals\n\n\nMarketing\nDevelop blog posts and other content\nMaintain email marketing system\n\n\nConsulting Business Development\nMeet with potential clients about consulting projects\nDevelop proposals for clients\n\n\nConsulting Project Management\nCommunicate with clients about project progress\nWork with consultants to get projects done on time\n\n\nCourse Development\nReach out to potential instructors to gauge interest\nWork with instructors to develop courses\nCreate courses on website\nMarketing for courses"
+    "objectID": "courses-production.html#putting-content-on-website",
+    "href": "courses-production.html#putting-content-on-website",
+    "title": "Production",
+    "section": "Putting Content on Website",
+    "text": "Putting Content on Website"
   },
   {
     "objectID": "tools.html",
@@ -393,28 +116,28 @@
     "href": "tools.html#website",
     "title": "Tools",
     "section": "Website",
-    "text": "Website\nThe website runs on Statamic and is hosted using Laravel Forge and Digital Ocean.\nWebsite analytics are provided by Fathom."
+    "text": "Website\nThe website runs on WordPress and is hosted by Kinsta. There are various paid plugins that help do specific things on the website. See Website.\nWebsite analytics are provided by Fathom."
   },
   {
     "objectID": "tools.html#video-creation",
     "href": "tools.html#video-creation",
     "title": "Tools",
     "section": "Video Creation",
-    "text": "Video Creation\nWhen providing quick feedback videos, we use CloudApp for short videos and Descript for longer videos that need to be edited.\nVideo editing happens in Descript.\nCaptions for videos are made using the automated transcripts in muse.ai."
+    "text": "Video Creation\nWhen providing quick feedback videos, we use CloudApp or CleanShot.\nTo record videos for courses, we use either Screenflow, OBS Studio, Streamlabs (depending on instructor operating system + preferences).\nVideo editing happens in Screenflow.\nCaptions for videos are made using Descript or muse.ai."
   },
   {
     "objectID": "tools.html#video-hosting",
     "href": "tools.html#video-hosting",
     "title": "Tools",
     "section": "Video Hosting",
-    "text": "Video Hosting\nCourse videos, teaching videos, etc are hosted on muse.ai and embedded on the website.\nThere is an R for the Rest of Us YouTube channel as well."
+    "text": "Video Hosting\nCourse videos, teaching videos, etc are hosted on muse.ai and embedded on the website.\nThere is an R for the Rest of Us YouTube channel that I’ve only periodically used."
   },
   {
     "objectID": "tools.html#social-media",
     "href": "tools.html#social-media",
     "title": "Tools",
     "section": "Social Media",
-    "text": "Social Media\nWe use Buffer to schedule social media content:"
+    "text": "Social Media\nWe use two tools to schedule social media content:\n\nBuffer is where we set up a queue of regular R content created by others to go out on Twitter. We also post our own content using Buffer, often piped through a Zapier automation from Airtable.\nIf we need to schedule Twitter threads, we use Typefully."
   },
   {
     "objectID": "tools.html#automation",
@@ -424,50 +147,8 @@
     "text": "Automation\nWe use Zapier to automate various processes (e.g. when a user completes a course, Zapier sends that data to ConvertKit)."
   },
   {
-    "objectID": "courses-production.html",
-    "href": "courses-production.html",
-    "title": "Production",
-    "section": "",
-    "text": "After videos are edited, they are uploaded to muse.ai."
-  },
-  {
-    "objectID": "courses-production.html#uploading-videos",
-    "href": "courses-production.html#uploading-videos",
-    "title": "Production",
-    "section": "",
-    "text": "After videos are edited, they are uploaded to muse.ai."
-  },
-  {
-    "objectID": "courses-production.html#captions",
-    "href": "courses-production.html#captions",
-    "title": "Production",
-    "section": "Captions",
-    "text": "Captions\nmuse.ai will add pretty good captions. For videos that need further cleaning up, someone will edit the captions manually."
-  },
-  {
-    "objectID": "courses-production.html#adding-content-to-website",
-    "href": "courses-production.html#adding-content-to-website",
-    "title": "Production",
-    "section": "Adding Content to Website",
-    "text": "Adding Content to Website\nTODO"
-  },
-  {
-    "objectID": "data-viz.html",
-    "href": "data-viz.html",
-    "title": "Data Viz",
-    "section": "",
-    "text": "We do a lot of data viz at R for the Rest of Us. Most of the work we do is for general audiences, or at least for folks not super familiar with data. As a result, our data viz tends to look more like data viz seen in the media rather than like that seen in, say, academia.\nWhen making data viz for R for the Rest of Us, we abide by four main principles:\n\nHighlight\nDeclutter\nExplain\nSparkle\n\nI talk about these principles in a video I made for the Going Deeper with R course.\n\n\n\n\nWhat this means in practice is the following:\nWe highlight important findings using descriptive titles that show what’s happening with the data. Things like “90% of people do X” rather than “Percent of people who do X.” The rationale for this is laid out in this article by Stephanie Everegreen.\nWe declutter our charts by removing unnecessary elements. Here’s an example of such a chart. Note that we have removed most grid lines, and the y axis title. This makes the data easier to read and make sense of.\n\nWe explain by using annotations where possible.\nWe make our charts sparkle by using custom fonts and custom themes. We have an internal custom theme in the rfortherestofus package.\n\n\n\n\n\nBut more often, we create a custom theme for clients we work with. This involves using their fonts and colors. In cases where clients have branding guidelines, we use those. If not, we get colors and fonts from their website and use them."
-  },
-  {
     "objectID": "courses-curriculum.html",
     "href": "courses-curriculum.html",
-    "title": "Curriculum",
-    "section": "",
-    "text": "You’ll start out by creating an outline of your course. This will be done in the GitHub repo that David creates for your course.\nPlease just create an outline.Rmd file for this. Use the following format:\nSection Name (H1)\nLesson Title (H2)\nOverview of lesson\nMy Turn (H3)\nOverview of what you’ll demonstrate\nYour Turn (H3)\nExercise for student\nSolutions Code (H3)\nCode used for solution to Your Turn\nLearn More (H3)\nText with additional info, resources, etc on topic of lesson"
-  },
-  {
-    "objectID": "courses-curriculum.html#outline",
-    "href": "courses-curriculum.html#outline",
     "title": "Curriculum",
     "section": "",
     "text": "You’ll start out by creating an outline of your course. This will be done in the GitHub repo that David creates for your course.\nPlease just create an outline.Rmd file for this. Use the following format:\nSection Name (H1)\nLesson Title (H2)\nOverview of lesson\nMy Turn (H3)\nOverview of what you’ll demonstrate\nYour Turn (H3)\nExercise for student\nSolutions Code (H3)\nCode used for solution to Your Turn\nLearn More (H3)\nText with additional info, resources, etc on topic of lesson"
@@ -484,7 +165,7 @@
     "href": "courses-curriculum.html#lessons",
     "title": "Curriculum",
     "section": "Lessons",
-    "text": "Lessons\nThe number of lessons varies by course. However, as a general rule, core courses tend to be longer (between 30 and 40 lessons) while topics courses tend to be shorter (15 to 30 lessons).\nEach lesson should cover one distinct topic. Each lesson within a section should be short and focus on a single topic. As you’re making your materials, if you think that a video demonstrating the concept will go beyond 10 minutes or so, consider breaking it into multiple lessons.\nEach lesson has the following sections:\n\nVideo overview\nYour Turn exercise (some lessons don’t lend themselves to this and don’t have an exercise)\nCode and video solutions (only if there is a Your Turn)\nLearn More section with links to resources on that topic\n\nHere’s what it looks like (you can see this lesson here).\n\nLessons will typically start with your face on camera, then go to full screen of your slides/RStudio. Here’s an example."
+    "text": "Lessons\nThe number of lessons varies by course. However, as a general rule, core courses tend to be longer (between 30 and 40 lessons) while topics courses tend to be shorter (15 to 30 lessons).\nEach lesson should cover one distinct topic. Each lesson within a section should be short and focus on a single topic. As you’re making your materials, if you think that a video demonstrating the concept will go beyond 10 minutes or so, consider breaking it into multiple lessons.\nEach lesson has the following sections:\n\nVideo overview\nYour Turn exercise (some lessons don’t lend themselves to this and don’t have an exercise)\nCode and video solutions (only if there is a Your Turn)\nLearn More section with links to resources on that topic\n\nHere’s what it looks like (you can see this lesson here).\n\nI typically start a lesson with slides. I’ll start with a slide that lays out the concept. I’ll often have code on this slide.\nI’ll usually then flip over to RStudio to show myself typing out the code to demonstrate this concept in an exercises file. I call this the My Turn. Here’s a sample lesson."
   },
   {
     "objectID": "courses-curriculum.html#materials",
@@ -492,6 +173,20 @@
     "title": "Curriculum",
     "section": "Materials",
     "text": "Materials\nThe materials for each courses lives in a GitHub repo on the R for the Rest of Us organization account. David will create this and add you to the repo.\n\nSlides\nSlides for R for the Rest of Us courses are made using the xaringan package.\nThere is a custom template to use to make slides in the R for the Rest of Us style. You can access this by installing the rfortherestofus package using the following code:\nYou can then add slides by going to File &gt; New File &gt; RMarkdown and selecting the R for the Rest of Us template.\n\nPlease create a slides directory where all of your slides will live.\nYou can create slides as follows:\nMost lessons should have a My Turn and a Your Turn section. The slide for the My Turn section should have an orange background and the slide for the Your Turn section should have a dark background. To do this, add the class my-turn and the class inverse to your slides as follows:\n\n\n\nOther Materials\nAny other materials that you want people to access can live in the repo. Please organize however you see fit."
+  },
+  {
+    "objectID": "david-work.html",
+    "href": "david-work.html",
+    "title": "David’s Work",
+    "section": "",
+    "text": "As R for the Rest of Us has grown, my work away from doing all of the teaching and all of the consulting to being someone who facilitates others doing this work. In 2021, I make a conscious decision to try to achieve two goals:\nTo achieve the first goal, I did two things:\nTo achieve the second goal, I have worked with consultants on a range of projects."
+  },
+  {
+    "objectID": "david-work.html#core-responsibilities",
+    "href": "david-work.html#core-responsibilities",
+    "title": "David’s Work",
+    "section": "Core Responsibilities",
+    "text": "Core Responsibilities\nDavid’s core responsibilities are below. To be clear, I do a LOT more than just these things. But these are the high-leverage things that I should focus my time and attention on.\n\nStrategy\nThink about the future direction of R for the Rest of Us\nEnsure we have the team necessary to achieve goals\n\n\nMarketing\nDevelop blog posts and other content\nMaintain email automation system\nRegularly share useful R content through social media\n\n\nConsulting Business Development\nMeet with potential clients about consulting projects\nDevelop proposals for clients\n\n\nConsulting Project Management\nCommunicate with clients about project progress\nWork with consultants to get projects done on time\n\n\nCourse Development\nReach out to potential instructors to gauge interest\nWork with instructors to develop courses\nCreate courses on website\nMarketing courses"
   },
   {
     "objectID": "courses-legal-financial.html",
@@ -533,7 +228,7 @@
     "href": "website.html",
     "title": "Website",
     "section": "",
-    "text": "R for the Rest of Us runs on a Statamic website hosted using Laravel Forge and Digital Ocean."
+    "text": "R for the Rest of Us runs on a WordPress website hosted by Kinsta."
   },
   {
     "objectID": "website.html#theme",
@@ -557,6 +252,48 @@
     "text": "Plugins\nThe website uses many plugins. Here are some of the most important and less obvious ones.\nAffiliateWP enables us to have affiliates who are paid for referring customers (not currently using this)\nBuddyBoss Platform + BuddyBoss Platform Pro hosts groups and forums for cohort-based courses\nConvertKit allows me to do things like apply a tag to a customer whenever they purchase a course\nFacetWP is what I use to create a searchable, filterable resources page\nLearnDash is probably the most important plugin. It is what we use to manage all courses. BuddyBoss integrates with it, making the course pages even more attractive. The one thing to note with LearnDash is that we use WooCommerce for signup and just use LearnDash itself for the course stuff.\n\nLearnDash Course Duplicator allows us to duplicate courses (e.g. for new cohorts of R in 3 Months)\n\nNinjaForms is what we use for all forms\nPods creates custom post types\nSEOPress + SEOPress Pro is used for all SEO stuff\nUncanny Automator + Uncanny Automator Pro allow us to automate various things (e.g. sending notifications on new comments to Twist)\nWooCommerce is how we handle all ecommerce on the site. We also use add-on Woo plugins:\n\nWooCommerce Price Based on Country allows us to set lower prices for those in lower GDP countries\nWooCommerce Product Vendors allows us to track commissions for course instructors\nWooCommerce Smart Coupons allows us to set up coupons for gift certificates\nWooCommerce Stripe Gateway allows us to use Stripe to process credit cards (we also reluctantly use PayPal)\nWooCommerce Zapier allows us to create coupons for users from using Zapier when they are in their pitch window (see Email Marketing)\n\nWP Pusher syncs our child theme from this GitHub repo to the website"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Welcome! You are reading an in-progress version of the R for the Rest of Us handbook."
+  },
+  {
+    "objectID": "index.html#mission",
+    "href": "index.html#mission",
+    "title": "Welcome",
+    "section": "Mission",
+    "text": "Mission\nThe goal of R for the Rest of Us is to help people use R to do good in the world."
+  },
+  {
+    "objectID": "index.html#our-work",
+    "href": "index.html#our-work",
+    "title": "Welcome",
+    "section": "Our Work",
+    "text": "Our Work\nThe business has two main arms: education and consulting.\n\nEducation\nOn the education side, we offer:\n\nSelf-paced and cohort-based courses\nIn-person public workshops\nCustom training for organizations\n\n\n\nConsulting\nOn the consulting side, we do a range of projects. Almost all of them involve some combination of:\n\nData visualization\nUsing R to improve workflows\nAutomating reporting (especially with parameterized reporting)"
+  },
+  {
+    "objectID": "index.html#roadmap",
+    "href": "index.html#roadmap",
+    "title": "Welcome",
+    "section": "Roadmap",
+    "text": "Roadmap\nAs a business that does both education and consulting work, the R for the Rest of Us roadmap is guided by internal and external factors. We do our best to be thoughtful about future directions we think are useful based on customer feedback while also leaving space to adjust based on new information."
+  },
+  {
+    "objectID": "index.html#a-business-with-a-social-conscience",
+    "href": "index.html#a-business-with-a-social-conscience",
+    "title": "Welcome",
+    "section": "A Business with a Social Conscience",
+    "text": "A Business with a Social Conscience\nR for the Rest of Us is not just a money-making enterprise. I also want it to be a business with a social conscience. We put this into practice by:\n\nHighlighting important issues in the work we do (e.g. the types of projects we work on)\nMaking it possible for people of various means to learn R (through parity purchasing power and scholarships)\nDonating a portion of revenue to organizations working for social justice"
+  },
+  {
+    "objectID": "index.html#people",
+    "href": "index.html#people",
+    "title": "Welcome",
+    "section": "People",
+    "text": "People\nR for the Rest of Us is headed by David Keyes. I’ve outlined my role in David’s Responsibilities.\nCurrent consultants include Charlie Hadley, Thomas Vroylandt, Cara Thompson, Crystal Lewis, and Joscelin Rocha-Hidalgo. Other consultants are brought in for individual projects."
+  },
+  {
     "objectID": "branding.html",
     "href": "branding.html",
     "title": "Branding",
@@ -569,6 +306,27 @@
     "title": "Branding",
     "section": "Logo, colors, typography",
     "text": "Logo, colors, typography\nWhen most people think of branding, this is what they’re asking about. You can find the various logos, colors, and typography that I use on Canva."
+  },
+  {
+    "objectID": "social-media.html",
+    "href": "social-media.html",
+    "title": "Social Media",
+    "section": "",
+    "text": "Social media is the main marketing strategy to help people become aware of R for the Rest of Us. The main platform we use is Twitter, as that’s where most R users are. We also market through LinkedIn.\nAll social media is designed not so much to sell directly (though we do a bit of this), but to get people on the R for the Rest of Us email list (see Email Marketing). Once they are on that list, we attempt to educate them and convince them to buy products form us."
+  },
+  {
+    "objectID": "social-media.html#twitter",
+    "href": "social-media.html#twitter",
+    "title": "Social Media",
+    "section": "Twitter",
+    "text": "Twitter\nActive R users are on Twitter. We try to reach them not so much to sell to them directly (though this does sometimes happen), but more to have them connect people looking to learn R (who currently users are likely to know) with R for the Rest of Us.\n\nWe find R content produced by others and tweet it out on weekdays at 6am using Buffer.\nWe share R for the Rest of Us content on Thursdays at 9am. I’ve done this by using a Zapier integration that connects Airtable to Buffer.\nWe also regularly share promotional material (i.e. links directly to a course) using Buffer or Typefully (if we want to schedule a thread). We don’t currently have a schedule for this, but probably should."
+  },
+  {
+    "objectID": "social-media.html#linkedin",
+    "href": "social-media.html#linkedin",
+    "title": "Social Media",
+    "section": "LinkedIn",
+    "text": "LinkedIn\nIn the first half of 2022, we set up content to go out to LinkedIn. We should continue to do this."
   },
   {
     "objectID": "courses-recording.html",
@@ -596,311 +354,272 @@
     "href": "courses-recording.html#recording-videos",
     "title": "Recording",
     "section": "Recording Videos",
-    "text": "Recording Videos\nFor those on Mac or Windows, recording happens with Descript. David will set you up with a license so you can use it.\n\nGetting Ready to Record\nThis image from Egghead is an accurate representation of what goes into making videos.\n\nBefore you record there are several things to take into consideration.\nPlease tidy whatever portion of your workspace will show in the background of videos. No need to go 100% Marie Kondo, but please try to keep it neat. Not only does it look more professional, it also encourages people to focus on what you’re teaching, not whatever random object is on your bookshelf.\nPlease use an external microphone. Try to keep it as close to you as possible, though I generally try to keep it off screen.\nAdjust your screen resolution. Adjusting your screen resolution makes your code much easier to read.\nWorking on a Mac, I go to Settings &gt; Displays and select 1024 x 576 (HiDPI). As Egghead explains about HiDPI:\n\nHiDPI mode—also known broadly as DPI scaling, or Retina display on Macs—doubles each pixel, allowing for highly readable text on very high-resolution screens.\n\nThere are some instructions for doing the same thing on Windows here.\nPlease hit the top menu bar when you record. Please go into full screen mode in RStudio. This hides your top menu bar and keeps the focus on your code.\n\nPlease use an external webcam. They tend to be higher quality than built-in ones.\nIf you are interested in learning more tips about high-quality screencasting, this guide from Egghead is helpful.\n\n\nRecording Lessons in Descript\nYou will record videos using Descript. It’s a great tool and has extensive documentation.\nPlease create a new project for each lesson. Use the blue new project button, not the classic project option.\n\nHere’s how to record a lesson.\n\n\n\nYou can re-record as much as you’d like. It’s helpful if you can delete bad takes that you don’t want included. Just highlight the text and hit delete."
+    "text": "Recording Videos\nI record using Screenflow. If you’re on a Mac, you’ll get a license for it. If not, we’ll discuss options.\n\nRecording Procedures\nI’m generally not that fussy about making sure everything is super high quality, but please use an external camera and external mic to record. Please put your mic as close to you as possible, but make sure it doesn’t show up on camera. If you are interested in learning some tips about high-quality screencasting, this guide from Egghead is helpful.\nMy general experience is that it’s easier to record videos by just hitting record and going through your lesson as many times as you need to. I often make mistakes along the way, but that’s ok because we can edit them out after the fact. Just go back to right before you messed up and start again! You can, of course, record so you get a single high-quality take, but I find that hard to do and way too much pressure.\n\n\nSharing Videos with David\nPlease share the raw videos you record in the Google Drive folder that David sets up for you. Make sure they are labeled so I know what each video is."
   },
   {
     "objectID": "courses-recording.html#video-editing",
     "href": "courses-recording.html#video-editing",
     "title": "Recording",
     "section": "Video Editing",
-    "text": "Video Editing\nOnce you’ve finished recording all lessons, David will then edit them."
+    "text": "Video Editing\nDavid will edit all of your videos."
   },
   {
-    "objectID": "courses-editing.html",
-    "href": "courses-editing.html",
-    "title": "Editing",
+    "objectID": "consulting-overview.html",
+    "href": "consulting-overview.html",
+    "title": "Overview",
     "section": "",
-    "text": "After the instructor records videos on Descript, David and team edit them.\nMost lessons will have the following structure:\n\nIntro sting\nFull video on instructor as they introduce topic\nFull screen on slides/RSutdio as instructor presents lesson\nFull screen on Your Turn section\nOutro sting\n\nAfter editing each video, the intro and outro animation should be added."
+    "text": "In general, consulting projects we take on involve some combination of the following:\n\nData visualization\nLayout using RMarkdown and pagedown\nParameterized reporting\n\nYou can see examples of several such projects on the consulting page of the R for the Rest of Us website."
   },
   {
-    "objectID": "courses-editing.html#video-editing",
-    "href": "courses-editing.html#video-editing",
-    "title": "Editing",
+    "objectID": "consulting-overview.html#projects-we-dont-take-on",
+    "href": "consulting-overview.html#projects-we-dont-take-on",
+    "title": "Overview",
+    "section": "Projects We Don’t Take On",
+    "text": "Projects We Don’t Take On\nProjects that have been less successful for R for the Rest of Us are:\n\nAd hoc data analysis\nLack clear scope and involve “looking to see what data is out there”\n\nThis tweet thread has good examples of red flags to look for when considering clients/projects.\n\n\nFastest way to kill your business? Taking on the wrong clients. Here are 15 client red flags you must learn to spot:👇\n\n— Shane Martin (@Shane___Martin) June 8, 2022"
+  },
+  {
+    "objectID": "project-management.html",
+    "href": "project-management.html",
+    "title": "Project Management",
     "section": "",
-    "text": "After the instructor records videos on Descript, David and team edit them.\nMost lessons will have the following structure:\n\nIntro sting\nFull video on instructor as they introduce topic\nFull screen on slides/RSutdio as instructor presents lesson\nFull screen on Your Turn section\nOutro sting\n\nAfter editing each video, the intro and outro animation should be added."
+    "text": "Create a GitHub repo (set to private unless the client is ok with it being public):\n\nUse the README to lay out the overall project scope, deliverables, etc.\nUse issues to manage code-related questions at a granular level.\nIf the project is large enough, use milestones.\n\nCreate a thread in the #consulting channel on Twist for the project. This is a good place for things we’d like to keep confidential (because we work more and more with clients directly in GitHub, that isn’t the best place for confidential discussions). Communicate updates on overall progress with David using Twist. An update once a week or so is helpful."
   },
   {
-    "objectID": "courses-editing.html#descript-tips",
-    "href": "courses-editing.html#descript-tips",
-    "title": "Editing",
-    "section": "Descript Tips",
-    "text": "Descript Tips\nThe easiest way to start out is to remove word gaps. I do this for any gaps greater than 1 second. This ensures that any times the instructor paused to gather their thoughts etc, those blank spaces are removed.\nLeave 0.25 seconds gaps between clips where the instructor is on camera and clips where they’re showing their screen.\nWhen there are two back-to-back clips of the speaker on camera, do a 0.5 second crossfade so the jump isn’t too abrupt.\nWhere appropriate, use stock videos/photos on Descript to highlight a concept.\nYou can zoom into sections of the screen on Descript. For example, in a video showing the pieces of RStudio, it may make sense to zoom into each one as I discuss it. Make zooms quicker — around 1 second.\nWhere appropriate, use callout boxes, arrows, and text to draw the learner’s attention to a specific area of the screen (for example, when the instructor says “you can see here…”). Use the R for the Rest of Us oragne color (#ff7400) consistently when adding these attention grabbers."
-  },
-  {
-    "objectID": "courses-editing.html#sound",
-    "href": "courses-editing.html#sound",
-    "title": "Editing",
-    "section": "Sound",
-    "text": "Sound\nSound levels should be fairly consistent assuming recording conditions remain consistent. However, if necessary you can auto-level clips.\nWe should Studio Sound when possible."
-  },
-  {
-    "objectID": "courses-editing.html#export",
-    "href": "courses-editing.html#export",
-    "title": "Editing",
-    "section": "Export",
-    "text": "Export\nThere are two ways to export videos:\n\nExporting directly\nPublishing and then downloading\n\nIt is best to do the second option, as it is much quicker. Simply hit publish in the top right. Once the project is published, you can then hit the download button. If you make changes to the project, simply hit Update and then re-download."
+    "objectID": "project-management.html#client-communication",
+    "href": "project-management.html#client-communication",
+    "title": "Project Management",
+    "section": "Client Communication",
+    "text": "Client Communication\nThe most important thing we can do is communicate effectively and regularly. This means getting back to clients within 24 hours.\nThe type of communication we use with clients depends on the client.\n\nIf clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.\nIf they don’t want to work in GitHub (most don’t), email is generally best.\n\nI generally try to send clients updates by email about overall progress every 1-2 weeks to make sure they know what’s going on and see if they have any questions."
   },
   {
     "objectID": "clients.html",
     "href": "clients.html",
     "title": "Clients and Projects",
     "section": "",
-    "text": "Here is a partial list of clients we have worked with and a sample of the projects we’ve worked on with them.\nAPI Council: San Francisco-based non-profit that advocates for the Asian Pacific Islander community. We built a food resources map for them in 2021.\nAspect Evaluation: Very small (one-person, I believe) evaluation firm in Seattle. We made some visualizations for them in 2020.\nColibri Consulting: One-person evaluation firm. We partnered with them to do a report on Oregon farmworkers in 2021-2022.\nCTData: Connecticut-based non-profit. We worked with them and their client the Partnership for Strong Communities to make housing reports in 2020.\nEvaluation by Design: Very small (one-person, I believe) evaluation firm in the Bay Area. We helped them to develop strategy and reporting on their 21st century skills training program.\nFord Family Foundation: The client we’ve worked with the longest (since ~2017). We’ve done several data viz projects for them. The most notable is Oregon by the Numbers, but we’ve also done multiple internal projects.\nISTE/EdSurge: A non-profit education news site. We did a couple data visualizations for them focused on COVID and school reopening in 2020.\nMichigan Fitness Foundation: Non-profit focused on health. We have been doing custom training with them (mostly in the form of regular check-in calls) since 2020.\nOMNI Institute: Colorado-based evaluation firm. We trained their staff on R in 2019. Since then, we’ve done some additional training for them as well as some smaller consulting projects around survey reporting.\nORS Impact: Seattle-based evaluation firm. We’re currently helping them with a set of reports on 2020 Census outreach efforts.\nPacific Research and Evaluation: A Portland-based evaluation firm, we trained them in R in 2019. Since then, we’ve done a few small consulting projects for them, mostly around making maps.\nProsper Portland: Small business development agency for the city of Portland. We did a training with their data team in 2019. We’ve also done a series of smaller consulting projects with them since then.\nPublic Profit: Oakland-based evaluation firm. We trained their team in 2018.\nReading Partners: National non-profit that promotes literacy. We trained their team in 2019. We also developed an internal dashboard for them.\nTORV LLC: Colorado-based consulting firm that works with golf courses and sports fields. We’re helping them to automate reporting.\nThe Mark: Southern California-based evaluation firm. They took some of our courses as a group in 2020 and had us develop some docs for them.",
-    "crumbs": [
-      "Clients",
-      "Clients and Projects"
-    ]
+    "text": "API Council: San Francisco-based non-profit that advocates for the Asian Pacific Islander community. We built a food resources map for them in 2021.\nAspect Evaluation: Very small (one-person, I believe) evaluation firm in Seattle. We made some visualizations for them in 2020.\nColibri Consulting: One-person evaluation firm. We partnered with them to do a report on Oregon farmworkers in 2021-2022.\nCTData: Connecticut-based non-profit. We worked with them and their client the Partnership for Strong Communities to make housing reports in 2020.\nEvaluation by Design: Very small (one-person, I believe) evaluation firm in the Bay Area. We helped them to develop strategy and reporting on their 21st century skills training program.\nFord Family Foundation: The client we’ve worked with the longest (since ~2017). We’ve done several data viz projects for them. The most notable is Oregon by the Numbers, but we’ve also done multiple internal projects.\nISTE/EdSurge: A non-profit education news site. We did a couple data visualizations for them focused on COVID and school reopening in 2020.\nMichigan Fitness Foundation: Non-profit focused on health. We have been doing custom training with them (mostly in the form of regular check-in calls) since 2020.\nOMNI Institute: Colorado-based evaluation firm. We trained their staff on R in 2019. Since then, we’ve done some additional training for them as well as some smaller consulting projects around survey reporting.\nORS Impact: Seattle-based evaluation firm. We’re currently helping them with a set of reports on 2020 Census outreach efforts.\nPacific Research and Evaluation: A Portland-based evaluation firm, we trained them in R in 2019. Since then, we’ve done a few small consulting projects for them, mostly around making maps.\nProsper Portland: Small business development agency for the city of Portland. We did a training with their data team in 2019. We’ve also done a series of smaller consulting projects with them since then.\nPublic Profit: Oakland-based evaluation firm. We trained their team in 2018.\nReading Partners: National non-profit that promotes literacy. We trained their team in 2019. We also developed an internal dashboard for them.\nTORV LLC: Colorado-based consulting firm that works with golf courses and sports fields. We’re helping them to automate reporting.\nThe Mark: Southern California-based evaluation firm. They took some of our courses as a group in 2020 and had us develop some docs for them."
+  },
+  {
+    "objectID": "finances.html",
+    "href": "finances.html",
+    "title": "Finances",
+    "section": "",
+    "text": "R for the Rest of Us finances are managed using QuickBooks.\nWe do the following tasks in the first week of each month:\nCategorize and approve all expenses in QuickBooks: If unclear on category, first look at previous months. If still unclear, ask David.\nSend invoices to clients with QuickBooks: Time should be checked on Toggl reports and an invoice should be generated for each client. Some projects are billed hourly while others are billed at a flat rate (details are in the associated Todoist tasks).\nPay contractors with Gusto: All contractors will submit an invoice each month. They are then paid with Gusto."
+  },
+  {
+    "objectID": "finances.html#quarterly-tasks",
+    "href": "finances.html#quarterly-tasks",
+    "title": "Finances",
+    "section": "Quarterly Tasks",
+    "text": "Quarterly Tasks\nEach quarter we reconcile accounts in QuickBooks. This is done by getting statements from both Advantis Credit Union and Mercury and then entering balances here. This compares the balances in my bank accounts to those in QuickBooks to make sure everything matches up.\nI also pay course instructors each quarter. You can go to the commission report on the website and see which commissions are unpaid. You can total these up for each instructor (they’re called a vendor on this part of the website) and then pay them through Gusto. Each instructor gets an advance so they only start receiving commissions when they earn more than the advance."
+  },
+  {
+    "objectID": "finances.html#annual-tasks",
+    "href": "finances.html#annual-tasks",
+    "title": "Finances",
+    "section": "Annual Tasks",
+    "text": "Annual Tasks\nWe send out 1099s to all contractors by Gusto. I’ve set Gusto up to make sure this happens, but we should check to confirm this in mid-January."
   },
   {
     "objectID": "proposals.html",
     "href": "proposals.html",
     "title": "Proposals",
     "section": "",
-    "text": "We use PandaDoc to create proposals for clients.\nWe are likely switching to using Google Docs for proposals moving forward."
+    "text": "We use PandaDoc to create proposals for clients."
+  },
+  {
+    "objectID": "content-strategy.html",
+    "href": "content-strategy.html",
+    "title": "Content Strategy",
+    "section": "",
+    "text": "R for the Rest of Us produces multiple types of content. All content that is produced for one place should be reused on social media as much as possible to get the word out about R for the Rest of Us. For example:"
+  },
+  {
+    "objectID": "content-strategy.html#paid-content",
+    "href": "content-strategy.html#paid-content",
+    "title": "Content Strategy",
+    "section": "Paid Content",
+    "text": "Paid Content\nCourses are obviously paid content."
+  },
+  {
+    "objectID": "content-strategy.html#free-content",
+    "href": "content-strategy.html#free-content",
+    "title": "Content Strategy",
+    "section": "Free Content",
+    "text": "Free Content\nWe use free content to build authority so that people see R for the Rest of Us as worth purchasing things (courses, custom training, consulting services) from\nThe main content that we produce is on our blog. There are two types of articles that we write:\n\nTutorials\nPosts that explain why R is worth learning\n\nThe other main content is emails (see Email Marketing). Although most emails are simply introductions and links to other content, some emails are unique content on their own."
   },
   {
     "objectID": "contracts.html",
     "href": "contracts.html",
     "title": "Contracts",
     "section": "",
-    "text": "We mostly use our own contracts, but if clients prefer to use their contracts (and they look ok), that’s fine too.\nR for the Rest of Us contract templates live in PandaDoc. There are three main templates that we adapt as appropriate:\n\nThe R for the Rest of Us Client Service Agreement is for training and consulting engagements.\nThe R for the Rest of Us Master Consulting Services Agreement Template is for hiring contractors.\nThe R for the Rest of Us Course Creation Agreement is for partnering with instructors to create courses.\n\nWe are likely switching to using Google Docs for contracts moving forward."
+    "text": "We mostly use our own contracts, but if clients prefer to use their contracts (and they look ok), that’s fine too.\nR for the Rest of Us contract templates live in PandaDoc. There are three main templates that we adapt as appropriate:\n\nThe R for the Rest of Us Client Service Agreement is for training and consulting engagements.\nThe R for the Rest of Us Master Consulting Services Agreement Template is for hiring contractors.\nThe R for the Rest of Us Course Creation Agreement is for partnering with instructors to create courses."
+  },
+  {
+    "objectID": "email-automations.html",
+    "href": "email-automations.html",
+    "title": "Email Automations",
+    "section": "",
+    "text": "Email marketing is the main way that R for the Rest of Us brings in revenue.\nAll external marketing is designed to get people onto the R for the Rest of Us email list. Once they’re on the list, we send them regular emails that educate them about R, interspersing emails that attempt to sell them on our offerings.\nThe specifics of how our email marketing system works comes largely from Brennan Dunn’s Mastering ConvertKit course. The process gets fairly complicated, but at the highest level, here’s what it does:\nBelow are details about how email automations work. Note that sequences aren’t included because they are generally just called from Visual Automations below."
+  },
+  {
+    "objectID": "email-automations.html#signup",
+    "href": "email-automations.html#signup",
+    "title": "Email Automations",
+    "section": "Signup",
+    "text": "Signup\nHere are the signup journeys that users experience on the R for the Rest of Us email list.\n\nGetting Started\nIf the user gets onto the list by signing up for Getting Started, they get the tag Purchased - Getting Started applied through the WooCommerce-ConvertKit integration.\nThey then go through the Getting Started - Signup - Automation. This does the following:\n\nAssigns the tag Customer - Course/Workshop\nAssigns the tag Customer\nAssigns the tag Flag - Calculate Next offer (which sends them through the Function - Calculate Next Offer - Automation)\nAssigns the Flag - Remove from Shadow Newsletter tag, which does what it says\nPuts them through the Getting Started - Signup - Sequence, which sends a set of emails about the course\nWhen they complete the course or the Getting Started - Signup - Sequence, they get pulled to the end and go into the Fundamentals - Bridge - Automation\n\nThe Fundamentals - Bridge - Automation pitches people on Fundamentals. It happens in two ways depending on what the user has done so far on Getting Started.\n\nIf the user has the Completed - Getting Started tag, they go into the Fundamentals - Bridge - Hot. This goes straight to the pitch for Fundamentals.\nIf the user has not completed Getting Started, they go into the Fundamentals - Bridge - Cold. This sends them a few emails before pitching them on Fundamentals.\n\nAfter they go through the bridge sequences, they go into the Fundamentals - Pitch - Automation.\n\nThe tag Flag - Pitch Window Open - Fundamentals gets applied. This triggers Zapier to create a personalized coupon on WooCommerce.\nThe user gets an email on Friday telling them their personal window is open to purchase Fundamentals.\nThe user goes through the Fundamentals - Pitch - Sequence, which sends an email every day the next week with info on purchasing Fundamentals.\nThe tag Completed - Onboarding is applied.\nThe tag Flag - Start Shadow Newsletter is applied. This triggers the Shadow Newsletter - Automation and adds them to the shadow newsletter.\n\n\n\nOther Courses\n\nIf they sign up for a course, each Woo products assigns them the appropriate tag (e.g. Purchased - Fundamentals).\nThen, they go through a visual automation for each course (e.g. Fundamentals - Signup - Automation)\nThen, this automation rule assigns them the tag Flag - New Subscriber.\n\n\n\nR in 3 Months\n\nIf they sign up for R in 3, WooCommerce assigns them the tag Purchased - R in 3 Months.\nThen, they go through this visual automation, which sends them an email that welcomes them. All other communication about R in 3 Months happens directly via Gmail.\n\n\n\nNewsletter\nIf someone signs up for the newsletter using this form, the following happens:\n\nThe Flag - New Subscriber tag is added to them through this automation rule\n\nThe Flag - New Subscriber tag puts them into the Global - Welcome - Sequence using this automation rule\n\nThe Flag - New Subscriber tag being added puts them onto the New Subscriber - Automation\nThe New Subscriber - Automation moves them through the Function - Calculate Next Offer - Automation and Function - Tag Custom Training/Consulting Clients - Automation\nThe New Subscriber - Automation moves them through the Function - Calculate Topics vs Core Courses\n\nIf they are a custom training/consulting client, they get the Completed - Onboarding and the Flag - Start Shadow Newsletter tags applied, which moves them onto the shadow newsletter\nIf they are not a custom training/consulting client, they are moved to the Getting Started - Pitch - Automation (if they haven’t signed up for it already)\n\n\n\n\nYou can do that with R\nNote: This one is basically archived. It was a lead magnet early on but isn’t really necessary anymore because most people sign up for Getting Started.\n\nIf user signs up for you can do that, it happens with this form.\nThen, this automation rule assigns them the tag Flag - New Subscriber."
+  },
+  {
+    "objectID": "email-automations.html#shadow-newsletter",
+    "href": "email-automations.html#shadow-newsletter",
+    "title": "Email Automations",
+    "section": "Shadow Newsletter",
+    "text": "Shadow Newsletter\nAny time the tag Flag - Start Shadow Newsletter is added to a user, they go through the Shadow Newsletter - Automation. This does the following:\n\nRemoves the Flag - Start Shadow Newsletter tag (so it can be added again)\nChecks if they’ve completed part 1 of the shadow newsletter. If not, puts them onto that sequence. If so, moves onto the next part.\nRepeats the previous step through each part of the shadow newsletter.\n\nAfter the user completes each part of the shadow newsletter, they get the tag Locked - Pitched added. This puts them onto Function - Move to Pitch - Automation.\nNew content is constantly added to the last part of the shadow newsletter sequences so that people continually receive emails."
+  },
+  {
+    "objectID": "email-automations.html#pitching",
+    "href": "email-automations.html#pitching",
+    "title": "Email Automations",
+    "section": "Pitching",
+    "text": "Pitching\n\nCalculate Next Offer\nFunction - Calculate Next Offer - Automation calculates the next offer for the user by doing the following:\n\nRuns Function - Calculate Topics vs Core Courses to see what type of course user should be pitched on. That automation adds Flag - Pitch on Topics Courses to those for whom it is appropriate (if they have said they are intermediate/advanced, have said they’re interested in topics courses, or have been pitched on all core courses).\nIf user has Flag - Pitch on Topics Courses, the automation looks at which course they’ve yet to have been pitched on. It then adds the next course in the following order as their next_offer custom field: Mapping, Data Cleaning, Inferential Stats.\n\n\n\nMove to Pitch\nWhen the user gets put onto Function - Move to Pitch - Automation:\n\nThe user gets the Flag - Remove from Shadow Newsletter tag added so they don’t get newsletter emails while being pitched.\nThe user goes through the Function - Calculate Next Offer - Automation, which calculates their next offer\nBased on the custom field next_offer, the user is put onto a PRODUCT - Pitch - Automation for their next offer.\n\n\n\nSelf-Paced Course Pitch\nAll self-paced course pitches follow the same rough pattern as Fundamentals:\n\nThe user gets an email on Friday (for some courses it’s Monday) telling them their personal window is open to purchase Fundamentals.\nThe user goes through the Fundamentals - Pitch - Sequence, which sends an email every day the next week with info on purchasing Fundamentals.\n\n\n\nLive Launch\nTODO\n\n\nCustom Training Pitch\nTODO\n\n\nConsulting Pitch\nTODO"
+  },
+  {
+    "objectID": "email-automations.html#segmentation",
+    "href": "email-automations.html#segmentation",
+    "title": "Email Automations",
+    "section": "Segmentation",
+    "text": "Segmentation\nUsers are segmented by asking questions in the survey on this page:\n\nHow would you describe your level of expertise with R?\nWhy do you want to learn R (or, if you already use it, learn more)?\nWhat has stopped you from learning R (or learning more R if you already use it)?\nWhat’s your main tool for working with data?\nHow big is the organization you work in?\nWhat type of courses are you interested in?\n\nData submitted through this form gets piped back to ConvertKit using Zapier.\nNew users also get added to the Global - Profiling - Sequence through the New Subscriber - Automation. This sequences sends them an email each Sunday asking them one of the questions above."
+  },
+  {
+    "objectID": "email-automations.html#email-templates",
+    "href": "email-automations.html#email-templates",
+    "title": "Email Automations",
+    "section": "Email Templates",
+    "text": "Email Templates\nTODO"
+  },
+  {
+    "objectID": "email-automations.html#reference",
+    "href": "email-automations.html#reference",
+    "title": "Email Automations",
+    "section": "Reference",
+    "text": "Reference\n\nSchedule\n\nSelf-paced course pitch emails go out FMTWTF at 6am\nFundamentals bridge emails (hot and cold) go out MTWTF at 6am\nCourse signup emails go out MTWTF at 6am\nShadow newsletter emails go out at 9am on Thursdays\nEmails in the Global - Welcome - Sequence go out at noon on MWF\n\n\n\nSequences\nTODO\n\n\nVisual Automations\nTODO\n\n\n\n\n\nTags\nTODO\n\n\n\n\n\nAutomation Rules\nTODO\n\n\nSegments"
   },
   {
     "objectID": "code-style.html",
     "href": "code-style.html",
     "title": "Code Style",
     "section": "",
-    "text": "https://github.com/tgerke/r-code-review-checklist\nI’ll add more soon"
+    "text": "I’ll add more soon"
+  },
+  {
+    "objectID": "courses-overview.html",
+    "href": "courses-overview.html",
+    "title": "Overview",
+    "section": "",
+    "text": "R for the Rest of Us has multiple self-paced online courses. The core courses (i.e. for those just learning R) are taught by David. There are also topics courses taught by others.\nThese are instructions for making an R for the Rest of Us online course. The overall process from start to finish looks something like this:"
+  },
+  {
+    "objectID": "courses-overview.html#intro-call",
+    "href": "courses-overview.html#intro-call",
+    "title": "Overview",
+    "section": "Intro Call",
+    "text": "Intro Call\n\nDiscuss course idea\nGo over legal and financial terms\nDiscuss timing\nConfirm instructor has access to external camera and mic\nShare course-making instructions (i.e. what you’re looking at)"
+  },
+  {
+    "objectID": "courses-overview.html#terms",
+    "href": "courses-overview.html#terms",
+    "title": "Overview",
+    "section": "Terms",
+    "text": "Terms\n\nDavid + instructor sign contract\nDavid pays 50% of advance to instructor"
+  },
+  {
+    "objectID": "courses-overview.html#curriculum",
+    "href": "courses-overview.html#curriculum",
+    "title": "Overview",
+    "section": "Curriculum",
+    "text": "Curriculum\n\nDavid explains how lessons work (e.g. video, your turn, solutions, learn more)\nDavid explains how to create course outline\nDavid shares rfortherestofus package to be used for the custom xaringan template\nInstructor develops slides\nDavid approves slides"
+  },
+  {
+    "objectID": "courses-overview.html#recording",
+    "href": "courses-overview.html#recording",
+    "title": "Overview",
+    "section": "Recording",
+    "text": "Recording\n\nDavid sets up shared Google Drive folder for raw videos\nInstructor records single test video\nDavid approves test video\nInstructor records all lesson and solutions videos"
+  },
+  {
+    "objectID": "courses-overview.html#production",
+    "href": "courses-overview.html#production",
+    "title": "Overview",
+    "section": "Production",
+    "text": "Production\n\nDavid edits videos\nDavid has transcripts created for all videos\nDavid puts videos and related materials on website\nInstructor reviews and approves videos and course materials"
+  },
+  {
+    "objectID": "courses-overview.html#marketing",
+    "href": "courses-overview.html#marketing",
+    "title": "Overview",
+    "section": "Marketing",
+    "text": "Marketing\n\nDavid makes course sales page\nDavid develops launch email sequence\nDavid puts together social media launch"
+  },
+  {
+    "objectID": "courses-overview.html#course-launch",
+    "href": "courses-overview.html#course-launch",
+    "title": "Overview",
+    "section": "Course Launch!",
+    "text": "Course Launch!\n\nEmail goes out to list announcing that course is live"
   },
   {
     "objectID": "marketing-overview.html",
     "href": "marketing-overview.html",
     "title": "Overview",
     "section": "",
-    "text": "Our basic approach to marketing is simple:\n\nDon’t market, educate.\n\nBy educating, we show people what R is and what you can do with it. Once they appreciate these things, they’re more likely to want to learn R themselves or to hire us to help them do something with it."
+    "text": "Don’t market, educate.\n\nBy educating, we show people what R is and what you can do with it. Once they appreciate these things, they’re more likely to want to learn R themselves or to hire us to help them do something with it."
   },
   {
-    "objectID": "project-management.html#github",
-    "href": "project-management.html#github",
+    "objectID": "communication.html",
+    "href": "communication.html",
+    "title": "Communication",
+    "section": "",
+    "text": "As a fully remote company, we try to communicate by writing as much as possible. Doing so has many benefits:\n\nIt forces us to clarify our thinking\nIt provides a record of decisions for those who may join things midstream\nIt allows people to work on their own time without feeling the need to join live calls etc\n\nInternal communication happens, as much as possible, in Twist. There are several channels:\n\nConsulting\nCourse Questions\nCourses\nGeneral\nOrders (all paid course orders go through here)\nR in 3 Months\nTraining\n\nWithin each channel, we typically use one thread per project (sometimes more depending on its complexity).\nOther places internal communication happens include:\n\nGitHub for discussion of specific issues on code-based projects\nTodoist comments for questions on specific tasks to be done"
+  },
+  {
+    "objectID": "communication.html#external-communication",
+    "href": "communication.html#external-communication",
+    "title": "Communication",
+    "section": "External Communication",
+    "text": "External Communication\nExternal communication with clients and others happens mostly through email."
+  },
+  {
+    "objectID": "communication.html#internal-communication",
+    "href": "communication.html#internal-communication",
+    "title": "Communication",
+    "section": "",
+    "text": "As a fully remote company, we try to communicate by writing as much as possible. Doing so has many benefits:\n\nIt forces us to clarify our thinking\nIt provides a record of decisions for those who may join things midstream\nIt allows people to work on their own time without feeling the need to join live calls etc\n\nInternal communication happens, as much as possible, in Twist. There are several channels:\n\nConsulting\nCourse Questions\nCourses\nGeneral\nOrders (all paid course orders go through here)\nR in 3 Months\nTraining\n\nWithin each channel, we typically use one thread per project (sometimes more depending on its complexity).\nOther places internal communication happens include:\n\nGitHub for discussion of specific issues on code-based projects\nTodoist comments for questions on specific tasks to be done"
+  },
+  {
+    "objectID": "project-management.html#overview",
+    "href": "project-management.html#overview",
     "title": "Project Management",
-    "section": "GitHub",
-    "text": "GitHub\nCreate a GitHub repo (set to private unless the client is ok with it being public):\n\nUse the README to lay out the overall project scope, schedule, deliverables, etc. Please also lay out an overall schedule of due dates in the README.\nUse issues to manage code-related questions at a granular level.\nIf the project is large enough so that there are multiple issues per type of work (e.g. creating various pieces of data viz), use milestones.\nIf the client is working in GitHub with us, create a project that they can see. Make the default view a Kanban (see example here) so the client can see the status of various tasks."
-  },
-  {
-    "objectID": "project-management.html#todoist",
-    "href": "project-management.html#todoist",
-    "title": "Project Management",
-    "section": "Todoist",
-    "text": "Todoist\nIn addition to using GitHub to manage code, we also use Todoist to keep track of due dates. For each project, we create a corresponding project on Todoist. Within that project, create two sections:\n\nSchedule\nMisc\n\nIn the Schedule section, put various deadlines. Make sure to add the label deadline to the tasks (this way, David can see them in a special view he has created).\nIt’s generally ok to move due dates as necessary (please just ask David if you have questions about whether it is a problem on any specific project). Please just update the due dates on the project README on GitHub to match.\nIn the Misc section, create a recurring task to email the client each week (see below) as well as any miscellaneous tasks to keep track of.\nHere’s what a project might look like:"
-  },
-  {
-    "objectID": "project-management.html#twist",
-    "href": "project-management.html#twist",
-    "title": "Project Management",
-    "section": "Twist",
-    "text": "Twist\nCreate a thread in the Consulting channel on Twist for the project. If it is large project, we can create a separate channel just for the project so we can have multiple threads.\nTwist is a good place for things we’d like to keep confidential (because we work more and more with clients directly in GitHub, that isn’t the best place for confidential discussions). Also, while Todoist has the ability to communicate within tasks, it’s not as user friendly as Twist so we use Twist for general communication."
-  },
-  {
-    "objectID": "R3M_operations.html",
-    "href": "R3M_operations.html",
-    "title": "R in 3 Months Documentation",
     "section": "",
-    "text": "All the Discord server structure should be reviewed and redesigned, if needed. Channels that were not used need to be removed or redesigned.\n\n\nAs participants register, they will provide their Discord handles and join the server through a link provided in the “Sign up for Discord” lesson. At the beggining of each cohort, this link must be reviewed and updated, as it might have expired. Coaches must rename participants’ display names with their real names and surnames, and later assign them the role of “student” or “scholar”. Participants would then gain access to the active channels.\n\n\n\n\nEach participant will be assigned one coach, who will be responsible for giving feedback to their assignments, answering their questions and having 1:1 meetings with them."
+    "text": "Create a GitHub repo (set to private unless the client is ok with it being public):\n\nUse the README to lay out the overall project scope, deliverables, etc.\nUse issues to manage code-related questions at a granular level.\nIf the project is large enough, use milestones.\n\nCreate a thread in the #consulting channel on Twist for the project. This is a good place for things we’d like to keep confidential (because we work more and more with clients directly in GitHub, that isn’t the best place for confidential discussions). Communicate updates on overall progress with David using Twist. An update once a week or so is helpful."
   },
   {
-    "objectID": "R3M_operations.html#discord",
-    "href": "R3M_operations.html#discord",
-    "title": "R in 3 Months Documentation",
+    "objectID": "consulting-overview.html#projects-we-take-on",
+    "href": "consulting-overview.html#projects-we-take-on",
+    "title": "Overview",
     "section": "",
-    "text": "All the Discord server structure should be reviewed and redesigned, if needed. Channels that were not used need to be removed or redesigned.\n\n\nAs participants register, they will provide their Discord handles and join the server through a link provided in the “Sign up for Discord” lesson. At the beggining of each cohort, this link must be reviewed and updated, as it might have expired. Coaches must rename participants’ display names with their real names and surnames, and later assign them the role of “student” or “scholar”. Participants would then gain access to the active channels."
+    "text": "In general, consulting projects we take on involve some combination of the following:\n\nData visualization\nLayout using RMarkdown and pagedown\nParameterized reporting\n\nYou can see examples of several such projects on the consulting page of the R for the Rest of Us website."
   },
   {
-    "objectID": "R3M_operations.html#assigning-coaches",
-    "href": "R3M_operations.html#assigning-coaches",
-    "title": "R in 3 Months Documentation",
+    "objectID": "courses-curriculum.html#outline",
+    "href": "courses-curriculum.html#outline",
+    "title": "Curriculum",
     "section": "",
-    "text": "Each participant will be assigned one coach, who will be responsible for giving feedback to their assignments, answering their questions and having 1:1 meetings with them."
+    "text": "You’ll start out by creating an outline of your course. This will be done in the GitHub repo that David creates for your course.\nPlease just create an outline.Rmd file for this. Use the following format:\nSection Name (H1)\nLesson Title (H2)\nOverview of lesson\nMy Turn (H3)\nOverview of what you’ll demonstrate\nYour Turn (H3)\nExercise for student\nSolutions Code (H3)\nCode used for solution to Your Turn\nLearn More (H3)\nText with additional info, resources, etc on topic of lesson"
   },
   {
-    "objectID": "R3M_operations.html#mondays---reminder-day",
-    "href": "R3M_operations.html#mondays---reminder-day",
-    "title": "R in 3 Months Documentation",
-    "section": "Mondays - reminder day",
-    "text": "Mondays - reminder day\n\nReminder email\nOne of the coaches send a reminder email every Monday, which contains the following:\n\nSubject line in the format “[R in 3 Months] Week XX reminder email”\n\nTheme of the week and what will be discussed in the live session\n\nLink to the Zoom room\n\nDate and time of the live session in Pacific Time (and a link to a time converter)\n\nReminder of any assignment due that week\n\nLinks and information on how to look for help (link to book 1:1 meetings with coaches, invite to office hours, etc.)\n\nThe goal of the reminder email is to make sure all participants have the most up-to-date information about the tasks of the week, so they don’t miss anything. All participants’ emails should be added as BCC.\n\n\nEvents on Discord\nOne of the coaches set the events of the week every Monday on Discord. They include the live session and office hours, if they are happening that week. The goal of setting these events is to add an option for those who need extra notification, as events on Discord notify the participants when the event starts and redirects them to the Zoom room where the event is happening."
-  },
-  {
-    "objectID": "R3M_operations.html#thursdays---live-session-day",
-    "href": "R3M_operations.html#thursdays---live-session-day",
-    "title": "R in 3 Months Documentation",
-    "section": "Thursdays - live session day",
-    "text": "Thursdays - live session day\nOn the day of the live session, David will start the Zoom room and the recording. The live session will last one hour, and recording will be made available on the website.\nThe assigned coach will take notes during the live session of:\n* The participants list from the attendees list.\n* Every link shared in the chat.\n* Any important tips, comments and questions made by the participants.\nOnce the live session ends, the recording will be automatically uploaded to a shared Google Drive folder, and the assigned coach will be responsible for downloading the recording, uploading it into Muse.ai, creating a lesson in the corresponding Week section, and linking the video from Muse.ai into the lesson. In the lesson resources section, the assigned coach will add any resources shared or mentioned during the live session.\n\nFollow-up email\nOn the afternoon after the live session, the assigned coach will send a follow-up email that contains important information shared on the live session, and replies to the reminder email sent on Monday. It should contain:\n\nSubject line in the format “[R in 3 Months] Week XX follow-up email”\n\nTheme of the week and what was discussed in the live session (including important housekeeping topics)\n\nLink to the recording on the course website\n\nReminder of any assignment due that week\n\nLinks and information on how to look for help (link to book 1:1 meetings with coaches, invite to office hours, etc.)\n\nThe goal of this email is to provide a short summary and references that participants can refer to in the future, and to convey the most important information for those who couldn’t attend the live session."
-  },
-  {
-    "objectID": "R3M_operations.html#other-days---community-support",
-    "href": "R3M_operations.html#other-days---community-support",
-    "title": "R in 3 Months Documentation",
-    "section": "Other days - community support",
-    "text": "Other days - community support\nAlso on Mondays and Thursdays, but mainly during the other days of the week, the coaches will work on supporting the community by answering questions, animating the Discord server, replying to emails and checking-in on them regularly. Coaches usually block 15min/day for this task, although it can take more than one hour/day during the first month of the cohort.\n\nCo-working hours\nCo-working hours last 60min and are scheduled to happen in two different periods of the day, on dates and times defined by the coaches. The goal of the co-working hour is to provide a space for participants to ask direct questions, work together on the assingments, and talk about subjects not covered in the lessons.\nCo-working hours are not recorded, but notes should be taken by the assigned coach to help the instructor group to identify where participants need more assistance and topics to be covered in the live sessions.\n\n\n\n1:1 meetings\n1:1 meetings are booked by the participants to request 30min meetings with their assigned coaches. Coaches should set up the booking system in a way that every booking request generates a Zoom room and a reminder for the participant to share their questions, data and code in advance. The booking system currently used is SavvyCalendar.\n\n\nAnswering questions on lessons\nComments and questions posted on the lessons should be approved and answered. David is the instructor responsible for replying the questions related specifically to the lessons, especially if they refer to the videos. Coaches are encouraged to reply these questions and to help approve the comments.\n\n\nAssignment feedback\nOnce a feedback is submitted, coaches have approximately three work days to provide feedback. These feedbacks can be a mix of text, code and video. Videos should be uploaded to Muse.ai and transcripts should be marked as viewable. When the feedback is complete, the coach should click on “Save & Publish” to make the feedback viewable. Each assignment submitted will generate a task on Todoist with a corresponding deadline. Once the feedback is submitted, the assigned coach should mark this task as complete."
-  },
-  {
-    "objectID": "R3M_operations.html#discord-1",
-    "href": "R3M_operations.html#discord-1",
-    "title": "R in 3 Months Documentation",
-    "section": "Discord",
-    "text": "Discord\nAll cohort participants must lose their “student” or “scholar” status and become “alumni”. This will make them lose access to most channels on the server, except for the “general” channel. They will, however, gain access to the “alumni-lounge” channel."
-  },
-  {
-    "objectID": "R3M_operations.html#github",
-    "href": "R3M_operations.html#github",
-    "title": "R in 3 Months Documentation",
-    "section": "GitHub",
-    "text": "GitHub\nCoaches should remind their students to remove them from their GitHub repositories and stop sharing any files or folders on cloud storage."
-  },
-  {
-    "objectID": "R3M_operations.html#deleting-information",
-    "href": "R3M_operations.html#deleting-information",
-    "title": "R in 3 Months Documentation",
-    "section": "Deleting information",
-    "text": "Deleting information"
-  },
-  {
-    "objectID": "rin3months.html",
-    "href": "rin3months.html",
-    "title": "R in 3 Months",
+    "objectID": "courses-production.html#video-editing",
+    "href": "courses-production.html#video-editing",
+    "title": "Production",
     "section": "",
-    "text": "All the Discord server structure should be reviewed and redesigned, if needed. Channels that were not used need to be removed or redesigned.\n\n\nAs participants register, they will provide their Discord handles and join the server through a link provided in the “Sign up for Discord” lesson. At the beggining of each cohort, this link must be reviewed and updated, as it might have expired. Coaches must rename participants’ display names with their real names and surnames, and later assign them the role of “student” or “scholar”. Participants would then gain access to the active channels.\n\n\n\n\nEach participant will be assigned one coach, who will be responsible for giving feedback to their assignments, answering their questions and having 1:1 meetings with them. Coaches work together to determine who will work with each participant. The coach is then manually assigned on the backend of the website. Go to Customers, then search for the participant by their email. Click on the Membership tab and at the bottom of the screen select the coach."
-  },
-  {
-    "objectID": "rin3months.html#discord",
-    "href": "rin3months.html#discord",
-    "title": "R in 3 Months",
-    "section": "",
-    "text": "All the Discord server structure should be reviewed and redesigned, if needed. Channels that were not used need to be removed or redesigned.\n\n\nAs participants register, they will provide their Discord handles and join the server through a link provided in the “Sign up for Discord” lesson. At the beggining of each cohort, this link must be reviewed and updated, as it might have expired. Coaches must rename participants’ display names with their real names and surnames, and later assign them the role of “student” or “scholar”. Participants would then gain access to the active channels."
-  },
-  {
-    "objectID": "rin3months.html#assigning-coaches",
-    "href": "rin3months.html#assigning-coaches",
-    "title": "R in 3 Months",
-    "section": "",
-    "text": "Each participant will be assigned one coach, who will be responsible for giving feedback to their assignments, answering their questions and having 1:1 meetings with them. Coaches work together to determine who will work with each participant. The coach is then manually assigned on the backend of the website. Go to Customers, then search for the participant by their email. Click on the Membership tab and at the bottom of the screen select the coach."
-  },
-  {
-    "objectID": "rin3months.html#mondays---reminder-day",
-    "href": "rin3months.html#mondays---reminder-day",
-    "title": "R in 3 Months",
-    "section": "Mondays - reminder day",
-    "text": "Mondays - reminder day\n\nReminder email\nOne of the coaches send a reminder email every Monday, which contains the following:\n\nSubject line in the format “[R in 3 Months] Week XX reminder email”\n\nTheme of the week and what will be discussed in the live session\n\nLink to the Zoom room\n\nDate and time of the live session in Pacific Time (and a link to a time converter)\n\nReminder of any assignment due that week\n\nLinks and information on how to look for help (link to book 1:1 meetings with coaches, invite to office hours, etc.)\n\nThe goal of the reminder email is to make sure all participants have the most up-to-date information about the tasks of the week, so they don’t miss anything. All participants’ emails should be added as BCC.\n\n\nEvents on Discord\nOne of the coaches set the events of the week every Monday on Discord. They include the live session and office hours, if they are happening that week. The goal of setting these events is to add an option for those who need extra notification, as events on Discord notify the participants when the event starts and redirects them to the Zoom room where the event is happening."
-  },
-  {
-    "objectID": "rin3months.html#thursdays---live-session-day",
-    "href": "rin3months.html#thursdays---live-session-day",
-    "title": "R in 3 Months",
-    "section": "Thursdays - live session day",
-    "text": "Thursdays - live session day\nOn the day of the live session, David will start the Zoom room and the recording. The live session will last one hour, and recording will be made available on the website.\nThe assigned coach will take notes during the live session of:\n* The participants list from the attendees list.\n* Every link shared in the chat.\n* Any important tips, comments and questions made by the participants.\nOnce the live session ends, the recording will be automatically uploaded to a shared Google Drive folder, and the assigned coach will be responsible for downloading the recording, uploading it into Muse.ai, creating a lesson in the corresponding Week section, and linking the video from Muse.ai into the lesson. In the lesson resources section, the assigned coach will add any resources shared or mentioned during the live session.\n\nFollow-up email\nOn the afternoon after the live session, the assigned coach will send a follow-up email that contains important information shared on the live session, and replies to the reminder email sent on Monday. It should contain:\n\nSubject line in the format “[R in 3 Months] Week XX follow-up email”\n\nTheme of the week and what was discussed in the live session (including important housekeeping topics)\n\nLink to the recording on the course website\n\nReminder of any assignment due that week\n\nLinks and information on how to look for help (link to book 1:1 meetings with coaches, invite to office hours, etc.)\n\nThe goal of this email is to provide a short summary and references that participants can refer to in the future, and to convey the most important information for those who couldn’t attend the live session."
-  },
-  {
-    "objectID": "rin3months.html#other-days---community-support",
-    "href": "rin3months.html#other-days---community-support",
-    "title": "R in 3 Months",
-    "section": "Other days - community support",
-    "text": "Other days - community support\nAlso on Mondays and Thursdays, but mainly during the other days of the week, the coaches will work on supporting the community by answering questions, animating the Discord server, replying to emails and checking-in on them regularly. Coaches usually block 15min/day for this task, although it can take more than one hour/day during the first month of the cohort.\n\nCo-working hours\nCo-working hours last 60min and are scheduled to happen in two different periods of the day, on dates and times defined by the coaches. The goal of the co-working hour is to provide a space for participants to ask direct questions, work together on the assingments, and talk about subjects not covered in the lessons.\nCo-working hours are not recorded, but notes should be taken by the assigned coach to help the instructor group to identify where participants need more assistance and topics to be covered in the live sessions.\n\n\n\n1:1 meetings\n1:1 meetings are booked by the participants to request 30min meetings with their assigned coaches. Coaches should set up the booking system in a way that every booking request generates a Zoom room and a reminder for the participant to share their questions, data and code in advance. The booking system currently used is SavvyCalendar.\n\n\nAnswering questions on lessons\nComments and questions posted on the lessons should be approved and answered. David is the instructor responsible for replying the questions related specifically to the lessons, especially if they refer to the videos. Coaches are encouraged to reply these questions and to help approve the comments.\n\n\nAssignment feedback\nOnce a feedback is submitted, coaches have approximately three work days to provide feedback. These feedbacks can be a mix of text, code and video. Videos should be uploaded to Muse.ai and transcripts should be marked as viewable. When the feedback is complete, the coach should click on “Save & Publish” to make the feedback viewable. Each assignment submitted will generate a task on Todoist with a corresponding deadline. Once the feedback is submitted, the assigned coach should mark this task as complete."
-  },
-  {
-    "objectID": "rin3months.html#discord-1",
-    "href": "rin3months.html#discord-1",
-    "title": "R in 3 Months",
-    "section": "Discord",
-    "text": "Discord\nAll cohort participants must lose their “student” or “scholar” status and become “alumni”. This will make them lose access to most channels on the server, except for the “general” channel. They will, however, gain access to the “alumni-lounge” channel."
-  },
-  {
-    "objectID": "rin3months.html#github",
-    "href": "rin3months.html#github",
-    "title": "R in 3 Months",
-    "section": "GitHub",
-    "text": "GitHub\nCoaches should remind their students to remove them from their GitHub repositories and stop sharing any files or folders on cloud storage."
-  },
-  {
-    "objectID": "rin3months.html#deleting-information",
-    "href": "rin3months.html#deleting-information",
-    "title": "R in 3 Months",
-    "section": "Deleting information",
-    "text": "Deleting information"
-  },
-  {
-    "objectID": "rin3months.html#mondays-reminder-day",
-    "href": "rin3months.html#mondays-reminder-day",
-    "title": "R in 3 Months",
-    "section": "Mondays: Reminder Day",
-    "text": "Mondays: Reminder Day\n\nReminder Email\nOne of the coaches send a reminder email every Monday, which contains the following:\n\nSubject line in the format “[R in 3 Months] Week XX reminder email”\n\nTheme of the week and what will be discussed in the live session\n\nLink to the Zoom room for the live session\nDate and time of the live session in Pacific Time (and a link to a time converter)\n\nReminder of any assignments due that week\n\nLinks and information on how to look for help (link to book 1:1 meetings with coaches, invite to office hours, etc.)\n\nThe goal of the reminder email is to make sure all participants have the most up-to-date information about the tasks of the week, so they don’t miss anything. All participants’ emails should be added as BCC.\n\n\nEvents on Discord\nOne of the coaches set the events of the week every Monday on Discord. They include the live session and office hours, if they are happening that week. The goal of setting these events is to add an option for those who need extra notification, as events on Discord notify the participants when the event starts and redirects them to the Zoom room where the event is happening."
-  },
-  {
-    "objectID": "rin3months.html#thursdays-live-session-day",
-    "href": "rin3months.html#thursdays-live-session-day",
-    "title": "R in 3 Months",
-    "section": "Thursdays: Live Session Day",
-    "text": "Thursdays: Live Session Day\nOn the day of the live session, David will start the Zoom room and the recording. The live session will last one hour, and recording will be made available on the website.\nThe assigned coach will take notes during the live session of:\n* The participants list from the attendees list.\n* Every link shared in the chat.\n* Any important tips, comments and questions made by the participants.\nOnce the live session ends, the recording will be automatically uploaded to a shared Google Drive folder (this happens automatically through Zapier), and the assigned coach will be responsible for downloading the recording, uploading it into Muse.ai, creating a lesson in the corresponding Week section, and linking the video from muse.ai into the lesson. In the lesson resources section, the assigned coach will add any resources shared or mentioned during the live session.\n\nFollow-Up Email\nOn the afternoon after the live session, the assigned coach will send a follow-up email that contains important information shared on the live session, and replies to the reminder email sent on Monday. It should contain:\n\nSubject line in the format “[R in 3 Months] Week XX follow-up email”\n\nTheme of the week and what was discussed in the live session (including important housekeeping topics)\n\nLink to the recording on the course website\n\nReminder of any assignment due that week\n\nLinks and information on how to look for help (link to book 1:1 meetings with coaches, invite to office hours, etc.)\n\nThe goal of this email is to provide a short summary and references that participants can refer to in the future, and to convey the most important information for those who couldn’t attend the live session."
-  },
-  {
-    "objectID": "rin3months.html#other-days-community-support",
-    "href": "rin3months.html#other-days-community-support",
-    "title": "R in 3 Months",
-    "section": "Other Days: Community Support",
-    "text": "Other Days: Community Support\nAlso on Mondays and Thursdays, but mainly during the other days of the week, the coaches will work on supporting the community by answering questions, animating the Discord server, replying to emails and checking-in on them regularly. Coaches usually block 15min/day for this task, although it can take more than one hour/day during the first month of the cohort.\n\nCo-Working Hours\nCo-working hours last 60min and are scheduled to happen in two different periods of the day, on dates and times defined by the coaches. The goal of the co-working hour is to provide a space for participants to ask direct questions, work together on the assingments, and talk about subjects not covered in the lessons.\nCo-working hours are not recorded, but notes should be taken by the assigned coach to help the instructor group to identify where participants need more assistance and topics to be covered in the live sessions.\n\n\n\n1:1 meetings\n1:1 meetings are booked by the participants to request 30min meetings with their assigned coaches. Coaches should set up the booking system in a way that every booking request generates a Zoom room and a reminder for the participant to share their questions, data and code in advance. The booking system currently used is SavvyCal.\n\n\nAnswering Course Questions\nComments and questions posted on the lessons should be approved and answered. David is the instructor responsible for replying the questions related specifically to the lessons, especially if they refer to the videos. Coaches are encouraged to reply these questions and to help approve the comments.\n\n\nAssignment Feedback\nOnce a feedback is submitted, coaches have approximately three work days to provide feedback. These feedbacks can be a mix of text, code and video. Videos should be uploaded to muse.ai and transcripts should be marked as viewable. When the feedback is complete, the coach should click on “Save & Publish” to make the feedback viewable.\nEach assignment submitted will generate a task on Todoist with a corresponding deadline. Once the feedback is submitted, the assigned coach should mark this task as complete."
-  },
-  {
-    "objectID": "email-marketing.html",
-    "href": "email-marketing.html",
-    "title": "Email Marketing",
-    "section": "",
-    "text": "Email marketing is the main way that R for the Rest of Us brings in revenue.\nAll external marketing is designed to get people onto the R for the Rest of Us email list. Once they’re on the list, we send them regular emails that educate them about R, interspersing emails that attempt to sell them on our offerings.\nThe specifics of how our email marketing system works comes largely from Brennan Dunn’s Mastering ConvertKit course. The process gets fairly complicated, but at the highest level, here’s what it does:\nBelow are details about how email automations work. Note that sequences aren’t included because they are generally just called from Visual Automations below."
-  },
-  {
-    "objectID": "email-marketing.html#signup",
-    "href": "email-marketing.html#signup",
-    "title": "Email Marketing",
-    "section": "Signup",
-    "text": "Signup\nHere are the signup journeys that users experience on the R for the Rest of Us email list.\n\nGetting Started\nIf the user gets onto the list by signing up for Getting Started, they get the tag Purchased - Getting Started applied through the WooCommerce-ConvertKit integration.\nThey then go through the Getting Started - Signup - Automation. This does the following:\n\nAssigns the tag Customer - Course/Workshop\nAssigns the tag Customer\nAssigns the tag Flag - Calculate Next offer (which sends them through the Function - Calculate Next Offer - Automation)\nAssigns the Flag - Remove from Shadow Newsletter tag, which does what it says\nPuts them through the Getting Started - Signup - Sequence, which sends a set of emails about the course\nWhen they complete the course or the Getting Started - Signup - Sequence, they get pulled to the end and go into the Fundamentals - Bridge - Automation\n\nThe Fundamentals - Bridge - Automation pitches people on Fundamentals. It happens in two ways depending on what the user has done so far on Getting Started.\n\nIf the user has the Completed - Getting Started tag, they go into the Fundamentals - Bridge - Hot. This goes straight to the pitch for Fundamentals.\nIf the user has not completed Getting Started, they go into the Fundamentals - Bridge - Cold. This sends them a few emails before pitching them on Fundamentals.\n\nAfter they go through the bridge sequences, they go into the Fundamentals - Pitch - Automation.\n\nThe tag Flag - Pitch Window Open - Fundamentals gets applied. This triggers Zapier to create a personalized coupon on WooCommerce.\nThe user gets an email on Friday telling them their personal window is open to purchase Fundamentals.\nThe user goes through the Fundamentals - Pitch - Sequence, which sends an email every day the next week with info on purchasing Fundamentals.\nThe tag Completed - Onboarding is applied.\nThe tag Flag - Start Shadow Newsletter is applied. This triggers the Shadow Newsletter - Automation and adds them to the shadow newsletter.\n\n\n\nOther Courses\n\nIf they sign up for a course, each Woo products assigns them the appropriate tag (e.g. Purchased - Fundamentals).\nThen, they go through a visual automation for each course (e.g. Fundamentals - Signup - Automation)\nThen, this automation rule assigns them the tag Flag - New Subscriber.\n\n\n\nR in 3 Months\n\nIf they sign up for R in 3, WooCommerce assigns them the tag Purchased - R in 3 Months.\nThen, they go through this visual automation, which sends them an email that welcomes them. All other communication about R in 3 Months happens directly via Gmail.\n\n\n\nNewsletter\nIf someone signs up for the newsletter using this form, the following happens:\n\nThe Flag - New Subscriber tag is added to them through this automation rule\n\nThe Flag - New Subscriber tag puts them into the Global - Welcome - Sequence using this automation rule\n\nThe Flag - New Subscriber tag being added puts them onto the New Subscriber - Automation\nThe New Subscriber - Automation moves them through the Function - Calculate Next Offer - Automation and Function - Tag Custom Training/Consulting Clients - Automation\nThe New Subscriber - Automation moves them through the Function - Calculate Topics vs Core Courses\n\nIf they are a custom training/consulting client, they get the Completed - Onboarding and the Flag - Start Shadow Newsletter tags applied, which moves them onto the shadow newsletter\nIf they are not a custom training/consulting client, they are moved to the Getting Started - Pitch - Automation (if they haven’t signed up for it already)\n\n\n\n\nYou can do that with R\nNote: This one is basically archived. It was a lead magnet early on but isn’t really necessary anymore because most people sign up for Getting Started.\n\nIf user signs up for you can do that, it happens with this form.\nThen, this automation rule assigns them the tag Flag - New Subscriber."
-  },
-  {
-    "objectID": "email-marketing.html#shadow-newsletter",
-    "href": "email-marketing.html#shadow-newsletter",
-    "title": "Email Marketing",
-    "section": "Shadow Newsletter",
-    "text": "Shadow Newsletter\nAny time the tag Flag - Start Shadow Newsletter is added to a user, they go through the Shadow Newsletter - Automation. This does the following:\n\nRemoves the Flag - Start Shadow Newsletter tag (so it can be added again)\nChecks if they’ve completed part 1 of the shadow newsletter. If not, puts them onto that sequence. If so, moves onto the next part.\nRepeats the previous step through each part of the shadow newsletter.\n\nAfter the user completes each part of the shadow newsletter, they get the tag Locked - Pitched added. This puts them onto Function - Move to Pitch - Automation.\nNew content is constantly added to the last part of the shadow newsletter sequences so that people continually receive emails."
-  },
-  {
-    "objectID": "email-marketing.html#pitching",
-    "href": "email-marketing.html#pitching",
-    "title": "Email Marketing",
-    "section": "Pitching",
-    "text": "Pitching\n\nCalculate Next Offer\nFunction - Calculate Next Offer - Automation calculates the next offer for the user by doing the following:\n\nRuns Function - Calculate Topics vs Core Courses to see what type of course user should be pitched on. That automation adds Flag - Pitch on Topics Courses to those for whom it is appropriate (if they have said they are intermediate/advanced, have said they’re interested in topics courses, or have been pitched on all core courses).\nIf user has Flag - Pitch on Topics Courses, the automation looks at which course they’ve yet to have been pitched on. It then adds the next course in the following order as their next_offer custom field: Mapping, Data Cleaning, Inferential Stats.\n\n\n\nMove to Pitch\nWhen the user gets put onto Function - Move to Pitch - Automation:\n\nThe user gets the Flag - Remove from Shadow Newsletter tag added so they don’t get newsletter emails while being pitched.\nThe user goes through the Function - Calculate Next Offer - Automation, which calculates their next offer\nBased on the custom field next_offer, the user is put onto a PRODUCT - Pitch - Automation for their next offer.\n\n\n\nSelf-Paced Course Pitch\nAll self-paced course pitches follow the same rough pattern as Fundamentals:\n\nThe user gets an email on Friday (for some courses it’s Monday) telling them their personal window is open to purchase Fundamentals.\nThe user goes through the Fundamentals - Pitch - Sequence, which sends an email every day the next week with info on purchasing Fundamentals.\n\n\n\nLive Launch\nTODO\n\n\nCustom Training Pitch\nTODO\n\n\nConsulting Pitch\nTODO"
-  },
-  {
-    "objectID": "email-marketing.html#segmentation",
-    "href": "email-marketing.html#segmentation",
-    "title": "Email Marketing",
-    "section": "Segmentation",
-    "text": "Segmentation\nUsers are segmented by asking questions in the survey on this page:\n\nHow would you describe your level of expertise with R?\nWhy do you want to learn R (or, if you already use it, learn more)?\nWhat has stopped you from learning R (or learning more R if you already use it)?\nWhat’s your main tool for working with data?\nHow big is the organization you work in?\nWhat type of courses are you interested in?\n\nData submitted through this form gets piped back to ConvertKit using Zapier.\nNew users also get added to the Global - Profiling - Sequence through the New Subscriber - Automation. This sequences sends them an email each Sunday asking them one of the questions above."
-  },
-  {
-    "objectID": "email-marketing.html#email-templates",
-    "href": "email-marketing.html#email-templates",
-    "title": "Email Marketing",
-    "section": "Email Templates",
-    "text": "Email Templates\nTODO"
-  },
-  {
-    "objectID": "email-marketing.html#reference",
-    "href": "email-marketing.html#reference",
-    "title": "Email Marketing",
-    "section": "Reference",
-    "text": "Reference\n\nSchedule\n\nSelf-paced course pitch emails go out FMTWTF at 6am\nFundamentals bridge emails (hot and cold) go out MTWTF at 6am\nCourse signup emails go out MTWTF at 6am\nShadow newsletter emails go out at 9am on Thursdays\nEmails in the Global - Welcome - Sequence go out at noon on MWF\n\n\n\nSequences\nTODO\n\n\nVisual Automations\nTODO\n\n\nTags\nTODO\n\n\nAutomation Rules\nTODO\n\n\nSegments"
-  },
-  {
-    "objectID": "social-media.html#youtube",
-    "href": "social-media.html#youtube",
-    "title": "Social Media",
-    "section": "YouTube",
-    "text": "YouTube\nAlmost all blog posts we produce have an accompanying video posted on YouTube. The YouTube video should include a link back to the blog post in the hope of getting people to sign up for the email list."
+    "text": "After the instructor provides raw videos, David edits them. Most lessons have the following structure:\n\nFull screen on instructor as they introduce topic\nSwitch to instructor in corner with their screen as background\nAs the instructor talks about code, zoom in on it (pan back out when they’re done talking about the specific code)\nSwitch back to full-screen on instructor when they’re not talking about code at all\nDo pans on other websites etc as appropriate\nMy Turn as appropriate\nYour Turn as appropriate\n\n\n\n\nUse a 0.2 second length Cross Blur transition\nDetach audio and use audio smoothing\nMake sure audio doesn’t have any transitions\nYou can take full-length screenshots with Firefox\n\nExample walkthrough of me editing video: https://show.rfor.us/z1fUk4"
   }
 ]

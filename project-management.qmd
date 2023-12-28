@@ -2,51 +2,23 @@
 title: "Project Management"
 ---
 
-We use three tools to manage projects:
-
-1. **GitHub** for code discussions
-2. **Todoist** to keep track of deadlines
-3. **Twist** for general discussion
-
-## GitHub
+## Overview
 
 Create a **GitHub repo** (set to private unless the client is ok with it being public):
 
-- Use the **README** to lay out the overall project scope, schedule, deliverables, etc. Please also lay out an overall schedule of due dates in the README.
+- Use the **README** to lay out the overall project scope, deliverables, etc.
 - Use **issues** to manage code-related questions at a granular level.
-- If the project is large enough so that there are multiple issues per type of work (e.g. creating various pieces of data viz), use **milestones**. 
-- If the client is working in GitHub with us, create a **project** that they can see. Make the default view a Kanban (see example [here](https://github.com/orgs/rfortherestofus/projects/14))  so the client can see the status of various tasks.
+- If the project is large enough, use **milestones**. 
 
-## Todoist
-
-In addition to using GitHub to manage code, we also use Todoist to keep track of due dates. For each project, we create a corresponding project on **Todoist**. Within that project, create two sections:
-
-1. Schedule
-2. Misc
-
-In the **Schedule section**, put various deadlines. Make sure to add the label `deadline` to the tasks (this way, David can see them in a special view he has created). 
-
-It's generally ok to move due dates as necessary (please just ask David if you have questions about whether it is a problem on any specific project). Please just update the due dates on the project README on GitHub to match.
-
-In the **Misc section**, create a recurring task to email the client each week (see below) as well as any miscellaneous tasks to keep track of.
-
-Here's what a project might look like:
-
-![](assets/todoist-deadlines.png)
-
-## Twist
-
-Create a thread in the Consulting channel on Twist for the project. If it is large project, we can create a separate channel just for the project so we can have multiple threads. 
-
-Twist is a good place for things we'd like to keep confidential (because we work more and more with clients directly in GitHub, that isn't the best place for confidential discussions). Also, while Todoist has the ability to communicate within tasks, it's not as user friendly as Twist so we use Twist for general communication. 
+Create a thread in the #consulting channel on Twist for the project. This is a good place for things we'd like to keep confidential (because we work more and more with clients directly in GitHub, that isn't the best place for confidential discussions). Communicate updates on overall progress with David using Twist. An update once a week or so is helpful.  
 
 ## Client Communication
 
-The most important thing we can do is communicate effectively and regularly. This means getting back to clients within 24 hours via the means they message us (email, GitHub issues, etc). 
+The most important thing we can do is communicate effectively and regularly. This means getting back to clients within 24 hours. 
 
 The type of communication we use with clients depends on the client. 
 
 - If clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.
-- If they don't want to work in GitHub, email is generally best.
+- If they don't want to work in GitHub (most don't), email is generally best.
 
-We should also email clients every week or two (determine which is appropriate at the beginning of the project) to give them a quick overall update on progress and see if they have any questions. Please make sure to cc David on these weekly updates. 
+I generally try to send clients updates by email about overall progress every 1-2 weeks to make sure they know what's going on and see if they have any questions.

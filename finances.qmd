@@ -10,16 +10,14 @@ We do the following tasks in the first week of each month:
 
 [Send invoices to clients with QuickBooks](https://app.qbo.intuit.com/app/invoices): Time should be checked on [Toggl reports](https://track.toggl.com/reports/summary/3434156/period/prevMonth) and an invoice should be generated for each client. Some projects are billed hourly while others are billed at a flat rate (details are in the associated Todoist tasks). 
 
-**Pay contractors with Gusto:** All contractors will submit an invoice each month using [this form](https://forms.gle/GadwWgoAP7U937uA6). They are then paid with Gusto. 
+**Pay contractors with Gusto:** All contractors will submit an invoice each month. They are then paid with Gusto. 
 
 ## Quarterly Tasks
 
 Each quarter we reconcile accounts in QuickBooks. This is done by getting statements from both Advantis Credit Union and Mercury and then entering balances [here](https://app.qbo.intuit.com/app/reconcile). This compares the balances in my bank accounts to those in QuickBooks to make sure everything matches up.
 
-I also pay course instructors each quarter. This is done using the [`pay-course-instructors.R` script in the `rru-finances` project](https://github.com/rfortherestofus/rru-finances/blob/main/pay-course-instructors.R).
+I also pay course instructors each quarter. You can go to the [commission report on the website](https://rfortherestofus.com/wp-admin/admin.php?page=wcpv-commissions) and see which commissions are unpaid. You can total these up for each instructor (they're called a vendor on this part of the website) and then pay them through Gusto. Each instructor gets an advance so they only start receiving commissions when they earn more than the advance. 
 
 ## Annual Tasks
 
 We send out 1099s to all contractors by Gusto. I've set Gusto up to make sure this happens, but we should check to confirm this in mid-January.
-
-We also need to add end-of-year taxes for Stripe and PayPal fees. This is done in early January ([see Todoist task](https://app.todoist.com/app/task/add-pay-pal-stripe-end-of-year-taxes-6JjPf5McMG2qG3c4)).
