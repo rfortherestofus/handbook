@@ -48,32 +48,27 @@ We manage passwords with **1Password**.
 
 ## Website
 
-The website runs on **WordPress** and is hosted by **Kinsta**. There are **various paid plugins** that help do specific things on the website. See [Website](website.html).
+The website runs on **Statamic** and is hosted using **Laravel Forge** and **Digital Ocean**. 
 
 Website analytics are provided by **Fathom**.
 
 ## Video Creation
 
-When providing quick feedback videos, we use **CloudApp** or **CleanShot**.
+When providing quick feedback videos, we use **CloudApp** for short videos and **Descript** for longer videos that need to be edited. 
 
-To record videos for courses, we use either **Screenflow**, **OBS Studio**, **Streamlabs** (depending on instructor operating system + preferences).
+Video editing happens in **Descript**.
 
-Video editing happens in **Screenflow**.
-
-Captions for videos are made using **Descript** or **muse.ai**.
+Captions for videos are made using the automated transcripts in **muse.ai**.
 
 ## Video Hosting
 
 Course videos, teaching videos, etc are hosted on **muse.ai** and embedded on the website.
 
-There is an R for the Rest of Us YouTube channel that I've only periodically used. 
+There is an R for the Rest of Us YouTube channel as well. 
 
 ## Social Media
 
-We use two tools to schedule social media content:
-
-1. **Buffer** is where we set up a queue of regular R content created by others to go out on Twitter. We also post our own content using Buffer, often piped through a Zapier automation from **Airtable**.
-2. If we need to schedule Twitter threads, we use **Typefully**.
+We use **Buffer** to schedule social media content:
 
 ## Automation
 

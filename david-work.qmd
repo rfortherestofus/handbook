@@ -7,10 +7,11 @@ As R for the Rest of Us has grown, my work away from doing all of the teaching a
 1. Increase course revenue
 2. Project manage (not do) most consulting projects
 
-To achieve the first goal, I did two things: 
+To achieve the first goal, I do several things: 
 
-1. I developed a complex system of email automations (see [Email Automation](email-automations.html)) based on what I have learned in the Mastering ConvertKit course
-2. Partner with other R users to develop topics courses in areas of their expertise
+1. Partner with other R users to develop topics courses in areas of their expertise
+1. Develop content on the blog that brings in users through SEO
+1. Develop an [email marketing system](email-automations.html) to educate and sell to customers
 
 To achieve the second goal, I have worked with consultants on a range of projects. 
 
@@ -28,9 +29,7 @@ Ensure we have the team necessary to achieve goals
 
 Develop blog posts and other content
 
-Maintain email automation system
-
-Regularly share useful R content through social media
+Maintain email marketing system
 
 ### Consulting Business Development
 
@@ -52,4 +51,4 @@ Work with instructors to develop courses
 
 Create courses on website
 
-Marketing courses
+Marketing for courses

@@ -7,7 +7,7 @@ title: "Overview"
 In general, consulting projects we take on involve some combination of the following:
 
 - Data visualization
-- Layout using RMarkdown and pagedown
+- Layout using RMarkdown/Quarto
 - Parameterized reporting
 
 You can see examples of several such projects on the [consulting page of the R for the Rest of Us website](https://rfortherestofus.com/consulting).
