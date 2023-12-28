@@ -47,6 +47,10 @@ website:
         - courses-editing.qmd
         - courses-production.qmd
         - courses-marketing.qmd
+      - section: "R in 3 Months"
+        contents:
+        - href: rin3months.qmd
+          text: "Overview"
       - section: "Consulting"
         contents:
         - consulting-overview.qmd
