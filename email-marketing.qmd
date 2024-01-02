@@ -1,0 +1,39 @@
+---
+title: "Email Marketing"
+---
+
+```{r}
+library(tidyverse)
+library(reactable)
+
+source("functions.R")
+```
+
+Email marketing is the main way that R for the Rest of Us brings in revenue.
+
+All external marketing is designed to get people onto the R for the Rest of Us email list. Once they're on the list, we send them regular emails that educate them about R, interspersing emails that attempt to sell them on our offerings.
+
+# Getting People Onto Email List
+
+There are several ways that people get onto the R for the Rest of Us email list:
+
+- They sign up for a course
+- They sign up directly for the newsletter through a form on the website
+- They express interest in R in 3 Months and fill out the form there
+- They sign up to receive What's New in R emails (TODO)
+
+# Email Types and Schedule
+
+We have four main types of emails that go out to people:
+
+- **Master Sequence** emails are prewritten emails that educate people on a variety of R topics. They often include links to blog posts and other resources we have created. They go out Monday mornings at 5am. The [Master Automation](https://app.convertkit.com/automations/1271379/edit) automation looks for people who get the Flag - Newsletter Signup, Interested - R in 3 Months, Purchased - Course, or What's New in R tags added and then adds them to the [Master Sequence sequence](https://app.convertkit.com/sequences/1690383). This sequence sends out emails every Monday at 5am.
+
+- **Live Broadcast** emails are for when content is time sensitive (e.g. course launch) and they generally go out Tuesday mornings at 5am, but can be adapted if necessary. These are sent manually.
+
+- **What's New in R** emails are emails with three interesting packages/tutorials/etc. They go out Wednesday mornings at 5am. These are sent manually as broadcasts. 
+
+- **Podcast Episode Announcement** emails go out Thursdays at 5am. These are sent manually as broadcasts. 
+
+# Course Signup Emails
+
+- **Course signup emails** go out on purchase of courses. These sequences need to be updated TODO. 
