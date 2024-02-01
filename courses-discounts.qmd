@@ -22,7 +22,7 @@ When users fill out this form, three things happens:
 
 1. A new thread is created on Twist with their submission. This is mostly for David's awareness. I'll chime in if anything special needs to happen on that particular case. 
 
-1. A Todoist task is created, assigned to Joe with a due date of tomorrow.
+1. A Todoist task is created, assigned to Joe with a due date of tomorrow (i.e. one day after the form is submitted).
 
 1. An email is sent to info@rfortherestofus.com. 
 
