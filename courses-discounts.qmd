@@ -1,0 +1,61 @@
+---
+title: "Discounts"
+---
+
+We offer discounts on courses in order to make them accessible to students and those in low-income locations and to encourage groups to sign up.
+
+## Discount Types
+
+There are three types of discounts:
+
+- 25% group discounts for groups of 3+ from the same organization
+
+- 50% student discounts
+
+- 50% discounts for people in low-income countries (the easiest way to see eligible countries is on the form on this page)
+
+## Request for Discounts
+
+To get access to discounts, users submit a form on any course. That form asks them to submit their name and email. For students, they are also asked where they go to school and for an optional link to a LinkedIn profile (or something similar) to verify their student status. For those in low-income locations, they select their country and submit an optional link to a LinkedIn profile (or something similar) to verify their location. 
+
+When users fill out this form, three things happens:
+
+1. A new thread is created on Twist with their submission. This is mostly for David's awareness. I'll chime in if anything special needs to happen on that particular case. 
+
+1. A Todoist task is created, assigned to Joe with a due date of tomorrow.
+
+1. An email is sent to info@rfortherestofus.com. 
+
+## Verification: Groups
+
+For groups, verification is easy. As long as they have 3+ users, they're good. At this point, go to the [coupons page on the backend of the website](https://rfortherestofus.com/cp/simple-commerce/coupons) and create a new coupon. . There are three things you need to do:
+
+1. Give the coupon a name: I usually just name it for the organization (e.g. MICROSOFT).
+
+1. Set the discount type to Percentage Discount the Value to 25.
+
+1. Set it so that only emails from the domain of the company can use the coupon (e.g. microsoft.com).
+
+![](assets/group-discount-coupon.png)
+
+## Verification: Students and Low-Income Locations
+
+If users have submitted enough information to verify their status, you can add them to an already existing coupon. There are two coupons:
+
+1. [STUDENT](https://rfortherestofus.com/cp/simple-commerce/coupons/9152e6de-1152-445f-89a6-c304a5c11a63/edit) (for students)
+
+1. [PPP50](https://rfortherestofus.com/cp/simple-commerce/coupons/0a8c4cc0-7055-4b44-a6a8-f791c680f08e/edit) (for those in low-income locations)
+
+For users who already have an account on the R for the Rest of Us site, please add them as follows:
+
+<div class="muse-video-player" data-video="4x3YxGp" data-links="0" data-logo="0" data-title="0" data-width="100%"></div><script src="https://muse.ai/static/js/embed-player.min.js"></script>
+
+For users who don't already have an account, you need to first create one for them before adding them to the coupon. You can do this as follows:
+
+<div class="muse-video-player" data-video="qsD33XD" data-links="0" data-logo="0" data-title="0" data-width="100%"></div><script src="https://muse.ai/static/js/embed-player.min.js"></script>
+
+If you are not sure whether a user should be eligible for a discount (maybe you're not sure they are actually a student), please feel free to reach out to David to ask. In general, I err on the side of assuming people are telling the truth. I'd rather give someone a discount who may not be telling the truth than not give a discount to someone who should receive it.
+
+## Send Coupon to User
+
+No matter which they of discount the user is requesting, they need to be given the coupon code manually. Respond to the email that came in to tell the user that the coupon has been created and they can use it on checkout. 

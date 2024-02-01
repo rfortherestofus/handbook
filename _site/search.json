@@ -905,5 +905,71 @@
       "Marketing",
       "Overview"
     ]
+  },
+  {
+    "objectID": "courses-discounts.html",
+    "href": "courses-discounts.html",
+    "title": "Discounts",
+    "section": "",
+    "text": "We offer discounts on courses in order to make them accessible to students and those in low-income locations and to encourage groups to sign up.",
+    "crumbs": [
+      "Courses",
+      "Discounts"
+    ]
+  },
+  {
+    "objectID": "courses-discounts.html#discount-types",
+    "href": "courses-discounts.html#discount-types",
+    "title": "Discounts",
+    "section": "Discount Types",
+    "text": "Discount Types\nThere are three types of discounts:\n\n25% group discounts for groups of 3+ from the same organization\n50% student discounts\n50% discounts for people in low-income countries (the easiest way to see eligible countries is on the form on this page)",
+    "crumbs": [
+      "Courses",
+      "Discounts"
+    ]
+  },
+  {
+    "objectID": "courses-discounts.html#request-for-discounts",
+    "href": "courses-discounts.html#request-for-discounts",
+    "title": "Discounts",
+    "section": "Request for Discounts",
+    "text": "Request for Discounts\nTo get access to discounts, users submit a form on any course. That form asks them to submit their name and email. For students, they are also asked where they go to school and for an optional link to a LinkedIn profile (or something similar) to verify their student status. For those in low-income locations, they select their country and submit an optional link to a LinkedIn profile (or something similar) to verify their location.\nWhen users fill out this form, three things happens:\n\nA new thread is created on Twist with their submission. This is mostly for David’s awareness. I’ll chime in if anything special needs to happen on that particular case.\nA Todoist task is created, assigned to Joe with a due date of tomorrow.\nAn email is sent to info@rfortherestofus.com.",
+    "crumbs": [
+      "Courses",
+      "Discounts"
+    ]
+  },
+  {
+    "objectID": "courses-discounts.html#verification-students-and-low-income-locations",
+    "href": "courses-discounts.html#verification-students-and-low-income-locations",
+    "title": "Discounts",
+    "section": "Verification: Students and Low-Income Locations",
+    "text": "Verification: Students and Low-Income Locations\nIf users have submitted enough information to verify their status, you can add them to an already existing coupon. There are two coupons:\n\nSTUDENT (for students)\nPPP50 (for those in low-income locations)\n\nFor users who already have an account on the R for the Rest of Us site, please add them as follows:\n\n\n\n\nFor users who don’t already have an account, you need to first create one for them before adding them to the coupon. You can do this as follows:\n\n\n\n\nIf you are not sure whether a user should be eligible for a discount (maybe you’re not sure they are actually a student), please feel free to reach out to David to ask. In general, I err on the side of assuming people are telling the truth. I’d rather give someone a discount who may not be telling the truth than not give a discount to someone who should receive it.",
+    "crumbs": [
+      "Courses",
+      "Discounts"
+    ]
+  },
+  {
+    "objectID": "courses-discounts.html#verification-groups",
+    "href": "courses-discounts.html#verification-groups",
+    "title": "Discounts",
+    "section": "Verification: Groups",
+    "text": "Verification: Groups\nFor groups, verification is easy. As long as they have 3+ users, they’re good. At this point, go to the coupons page on the backend of the website and create a new coupon. . There are three things you need to do:\n\nGive the coupon a name: I usually just name it for the organization (e.g. MICROSOFT).\nSet the discount type to Percentage Discount the Value to 25.\nSet it so that only emails from the domain of the company can use the coupon (e.g. microsoft.com).",
+    "crumbs": [
+      "Courses",
+      "Discounts"
+    ]
+  },
+  {
+    "objectID": "courses-discounts.html#send-coupon-to-user",
+    "href": "courses-discounts.html#send-coupon-to-user",
+    "title": "Discounts",
+    "section": "Send Coupon to User",
+    "text": "Send Coupon to User\nNo matter which they of discount the user is requesting, they need to be given the coupon code manually. Respond to the email that came in to tell the user that the coupon has been created and they can use it on checkout.",
+    "crumbs": [
+      "Courses",
+      "Discounts"
+    ]
   }
 ]

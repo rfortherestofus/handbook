@@ -46,6 +46,7 @@ website:
         - courses-recording.qmd
         - courses-production.qmd
         - courses-marketing.qmd
+        - courses-discounts.qmd
       - section: "Consulting"
         contents:
         - consulting-overview.qmd
