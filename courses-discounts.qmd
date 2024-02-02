@@ -59,3 +59,33 @@ If you are not sure whether a user should be eligible for a discount (maybe you'
 ## Send Coupon to User
 
 No matter which they of discount the user is requesting, they need to be given the coupon code manually. Respond to the email that came in to tell the user that the coupon has been created and they can use it on checkout. 
+
+**Email for student discount:**
+
+Hi NAME,
+
+Thanks for reaching out a the discount on R for the Rest of Us courses for students. You can use the coupon code STUDENT on checkout to receive a 50% discount on any course. If you have any trouble using it, please just let us know.
+
+Best of luck in your learning journey!
+
+Joe
+
+**Email for low-income locations discount:**
+
+Hi NAME,
+
+Thanks for reaching out a the discount on R for the Rest of Us courses for those in low-income locations. You can use the coupon code PPP50 on checkout to receive a 50% discount on any course. If you have any trouble using it, please just let us know.
+
+Best of luck in your learning journey!
+
+Joe
+
+**Email for groups:**
+
+Hi NAME,
+
+Thanks for reaching out a the discount on R for the Rest of Us courses for students. You can use the coupon code NAMEOFCOUPON on checkout to receive a 25% discount on any course. Users will need to use their DOMAIN.COM email in order to take advantage of this discount. If you have any trouble using it, please just let us know.
+
+Best of luck in your learning journey!
+
+Joe
