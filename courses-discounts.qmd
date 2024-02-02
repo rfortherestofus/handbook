@@ -64,7 +64,7 @@ No matter which they of discount the user is requesting, they need to be given t
 
 Hi NAME,
 
-Thanks for reaching out a the discount on R for the Rest of Us courses for students. You can use the coupon code STUDENT on checkout to receive a 50% discount on any course. If you have any trouble using it, please just let us know.
+Thanks for reaching out about the discount on R for the Rest of Us courses for students. You can use the coupon code STUDENT on checkout to receive a 50% discount on any course. If you have any trouble using it, please just let us know.
 
 Best of luck in your learning journey!
 
@@ -74,7 +74,7 @@ Joe
 
 Hi NAME,
 
-Thanks for reaching out a the discount on R for the Rest of Us courses for those in low-income locations. You can use the coupon code PPP50 on checkout to receive a 50% discount on any course. If you have any trouble using it, please just let us know.
+Thanks for reaching out about the discount on R for the Rest of Us courses for those in low-income locations. You can use the coupon code PPP50 on checkout to receive a 50% discount on any course. If you have any trouble using it, please just let us know.
 
 Best of luck in your learning journey!
 
@@ -84,7 +84,7 @@ Joe
 
 Hi NAME,
 
-Thanks for reaching out a the discount on R for the Rest of Us courses for students. You can use the coupon code NAMEOFCOUPON on checkout to receive a 25% discount on any course. Users will need to use their DOMAIN.COM email in order to take advantage of this discount. If you have any trouble using it, please just let us know.
+Thanks for reaching out about the discount on R for the Rest of Us courses for groups of 3+. You can use the coupon code NAMEOFCOUPON on checkout to receive a 25% discount on any course. Users will need to use their DOMAIN.COM email in order to take advantage of this discount. If you have any trouble using it, please just let us know.
 
 Best of luck in your learning journey!
 
