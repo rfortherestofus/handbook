@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R for the Rest of Us Handbook - Discounts</title>
+<title>R for the Rest of Us Handbook - Git and GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -64,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./courses-overview.html">Courses</a></li><li class="breadcrumb-item"><a href="./courses-discounts.html">Discounts</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./code-style.html">Code</a></li><li class="breadcrumb-item"><a href="./github.html">Git and GitHub</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -253,7 +287,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./courses-discounts.html" class="sidebar-item-text sidebar-link active">
+  <a href="./courses-discounts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Discounts</span></a>
   </div>
 </li>
@@ -299,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./github.html" class="sidebar-item-text sidebar-link">
+  <a href="./github.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Git and GitHub</span></a>
   </div>
 </li>
@@ -315,21 +349,39 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#discount-types" id="toc-discount-types" class="nav-link active" data-scroll-target="#discount-types">Discount Types</a></li>
-  <li><a href="#request-for-discounts" id="toc-request-for-discounts" class="nav-link" data-scroll-target="#request-for-discounts">Request for Discounts</a></li>
-  <li><a href="#r-in-3-months-discounts" id="toc-r-in-3-months-discounts" class="nav-link" data-scroll-target="#r-in-3-months-discounts">R in 3 Months Discounts</a></li>
-  <li><a href="#verification-groups" id="toc-verification-groups" class="nav-link" data-scroll-target="#verification-groups">Verification: Groups</a></li>
-  <li><a href="#verification-students-and-low-income-locations" id="toc-verification-students-and-low-income-locations" class="nav-link" data-scroll-target="#verification-students-and-low-income-locations">Verification: Students and Low-Income Locations</a></li>
-  <li><a href="#send-coupon-to-user" id="toc-send-coupon-to-user" class="nav-link" data-scroll-target="#send-coupon-to-user">Send Coupon to User</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul>
+  <li><a href="#setting-up-a-new-repo" id="toc-setting-up-a-new-repo" class="nav-link" data-scroll-target="#setting-up-a-new-repo">Setting Up a New Repo</a>
+  <ul class="collapse">
+  <li><a href="#readme.md" id="toc-readme.md" class="nav-link" data-scroll-target="#readme.md">README.md</a></li>
+  <li><a href="#gitignore" id="toc-gitignore" class="nav-link" data-scroll-target="#gitignore">.gitignore</a></li>
+  <li><a href="#gitattributes" id="toc-gitattributes" class="nav-link" data-scroll-target="#gitattributes">.gitattributes</a></li>
+  </ul></li>
+  <li><a href="#cloning-an-existing-repo" id="toc-cloning-an-existing-repo" class="nav-link" data-scroll-target="#cloning-an-existing-repo">Cloning an Existing Repo</a></li>
+  </ul></li>
+  <li><a href="#git-etiquette" id="toc-git-etiquette" class="nav-link" data-scroll-target="#git-etiquette">Git Etiquette</a>
+  <ul>
+  <li><a href="#commit-messages" id="toc-commit-messages" class="nav-link" data-scroll-target="#commit-messages">Commit messages</a></li>
+  <li><a href="#using-branches" id="toc-using-branches" class="nav-link" data-scroll-target="#using-branches">Using branches</a>
+  <ul class="collapse">
+  <li><a href="#what-are-branches" id="toc-what-are-branches" class="nav-link" data-scroll-target="#what-are-branches">What are branches?</a></li>
+  <li><a href="#creating-a-new-branch" id="toc-creating-a-new-branch" class="nav-link" data-scroll-target="#creating-a-new-branch">Creating a New Branch</a></li>
+  <li><a href="#creating-a-pull-request" id="toc-creating-a-pull-request" class="nav-link" data-scroll-target="#creating-a-pull-request">Creating a Pull Request</a></li>
+  <li><a href="#reviewing-a-pull-request" id="toc-reviewing-a-pull-request" class="nav-link" data-scroll-target="#reviewing-a-pull-request">Reviewing a Pull Request</a></li>
+  <li><a href="#merging-etiquette-and-branch-hygiene" id="toc-merging-etiquette-and-branch-hygiene" class="nav-link" data-scroll-target="#merging-etiquette-and-branch-hygiene">Merging etiquette and branch hygiene</a></li>
+  </ul></li>
+  <li><a href="#dealing-with-merge-conflicts" id="toc-dealing-with-merge-conflicts" class="nav-link" data-scroll-target="#dealing-with-merge-conflicts">Dealing with merge conflicts</a></li>
+  <li><a href="#writing-good-issues" id="toc-writing-good-issues" class="nav-link" data-scroll-target="#writing-good-issues">Writing good issues</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./courses-overview.html">Courses</a></li><li class="breadcrumb-item"><a href="./courses-discounts.html">Discounts</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./code-style.html">Code</a></li><li class="breadcrumb-item"><a href="./github.html">Git and GitHub</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Discounts</h1>
+<h1 class="title">Git and GitHub</h1>
 </div>
 
 
@@ -346,83 +398,156 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>We offer discounts on courses in order to make them accessible to students and those in low-income locations and to encourage groups to sign up.</p>
-<section id="discount-types" class="level2">
-<h2 class="anchored" data-anchor-id="discount-types">Discount Types</h2>
-<p>There are three types of discounts:</p>
+<p>At R For The Rest Of Us, we collaborate on projects using Git and GitHub. Git is the gold standard for version control, and using it in conjunction with GitHub provides a neat way of exploring the more advanced Git features within a friendly interface. This section covers the basics of the Git etiquette we adopt, as well as a few how-tos and worked examples.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <ul>
-<li><p>25% group discounts for groups of 3+ from the same organization</p></li>
-<li><p>50% student discounts</p></li>
-<li><p>50% discounts for people in low-income countries (the easiest way to see eligible countries is on the form on this page)</p></li>
+<li>Each project has its own unique repository</li>
+<li>The central repository for each project lives on GitHub; this is also referred to as <code>origin</code></li>
+<li>Everyone working on that project is invited to the GitHub repo, and we then <code>clone</code> the repo to our own computers (this gives us what we call local repos)</li>
 </ul>
-</section>
-<section id="request-for-discounts" class="level2">
-<h2 class="anchored" data-anchor-id="request-for-discounts">Request for Discounts</h2>
-<p>To get access to discounts, users submit a form on any course. That form asks them to submit their name and email. For students, they are also asked where they go to school and for an optional link to a LinkedIn profile (or something similar) to verify their student status. For those in low-income locations, they select their country and submit an optional link to a LinkedIn profile (or something similar) to verify their location.</p>
-<p>When users fill out this form, three things happens:</p>
-<ol type="1">
-<li><p>A new thread is created on Twist with their submission. This is mostly for David’s awareness. I’ll chime in if anything special needs to happen on that particular case.</p></li>
-<li><p>A Todoist task is created, assigned to Joe with a due date of tomorrow (i.e.&nbsp;one day after the form is submitted).</p></li>
-<li><p>An email is sent to info@rfortherestofus.com.</p></li>
-</ol>
-</section>
-<section id="r-in-3-months-discounts" class="level2">
-<h2 class="anchored" data-anchor-id="r-in-3-months-discounts">R in 3 Months Discounts</h2>
-<p>For R in 3 Months, many people just email directly. David will verify these and then pass them along to create an invoice for them in QuickBooks. You’ll need to create a new customer and then a new invoice and send it to them, as shown in the video below.</p>
-<div class="muse-video-player" data-video="Z5vp6M9" data-links="0" data-logo="0" data-title="0" data-width="100%">
-
+<p>The rest of this section assumes a basic understanding of how Git works. The main thing to note for new users is that, unlike something like Dropbox, changes only make it to the central repo (and from there to others), if Git is explicitly told about them via <code>add</code>, <code>commit</code> and <code>push</code> commands.</p>
+<section id="setting-up-a-new-repo" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-a-new-repo">Setting Up a New Repo</h3>
+<p>The easiest way to create a new repo is to do it on GitHub. Make sure to give it a name that clearly identifies the project!</p>
+<p><img src="assets/git-section/new-repo.png" class="img-fluid" alt="screenshot of a repo being created"> Then follow the instructions that come up once you’ve clicked on Create Repository. Pick the option that best corresponds to the stage you have reached. If you have already used <code>git init</code> to make your local folder into a Git repo, pick the second option. If not, pick the first.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/git-section/initial-clone.png" class="img-fluid figure-img"></p>
+<figcaption>screenshot of init instructions</figcaption>
+</figure>
 </div>
-<script src="https://muse.ai/static/js/embed-player.min.js"></script>
+<p>When creating a new repo, we want to add three files: <code>README.md</code> (which is added automatically in the first option), <code>.gitignore</code> and <code>.gitattributes</code>. The default branch of a new repo should be called <code>main</code>. This is GitHub’s new default, so should happen automatically.</p>
+<section id="readme.md" class="level4">
+<h4 class="anchored" data-anchor-id="readme.md">README.md</h4>
+<p>This file should contain information about the purpose of the repo, and any information useful to other team members interacting with it. We sometimes make our repos available to clients towards the end of projects, so keep the contents of the <code>README</code> accessible to non-R specialists.</p>
 </section>
-<section id="verification-groups" class="level2">
-<h2 class="anchored" data-anchor-id="verification-groups">Verification: Groups</h2>
-<p>For groups, verification is easy. As long as they have 3+ users, they’re good. At this point, go to the <a href="https://rfortherestofus.com/cp/simple-commerce/coupons">coupons page on the backend of the website</a> and create a new coupon. There are three things you need to do:</p>
-<ol type="1">
-<li><p>Give the coupon a name: I usually just name it for the organization (e.g.&nbsp;MICROSOFT).</p></li>
-<li><p>Set the discount type to Percentage Discount the Value to 25.</p></li>
-<li><p>Set it so that only emails from the domain of the company can use the coupon (e.g.&nbsp;microsoft.com).</p></li>
-</ol>
-<p><img src="assets/group-discount-coupon.png" class="img-fluid"></p>
-</section>
-<section id="verification-students-and-low-income-locations" class="level2">
-<h2 class="anchored" data-anchor-id="verification-students-and-low-income-locations">Verification: Students and Low-Income Locations</h2>
-<p>If users have submitted enough information to verify their status, you can add them to an already existing coupon. There are two coupons:</p>
-<ol type="1">
-<li><p><a href="https://rfortherestofus.com/cp/simple-commerce/coupons/9152e6de-1152-445f-89a6-c304a5c11a63/edit">STUDENT</a> (for students)</p></li>
-<li><p><a href="https://rfortherestofus.com/cp/simple-commerce/coupons/0a8c4cc0-7055-4b44-a6a8-f791c680f08e/edit">PPP50</a> (for those in low-income locations)</p></li>
-</ol>
-<p>For users who already have an account on the R for the Rest of Us site, please add them as follows:</p>
-<div class="muse-video-player" data-video="4x3YxGp" data-links="0" data-logo="0" data-title="0" data-width="100%">
-
+<section id="gitignore" class="level4">
+<h4 class="anchored" data-anchor-id="gitignore">.gitignore</h4>
+<p>The best way to do this is by using <code>{usethis}</code> within <code>R</code>. Navigate to your repo, and type:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_vaccinate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<script src="https://muse.ai/static/js/embed-player.min.js"></script>
-<p>For users who don’t already have an account, you need to first create one for them before adding them to the coupon. You can do this as follows:</p>
-<div class="muse-video-player" data-video="qsD33XD" data-links="0" data-logo="0" data-title="0" data-width="100%">
-
-</div>
-<script src="https://muse.ai/static/js/embed-player.min.js"></script>
-<p>If you are not sure whether a user should be eligible for a discount (maybe you’re not sure they are actually a student), please feel free to reach out to David to ask. In general, I err on the side of assuming people are telling the truth. I’d rather give someone a discount who may not be telling the truth than not give a discount to someone who should receive it.</p>
+<p>This will add a .gitignore file that excludes files with the following extensions from being tracked by Git.</p>
+<pre><code>.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store</code></pre>
 </section>
-<section id="send-coupon-to-user" class="level2">
-<h2 class="anchored" data-anchor-id="send-coupon-to-user">Send Coupon to User</h2>
-<p>No matter which they of discount the user is requesting, they need to be given the coupon code manually. Respond to the email that came in to tell the user that the coupon has been created and they can use it on checkout.</p>
-<p><strong>Email for student discount:</strong></p>
-<p>Hi NAME,</p>
-<p>Thanks for reaching out about the discount on R for the Rest of Us courses for students. You can use the coupon code STUDENT on checkout to receive a 50% discount on any course. If you have any trouble using it, please just let us know.</p>
-<p>Best of luck in your learning journey!</p>
-<p>Joe</p>
-<p><strong>Email for low-income locations discount:</strong></p>
-<p>Hi NAME,</p>
-<p>Thanks for reaching out about the discount on R for the Rest of Us courses for those in low-income locations. You can use the coupon code PPP50 on checkout to receive a 50% discount on any course. If you have any trouble using it, please just let us know.</p>
-<p>Best of luck in your learning journey!</p>
-<p>Joe</p>
-<p><strong>Email for groups:</strong></p>
-<p>Hi NAME,</p>
-<p>Thanks for reaching out about the discount on R for the Rest of Us courses for groups of 3+. You can use the coupon code NAMEOFCOUPON on checkout to receive a 25% discount on any course. Users will need to use their DOMAIN.COM email in order to take advantage of this discount. If you have any trouble using it, please just let us know.</p>
-<p>Best of luck in your learning journey!</p>
-<p>Joe</p>
+<section id="gitattributes" class="level4">
+<h4 class="anchored" data-anchor-id="gitattributes">.gitattributes</h4>
+<p>This file allows us to work across different Operating Systems, which have different behaviours for handling line endings. Create a text file and rename it to <code>.gitattributes</code> (note, not <code>gitattributes.txt</code>) and copy the following content into it:</p>
+<pre><code># Let Git's auto-detection algorithm infer if a file is text. If it is,
+# enforce LF line endings regardless of OS or git configurations.
+* text=auto eol=lf
+
+# Isolate binary files in case the auto-detection algorithm fails and
+# marks them as text files (which could break them).
+*.{png,jpg,jpeg,gif,webp,woff,woff2} binary
+</code></pre>
+</section>
+</section>
+<section id="cloning-an-existing-repo" class="level3">
+<h3 class="anchored" data-anchor-id="cloning-an-existing-repo">Cloning an Existing Repo</h3>
+<p>To clone a repo from GitHub, it either needs to be public, or you need to have been invited to the repo. We invite all team members to the <code>sandbox</code> repo we created, and use it as a way of exploring different Git tricks.</p>
+<p>To clone the repo, go to <a href="https://github.com/rfortherestofus/sandbox">its GitHub page</a> and click on Code, copy the text provided by GitHub by clicking on the copy icon.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/git-section/clone-sandbox.png" class="img-fluid figure-img"></p>
+<figcaption>screenshot showing how to copy the url of the repo we want to clone</figcaption>
+</figure>
+</div>
+<p>Next, create a new folder called <code>sandbox</code> somewhere on your computer. Navigate to that folder in your terminal, and type <code>git clone</code> then paste in the text you’ve just copied, type space then <code>.</code> and hit <code>Enter</code>. That full stop means “clone the folder into the directory where I am currently”. If you miss that out, you’ll end up with this git folder called <code>sandbox</code> inside your <code>sandbox</code> folder which will make things very confusing. Your command should look like this:</p>
+<pre><code>git clone https://github.com/rfortherestofus/sandbox.git .</code></pre>
+<p>This will create a local copy of the repo on your computer.</p>
+<p>Depending on how your computer is set up, you may see a folder called <code>.git</code>. This is a hidden folder. Do not edit its contents!</p>
+</section>
+</section>
+<section id="git-etiquette" class="level2">
+<h2 class="anchored" data-anchor-id="git-etiquette">Git Etiquette</h2>
+<section id="commit-messages" class="level3">
+<h3 class="anchored" data-anchor-id="commit-messages">Commit messages</h3>
+<p>There is an art to writing good commit messages.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://imgs.xkcd.com/comics/git_commit_2x.png" class="img-fluid figure-img"></p>
+<figcaption>Commit messages comic illustrating how not to do it! From xkcd.com</figcaption>
+</figure>
+</div>
+<p>Some organisations have very strict guidelines on that. Here, we just try to follow the following rules:</p>
+<ul>
+<li><p>Commit often and frequently; this allow you to easily backtrack to the point where your code was doing what it should be.</p></li>
+<li><p>Write clear commit messages. Things like “I fixed it!” are not all that helpful when trying to find a commit that addressed a specific problem!</p></li>
+<li><p>If the change you’re making is linked to an issue on GitHub (we’ll come to issues later), include the number of the issue in the commit message (e.g.&nbsp;“Added section on commit messages - #4”). GitHub picks this up and adds a message into the issue, which allows us to easily keep track of progress.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/git-section/gh-issue-commit.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshot of GitHub issue #4 featuring the commit above</figcaption>
+</figure>
+</div>
+</section>
+<section id="using-branches" class="level3">
+<h3 class="anchored" data-anchor-id="using-branches">Using branches</h3>
+<p>We encourage the use of branches when collaborating on projects. These can be daunting to new Git users, but once we get the hang of them, there’s no looking back!</p>
+<section id="what-are-branches" class="level4">
+<h4 class="anchored" data-anchor-id="what-are-branches">What are branches?</h4>
+<p>We mentioned the default branch, <code>main</code> earlier. Think of this as the “stable universe” as far as the project is concerned. It contains up-to-date code that others can reliably use. A branch is essentially an “alternate universe” for the project, where we can experiment, make changes, test new things, all without disrupting the “stable universe” that others rely on.</p>
+<p>Some organisations only ever allow changes to be made via a branch. There’s lot of wisdom in that, but sometimes it can become cumbersome. Here are some use cases where you could consider working in the <code>main</code> branch:</p>
+<ul>
+<li><p>you are the only person working on the project</p></li>
+<li><p>you are adding something to the project that doesn’t interact at all with the code others are writing</p></li>
+</ul>
+<p>But even in those cases, you could consider using a new branch to be on the safe side. If in doubt, check with David.</p>
+</section>
+<section id="creating-a-new-branch" class="level4">
+<h4 class="anchored" data-anchor-id="creating-a-new-branch">Creating a New Branch</h4>
+<p>Creating a new branch is trivial. As with commit messages, we want to make sure the name of the branch gives a clear indication of its purpose. Say a client wants to add a new timeline to their report. The report is otherwise working as it should be. To work in a branch, and thereby allow them to keep using the report as is while you figure this out, you’ll want to</p>
+<ul>
+<li><p>make sure you’re branching off an up-to-date <code>main</code>: <code>git pull</code></p></li>
+<li><p>create a new branch with a clear name: <code>git checkout -b adding-timeline-feature</code></p></li>
+</ul>
+<p>You can also do this in RStudio or in GitHub Desktop.</p>
+<p>Now the files that you see are ones that belong to your alternate universe called “adding timeline feature”. Everything will look the same, but changes you add and commit here won’t affect anything in <code>main</code>; if it all goes horribly wrong, you can delete this branch and know all is still well in the “stable universe”. You can then switch between universes as follows:</p>
+<ul>
+<li><p>Commit (or stash) everything you’ve done within your branch</p></li>
+<li><p>Go back to the “stable universe”: <code>git checkout main</code>, probably followed by <code>git pull</code> to see what’s happened there in your absence. The modifications you’ve made within <code>adding-timeline-feature</code> will no longer be visible to you.</p></li>
+<li><p>Go back to your own alternate universe: <code>git checkout adding-timeline-feature</code>, and your modifications are back!</p></li>
+</ul>
+<p>While you’re working on your feature, you can keep your branch backed up on GitHub, safe in the knowledge that it doesn’t affect anything in <code>main</code>. The first time you push, you need to “set the upstream”.</p>
+<pre><code>git push -u origin adding-timeline-feature</code></pre>
+<p>Every time after that, you can just use <code>git push</code>. Pushing your branch to <code>origin</code> allows others to view your branch (useful if you want to get feedback along the process), and ensures that if something bad happens to your computer, your work is stored somewhere else. Give it a go in our <code>sandbox</code> repo.</p>
+<p>Create a new branch, with a name of your choosing, and add a quote to <code>quotes/client-quotes.txt</code>. Add, commit and push (remember to set the upstream branch!). Then checkout main again, and open the <code>client-quotes.txt</code> file. The quote you’ve added should no longer be there. Switch back to your branch, and it will reappear. The GitHub page for this repo should also now include your branch in the list of branches.</p>
+</section>
+<section id="creating-a-pull-request" class="level4">
+<h4 class="anchored" data-anchor-id="creating-a-pull-request">Creating a Pull Request</h4>
+<p>Pull request are the way we merge the work you’ve done in a branch back into our “stable universe” while allowing someone else to review the changes in the process.</p>
+<p>TODO: example create a pull request for the added quote TODO: best for the branch author / person who made the most recent contribution to it to initiate the pull request TODO: get up to speed with <code>main</code> first.</p>
+</section>
+<section id="reviewing-a-pull-request" class="level4">
+<h4 class="anchored" data-anchor-id="reviewing-a-pull-request">Reviewing a Pull Request</h4>
+<p>TODO: We haven’t really done this, but it might be worth thinking about if projects get bigger - you can set things so that a merge into <code>main</code> needs to be approved by someone other than the person creating the pull request; a useful way to keep things safe, but we need to all be happy with pull requests first</p>
+</section>
+<section id="merging-etiquette-and-branch-hygiene" class="level4">
+<h4 class="anchored" data-anchor-id="merging-etiquette-and-branch-hygiene">Merging etiquette and branch hygiene</h4>
+<p>At this point comes a policy decision, which can be influenced by workload: who completes the approved merge? It could be the person who did the work, or the person who approved the merge. If there happen to be conflicts (see below), this can be non trivial. GitHub will tell you if there will be a conflict, in which case we can discuss who is best placed to resolve it.</p>
+<p>And a second policy decision, which can be influenced by how we want to use the branches: should a branch be deleted once it has been merged in? The advantage of deleting branches as part of the merge is that this avoids needing to tidy them up at a later stage. You might have a feature you’re working on where a quick bug fix was needed, but you’d like to keep working on it to improve the code once the immediate need for the bug fix has passed. In that case, it might be best to keep the branch, but we’ll need to make sure we keep it up to speed with the “stable universe” by merging <code>main</code> into that branch before picking it up again.</p>
+<p>To check the status of your branch(es) compared to others, click on the “branches” icon in the repo’s GitHub page. Here you can see by how many commits a branch is ahead and behind the default branch (typically <code>main</code>). A branch that is “behind” <code>main</code> by a large number of commits and hasn’t been updated for a while is probably a candidate for deletion, but if it wasn’t your branch, check with its author first!</p>
+</section>
+</section>
+<section id="dealing-with-merge-conflicts" class="level3">
+<h3 class="anchored" data-anchor-id="dealing-with-merge-conflicts">Dealing with merge conflicts</h3>
+<p>The best way to deal with conflicts is to avoid causing them in the first place!</p>
+<p>TODO: pull across info from my old team doc</p>
+<p>TODO: I use TortoiseGit as a merge tool; makes it easier to compare the changes; what do others use?</p>
+</section>
+<section id="writing-good-issues" class="level3">
+<h3 class="anchored" data-anchor-id="writing-good-issues">Writing good issues</h3>
+<p>TODO: Decide if we want a section on this</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
