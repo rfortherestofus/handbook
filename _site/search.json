@@ -242,33 +242,11 @@
     ]
   },
   {
-    "objectID": "website.html#theme",
-    "href": "website.html#theme",
+    "objectID": "website.html#featured-images",
+    "href": "website.html#featured-images",
     "title": "Website",
-    "section": "Theme",
-    "text": "Theme\nThe site uses the BuddyBoss theme. Some of the most important pages (e.g. Home, About, Consulting) are generated with custom templates that use Tailwind CSS. These are edited locally, the templates are pushed to this GitHub repo, and then the WP Pusher plugin adds them to the website.",
-    "crumbs": [
-      "Marketing",
-      "Website"
-    ]
-  },
-  {
-    "objectID": "website.html#custom-post-types",
-    "href": "website.html#custom-post-types",
-    "title": "Website",
-    "section": "Custom Post Types",
-    "text": "Custom Post Types\nI’ve created several custom post types using the Pods plugin:\n\nClients hosts pages with content for specific clients\nPresentations\nResources hosts resources for the resources page\nSuccess Stories hosts pages that highlight successful projects we’ve worked on\nThanks hosts various pages that say thanks to people (used mostly for when people click things in ConvertKit)",
-    "crumbs": [
-      "Marketing",
-      "Website"
-    ]
-  },
-  {
-    "objectID": "website.html#plugins",
-    "href": "website.html#plugins",
-    "title": "Website",
-    "section": "Plugins",
-    "text": "Plugins\nThe website uses many plugins. Here are some of the most important and less obvious ones.\nAffiliateWP enables us to have affiliates who are paid for referring customers (not currently using this)\nBuddyBoss Platform + BuddyBoss Platform Pro hosts groups and forums for cohort-based courses\nConvertKit allows me to do things like apply a tag to a customer whenever they purchase a course\nFacetWP is what I use to create a searchable, filterable resources page\nLearnDash is probably the most important plugin. It is what we use to manage all courses. BuddyBoss integrates with it, making the course pages even more attractive. The one thing to note with LearnDash is that we use WooCommerce for signup and just use LearnDash itself for the course stuff.\n\nLearnDash Course Duplicator allows us to duplicate courses (e.g. for new cohorts of R in 3 Months)\n\nNinjaForms is what we use for all forms\nPods creates custom post types\nSEOPress + SEOPress Pro is used for all SEO stuff\nUncanny Automator + Uncanny Automator Pro allow us to automate various things (e.g. sending notifications on new comments to Twist)\nWooCommerce is how we handle all ecommerce on the site. We also use add-on Woo plugins:\n\nWooCommerce Price Based on Country allows us to set lower prices for those in lower GDP countries\nWooCommerce Product Vendors allows us to track commissions for course instructors\nWooCommerce Smart Coupons allows us to set up coupons for gift certificates\nWooCommerce Stripe Gateway allows us to use Stripe to process credit cards (we also reluctantly use PayPal)\nWooCommerce Zapier allows us to create coupons for users from using Zapier when they are in their pitch window (see Email Marketing)\n\nWP Pusher syncs our child theme from this GitHub repo to the website",
+    "section": "Featured Images",
+    "text": "Featured Images\nWe create featured images for blog posts starting with this prompt in Microsoft Designer. This creates a background image that is then added to this Canva template.\n\nCreate an abstract image with a blue and black gradient background that simulates [TOPIC DISCUSSED]. The image should be 1280 by 720 pixels in size.\n\nTo understand the topic discussed, one may need to skim through the blog post/YouTube video. Then, try different versions of your understanding of the topic discussed and see what AI generates.\nThe images are exported and then uploaded to the website.",
     "crumbs": [
       "Marketing",
       "Website"
@@ -940,6 +918,17 @@
     ]
   },
   {
+    "objectID": "courses-discounts.html#r-in-3-months-discounts",
+    "href": "courses-discounts.html#r-in-3-months-discounts",
+    "title": "Discounts",
+    "section": "R in 3 Months Discounts",
+    "text": "R in 3 Months Discounts\nFor R in 3 Months, many people just email directly. David will verify these and then pass them along to create an invoice for them in QuickBooks. You’ll need to create a new customer and then a new invoice and send it to them, as shown in the video below.",
+    "crumbs": [
+      "Courses",
+      "Discounts"
+    ]
+  },
+  {
     "objectID": "courses-discounts.html#verification-groups",
     "href": "courses-discounts.html#verification-groups",
     "title": "Discounts",
@@ -970,28 +959,6 @@
     "crumbs": [
       "Courses",
       "Discounts"
-    ]
-  },
-  {
-    "objectID": "courses-discounts.html#r-in-3-months-discounts",
-    "href": "courses-discounts.html#r-in-3-months-discounts",
-    "title": "Discounts",
-    "section": "R in 3 Months Discounts",
-    "text": "R in 3 Months Discounts\nFor R in 3 Months, many people just email directly. David will verify these and then pass them along to create an invoice for them in QuickBooks. You’ll need to create a new customer and then a new invoice and send it to them, as shown in the video below.",
-    "crumbs": [
-      "Courses",
-      "Discounts"
-    ]
-  },
-  {
-    "objectID": "website.html#featured-images",
-    "href": "website.html#featured-images",
-    "title": "Website",
-    "section": "Featured Images",
-    "text": "Featured Images\nWe create featured images for blog posts starting with this prompt in Microsoft Designer. This creates a background image that is then added to this Canva template.\n\nCreate an abstract image with a blue and black gradient background that simulates [TOPIC DISCUSSED]. The image should be 1280 by 720 pixels in size.\n\nTo understand the topic discussed, one may need to skim through the blog post/YouTube video. Then, try different versions of your understanding of the topic discussed and see what AI generates.\nThe images are exported and then uploaded to the website.",
-    "crumbs": [
-      "Marketing",
-      "Website"
     ]
   }
 ]
