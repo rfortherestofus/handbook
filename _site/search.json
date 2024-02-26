@@ -235,7 +235,7 @@
     "href": "website.html",
     "title": "Website",
     "section": "",
-    "text": "R for the Rest of Us runs on a WordPress website hosted by Kinsta.",
+    "text": "R for the Rest of Us runs on a Statamic website. Details below will be updated soon.",
     "crumbs": [
       "Marketing",
       "Website"
@@ -981,6 +981,17 @@
     "crumbs": [
       "Courses",
       "Discounts"
+    ]
+  },
+  {
+    "objectID": "website.html#featured-images",
+    "href": "website.html#featured-images",
+    "title": "Website",
+    "section": "Featured Images",
+    "text": "Featured Images\nWe create featured images for blog posts starting with this prompt in Microsoft Designer. This creates a background image that is then added to this Canva template.\n\nCreate an abstract image with a blue and black gradient background that simulates [TOPIC DISCUSSED]. The image should be 1280 by 720 pixels in size.\n\nTo understand the topic discussed, one may need to skim through the blog post/YouTube video. Then, try different versions of your understanding of the topic discussed and see what AI generates.\nThe images are exported and then uploaded to the website.",
+    "crumbs": [
+      "Marketing",
+      "Website"
     ]
   }
 ]

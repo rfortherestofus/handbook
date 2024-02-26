@@ -315,9 +315,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#theme" id="toc-theme" class="nav-link active" data-scroll-target="#theme">Theme</a></li>
-  <li><a href="#custom-post-types" id="toc-custom-post-types" class="nav-link" data-scroll-target="#custom-post-types">Custom Post Types</a></li>
-  <li><a href="#plugins" id="toc-plugins" class="nav-link" data-scroll-target="#plugins">Plugins</a></li>
+  <li><a href="#featured-images" id="toc-featured-images" class="nav-link active" data-scroll-target="#featured-images">Featured Images</a></li>
   </ul>
 </nav>
     </div>
@@ -343,46 +341,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>R for the Rest of Us runs on a <strong>WordPress</strong> website hosted by <strong>Kinsta</strong>.</p>
-<section id="theme" class="level2">
-<h2 class="anchored" data-anchor-id="theme">Theme</h2>
-<p>The site uses the <a href="https://www.buddyboss.com/resources/docs/buddyboss-theme/">BuddyBoss theme</a>. Some of the most important pages (e.g.&nbsp;Home, About, Consulting) are generated with custom templates that use Tailwind CSS. These are edited locally, the templates are pushed to <a href="https://github.com/rfortherestofus/buddyboss-theme-child">this GitHub repo</a>, and then the <strong>WP Pusher</strong> plugin adds them to the website.</p>
-</section>
-<section id="custom-post-types" class="level2">
-<h2 class="anchored" data-anchor-id="custom-post-types">Custom Post Types</h2>
-<p>I’ve created several custom post types using the <strong>Pods</strong> plugin:</p>
-<ul>
-<li><strong>Clients</strong> hosts pages with content for specific clients</li>
-<li><strong>Presentations</strong></li>
-<li><strong>Resources</strong> hosts resources for the <a href="https://rfortherestofus.com/resources/">resources page</a></li>
-<li><strong>Success Stories</strong> hosts pages that highlight successful projects we’ve worked on</li>
-<li><strong>Thanks</strong> hosts various pages that say thanks to people (used mostly for when people click things in ConvertKit)</li>
-</ul>
-</section>
-<section id="plugins" class="level2">
-<h2 class="anchored" data-anchor-id="plugins">Plugins</h2>
-<p>The website uses many plugins. Here are some of the most important and less obvious ones.</p>
-<p><strong>AffiliateWP</strong> enables us to have affiliates who are paid for referring customers (not currently using this)</p>
-<p><strong>BuddyBoss Platform + BuddyBoss Platform Pro</strong> hosts groups and forums for cohort-based courses</p>
-<p><strong>ConvertKit</strong> allows me to do things like apply a tag to a customer whenever they purchase a course</p>
-<p><strong>FacetWP</strong> is what I use to create a searchable, filterable resources page</p>
-<p><strong>LearnDash</strong> is probably the most important plugin. It is what we use to manage all courses. BuddyBoss integrates with it, making the course pages even more attractive. The one thing to note with LearnDash is that we use WooCommerce for signup and just use LearnDash itself for the course stuff.</p>
-<ul>
-<li><strong>LearnDash Course Duplicator</strong> allows us to duplicate courses (e.g.&nbsp;for new cohorts of R in 3 Months)</li>
-</ul>
-<p><strong>NinjaForms</strong> is what we use for all forms</p>
-<p><strong>Pods</strong> creates custom post types</p>
-<p><strong>SEOPress + SEOPress Pro</strong> is used for all SEO stuff</p>
-<p><strong>Uncanny Automator</strong> + <strong>Uncanny Automator Pro</strong> allow us to automate various things (e.g.&nbsp;sending notifications on new comments to Twist)</p>
-<p><strong>WooCommerce</strong> is how we handle all ecommerce on the site. We also use add-on Woo plugins:</p>
-<ul>
-<li><strong>WooCommerce Price Based on Country</strong> allows us to set lower prices for those in lower GDP countries</li>
-<li><strong>WooCommerce Product Vendors</strong> allows us to track commissions for course instructors</li>
-<li><strong>WooCommerce Smart Coupons</strong> allows us to set up coupons for gift certificates</li>
-<li><strong>WooCommerce Stripe Gateway</strong> allows us to use Stripe to process credit cards (we also reluctantly use PayPal)</li>
-<li><strong>WooCommerce Zapier</strong> allows us to create coupons for users from using Zapier when they are in their pitch window (see <a href="https://www.notion.so/Email-Marketing-cd082f1d53b44cfd9ab210648f72ebe3">Email Marketing</a>)</li>
-</ul>
-<p><strong>WP Pusher</strong> syncs our child theme from <a href="https://www.notion.so/Website-19a7362de25746679ea61ccac1bae983">this GitHub repo</a> to the website</p>
+<p>R for the Rest of Us runs on a <strong>Statamic</strong> website. Details below will be updated soon.</p>
+<section id="featured-images" class="level2">
+<h2 class="anchored" data-anchor-id="featured-images">Featured Images</h2>
+<p>We create featured images for blog posts starting with this prompt in <a href="https://designer.microsoft.com/">Microsoft Designer</a>. This creates a background image that is then added to <a href="https://www.canva.com/design/DAF9nXMmRH0/9wfI47oEUa20zFF20tcKGQ/edit">this Canva template</a>.</p>
+<blockquote class="blockquote">
+<p>Create an abstract image with a blue and black gradient background that simulates [TOPIC DISCUSSED]. The image should be 1280 by 720 pixels in size.</p>
+</blockquote>
+<p>To understand the topic discussed, one may need to skim through the blog post/YouTube video. Then, try different versions of your understanding of the topic discussed and see what AI generates.</p>
+<p>The images are exported and then uploaded to the website.</p>
 
 
 </section>
