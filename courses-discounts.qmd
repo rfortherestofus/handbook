@@ -46,19 +46,15 @@ For groups, verification is easy. As long as they have 3+ users, they're good. A
 
 ## Verification: Students and Low-Income Locations
 
-If users have submitted enough information to verify their status, you can add them to an already existing coupon. There are two coupons:
-
-1. [STUDENT](https://rfortherestofus.com/cp/simple-commerce/coupons/9152e6de-1152-445f-89a6-c304a5c11a63/edit) (for students)
-
-1. [PPP50](https://rfortherestofus.com/cp/simple-commerce/coupons/0a8c4cc0-7055-4b44-a6a8-f791c680f08e/edit) (for those in low-income locations)
-
-For users who already have an account on the R for the Rest of Us site, please add them as follows:
-
-<div class="muse-video-player" data-video="4x3YxGp" data-links="0" data-logo="0" data-title="0" data-width="100%"></div><script src="https://muse.ai/static/js/embed-player.min.js"></script>
+If users have submitted enough information to verify their status, you can give them access to the discount as follows:
 
 For users who don't already have an account, you need to first create one for them before adding them to the coupon. You can do this as follows:
 
 <div class="muse-video-player" data-video="qsD33XD" data-links="0" data-logo="0" data-title="0" data-width="100%"></div><script src="https://muse.ai/static/js/embed-player.min.js"></script>
+
+Once the user has an account, you can then certify their status as follows:
+
+<div class="muse-video-player" data-video="YZvLHkU" data-links="0" data-logo="0" data-title="0" data-width="100%"></div><script src="https://muse.ai/static/js/embed-player.min.js"></script>
 
 If you are not sure whether a user should be eligible for a discount (maybe you're not sure they are actually a student), please feel free to reach out to David to ask. In general, I err on the side of assuming people are telling the truth. I'd rather give someone a discount who may not be telling the truth than not give a discount to someone who should receive it.
 
