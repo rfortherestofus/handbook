@@ -2,12 +2,6 @@
 title: "Email Marketing"
 ---
 
-```{r}
-library(tidyverse)
-library(reactable)
-
-source("functions.R")
-```
 
 Email marketing is the main way that R for the Rest of Us brings in revenue.
 
