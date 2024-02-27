@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: b39a33ae-2050-486e-bfb7-e2696c2181dd
+      url: 'https://handbook.rfortherestofus.com'
