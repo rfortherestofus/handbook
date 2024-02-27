@@ -1,0 +1,20 @@
+on:
+    push:
+      branches: main
+  
+  name: Publish
+  
+  jobs:
+    build-deploy:
+      runs-on: ubuntu-latest
+      container: rocker/verse:4.3.0
+      steps:
+  
+        - name: Check out repository
+          uses: actions/checkout@v3
+          
+        - name: Render and Publish to Netlify
+          uses: quarto-dev/quarto-actions/publish@v2
+          with:
+            target: netlify
+            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
