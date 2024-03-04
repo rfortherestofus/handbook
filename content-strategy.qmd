@@ -1,12 +1,8 @@
 ---
-title: "Content Strategy"
+title: "Content"
 ---
 
 We produce two types of content: free and paid content. The free content is inteded to drive awareness of and signups for paid content. 
-
-## Paid Content
-
-Courses are obviously paid content, as are consulting and custom training.
 
 ## Free Content
 
@@ -15,9 +11,12 @@ We use free content to build authority so that people see R for the Rest of Us a
 In 2024, I plan to produce 4 different types of content:
 
 1. Long-form **blog posts** and accompanying **YouTube videos** (one blog post/video every other week)
-2. **R in 2 Minutes** videos that highlight one tip in 2 minutes or less (one video every week)
+2. **R in 2 Minutes YouTube videos** and accompanying **blog posts** that highlight one tip in 2 minutes or less (one video every week)
 3. **What's New in R** emails that highlight three interesting packages/tutorials/etc in each email (one email every week)
-4. **Podcast** episodes (also released as videos if interviewee agrees) featuring interviews with people doing unique things with R (one episode per month)
+4. **Podcast** episodes (also released as **YouTube videos**) featuring interviews with people doing unique things with R (one episode per month)
 
-Each of these items gets sent out via [email](email-marketing.html) and [social media](social-media.html).
+Each of these items gets sent out via [email](email-marketing.qmd) and [social media](social-media.qmd).
 
+## Paid Content
+
+Courses are obviously paid content, as are consulting and custom training.

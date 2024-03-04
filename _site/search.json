@@ -57,34 +57,34 @@
   {
     "objectID": "content-strategy.html",
     "href": "content-strategy.html",
-    "title": "Content Strategy",
+    "title": "Content",
     "section": "",
     "text": "We produce two types of content: free and paid content. The free content is inteded to drive awareness of and signups for paid content.",
     "crumbs": [
       "Marketing",
-      "Content Strategy"
+      "Content"
     ]
   },
   {
     "objectID": "content-strategy.html#paid-content",
     "href": "content-strategy.html#paid-content",
-    "title": "Content Strategy",
+    "title": "Content",
     "section": "Paid Content",
     "text": "Paid Content\nCourses are obviously paid content, as are consulting and custom training.",
     "crumbs": [
       "Marketing",
-      "Content Strategy"
+      "Content"
     ]
   },
   {
     "objectID": "content-strategy.html#free-content",
     "href": "content-strategy.html#free-content",
-    "title": "Content Strategy",
+    "title": "Content",
     "section": "Free Content",
-    "text": "Free Content\nWe use free content to build authority so that people see R for the Rest of Us as worth purchasing things (courses, custom training, consulting services) from us.\nIn 2024, I plan to produce 4 different types of content:\n\nLong-form blog posts and accompanying YouTube videos (one blog post/video every other week)\nR in 2 Minutes videos that highlight one tip in 2 minutes or less (one video every week)\nWhat’s New in R emails that highlight three interesting packages/tutorials/etc in each email (one email every week)\nPodcast episodes (also released as videos if interviewee agrees) featuring interviews with people doing unique things with R (one episode per month)\n\nEach of these items gets sent out via email and social media.",
+    "text": "Free Content\nWe use free content to build authority so that people see R for the Rest of Us as worth purchasing things (courses, custom training, consulting services) from us.\nIn 2024, I plan to produce 4 different types of content:\n\nLong-form blog posts and accompanying YouTube videos (one blog post/video every other week)\nR in 2 Minutes YouTube videos and accompanying blog posts that highlight one tip in 2 minutes or less (one video every week)\nWhat’s New in R emails that highlight three interesting packages/tutorials/etc in each email (one email every week)\nPodcast episodes (also released as YouTube videos) featuring interviews with people doing unique things with R (one episode per month)\n\nEach of these items gets sent out via email and social media.",
     "crumbs": [
       "Marketing",
-      "Content Strategy"
+      "Content"
     ]
   },
   {
@@ -702,7 +702,7 @@
     "href": "social-media.html",
     "title": "Social Media",
     "section": "",
-    "text": "Social media is the main marketing strategy to help people become aware of R for the Rest of Us. The main platform we use is Twitter, as that’s where most R users are. We also market through LinkedIn.\nAll social media is designed not so much to sell directly (though we do a bit of this), but to get people on the R for the Rest of Us email list (see Email Marketing). Once they are on that list, we attempt to educate them and convince them to buy products form us.",
+    "text": "As of 2024, we post mostly on LinkedIn.",
     "crumbs": [
       "Marketing",
       "Social Media"
