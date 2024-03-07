@@ -12,14 +12,14 @@ In 2024, I plan to produce 4 different types of content:
 
 1. Long-form **blog posts** and accompanying **YouTube videos** (one blog post/video every other week)
 2. **R in 2 Minutes YouTube videos** and accompanying **blog posts** that highlight one tip in 2 minutes or less (one video every week)
-3. **What's New in R** emails that highlight three interesting packages/tutorials/etc in each email (one email every week on Thursdays)
-4. **Podcast** episodes (also released as **YouTube videos**) featuring interviews with people doing unique things with R (one episode every other week)
+3. **What's New in R** emails that highlight three interesting packages/tutorials/etc in each email (one email every other week)
+4. **Podcast** episodes (also released as **YouTube videos**) featuring interviews with people doing unique things with R (one episode every four weeks)
 
 Each of these items gets sent out via [email](email-marketing.qmd) and [social media](social-media.qmd).
 
 ### Podcast
 
-Podcast episodes are recorded using Squadcast. From there, the raw video files are downloaded and imported into Descript. Joe lines up the files manually so that the screencast portion of the interview is aligned with the other video files. Podcast episodes should be edited using the video files. Please use a side by side template (TODO: add link to it). Once a complete video version is created, a copy is made to create an audio version. In the audio version, the first half of the podcast is included, but as soon as the screenshare starts, we insert an audio clip of David saying something like "go to YouTube to watch this" (TODO: add link to this file).
+Podcast episodes are recorded using Squadcast. From there, the raw video files are downloaded and imported into Descript. Joe lines up the files manually so that the screencast portion of the interview is aligned with the other video files. Podcast episodes should be edited using the video files. Please use a side by side template (TODO: add link to it). Once a complete video version is created, a copy is made to create an audio version. In the audio version, the first half of the podcast is included, but as soon as the screenshare starts, we insert an audio clip of David saying "look at show notes for link to screencast."
 
 #### Ads
 
