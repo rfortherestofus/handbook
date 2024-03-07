@@ -6,7 +6,7 @@ title: "Project Management"
 
 Create a **GitHub repo** (set to private unless the client is ok with it being public):
 
-- Use the **README** to lay out the overall project scope, deliverables, etc.
+- Use the **README** to lay out the overall project scope, deliverables, deadlines, etc.
 - Use **issues** to manage code-related questions at a granular level.
 - If the project is large enough, use **milestones**. 
 
