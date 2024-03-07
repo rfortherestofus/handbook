@@ -35,7 +35,7 @@ website:
         - marketing-overview.qmd
         - branding.qmd
         - website.qmd
-        - content-strategy.qmd
+        - content.qmd
         - email-marketing.qmd
         - social-media.qmd
       - section: "Courses"
