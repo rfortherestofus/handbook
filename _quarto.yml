@@ -38,6 +38,7 @@ website:
         - content.qmd
         - email-marketing.qmd
         - social-media.qmd
+        - rin3-marketing.qmd
       - section: "Courses"
         contents: 
         - courses-overview.qmd
