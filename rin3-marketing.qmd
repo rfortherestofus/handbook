@@ -2,3 +2,4 @@
 title: "R in 3 Months"
 ---
 
+- [Final assignment videos](https://muse.ai/collections/ZFoAdFt)
