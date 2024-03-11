@@ -17,6 +17,44 @@ In 2024, I plan to produce 4 different types of content:
 
 Each of these items gets sent out via [email](email-marketing.qmd) and [social media](social-media.qmd).
 
+### Blog Posts and YouTube Videos
+
+### R in 2 Minutes Blog Posts and YouTube Videos
+
+Here are the steps to make and promote R in 2 Minutes videos.
+
+1. First, David records the video on Descript.
+1. Next, Joe edits the video, adding the R in 2 Minutes intro and outro.
+1. Joe creates a thumbnail using the R in 2 Minutes template in the [YouTube thumbnails project on Canva](https://www.canva.com/design/DAF9nXMmRH0/9wfI47oEUa20zFF20tcKGQ/edit?utm_content=DAF9nXMmRH0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
+1. Joe uploads the video to YouTube, setting the release date on the day the blog post is set to go live.
+1. Joe makes sure the YouTube video has a link to the blog post in the description. 
+1. Joe adds the thumbnail to the YouTube video.
+1. David writes a short text intro for the video.
+1. Joe takes the text intro and creates a new blog post. 
+1. Joe adds the thumbnail as the social image for the blog post in the SEO section. 
+1. Joe sets up an email to go out at 5:00am the day the blog post goes live (see text below).
+1. On the day that the R in 2 Minutes blog post and video is scheduled, Joe also sets the video to go up on LinkedIn. The LinkedIn post should just use the intro text as the body of the post.
+
+You can watch a video walkthrough of this here:
+
+<div class="muse-video-player" data-video="T4iH2pe" data-links="0" data-logo="0" data-title="0" data-width="100%"></div><script src="https://muse.ai/static/js/embed-player.min.js"></script>
+
+#### R in 2 Minutes email text
+
+Here is the template that should go in emails announcing new R in 2 Minutes blog posts/videos.
+
+> Hi friend,
+> 
+> I'm back with another short R in 2 Minutes video tutorial. This week, ADDINTROTEXTHERE.
+> 
+> Hope this video is helpful! If you have any feedback, just hit reply and let me know.
+> 
+> Cheers,
+>
+> David
+
+### What's New in R Emails
+
 ### Podcast
 
 Podcast episodes are recorded using Squadcast. From there, the raw video files are downloaded and imported into Descript. Joe lines up the files manually so that the screencast portion of the interview is aligned with the other video files. Podcast episodes should be edited using the video files. Please use a side by side template (TODO: add link to it). Once a complete video version is created, a copy is made to create an audio version. In the audio version, the first half of the podcast is included, but as soon as the screenshare starts, we insert an audio clip of David saying "look at show notes for link to screencast."
