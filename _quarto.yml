@@ -48,6 +48,7 @@ website:
         - courses-production.qmd
         - courses-marketing.qmd
         - courses-discounts.qmd
+        - rin3.qmd
       - section: "Consulting"
         contents:
         - consulting-overview.qmd
@@ -62,6 +63,8 @@ format:
     toc-depth: 4
     theme: litera
     css: styles.css
+    grid:
+      sidebar-width: 300px
 
 
 

@@ -1,0 +1,53 @@
+---
+title: "R in 3 Months"
+---
+
+## Scholarships
+
+### Emails
+
+Below is the text of emails that go out to applicants for R in 3 Months scholarships.
+
+#### Scholarship Recipients
+
+> Subject: Congratulations, you have been awarded a scholarship for R in 3 Months!
+>
+> Hello,
+> 
+> I'm delighted to inform you that you have been awarded a full scholarship for R in 3 Months! Supporting people learning R is something we feel passionately about, and we're honored to be able to help you on your R learning journey.
+> 
+> Please register for R in 3 Months using coupon code TODO. The price should be 0 for you. You will then receive an email with information about some things to do before our first live session on Thursday. 
+> 
+> If you have any questions in the meantime, please let me know. We look forward to working with you!
+> 
+> Cheers,
+> 
+> David
+
+#### Course Access
+
+> Subject: Your R in 3 Months Scholarship Application
+>
+> Hello,
+> 
+> Thank you for applying for a scholarship for R in 3 Months. I received many applications and, unfortunately, you were not among those selected. 
+> 
+> However, I really want to support you learning R so I'd like to give you free access to two courses (Fundamentals of R and Going Deeper with R). You can sign up for these for free using the coupon code TODO at checkout. Please note that you must use this email address for the coupon to work. 
+> 
+> If you have any questions, please let me know. Best wishes on your R journey!
+> 
+> Cheers,
+> 
+> David
+
+#### People Who Do Not Receive Scholarships or Course Access
+
+> Subject: Your R in 3 Months Scholarship Application
+>
+> Hello,
+> 
+> Thank you for applying for a scholarship for R in 3 Months. I received many applications and, unfortunately, you were not among those selected. I wish you best of luck on your R journey.
+> 
+> Cheers,
+> 
+> David
