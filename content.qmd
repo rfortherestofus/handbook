@@ -19,11 +19,23 @@ Each of these items gets sent out via [email](email-marketing.qmd) and [social m
 
 ### Long-Form Blog Posts and YouTube Videos
 
-Blog posts are written in the [blog repo](https://github.com/rfortherestofus/blog) as Quarto files. From there, they are imported as blog posts on the website using the procedures outlined [here](https://github.com/rfortherestofus/rfortherestofus.com?tab=readme-ov-file#quarto-importer).
+Blog posts are written in the [blog repo](https://github.com/rfortherestofus/blog) as Quarto files. 
 
-Almost all blog posts have an accompanying YouTube video. YouTube videos are scheduled to go live a few hours before the blog post to ensure the videos show up.
+From there, they are imported as blog posts on the website using the procedures outlined [here](https://github.com/rfortherestofus/rfortherestofus.com?tab=readme-ov-file#quarto-importer).
 
-The day a new blog post goes live, we also send out an email announcing it. 
+Joe creates a featured image for the blog post using AI and this Canva template (TODO: add link). 
+
+Almost all blog posts have an accompanying YouTube video. 
+
+David records the video in Descript.
+
+Joe edits the video and uploads it to YouTube. 
+
+Joe also creates a thumbnail by adapting the blog post featured image template in the right size for YouTube. 
+
+YouTube videos are scheduled to go live a few hours before the blog post to ensure the videos show up.
+
+The day a new blog post goes live, we also send out an email at 5:00am announcing it. David writes this email. Joe then adapts the email into a LinkedIn post that goes out at 8:00am. 
 
 ### R in 2 Minutes Blog Posts and YouTube Videos
 
@@ -89,13 +101,17 @@ Here is the template that should go in emails announcing new R in 2 Minutes blog
 
 ### Podcast (Audio and Video)
 
-Podcast episodes are recorded using Squadcast. From there, the raw video files are downloaded and imported into Descript. Joe lines up the files manually so that the screencast portion of the interview is aligned with the other video files. Podcast episodes should be edited using the video files. Please use the [side by side template](https://web.descript.com/11d9eca5-cccd-4bd0-8c71-09fa78670076). Once a complete video version is created, a copy is made to create an audio version. In the audio version, the first half of the podcast is included, but as soon as the screenshare starts, we insert an audio clip of David saying "look at show notes for link to screencast."
+Podcast episodes are recorded using Squadcast. 
+
+From there, the raw video files are downloaded and imported into Descript. Joe lines up the files manually so that the screencast portion of the interview is aligned with the other video files. Podcast episodes should be edited using the video files. Please use the [side by side template](https://web.descript.com/11d9eca5-cccd-4bd0-8c71-09fa78670076). 
+
+Once a complete video version is created, a copy is made to create an audio version. In the audio version, the first half of the podcast is included, but as soon as the screenshare starts, we insert an audio clip of David saying "look at show notes for link to screencast."
 
 #### Ads
 
 The goal of all content is to get people on the R for the Rest of Us email list. Toward this end, we insert ads in podcast episodes (both audio and video versions). 
 
-In the audio versions, we find a place about halfway through and insert an ad telling people to sign up for the newsletter.
+In the audio versions, we find a place about halfway through and insert an ad telling people to sign up for the newsletter and put a link to the R for the Rest of Us newsletter in the podcast notes.
 
 In the video versions, we add a link to the R for the Rest of Us newsletter in the video description.
 
