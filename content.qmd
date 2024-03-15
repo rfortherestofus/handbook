@@ -119,6 +119,13 @@ In the video versions, we add a link to the R for the Rest of Us newsletter in t
 
 Podcast episodes are released every other week, on weeks when there is not a new blog post. 
 
+### Subtitles
+
+For all videos on YouTube, we add subtitles. To do this:
+
+1. Joe downloads episode Transcript from Muse using the Plain text (.txt) option
+1. On YouTube, Joe adds the .txt file (open video from channel content list, click on pencil icon on the Subtitles button, choose Upload file, select ‘Without timing’ in the ‘Select subtitle file type’ dialog box, hit continue to upload the .txt file saved on computer, edit transcript where necessary, save changes) (edited)
+
 ## Paid Content
 
 Courses are obviously paid content, as are consulting and custom training.
