@@ -42,7 +42,7 @@ The day a new blog post goes live, we also send out an email at 5:00am announcin
 Here are the steps to make and promote R in 2 Minutes videos.
 
 1. First, David records the video on Descript.
-1. David writes a short text intro for the video.
+1. David writes a title and short text intro for the video.
 1. Next, Joe edits the video, adding the R in 2 Minutes intro and outro.
 1. Joe creates a thumbnail using the R in 2 Minutes template in the [YouTube thumbnails project on Canva](https://www.canva.com/design/DAF9nXMmRH0/9wfI47oEUa20zFF20tcKGQ/edit?utm_content=DAF9nXMmRH0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
 1. Joe uploads the video to YouTube, setting the release date on the day the blog post is set to go live.
