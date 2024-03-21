@@ -4,7 +4,9 @@ title: "R in 3 Months"
 These are some of the things we have available to promote on social media and in emails:
 - [Final assignment videos](https://muse.ai/collections/ZFoAdFt)
 - Sample lessons
-- Sample feedback videos [1](https://muse.ai/v/oopq2yZ-R-in-3-Months-Sample-Feedback-Video), [2](https://muse.ai/v/mggKZxF-R-in-3-Months-Sample-Feedback-Video) 
+- Sample feedback videos
+  - [Rin3 Sample Feedback Video 1](https://muse.ai/v/oopq2yZ-R-in-3-Months-Sample-Feedback-Video)
+  - [Rin3 Sample Feedback Video 2](https://muse.ai/v/mggKZxF-R-in-3-Months-Sample-Feedback-Video) 
 - [Sample live sessions](https://muse.ai/v/zps3Dob-R-in-3-Months-Sample-Live-Session)
 - Student discounts (50%)
 - PPP pricing (50%)
