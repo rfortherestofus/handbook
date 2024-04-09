@@ -30,7 +30,7 @@ By bringing in issues to Linear, we also get to add additional metadata to issue
 
 For larger projects, we can create **milestones** and set due dates for the milestones. This allows us to get an overview of upcoming milestones when looking at projects in a Gantt-style view.
 
-When creating a new project in Linear, also set a **project lead**. Doing so will set a reminder every Friday at 8am Pacific for them to post an update about how things are going with the project. When posting this update, please also post about the project health using the built-in tool for that. 
+When creating a new project in Linear, also set the **start date**, **target date**, and **project status** to In Progress. Also set a **project lead**, which will set a reminder every Friday at 8am Pacific for them to post an update about how things are going with the project. When posting this update, please also post about the project health using the built-in tool for that. 
 
 ## Twist
 

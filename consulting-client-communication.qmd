@@ -9,4 +9,4 @@ The type of communication we use with clients depends on the client.
 - If clients are comfortable working in GtiHub and we decide it is appropriate to have them collaborate on GitHub, feel free to add them to the repo.
 - If they don't want to work in GitHub (most don't), email is generally best.
 
-I generally try to send clients updates by email about overall progress every 1-2 weeks to make sure they know what's going on and see if they have any questions.
+I generally try to send clients updates by email about overall progress every 1-2 weeks to make sure they know what's going on and see if they have any questions. The timing of updates should be determined in the initial project proposal.
