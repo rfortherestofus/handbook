@@ -16,7 +16,7 @@ We do the following tasks in the first week of each month:
 
 Each quarter we reconcile accounts in QuickBooks. This is done by getting statements from both Advantis Credit Union and Mercury and then entering balances [here](https://app.qbo.intuit.com/app/reconcile). This compares the balances in my bank accounts to those in QuickBooks to make sure everything matches up.
 
-I also pay course instructors each quarter. You can go to the [commission report on the website](https://rfortherestofus.com/wp-admin/admin.php?page=wcpv-commissions) and see which commissions are unpaid. You can total these up for each instructor (they're called a vendor on this part of the website) and then pay them through Gusto. Each instructor gets an advance so they only start receiving commissions when they earn more than the advance. 
+We also pay course instructors each quarter. To calculate the amount to pay them, run [this code](https://github.com/rfortherestofus/rru-finances/blob/main/R/pay-instructors-and-1percent.R) (update the `date_last_run` variable first), which will give you a report of who is owed what. Each instructor gets an advance so they only start receiving commissions when they earn more than the advance. 
 
 ## Annual Tasks
 
