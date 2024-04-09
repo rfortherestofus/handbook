@@ -30,3 +30,5 @@ Other places internal communication happens include:
 ## External Communication
 
 External communication with clients and others happens mostly through email.
+
+Some clients use GitHub and we collaborate with them there. 
