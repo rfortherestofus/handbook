@@ -42,7 +42,7 @@ website:
       - section: "Courses"
         contents: 
         - courses-overview.qmd
-        - courses-legal-financial.qmd
+        - courses-terms.qmd
         - courses-curriculum.qmd
         - courses-recording.qmd
         - courses-production.qmd
