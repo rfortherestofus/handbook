@@ -52,7 +52,9 @@ website:
       - section: "Consulting"
         contents:
         - consulting-overview.qmd
-        - project-management.qmd
+        - consulting-proposals.qmd
+        - consulting-project-management.qmd
+        - consulting-client-communication.qmd
       - section: "Code"
         contents:
         - code-style.qmd

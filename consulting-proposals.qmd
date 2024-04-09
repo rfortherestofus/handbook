@@ -1,0 +1,27 @@
+---
+title: "Proposals"
+---
+
+## Initial Call
+
+Most consulting projects begin with an initial call. This is usually a 30-minute call to learn more about the client's needs and figure out whether we are a good fit to help them.
+
+## Proposals
+
+If we are a good fit, we follow up by putting together a proposal. Usually, this involves asking additional questions by email and, possibly, another call. 
+
+To write a proposal, we first create a new project in Linear and add it to the Proposal roadmap. From there, we create a new document using the Proposal Outline template. 
+
+One thing we have done in the past is to share a draft version of the proposal with clients for their feedback. This enables them to provide feedback and ensures we are meeting their needs. To do this, copy the proposal from Linear (minus the pricing info) into a Google Doc and share it with the client.
+
+Once proposals are ready to be sent, copy them into PandaDoc and send them.
+
+## Items to Include in Proposals
+
+- Specific scope
+- Specific timeline
+- Requirements of us (getting back to client, timeframe for sending updates, etc)
+- Requirements of client (get back to us within certain time frame etc)
+- Pricing
+- Language about needing to adjust pricing if scope/timeline changes
+

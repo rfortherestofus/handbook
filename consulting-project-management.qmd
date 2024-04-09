@@ -1,0 +1,38 @@
+---
+title: "Project Management"
+---
+
+## Overview
+
+We use three primary tools for project management:
+
+1. GitHub to manage code and issues
+2. Linear to set internal due dates and have internal discussions about issues
+3. Twist to have general discussions about projects
+
+## GitHub
+
+Create a **GitHub repo** (set to private unless the client is ok with it being public):
+
+- Use the **README** to lay out the overall project scope, deliverables, deadlines, etc.
+- Use **issues** to manage code-related questions at a granular level.
+
+## Linear
+
+We use Lienar for project management. After creating a new repo in GitHub, create a new associated project in Linear. You'll then want to link the GitHub repo to Linear using the GitHub integration. This will ensure that all issues and associated discussions on GitHub also show up in Linear. Issues added in GitHub will show up in the Triage section on Linear and you'll need to move them manually to the right project. You cannot add issues from Linear to GitHub. 
+
+By bringing in issues to Linear, we also get to add additional metadata to issues to help us manage things. Specifically, we use:
+
+1. **Due dates** to show when an issue is due
+1. **Status** to show what is happening with an issue
+1. **Estimates** to show how much work an issue is
+1. **Cycles**, which for our purposes just enables David to see what work is happening in which week
+
+For larger projects, we can create **milestones** and set due dates for the milestones. This allows us to get an overview of upcoming milestones when looking at projects in a Gantt-style view.
+
+When creating a new project in Linear, also set a **project lead**. Doing so will set a reminder every Friday at 8am Pacific for them to post an update about how things are going with the project. When posting this update, please also post about the project health using the built-in tool for that. 
+
+## Twist
+
+Create a thread in the #consulting channel on Twist for the project. This is a good place for things we'd like to keep confidential and general updates (because we work more and more with clients directly in GitHub, that isn't the best place for confidential discussions). 
+
