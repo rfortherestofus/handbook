@@ -19,23 +19,20 @@ Each of these items gets sent out via [email](email-marketing.qmd) and [social m
 
 ### Long-Form Blog Posts and YouTube Videos
 
-Blog posts are written in the [blog repo](https://github.com/rfortherestofus/blog) as Quarto files. 
-
-From there, they are imported as blog posts on the website using the procedures outlined [here](https://github.com/rfortherestofus/rfortherestofus.com?tab=readme-ov-file#quarto-importer).
-
-Joe creates a featured image for the blog post using AI and this Canva template (TODO: add link). 
-
-Almost all blog posts have an accompanying YouTube video. 
-
-David records the video in Descript.
-
-Joe edits the video and uploads it to YouTube. 
-
-Joe also creates a thumbnail by adapting the blog post featured image template in the right size for YouTube. 
-
-YouTube videos are scheduled to go live a few hours before the blog post to ensure the videos show up.
-
-The day a new blog post goes live, we also send out an email at 5:00am announcing it. David writes this email. Joe then adapts the email into a LinkedIn post that goes out at 8:00am. 
+1. When there is a new blog post, David adds the information about it (link to the blog post, Descript link, and email text) to [this website](https://blogcontentinfo.netlify.app/).
+1. David writes a blog post in the [blog repo](https://github.com/rfortherestofus/blog) as a Quarto document. 
+1. David adds the blog post as a draft to the website using the procedures outlined [here](https://github.com/rfortherestofus/rfortherestofus.com?tab=readme-ov-file#quarto-importer).
+1. Joe determines the date that the blog post should go out, based on the schedule laid out above. This is important because the link to the blog post depends on the date it is published, and that link will be added to the YouTube video description below.
+1. Assuming there is an accompanying video, David records that in Descript. 
+1. Joe edits the video in Descript.
+1. David approves the edited video.
+1. Joe uploads the video to YouTube. 
+1. Joe creates a featured image for the blog post and a thumbnail for the YouTube video and adds them.
+1. Joe writes the description for the YouTube video. The description should summarize the video content and, most importantly, provide a link to the accompanying blog post where people can read the tutorial and see the code used in the video. 
+1. Joe schedules the YouTube video to go live a few hours before the blog post to ensure the videos show up.
+1. Joe adds the YouTube video at the top of the blog post.
+1. Joe sets the email up in ConvertKit.
+1. Joe creates a LinkedIn post to go out the day the email goes out. The content of the LinkedIn post should be adapted from the email content.
 
 ### R in 2 Minutes Blog Posts and YouTube Videos
 
