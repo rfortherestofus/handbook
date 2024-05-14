@@ -3,3 +3,10 @@ title: "Proposals"
 ---
   
 We use PandaDoc to create proposals for clients.
+
+Proposals should always lay out information on:
+
+1. Scope
+1. Timeline
+1. Meeting schedule
+1. How we will communicate requests and feedback
