@@ -17,6 +17,12 @@ In 2024, I plan to produce 4 different types of content:
 
 Each of these items gets sent out via [email](email-marketing.qmd) and [social media](social-media.qmd).
 
+## Content Calendar
+
+We have a content calendar to get an overall sense of what's going out when. You can find that on [Airtable](https://airtable.com/appT0WIaSbe04ZU4r/tbliMwZdWOcjN5FS8/viw53Loqe6w5UEbZL?blocks=hide).
+
+[I recorded a video to show how this works](https://muse.ai/vt/4roR5EG).
+
 ### Long-Form Blog Posts and YouTube Videos
 
 1. When there is a new blog post, David adds the information about it (link to the blog post, Descript link, and email text) to [this website](https://blogcontentinfo.netlify.app/).
