@@ -20,7 +20,7 @@ There are several ways that people get onto the R for the Rest of Us email list:
 
 We have four main types of emails that go out to people:
 
-- **What's New in R** emails are emails with three interesting packages/tutorials/etc. They go out Monday mornings at 5am, except when Monday is a holiday in the United States, in which case they should go out Tuesday at 8am. These are sent manually as broadcasts. 
+- **What's New in R** emails are emails with three interesting packages/tutorials/etc. They go out Monday mornings at 5am, except when Monday is a holiday in the United States, in which case they should go out Tuesday at 5am. These are sent manually as broadcasts. 
 
 - **Master Sequence** emails are prewritten emails that educate people on a variety of R topics. They often include links to blog posts and other resources we have created. They go out Wednesday mornings at 5am. The [Master Automation](https://app.convertkit.com/automations/1271379/edit) automation looks for people who get the Flag - Newsletter Signup, Interested - R in 3 Months, Purchased - Course, or What's New in R tags added and then adds them to the [Master Sequence sequence](https://app.convertkit.com/sequences/1690383). 
 
