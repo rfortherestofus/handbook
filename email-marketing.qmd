@@ -28,4 +28,4 @@ We have four main types of emails that go out to people:
 
 # Course Signup Emails
 
-- **Course signup emails** go out on purchase of courses. These sequences send out a series of emails that tell them what the various lessons cover. They go out on various weekdays at 6am.
+- **Course signup emails** go out on purchase of courses. These sequences send out a series of emails that tell them what the various lessons cover. They go out on various weekdays at 8am.
