@@ -33,6 +33,7 @@ Each of these items gets sent out via [email](email-marketing.qmd) and [social m
 1. Joe adds the YouTube video at the top of the blog post.
 1. Joe sets the email up in ConvertKit.
 1. Joe creates a LinkedIn post to go out the day the email goes out. The content of the LinkedIn post should be adapted from the email content.
+1. Joe creates two video clips to go out on LinkedIn the Friday and Tuesday after a new blog post is released. 
 
 ### R in 2 Minutes Blog Posts and YouTube Videos
 
