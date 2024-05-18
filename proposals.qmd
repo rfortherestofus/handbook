@@ -10,4 +10,5 @@ Proposals should always lay out information on:
 1. Timeline
 1. Meeting schedule
 1. How we will communicate requests and feedback
+1. Who will maintain code
 1. What support looks like (and how long it lasts) after launch
