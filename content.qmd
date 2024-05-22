@@ -25,7 +25,7 @@ We have a content calendar to get an overall sense of what's going out when. You
 
 ### Long-Form Blog Posts and YouTube Videos
 
-1. When there is a new blog post, David adds the information about it (link to the blog post, Descript link, and email text) to [this website](https://blogcontentinfo.netlify.app/).
+1. When there is a new blog post, David adds the information about it (link to the blog post, Descript link, and email text) to the Todoist task.
 1. David writes a blog post in the [blog repo](https://github.com/rfortherestofus/blog) as a Quarto document. 
 1. David adds the blog post as a draft to the website using the procedures outlined [here](https://github.com/rfortherestofus/rfortherestofus.com?tab=readme-ov-file#quarto-importer).
 1. Joe determines the date that the blog post should go out, based on the schedule laid out above. This is important because the link to the blog post depends on the date it is published, and that link will be added to the YouTube video description below.
