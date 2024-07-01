@@ -9,12 +9,34 @@ All the Discord server structure should be reviewed and redesigned, if needed. C
 
 #### Participants roles
 
-As participants register, they will provide their Discord handles and join the server through a link provided in the "Sign up for Discord" lesson. At the beggining of each cohort, this link must be reviewed and updated, as it might have expired.
+As participants register, they will provide their Discord handles and join the server through a link provided in the "Sign up for Discord" lesson. At the begining of each cohort, this link must be reviewed and updated, as it might have expired.
 Coaches must rename participants' display names with their real names and surnames, and later assign them the role of "student" or "scholar". Participants would then gain access to the active channels.
 
 ## Assigning coaches
 
-Each participant will be assigned one coach, who will be responsible for giving feedback to their assignments, answering their questions and having 1:1 meetings with them. 
+Each participant will be assigned one coach, who will be responsible for giving feedback to their assignments, answering their questions and having 1:1 meetings with them. Coaches will be randomly assigned to participants and manually rearranged for better matches in time zones and working areas. 
+
+Then, participants should be assigend coaches manually in the backend of the course website. The process involves the following steps:
+
+1. Go to the "Users" section of the site: https://rfortherestofus.com/cp/users. Search for the participant's email address in the second search bar.
+
+![](assets/assign-coaches-1.png)
+
+2. Click the user's email that showed up in the search results, then click the Membership tab.
+
+![](assets/assign-coaches-2.png)  
+
+3. Scroll all the way down to the bottom of the page and you'll see "R in 3 Months Teaching Assistant" - click the "Link" button under that.
+
+![](assets/assign-coaches-3.png)
+
+4. Click the checkbox next to the coach you want to assign to that student (when you click it, the page automatically closes, but nothing has been saved yet! One more step!)
+
+![](assets/assign-coaches-4.png)
+
+5. Scroll back up to the top of the page and click "Save" in the top right, and make sure a small pop-up appears in the bottom left saying it saved successfully.
+
+![](assets/assign-coaches-5.png)
 
 # During the course
 
@@ -22,74 +44,149 @@ Each participant will be assigned one coach, who will be responsible for giving 
 
 ###  Reminder email
 
-One of the coaches send a reminder email every Monday, which contains the following:
+One of the coaches send a reminder email every Monday, following the template below:
 
-* Subject line in the format "[R in 3 Months] Week XX reminder email"  
-* Theme of the week and what will be discussed in the live session  
-* Link to the Zoom room  
-* Date and time of the live session in Pacific Time (and a link to a time converter)  
-* Reminder of any assignment due that week  
-* Links and information on how to look for help (link to book 1:1 meetings with coaches, invite to office hours, etc.)  
+::: {.callout-note appearance="minimal"}
+
+Hello!
+
+This is your weekly reminder email!
+
+**Live session**
+
+We’ll meet `<this/next>` Thursday, `<date>`, at 10am PT to talk about `<subject>`. Here’s the Zoom link: `<add zoom link>`
+
+
+**Co-working session**
+
+This week we talked about `<subject>`! Remember that we meet every `<date>` at 10am PT. Here’s the Zoom link to join: `<add zoom link>`
+
+**Assignment**
+
+`<assignment description>`
+
+Remember that you can also book a 1:1 meeting with your coach to ask questions or get help with the assignment. Here’s the link to book a meeting: `<add link>`
+
+See you on Thursday!
+
+:::
 
 The goal of the reminder email is to make sure all participants have the most up-to-date information about the tasks of the week, so they don't miss anything. All participants' emails should be added as BCC.  
 
-### Events on Discord 
-One of the coaches set the events of the week every Monday on Discord. They include the live session and office hours, if they are happening that week. The goal of setting these events is to add an option for those who need extra notification, as events on Discord notify the participants when the event starts and redirects them to the Zoom room where the event is happening.
 
 ## Thursdays - live session day
 On the day of the live session, David will start the Zoom room and the recording. The live session will last one hour, and recording will be made available on the website.  
 The assigned coach will take notes during the live session of:  
+
 * The participants list from the attendees list.  
+
 * Every link shared in the chat.  
+
 * Any important tips, comments and questions made by the participants.  
 
-Once the live session ends, the recording will be automatically uploaded to a shared Google Drive folder, and the assigned coach will be responsible for downloading the recording, uploading it into Muse.ai, creating a lesson in the corresponding Week section, and linking the video from Muse.ai into the lesson. In the lesson resources section, the assigned coach will add any resources shared or mentioned during the live session.  
+Once the live session ends, the recording will be automatically uploaded to a shared Google Drive folder, and the assigned coach will be responsible for downloading the recording, uploading it into `muse.ai`, creating a lesson in the corresponding Week section, and linking the video from `muse.ai` into the lesson. In the lesson resources section, the assigned coach will add any resources shared or mentioned during the live session.  
 
 ### Follow-up email  
-On the afternoon after the live session, the assigned coach will send a follow-up email that contains important information shared on the live session, and replies to the reminder email sent on Monday. It should contain:  
+On the afternoon after the live session, the assigned coach will send a follow-up email that contains important information shared on the live session, and replies to the reminder email sent on Monday. It should follow the template below:  
 
-* Subject line in the format "[R in 3 Months] Week XX follow-up email"  
-* Theme of the week and what was discussed in the live session (including important housekeeping topics)  
-* Link to the recording on the course website  
-* Reminder of any assignment due that week  
-* Links and information on how to look for help (link to book 1:1 meetings with coaches, invite to office hours, etc.)  
+::: {.callout-note appearance="minimal"}
+`Subject: [R in 3 Months] Week <#> follow-up`
+
+Hello all! 👋
+
+This is your Week <number> follow-up email, with information about the live session and extra resources for you to keep learning.
+
+**📹 Recording:**
+
+You can watch the recording and follow the transcript here `<add link to the live session lesson>`. 
+
+**🛝 Slides:**  
+
+Slides are available in the link above and here `<add link to the slides>`.
+
+**📚 Resources shared during class:**
+
+They are all available in the “Learn More” section of the live session lesson on our website!
+
+**🤖 Discord:**
+
+`<special topics from Discord>`
+
+And come say hello to `<pet>`!
+
+**📆 Next week:**
+
+`<what we’ll do next week>`
+
+As always, if you have any questions, concerns, or comments, please share them with us!
+
+See you around!
+:::
 
 The goal of this email is to provide a short summary and references that participants can refer to in the future, and to convey the most important information for those who couldn't attend the live session.
 
 ## Other days - community support
 
-Also on Mondays and Thursdays, but mainly during the other days of the week, the coaches will work on supporting the community by answering questions, animating the Discord server, replying to emails and checking-in on them regularly. Coaches usually block 15min/day for this task, although it can take more than one hour/day during the first month of the cohort.  
+Also on Mondays and Thursdays, but mainly during the other days of the week, the coaches will work on supporting the community by answering questions, animating the Discord server, replying to emails and checking-in on participants regularly. Coaches usually block 15min/day for this task, although it can take more than one hour/day during the first month of the cohort.  
 
 #### Co-working hours
 
-Co-working hours last 60min and are scheduled to happen in two different periods of the day, on dates and times defined by the coaches. The goal of the co-working hour is to provide a space for participants to ask direct questions, work together on the assingments, and talk about subjects not covered in the lessons.  
+Co-working hours last 60min and are scheduled to happen on Mondays (weekly or bi-weekly). The goal of the co-working hour is to provide a space for participants to ask direct questions, work together on the assignments, and talk about subjects not covered in the lessons.  
 
 **Co-working hours are not recorded**, but notes should be taken by the assigned coach to help the instructor group to identify where participants need more assistance and topics to be covered in the live sessions.
 
-<!--- For the next cohort, I suggest that the co-working hours are hosted and organized by the scholarship recipients. That way we involve them more actively and make this space more community-owned.--->
+The structure of the co-working hours is the following:
+
+1. **Introduction** (1min): The coach will introduce the session and lead an ice-breaker activity.
+
+2. **Tips and tricks** (10min): a coach will share a tip or lead a discussion focused on workflow and on the review of past lessons. Suggested topics are listed below:
+
+    * How to navigate RStudio
+    * How to turn in assignments and what to expect from feedbacks
+    * How to organize R projects
+    * How to how to inspect data
+    * How to use the help function in R
+    * How to use the R community to find answers
+    
+3. **Intro to activity of the day** (5min): The coach will introduce the activity of the day. These activities should follow the following format:
+
+    * **Warm-up** (10min): Participants will be given access to a specific dataset and will be asked to come up with a few questions about it. They should share their questions in the chat.
+    
+    * **Main activity** (20min): Participants will work together or alone on answering one of the questions they came up with. The coach will provide guidance and answer questions.
+    
+    * **Wrap-up** (10min): Participants will share what they did and provide feedback on each other's code. The coach will provide a summary of the session and will ask for suggestions for the next co-working hour.
 
 #### 1:1 meetings  
-1:1 meetings are booked by the participants to request 30min meetings with their assigned coaches. Coaches should set up the booking system in a way that every booking request generates a Zoom room and a reminder for the participant to share their questions, data and code in advance.  The booking system currently used is SavvyCalendar.
+1:1 meetings are booked by the participants to request 30min meetings with their assigned coaches. Coaches should set up the booking system in a way that every booking request generates a Zoom room and a reminder for the participant to share their questions, data and code in advance. It is recommended to add restrictions to allow participants to book calls with at least 48h in advance, and to add a cap on the number of meetings per week. The booking system currently used is SavvyCal.
 
 #### Answering questions on lessons  
 Comments and questions posted on the lessons should be approved and answered. David is the instructor responsible for replying the questions related specifically to the lessons, especially if they refer to the videos. Coaches are encouraged to reply these questions and to help approve the comments.
 
 #### Assignment feedback  
-Once a feedback is submitted, coaches have approximately three work days to provide feedback. These feedbacks can be a mix of text, code and video. Videos should be uploaded to Muse.ai and transcripts should be marked as viewable. When the feedback is complete, the coach should click on "Save & Publish" to make the feedback viewable.
+Once a feedback is submitted, coaches have approximately three work days to provide feedback. These feedbacks can be a mix of text, code and video. Videos should be uploaded to `muse.ai` and transcripts should be marked as viewable. When the feedback is complete, the coach should click on "Save & Publish" to make the feedback viewable.
 Each assignment submitted will generate a task on Todoist with a corresponding deadline. Once the feedback is submitted, the assigned coach should mark this task as complete.
 
+Feedbacks should be constructive, clear and concise. They should point out what was done well, what could be improved and how to improve it. Coaches should also provide resources and tips to help participants improve their skills, as well as suggestions on what to do next.
+
+Items that should be included in the feedback:
+
+* Project structure: how is the project organized? Is it easy to navigate? Are the files well named?
+* Code structure and style: is the code easy to read? Are the comments helpful? Are the variable names descriptive?
+* Use of lessons: did the participant use the concepts learned in the lessons? Are there any concepts that could be used to improve the code? Are there any misconceptions?
+* Implementation of previous feedback: did the participant implement the suggestions from previous feedback? Are there any recurring issues?
+
+
+
 # Final week
-After the final live session, participants will still be able to submit any assingments and get feedback from their coaches by the end of that month. 1:1 meetings can still be scheduled and completed by an end date defined by the coaches.  
+After the final live session, participants will still be able to submit any assignments and get feedback from their coaches by the end of that month. 1:1 meetings can still be scheduled and completed by an end date defined by the coaches.  
 In this final week, coaches work on wrapping up any remaining feedback, answering questions, and reflecting back on what has worked and what needs to change.
 
 # After the course is over
 ## Discord
-All cohort participants must lose their "student" or "scholar" status and become "alumni". This will make them lose access to most channels on the server, except for the "general" channel. They will, however, gain access to the "alumni-lounge" channel.  
+All cohort participants must lose their "student" or "scholar" status and become "alumni". This will make them lose access to most channels on the server, except for the "general" channel. 
 
 ## GitHub
-Coaches should remind their students to remove them from their GitHub repositories and stop sharing any files or folders on cloud storage.
-
-## Deleting information
+Coaches should remove themselves from participants' GitHub repositories and stop sharing any files or folders on cloud storage.
 
 ## Scholarships
 
