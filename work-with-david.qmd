@@ -1,0 +1,26 @@
+---
+title: "Working with David"
+---
+
+Here is a guide for how to work successfully with me.
+
+The most important thing is to communicate regularly. I'm very flexible, but I do need to know what you are doing, when you are doing it, etc. If you are in doubt about whether to share something with me or not, err on the side of sharing.
+
+## Where to Communicate
+
+Communication on code-related items will almost always take place on GitHub and/or Linear. Communicating there helps us to keep everything in one place, and allows me to review things with full context. 
+
+Twist is a great place for more general communication. Generally speaking, use threads set up for each project to discuss general things. For example, we might discuss whether a client request is within the scope of the project in Twist since we don't want to post this on GitHub.
+
+Direct messages on Twist work as a way to maintain direct contact. They are also the best way to notify me if you need immediate help. 
+
+As of mid-2025, I'm trying to be more intentional about reviewing work in batches so that I don't get distracted from deep work periods that I'm trying to give myself. I'm trying to respond to GitHub notifications in the afternoons Pacific time. If you need my immediate feedback in order to get unblocked, please message me on Twist. 
+
+I also like to have short check-ins with contractors most weeks. These are done by Zoom and allow us to discuss projects, roadblocks, etc. 
+
+## Weekly Plan
+
+It's helpful for me to know what you are working on each week and when you are working. Please message me on Twist on Monday to let you know what days you will be working that week and what you are planning to work on. Especially since everyone is a contractor with other things you work on, it's helpful for me to know when you are doing R for the Rest of Us things. 
+
+
+

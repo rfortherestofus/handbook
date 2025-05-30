@@ -25,6 +25,7 @@ website:
       - section: "Operations"
         contents:
         - david-work.qmd
+        - work-with-david.qmd
         - tools.qmd
         - communication.qmd
         - finances.qmd
