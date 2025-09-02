@@ -28,9 +28,7 @@ When users fill out this form, three things happens:
 
 ## R in 3 Months Discounts
 
-For R in 3 Months, many people just email directly. David will verify these and then pass them along to create an invoice for them in QuickBooks. You'll need to create a new customer and then a new invoice and send it to them, as shown in the video below.
-
-<div class="muse-video-player" data-video="Z5vp6M9" data-links="0" data-logo="0" data-title="0" data-width="100%"></div><script src="https://muse.ai/static/js/embed-player.min.js"></script>
+For R in 3 Months, many people just email directly. David will verify these and then pass them along to create an invoice for them in QuickBooks. You'll need to create a new customer and then a new invoice and send it to them.
 
 ## Verification: Groups
 
