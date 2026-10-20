@@ -25,12 +25,12 @@ We have a content calendar to get an overall sense of what's going out when. You
 
 ### Long-Form Blog Posts and YouTube Videos
 
-1. When there is a new blog post, David adds the information about it (link to the blog post, Descript link, and email text) to the Todoist task.
+1. When there is a new blog post, David adds the information about it (link to the blog post, Edit link, and email text) to the Todoist task.
 1. David writes a blog post in the [blog repo](https://github.com/rfortherestofus/blog) as a Quarto document. 
 1. David adds the blog post as a draft to the website using the procedures outlined [here](https://github.com/rfortherestofus/rfortherestofus.com?tab=readme-ov-file#quarto-importer).
 1. Joe determines the date that the blog post should go out, based on the schedule laid out above. This is important because the link to the blog post depends on the date it is published, and that link will be added to the YouTube video description below.
-1. Assuming there is an accompanying video, David records that in Descript. 
-1. Joe edits the video in Descript.
+1. Assuming there is an accompanying video, David records that in Capture. 
+1. Claude does a first-pass edit in Edit, then Joe finishes the edit (see [Recording and Editing Videos](video.qmd)).
 1. David approves the edited video.
 1. Joe uploads the video to YouTube. 
 1. Joe creates a featured image for the blog post and a thumbnail for the YouTube video and adds them.
@@ -45,9 +45,9 @@ We have a content calendar to get an overall sense of what's going out when. You
 
 Here are the steps to make and promote R in 2 Minutes videos.
 
-1. First, David records the video on Descript.
+1. First, David records the video in Capture.
 1. David writes a title and short text intro for the video.
-1. Next, Joe edits the video, adding the R in 2 Minutes intro and outro.
+1. Next, Joe edits the video in Edit, adding the R in 2 Minutes intro and outro.
 1. Joe creates a thumbnail using the R in 2 Minutes template in the [YouTube thumbnails project on Canva](https://www.canva.com/design/DAF9nXMmRH0/9wfI47oEUa20zFF20tcKGQ/edit?utm_content=DAF9nXMmRH0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
 1. Joe uploads the video to YouTube, setting the release date on the day the blog post is set to go live.
 1. Joe makes sure the YouTube video has a link to the blog post in the description. 

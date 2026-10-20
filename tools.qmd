@@ -52,9 +52,7 @@ The website runs on **Statamic** and is hosted by **Digital Ocean**. Website ana
 
 ## Video Creation
 
-When providing quick feedback videos, we use **CleanShot**.
-
-To record and edit videos for courses, we use **Descript**.
+We use three apps we built ourselves. **Capture** (a Mac app) takes screenshots, quick videos, recording sessions and livestreams. Screenshots and quick feedback videos go to **Share**. Recordings go to **Edit**, our video editor. See [Recording and Editing Videos](video.qmd) for how we use them.
 
 ## Video Hosting
 

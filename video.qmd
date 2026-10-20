@@ -1,0 +1,129 @@
+---
+title: "Recording and Editing Videos"
+---
+
+We record and edit video with three apps we built ourselves. Together they replace CleanShot and Descript.
+
+| App | What it's for | Where |
+|---|---|---|
+| **Capture** | The Mac app that takes screenshots, quick videos, full recording sessions and livestreams. It also renders the exports from Edit. | Menu bar on David's Mac (the viewfinder icon) |
+| **Share** | Links to screenshots and quick videos, with comments. The replacement for CleanShot Cloud. | [share.rfor.us](https://share.rfor.us) |
+| **Edit** | The video editor. Editing is transcript-driven, like Descript: cutting words cuts the video. | [edit.rfortherestofus.com](https://edit.rfortherestofus.com) |
+
+Share and Edit are separate apps with separate logins. Old CleanShot links on `show.rfor.us` still work: they redirect to the same capture on Share.
+
+## Screenshots and Quick Videos
+
+Screenshots and quick videos go from Capture to Share. They're for quick feedback, bug reports and walkthroughs, not for videos we publish.
+
+Capture uses the same shortcuts CleanShot did:
+
+| Action | Shortcut |
+|---|---|
+| Screenshot | ⇧⌘4 |
+| Screenshot and annotate | ⇧⌘6 |
+| Quick video (start and stop) | ⇧⌘I |
+
+- **Screenshots:** drag to select a region, or press Space to pick a window. The image and the Share link both go on the clipboard. A thumbnail in the corner lets you annotate, copy or delete it.
+- **Annotating:** arrows, lines, boxes, text, blur, highlight, spotlight and crop, in our brand colors. Saving replaces the image behind the same link, so a link you already sent shows the annotated version. You can reopen a screenshot later (from Capture's Recent menu, or "Annotate in Capture" in Share's library) and the arrows and boxes are still movable.
+- **Quick videos:** select a region or the whole screen, optionally add a camera bubble, and record. The link is copied as soon as you stop. Capture evens out the volume and transcribes the video on the Mac, and the transcript shows up on the Share page.
+- **Share:** the library searches titles, transcripts and the text inside screenshots. Each capture can have a password, an expiry date, downloads on or off, and comments on or off. Viewers can comment on a spot in an image or a moment in a video. Adding `?t=83` to a video link starts it at 1:23.
+
+Quit CleanShot if it's still installed. Both apps react to the same shortcuts.
+
+## Recording Videos
+
+Everything we publish (Ally lessons, blog post videos, R in 2 Minutes, course lessons David records) is recorded in Capture and edited in Edit.
+
+### Recording a Session
+
+Start a recording with **Record Session** in Capture's menu (⌃⌥⌘R), or with **New project > Record with Capture** in Edit. Pick the screen, its resolution, the cameras and the microphone, then hit Record. A small pill on the recorded screen shows the time and has Pause and Stop. It never appears in the video.
+
+When you stop, a panel asks for the project name and a template (Ally, for example). Pick one, or let the last-used template go after five seconds. You can also choose **Add to existing** to add a second sitting to a project that's already in Edit.
+
+Capture then does the rest on the Mac:
+
+- Every input is recorded to its own full-quality file, all in sync, so the editor can switch between screen and camera at any word.
+- The audio gets noise removal, the "Radio" voice preset and volume leveling.
+- The recording is transcribed word by word.
+- Everything uploads to Edit as a new project, and a notification links to it when it's ready.
+
+To record a voiceover for a spot in an existing edit, use **Record voiceover here** in Edit. Capture opens with just the microphone and adds the recording to that project.
+
+### Livestreams
+
+Capture also streams to YouTube. Schedule the broadcast in YouTube Studio first, then open **Go Live** in Capture's menu. Go Live shows the broadcast, a live preview, scenes (screen with camera, camera only, screen only, side by side, and Starting soon, Be right back and Ending cards) and the YouTube chat. Capture records the stream locally at full quality the whole time, and afterwards it lands in Edit as a project with the same scene switches already in place.
+
+### How David Records
+
+David records lessons in one take. When something goes wrong, or he wants something on screen, he doesn't stop. He says it out loud to Joe and keeps going:
+
+- "Hey Joe, that was a bad take, redo it."
+- "Cut that."
+- "Show this on the screen."
+- "Do me on camera for this part."
+- "Can you get a screenshot of the pricing page here?"
+
+There's no fixed cue phrase. These directions are what the first-pass edit looks for (see below), and anything it can't do itself is left as a comment for Joe.
+
+## Editing Videos
+
+### Working in Edit
+
+Each project has a main edit called **Edited**, plus any clips or copies made from it. The original recordings are kept untouched under **Recordings**, so nothing cut from the edit is ever lost. Projects are filed in shared folders.
+
+- **Transcript:** delete words to cut them from the video. Cut words can be restored.
+- **Layouts:** camera full, screen full, screen with camera bubble, and side by side. Switch at the word where the change should happen.
+- **Scenes:** type `/` in the transcript to start a scene, with a cut, crossfade or fade into it.
+- **Library:** intros, outros, stings, logos, lower thirds and background images, shared across projects and tagged by series. **Templates** bring a series' look in one step (for example, the Ally sting at the start and end).
+- **Screenshots and stills:** add a slow pan and zoom (Ken Burns) to a screenshot or image, and freeze the picture while a voiceover plays.
+- **Pauses:** shorten every pause over a set length in one step.
+- **AI tools:** the Tools panel has Claude cards for **Remove retakes**, **Add chapters** and **Write title and description**. Nothing changes until you accept a suggestion.
+- **Comments:** comment on any words and @mention people. Mentions, replies, finished exports and finished Claude passes all send a Slack message with a link to the exact spot.
+- **History:** every change is listed and can be undone. A batch of changes Claude made counts as one entry, so "Undo this batch" reverts the whole thing.
+
+### Exporting
+
+Exports are rendered by Capture on David's Mac, not in the browser. If David's Mac is asleep or Capture isn't running, an export waits until it is. When the export is done, the Export panel can:
+
+- Download the MP4.
+- **Publish to Share** for a review link.
+- **Export to Mux**, for videos that go on the website.
+- **Export to YouTube**, which uploads it with captions.
+
+### Our Editing Process
+
+1. David records in Capture. The project shows up in Edit.
+1. Claude does the first pass with the `first-pass-edit` skill (below): it cuts the bad takes, repeats, waits, filler and the spoken directions, sets camera and screen layouts, adds the series stings, tightens pauses, and leaves comments for everything a person has to do. Joe gets a Slack message when it's done.
+1. Joe reviews the first pass, works through the comments (screenshots, clips, zooms, highlights, B-roll) and finishes the edit. Each Claude pass can be undone on its own if it got something wrong.
+1. David approves the edited video.
+1. Joe exports it and sends it where it goes (Mux, YouTube or Share).
+
+## Claude Skills
+
+Claude can work in Edit directly. Edit has an MCP server, so Claude Code (or Claude on the web or desktop, as a custom connector) can read projects and transcripts and make edits through the same commands as the editor. Plain requests work: "cut the last sentence", "switch to camera full when I say 'let me show you'", "add the outro", "undo that", "export it".
+
+On top of that, we've written skills (saved instructions for Claude) for the jobs we do often.
+
+### Editing
+
+| Skill | Use it when | What it does |
+|---|---|---|
+| `first-pass-edit` | A recording is in Edit and needs its first pass: "do a first pass on the pricing lesson" | Reads the whole transcript, finds David's spoken directions to Joe, and carries them out. It cuts bad takes, repeats, waits, filler and the directions themselves, sets layouts, places stings and clear-cut assets, tightens pauses, and comments on anything a person has to do. It works in two passes (the edits, then the pauses), so either can be undone, and reports back with a line for every direction. Its rules come from comparing David's raw takes with Joe's finished edits. |
+
+### Before and After Recording (Ally)
+
+| Skill | Use it when | What it does |
+|---|---|---|
+| `ally-prep-livestream` | Planning an upcoming Ally livestream | Writes a livestream run sheet on the topic's Linear issue and sets up the demo data. |
+| `ally-prep-lesson` | A livestream is over | Moves the livestream recording from YouTube to Mux and onto the site, then writes a lesson outline on the Linear issue from what David actually said. |
+| `ally-release` | A lesson video is exported and ready | Uploads the video to Mux, generates the summary and description, puts the lesson live on the site, and (if David says so) schedules it on YouTube with social posts. |
+
+`ally-prep-lesson` and `ally-release` live in the [website repo](https://github.com/rfortherestofus/rfortherestofus.com), so they run from there.
+
+### Reading Screenshots and Videos
+
+| Skill | Use it when | What it does |
+|---|---|---|
+| `cleanshot-links` | Someone shares a screenshot or quick video link (`show.rfor.us`, CleanShot) | Reads the image, or the video and its transcript, without anyone having to paste it in. |
+| `video-to-fix` | Someone records a video walking through a bug or a change they want in an app | Watches the video, works out the problem, and fixes it in its own branch with tests, a preview link and a pull request. |
